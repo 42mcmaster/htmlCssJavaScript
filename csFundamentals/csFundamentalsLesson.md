@@ -561,8 +561,7 @@ In this lesson, you learned:
 - ✅ When you write code, the computer translates it into binary operations using registers and the ALU
 - ✅ All computing, no matter how complex, breaks down to these simple binary operations
 
-### Next Steps:
-Complete the practice tasks to reinforce these concepts through hands-on activities!
+
 
 ---
 
