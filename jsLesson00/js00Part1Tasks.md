@@ -4,44 +4,12 @@ These tasks will help you understand programming concepts before you start writi
 
 ---
 
-## Task 1: The Algorithm Challenge (No Computer Needed!)
-
-**Goal:** Understand that programming is about giving precise, step-by-step instructions.
-
-### Instructions:
-1. Get a piece of paper and a pencil
-2. Write **exact instructions** for making a peanut butter and jelly sandwich
-3. Be as specific as possible - assume the person following your instructions has never made a sandwich before
-4. Include every single step, no matter how obvious
-
-### Example Start:
-```
-1. Walk to the kitchen counter
-2. Pick up the bread bag with your right hand
-3. Open the twist tie on the bread bag
-4. Remove two slices of bread
-5. Place the bread slices on the counter...
-```
-
-### Challenge:
-- Trade instructions with a classmate
-- Try to follow their instructions EXACTLY as written
-- Can you make the sandwich if they forgot a step?
-- Did they specify which hand to use? How much peanut butter?
-
-### Reflection:
-Write 2-3 sentences about what this taught you about how computers need instructions.
-
-**💡 Key Lesson:** Computers are even pickier than humans! If you forget a step or aren't specific enough, the program won't work.
-
----
-
-## Task 2: Code Order Prediction
+## Task 1: Code Order Prediction
 
 **Goal:** Understand that code executes from top to bottom.
 
 ### Instructions:
-Look at each example below and predict what order the messages will appear in. Write your predictions on paper, then move to Task 3 where you'll test them.
+Look at each example below and predict what order the messages will appear in. Write your predictions on paper, then move to Task 2 where you'll test them.
 
 #### Example A:
 ```javascript
@@ -82,9 +50,9 @@ document.write('JavaScript!');
 
 ---
 
-## Task 3: Testing Your Predictions
+## Task 2: Testing Your Predictions
 
-**Goal:** See how code executes in real-time and verify your predictions from Task 2.
+**Goal:** See how code executes in real-time and verify your predictions from Task 1.
 
 ### Instructions:
 
@@ -107,7 +75,7 @@ document.write('JavaScript!');
 </html>
 ```
 
-3. Copy Example A from Task 2 into the script tags
+3. Copy Example A from Task 1 into the script tags
 4. Open the file in your browser
 5. Record what actually happened - were your predictions correct?
 6. Repeat for Examples B, C, and D (one at a time)
@@ -121,7 +89,7 @@ Write down your answers:
 
 ---
 
-## Task 4: High-Level vs Low-Level Translation
+## Task 3: High-Level vs Low-Level Translation
 
 **Goal:** Understand how high-level languages make programming easier.
 
@@ -153,7 +121,7 @@ Write a short paragraph (3-5 sentences) explaining:
 
 ---
 
-## Task 5: Vocabulary Matching
+## Task 4: Vocabulary Matching
 
 **Goal:** Make sure you understand the key terms.
 
@@ -182,7 +150,7 @@ G. A function that belongs to an object
 
 ---
 
-## Task 6: Spot the Language Level
+## Task 5: Spot the Language Level
 
 **Goal:** Practice identifying high-level vs low-level code.
 
@@ -222,7 +190,7 @@ console.log(age);
 
 ---
 
-## Task 7: Real-World Programming Examples
+## Task 6: Real-World Programming Examples
 
 **Goal:** Connect programming concepts to things you use every day.
 
@@ -258,7 +226,7 @@ When you type something and press Enter, what instructions might the program exe
 
 ---
 
-## Task 8: Predicting Errors
+## Task 7: Predicting Errors
 
 **Goal:** Start thinking about what could go wrong in code.
 
