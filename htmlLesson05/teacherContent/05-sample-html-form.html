@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1976D2;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #424242;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+        .radio-group {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #1976D2;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            display: block;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #1565C0;
+        }
+        .note {
+            background-color: #E3F2FD;
+            padding: 15px;
+            border-left: 4px solid #1976D2;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .data-type {
+            color: #666;
+            font-size: 14px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <form action="process-feedback.php" method="post">
+        <h1>Restaurant Feedback Form</h1>
+        
+        <!-- TEXT INPUT - String data -->
+        <label for="name">Your Name: <span class="data-type">(Text/String)</span></label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        
+        <!-- EMAIL INPUT - Validated string -->
+        <label for="email">Email Address: <span class="data-type">(Email/String)</span></label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        
+        <!-- DROPDOWN - Category data -->
+        <label for="restaurant">Favorite Restaurant: <span class="data-type">(Category)</span></label>
+        <select id="restaurant" name="restaurant" required>
+            <option value="">-- Select a restaurant --</option>
+            <option value="mcdonalds">McDonald's</option>
+            <option value="chipotle">Chipotle</option>
+            <option value="subway">Subway</option>
+            <option value="wendys">Wendy's</option>
+            <option value="tacoBell">Taco Bell</option>
+        </select>
+        
+        <!-- RADIO BUTTONS - Category data (single choice) -->
+        <label>How often do you eat there? <span class="data-type">(Category)</span></label>
+        <div class="radio-group">
+            <input type="radio" id="rarely" name="frequency" value="rarely" required>
+            <label for="rarely" style="display: inline; font-weight: normal;">Rarely</label><br>
+            
+            <input type="radio" id="monthly" name="frequency" value="monthly">
+            <label for="monthly" style="display: inline; font-weight: normal;">Monthly</label><br>
+            
+            <input type="radio" id="weekly" name="frequency" value="weekly">
+            <label for="weekly" style="display: inline; font-weight: normal;">Weekly</label><br>
+            
+            <input type="radio" id="multiple" name="frequency" value="multiple">
+            <label for="multiple" style="display: inline; font-weight: normal;">2-3 times per week</label><br>
+            
+            <input type="radio" id="daily" name="frequency" value="daily">
+            <label for="daily" style="display: inline; font-weight: normal;">Daily</label>
+        </div>
+        
+        <!-- NUMBER INPUT - Numeric data -->
+        <label for="rating">Rating (1-5): <span class="data-type">(Number)</span></label>
+        <input type="number" id="rating" name="rating" min="1" max="5" placeholder="1-5" required>
+        
+        <!-- TEXTAREA - Text data (multi-line) -->
+        <label for="comments">Comments: <span class="data-type">(Text/String)</span></label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Tell us about your experience..."></textarea>
+        
+        <!-- SUBMIT BUTTON -->
+        <button type="submit">Submit Feedback</button>
+    </form>
+    
+    <div class="note">
+        <strong>Notice:</strong> Each input type matches a data type we discussed:
+        <ul>
+            <li><strong>type="text"</strong> and <strong>textarea</strong> → String data</li>
+            <li><strong>type="number"</strong> → Numeric data</li>
+            <li><strong>select</strong> and <strong>radio buttons</strong> → Category data</li>
+            <li><strong>type="email"</strong> → Validated string data</li>
+        </ul>
+        When submitted, this data would be sent to a server (the <code>action</code> attribute) and stored in a database!
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 400px;
+            margin: 0 auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        #count {
+            font-size: 64px;
+            color: #2196f3;
+            margin: 30px 0;
+            font-weight: bold;
+        }
+        button {
+            padding: 15px 40px;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            transition: transform 0.1s;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        #clickBtn {
+            background-color: #4caf50;
+            color: white;
+        }
+        #resetBtn {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Click Counter</h1>
+        <div id="count">0</div>
+        <button id="clickBtn">Click Me!</button>
+        <button id="resetBtn">Reset</button>
+        <p id="message">Start clicking!</p>
+    </div>
+    
+    <script>
+        // Initialize counter variable
+        let clicks = 0;
+        
+        // Select all the elements we need
+        let countDisplay = document.getElementById('count');
+        let clickBtn = document.getElementById('clickBtn');
+        let resetBtn = document.getElementById('resetBtn');
+        let message = document.getElementById('message');
+        
+        // Add click event listener to the click button
+        clickBtn.addEventListener('click', function() {
+            clicks++;  // Increase the counter
+            countDisplay.textContent = clicks;  // Update the display
+            message.textContent = `You've clicked ${clicks} times!`;
+        });
+        
+        // Add click event listener to the reset button
+        resetBtn.addEventListener('click', function() {
+            clicks = 0;  // Reset counter to 0
+            countDisplay.textContent = clicks;  // Update display
+            message.textContent = 'Counter reset! Start clicking!';
+        });
+    </script>
+</body>
+</html>
