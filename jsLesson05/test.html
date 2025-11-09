@@ -1,82 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Click Counter</title>
+    <meta charset="UTF-8">
+    <title>Profile Builder</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f0f0f0;
+            background-color: #e0e0e0;
+            padding: 20px;
         }
-        .container {
-            background-color: white;
-            padding: 40px;
-            border-radius: 15px;
+        
+        #profile {
             max-width: 400px;
-            margin: 0 auto;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        #count {
-            font-size: 64px;
-            color: #2196f3;
-            margin: 30px 0;
-            font-weight: bold;
+        
+        #profile h2 {
+            margin-top: 0;
+            color: #1976d2;
         }
-        button {
-            padding: 15px 40px;
-            font-size: 20px;
-            margin: 10px;
-            cursor: pointer;
-            border: none;
-            border-radius: 8px;
-            transition: transform 0.1s;
-        }
-        button:hover {
-            transform: scale(1.05);
-        }
-        #clickBtn {
-            background-color: #4caf50;
-            color: white;
-        }
-        #resetBtn {
-            background-color: #f44336;
-            color: white;
+        
+        #profile p {
+            color: #555;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Click Counter</h1>
-        <div id="count">0</div>
-        <button id="clickBtn">Click Me!</button>
-        <button id="resetBtn">Reset</button>
-        <p id="message">Start clicking!</p>
+    <div id="profile">
+        <h2 id="name"></h2>
+        <p id="job"></p>
+        <p id="location"></p>
+        <p id="bio"></p>
     </div>
     
     <script>
-        // Initialize counter variable
-        let clicks = 0;
+        // Create profile data variables
+        let personName = "Sarah Johnson";
+        let jobTitle = "Web Developer";
+        let personLocation = "San Francisco, CA";
+        let personBio = "Passionate about creating beautiful and functional websites. Love learning new technologies!";
         
-        // Select all the elements we need
-        let countDisplay = document.getElementById('count');
-        let clickBtn = document.getElementById('clickBtn');
-        let resetBtn = document.getElementById('resetBtn');
-        let message = document.getElementById('message');
+        // Select elements
+        let nameElement = document.getElementById('name');
+        let jobElement = document.getElementById('job');
+        let locationElement = document.getElementById('location');
+        let bioElement = document.getElementById('bio');
         
-        // Add click event listener to the click button
-        clickBtn.addEventListener('click', function() {
-            clicks++;  // Increase the counter
-            countDisplay.textContent = clicks;  // Update the display
-            message.textContent = `You've clicked ${clicks} times!`;
-        });
+        // Populate the profile card
+        nameElement.textContent = personName;
+        // Add the rest of the content here...
+        jobElement.textContent = jobTitle;
         
-        // Add click event listener to the reset button
-        resetBtn.addEventListener('click', function() {
-            clicks = 0;  // Reset counter to 0
-            countDisplay.textContent = clicks;  // Update display
-            message.textContent = 'Counter reset! Start clicking!';
-        });
+        // Bonus: Add some extra styling
+        locationElement.textContent = personLocation;
+        nameElement.style.textAlign = 'center';
+        nameElement.style.textDecoration = 'underline';
+        jobElement.style.fontWeight = 'bold';
+        locationElement.style.color = '#777';
+        locationElement.style.marginTop = '10px';
+        // Try adding more styles...
+        bioElement.textContent = personBio;
+        bioElement.style.fontStyle = 'italic';
+        bioElement.style.marginTop = '15px';
+
+        console.log('Profile card created!');
     </script>
 </body>
 </html>
