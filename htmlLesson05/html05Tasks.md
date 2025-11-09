@@ -460,15 +460,3 @@ After completing these tasks, you should be able to:
 | Single choice | `type="radio"` | Gender, payment method |
 | Multiple choices | `type="checkbox"` | Interests, toppings |
 | Long text | `<textarea>` | Comments, description |
-
----
-
-## Next Steps
-
-Once you complete these tasks:
-1. Show your forms to a classmate - can they fill them out easily?
-2. Test all validation thoroughly
-3. Make sure all data would be clean and analyzable
-4. In future lessons, you'll style these with CSS and add JavaScript enhancements!
-
-**Remember:** The best forms collect clean data that's easy to analyze. Always think about the data type before choosing your input type!
