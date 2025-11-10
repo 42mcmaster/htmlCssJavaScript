@@ -91,10 +91,7 @@ print('Hello')
 2. Semicolon: JavaScript has `;`, Python doesn't need it
 3. (Bonus: Python uses `#` for comments, JS uses `//`)
 
-**Find 3 similarities:**
-1. ___________________
-2. ___________________
-3. ___________________
+
 
 ---
 
@@ -120,23 +117,14 @@ document.write('Hello');
 ```python
 message = 'hello world'
 
-# Method 1: Make it uppercase
-print(message.upper())
+# We stored a string object in the variable "message".
+# Now we're calling methods on that string object.
+print(message.upper())     # Method 1: Make it uppercase
+print(message.title())     # Method 2: Make it titlecase
+print(message.replace('world', 'Python'))  # Method 3: Replace text
+print(message.count('l'))  # Method 4: Count characters
 
-# Method 2: Make it titlecase
-print(message.title())
-
-# Method 3: Replace text
-print(message.replace('world', 'Python'))
-
-# Method 4: Count characters
-print(message.count('l'))
 ```
-
-**Answer these:**
-1. What pattern do you see? (object.method())
-2. What goes in the parentheses?
-3. Is this the same pattern as JavaScript? YES / NO
 
 ---
 
