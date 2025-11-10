@@ -354,6 +354,11 @@ Survey about school experience
 - Suggestions for improvement
 - After-school interests
 
+### Option D: You Pick, But Get My Approval
+
+- You must come up with criteria similar to the examples above and get approval from Mr. M.
+
+
 **Requirements:**
 - At least 3 fieldsets
 - At least 8 different inputs
