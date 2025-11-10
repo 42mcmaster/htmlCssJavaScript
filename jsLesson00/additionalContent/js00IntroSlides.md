@@ -281,32 +281,6 @@ object.method();
 
 ---
 
-```
-
-If you want, I can make a second slide that visually compares **object vs method vs function** with little diagrams.
-```
-
-
-
-## The Dot Notation
-
-The dot (`.`) connects objects to their methods:
-
-```javascript
-object.method()
-```
-
-**Examples:**
-```javascript
-console.log('message');    // Console object, log method
-Math.random();             // Math object, random method  
-document.write('Hi!');     // Document object, write method
-```
-
-Think: "Hey [object], do your [method] action!"
-
----
-
 ## Three Output Functions
 
 ### 1. alert() → Popup Message
