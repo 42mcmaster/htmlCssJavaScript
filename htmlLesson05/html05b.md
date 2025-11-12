@@ -36,18 +36,23 @@ Every HTML form needs three things:
 2. **`action`** - Where the data goes (usually a database)
 3. **`method`** - How to send it (`get` or `post`)
 
-### Quick Comparison: GET vs POST
+### Comparison: GET vs POST
 
-**Use GET for:**
-- Search forms
-- Filters
-- When data should be visible in URL
+### ✅ Use **GET** for:
+- **Search forms**: The query appears in the URL (like `?q=pizza`), which makes it easy to bookmark or share.
+- **Filters or sorting options**: Used when you’re only changing what the user *sees*, not updating anything on the server.
+- **Data that should be visible in the URL**: Helpful for navigation, pagination (`?page=3`), or analytics links.
+- **Small, simple pieces of data**: GET requests have length limits, so keep data short.
+- **Safe, repeatable actions**: Refreshing or sharing the link won’t accidentally change data on the server.
 
-**Use POST for:**
-- Login forms
-- Registration
-- Sensitive information
-- Large amounts of data
+---
+
+### ✅ Use **POST** for:
+- **Login forms**: Keeps usernames and passwords out of the URL for better security.
+- **Registration or updating information**: Any form that creates or saves something on the server.
+- **Sending sensitive information**: Passwords, email addresses, payment details, etc. stay out of browser history.
+- **Large amounts of data**: Big text inputs, file uploads, or long JSON payloads.
+- **Actions that modify server data**: Creating, editing, or deleting information—POST tells the server to *make a change*.
 
 ---
 

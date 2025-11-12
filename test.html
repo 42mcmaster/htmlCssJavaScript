@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Restaurant Survey</title>
+</head>
+<body>
+    <h1>Restaurant Survey</h1>
+    
+    <form action="submit-survey.php" method="post">
+        
+        <fieldset>
+            <legend>Your Information</legend>
+            
+            <p>
+                <label for="custName">Name:</label><br />
+                <input type="text" id="custName" name="name" required />
+            </p>
+            
+            <p>
+                <label for="custEmail">Email:</label><br />
+                <input type="email" id="custEmail" name="email" required />
+            </p>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Restaurant Experience</legend>
+            
+            <p>
+                <label for="restaurant">Which restaurant did you visit?</label><br />
+                <select id="restaurant" name="restaurant" required>
+                    <option value="">-- Select Restaurant --</option>
+                    <option value="olive-garden">Olive Garden</option>
+                    <option value="chipotle">Chipotle</option>
+                    <option value="five-guys">Five Guys</option>
+                    <option value="panera">Panera Bread</option>
+                </select>
+            </p>
+            
+            <p>
+                <label for="visitDate">Date of Visit:</label><br />
+                <input type="date" id="visitDate" name="date" required />
+            </p>
+            
+            <p>
+                <label for="rating">Overall Rating:</label><br />
+                <select id="rating" name="rating" required>
+                    <option value="">-- Rate 1-5 --</option>
+                    <option value="5">5 - Excellent</option>
+                    <option value="4">4 - Good</option>
+                    <option value="3">3 - Average</option>
+                    <option value="2">2 - Poor</option>
+                    <option value="1">1 - Terrible</option>
+                </select>
+            </p>
+            
+            <p>
+                <label>How often do you eat there?</label><br />
+                <input type="radio" id="freq-weekly" name="frequency" value="weekly" />
+                <label for="freq-weekly">Weekly</label><br />
+                
+                <input type="radio" id="freq-monthly" name="frequency" value="monthly" />
+                <label for="freq-monthly">Monthly</label><br />
+                
+                <input type="radio" id="freq-rarely" name="frequency" value="rarely" />
+                <label for="freq-rarely">Rarely</label><br />
+                
+                <input type="radio" id="freq-first" name="frequency" value="first-time" checked />
+                <label for="freq-first">First Time</label>
+            </p>
+            
+            <p>
+                <label for="comments">Additional Comments:</label><br />
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+            </p>
+        </fieldset>
+        
+        <p>
+            <button type="submit">Submit Survey</button>
+        </p>
+        
+    </form>
+</body>
+</html>
