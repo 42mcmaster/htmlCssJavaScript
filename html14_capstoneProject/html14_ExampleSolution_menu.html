@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Mountain View Coffee Co.</title>
+    <meta name="description"
+        content="Browse Mountain View Coffee Co.'s menu of specialty coffee drinks, pastries, and light food options.">
+    <meta property="og:title" content="Menu | Mountain View Coffee Co.">
+    <link rel="stylesheet" href="html14_ExampleSolution_styles.css">
+</head>
+
+<body>
+    <!-- Header: consistent across all pages -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Mountain View Coffee Co.</h1>
+            </div>
+            <nav class="main-nav">
+                <button class="hamburger-menu" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="html14_ExampleSolution_index.html">Home</a></li>
+                    <li><a href="html14_ExampleSolution_about.html">About</a></li>
+                    <li><a href="html14_ExampleSolution_menu.html" class="active">Menu</a></li>
+                    <li><a href="html14_ExampleSolution_contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page header -->
+        <section class="page-header">
+            <h1>Our Menu</h1>
+            <p>Crafted with care, served with passion</p>
+        </section>
+
+        <!-- Espresso drinks section -->
+        <section class="menu-section">
+            <h2>Espresso Drinks</h2>
+            <p class="section-description">All drinks made with our freshly roasted, locally sourced beans.</p>
+
+            <div class="menu-items">
+                <article class="menu-item">
+                    <h3>Espresso Shot</h3>
+                    <p class="description">A single or double shot of our signature blend espresso.</p>
+                    <p class="price">Single: $2.50 | Double: $3.50</p>
+                </article>
+
+                <article class="menu-item">
+                    <h3>Americano</h3>
+                    <p class="description">Espresso shots topped with hot water for a smooth, full-bodied coffee.</p>
+                    <p class="price">$3.50 - $4.50</p>
+                </article>
+
+                <article class="menu-item">
+                    <h3>Latte</h3>
+                    <p class="description">Espresso with steamed milk and a small layer of foam.</p>
+                    <p class="price">$4.50 - $5.50</p>
+                </article>
+
+                <article class="menu-item">
+                    <h3>Cappuccino</h3>
+                    <p class="description">Equal parts espresso, steamed milk, and rich foam for a bold taste.</p>
+                    <p class="price">$4.50 - $5.50</p>
+                </article>
+
+                <article class="menu-item">
+                    <h3>Macchiato</h3>
+                    <p class="description">Espresso "marked" with just a touch of steamed milk and foam.</p>
+                    <p class="price">$3.75 - $4.75</p>
+                </article>
+
+                <article class="menu-item">
+                    <h3>Mocha</h3>
+                    <p class="description">Espresso with steamed milk, chocolate, and topped with whipped cream.</p>
+                    <p class="price">$5.00 - $6.00</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Coffee table: the TABLE required by the capstone project -->
+        <section class="menu-section">
+            <h2>Coffee Comparison Guide</h2>
+            <p class="section-description">Not sure which drink to order? Use this guide to find your perfect cup!</p>
+
+            <!-- This is the required TABLE element for the capstone -->
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Drink Name</th>
+                        <th>Espresso</th>
+                        <th>Milk</th>
+                        <th>Foam</th>
+                        <th>Strength</th>
+                        <th>Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Espresso</strong></td>
+                        <td>2 oz</td>
+                        <td>None</td>
+                        <td>None</td>
+                        <td>★★★★★</td>
+                        <td>Those who want pure coffee</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Americano</strong></td>
+                        <td>1-2 oz</td>
+                        <td>None</td>
+                        <td>None</td>
+                        <td>★★★★☆</td>
+                        <td>Drip coffee lovers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Latte</strong></td>
+                        <td>1-2 oz</td>
+                        <td>8-10 oz</td>
+                        <td>Small</td>
+                        <td>★★☆☆☆</td>
+                        <td>Milk lovers, smooth taste</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cappuccino</strong></td>
+                        <td>1-2 oz</td>
+                        <td>3-4 oz</td>
+                        <td>Large</td>
+                        <td>★★★☆☆</td>
+                        <td>Balance of coffee and milk</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Macchiato</strong></td>
+                        <td>1-2 oz</td>
+                        <td>¼ oz</td>
+                        <td>Small</td>
+                        <td>★★★★☆</td>
+                        <td>Coffee-forward with hint of milk</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mocha</strong></td>
+                        <td>1-2 oz</td>
+                        <td>8-10 oz</td>
+                        <td>Small</td>
+                        <td>★★★☆☆</td>
+                        <td>Chocolate and coffee lovers</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Cold drinks section -->
+        <section class="menu-section">
+            <h2>Cold Drinks</h2>
+            <div class="menu-items">
+                <article class="menu-item">
+                    <h3>Iced Coffee</h3>
+                    <p class="description">Chilled brewed coffee served over ice with milk and sweetener of
+                        your choice.</p>
+                    <p class="price">$3.50 - $4.50</p>
+                </article>
+
+                <article class="menu-item">
+                    <h3>Cold Brew</h3>
+                    <p class="description">Smooth, less acidic coffee steeped cold for 12+ hours. Topped with
+                        ice and your choice of milk.</p>
+                    <p class="price">$4.00 - $5.00</p>
+                </article>
+
+                <article class="menu-item">
+                    <h3>Iced Latte</h3>
+                    <p class="description">Espresso with cold milk and ice. Refreshing and smooth.</p>
+                    <p class="price">$4.50 - $5.50</p>
+                </article>
+
+                <article class="menu-item">
+                    <h3>Iced Mocha</h3>
+                    <p class="description">Espresso, cold milk, chocolate, and ice. Perfect on hot days!</p>
+                    <p class="price">$5.00 - $6.00</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Pastries and food section -->
+        <section class="menu-section">
+            <h2>Fresh Pastries & Food</h2>
+            <p class="section-description">All baked fresh daily by our pastry chef, Alex.</p>
+
+            <div class="menu-items">
+                <article class="menu-item">
+                    <h3>Croissant</h3>
+                    <p class="description">Buttery, flaky, and perfect for pairing with any coffee.</p>
+                    <p class="price">$4.50</p>
+                </article>
+
+                <article class="menu-item">
+                    <h3>Blueberry Muffin</h3>
+                    <p class="description">Made with fresh, locally-sourced blueberries and organic flour.</p>
+                    <p class="price">$4.99</p>
+                </article>
+
+                <article class="menu-item">
+                    <h3>Almond Scone</h3>
+                    <p class="description">Light, buttery scone with sliced almonds. Great with jam and cream.</p>
+                    <p class="price">$4.50</p>
+                </article>
+
+                <article class="menu-item">
+                    <h3>Chocolate Chip Cookie</h3>
+                    <p class="description">Classic homemade cookie with dark chocolate chips. Pairs well with
+                        cold milk.</p>
+                    <p class="price">$3.50</p>
+                </article>
+
+                <article class="menu-item">
+                    <h3>Sandwich (Italian or Chicken)</h3>
+                    <p class="description">Fresh-made sandwiches served on artisan bread with local ingredients.
+                    </p>
+                    <p class="price">$8.99 - $9.99</p>
+                </article>
+
+                <article class="menu-item">
+                    <h3>Salad (Seasonal)</h3>
+                    <p class="description">Fresh greens with seasonal vegetables, nuts, and a homemade vinaigrette.
+                    </p>
+                    <p class="price">$10.99</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Specialty drinks section -->
+        <section class="menu-section">
+            <h2>Specialty Drinks</h2>
+            <p class="section-description">Ask our baristas about these rotating seasonal favorites!</p>
+
+            <div class="menu-items">
+                <article class="menu-item">
+                    <h3>Seasonal Latte</h3>
+                    <p class="description">Different flavors each season. Currently: Vanilla & Cinnamon</p>
+                    <p class="price">$5.50 - $6.50</p>
+                </article>
+
+                <article class="menu-item">
+                    <h3>Affogato</h3>
+                    <p class="description">Vanilla ice cream topped with a hot espresso shot. A dessert in a
+                        cup!</p>
+                    <p class="price">$5.99</p>
+                </article>
+
+                <article class="menu-item">
+                    <h3>Cortado</h3>
+                    <p class="description">The perfect 1:1 balance of espresso and steamed milk.</p>
+                    <p class="price">$4.00 - $5.00</p>
+                </article>
+
+                <article class="menu-item">
+                    <h3>Pour Over</h3>
+                    <p class="description">Single-origin beans brewed fresh to order. Ask about today's origin!
+                    </p>
+                    <p class="price">$4.50</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Call to action -->
+        <section class="cta-section">
+            <h2>Not Sure What to Order?</h2>
+            <p>Ask our knowledgeable baristas for recommendations based on your taste preferences!</p>
+            <a href="html14_ExampleSolution_contact.html" class="cta-button">Get in Touch</a>
+        </section>
+    </main>
+
+    <!-- Footer: consistent across all pages -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Mountain View Coffee Co.</h3>
+                <p>123 Main Street<br>
+                    Anytown, Ohio 44146<br>
+                    Phone: (330) 555-0123</p>
+            </div>
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <p>Monday - Friday: 6am - 6pm<br>
+                    Saturday: 7am - 7pm<br>
+                    Sunday: 8am - 5pm</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <p>
+                    <a href="#facebook">Facebook</a> |
+                    <a href="#instagram">Instagram</a> |
+                    <a href="#twitter">Twitter</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mountain View Coffee Co. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="html14_ExampleSolution_script.js"></script>
+</body>
+
+</html>

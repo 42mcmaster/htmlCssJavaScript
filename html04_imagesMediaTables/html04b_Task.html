@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding and viewport for responsive design -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 Media Task</title>
+  <style>
+    /* Global styling */
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    /* Media container styling */
+    section {
+      margin: 30px 0;
+      padding: 20px;
+      background-color: white;
+      border-radius: 5px;
+    }
+
+    /* Video and audio styling */
+    video, audio {
+      width: 100%;
+      max-width: 500px;
+      margin: 15px 0;
+      display: block;
+    }
+
+    /* iframe styling for responsive embedding */
+    iframe {
+      max-width: 100%;
+      margin: 15px 0;
+    }
+
+    /* Info boxes */
+    .info-box {
+      background-color: #e8f4f8;
+      padding: 15px;
+      border-left: 4px solid #0288d1;
+      margin: 15px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HTML5 Media Task</h1>
+  <p>Practice embedding videos, audio, and external media content.</p>
+
+  <!-- ===== TODO 1: Embed HTML5 video ===== -->
+  <!-- Task: Create a <video> element with:
+       - width="400"
+       - height="300"
+       - controls attribute
+       - Two <source> tags:
+         1. src="media/demo.mp4" type="video/mp4"
+         2. src="media/demo.webm" type="video/webm"
+       - Fallback text: "Your browser does not support HTML5 video."
+  -->
+  <section id="video">
+    <h2>Embed HTML5 Video</h2>
+    <p>Use the <code>&lt;video&gt;</code> tag to embed local video files.</p>
+
+    <div class="info-box">
+      <strong>Tip:</strong> Provide multiple source formats (MP4, WebM) for browser compatibility.
+    </div>
+
+    <!-- TODO 1: Add video element here -->
+    ___
+
+  </section>
+
+  <!-- ===== TODO 2: Embed HTML5 audio ===== -->
+  <!-- Task: Create an <audio> element with:
+       - controls attribute
+       - Two <source> tags:
+         1. src="media/podcast.mp3" type="audio/mpeg"
+         2. src="media/podcast.ogg" type="audio/ogg"
+       - Fallback text: "Your browser does not support HTML5 audio."
+  -->
+  <section id="audio">
+    <h2>Embed HTML5 Audio</h2>
+    <p>Use the <code>&lt;audio&gt;</code> tag for podcasts, music, or sound effects.</p>
+
+    <div class="info-box">
+      <strong>Tip:</strong> Always include the <code>controls</code> attribute so users can play, pause, and adjust volume.
+    </div>
+
+    <!-- TODO 2: Add audio element here -->
+    ___
+
+  </section>
+
+  <!-- ===== TODO 3: Embed YouTube video with iframe ===== -->
+  <!-- Task: Create an <iframe> element with:
+       - width="560"
+       - height="315"
+       - src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+       - title="Sample YouTube Video"
+       - allowfullscreen attribute
+       - Fallback text inside: (your browser doesn't support iframes)
+  -->
+  <section id="youtube">
+    <h2>Embed YouTube Video</h2>
+    <p>Use <code>&lt;iframe&gt;</code> to embed videos from external sources like YouTube.</p>
+
+    <div class="info-box">
+      <strong>Important:</strong> Use the EMBED URL (ends with /embed/VIDEO_ID), not the share URL!
+    </div>
+
+    <!-- TODO 3: Add YouTube iframe here -->
+    ___
+
+  </section>
+
+  <!-- ===== TODO 4: Create a media gallery (challenge) ===== -->
+  <!-- Task: Add THREE media elements (mix of video, audio, and/or iframe):
+       - 1 HTML5 video
+       - 1 HTML5 audio
+       - 1 YouTube iframe
+       Try: https://www.youtube.com/embed/9bZkp7q19f0 (royalty-free video)
+  -->
+  <section id="media-gallery">
+    <h2>Media Gallery (Challenge)</h2>
+    <p>Combine multiple media types on one page.</p>
+
+    <h3>Video</h3>
+    ___
+
+    <h3>Audio</h3>
+    ___
+
+    <h3>External Content (YouTube)</h3>
+    ___
+
+  </section>
+
+  <!-- Media file formats reference -->
+  <section id="formats">
+    <h2>Media Format Reference</h2>
+    <table style="width: 100%; border-collapse: collapse;">
+      <tr style="background-color: #333; color: white;">
+        <th style="border: 1px solid #ddd; padding: 10px;">Type</th>
+        <th style="border: 1px solid #ddd; padding: 10px;">Format</th>
+        <th style="border: 1px solid #ddd; padding: 10px;">File Extension</th>
+        <th style="border: 1px solid #ddd; padding: 10px;">MIME Type</th>
+      </tr>
+      <tr style="background-color: white;">
+        <td style="border: 1px solid #ddd; padding: 10px;">Video</td>
+        <td style="border: 1px solid #ddd; padding: 10px;">MP4 (most compatible)</td>
+        <td style="border: 1px solid #ddd; padding: 10px;">.mp4</td>
+        <td style="border: 1px solid #ddd; padding: 10px;">video/mp4</td>
+      </tr>
+      <tr style="background-color: #f9f9f9;">
+        <td style="border: 1px solid #ddd; padding: 10px;">Video</td>
+        <td style="border: 1px solid #ddd; padding: 10px;">WebM</td>
+        <td style="border: 1px solid #ddd; padding: 10px;">.webm</td>
+        <td style="border: 1px solid #ddd; padding: 10px;">video/webm</td>
+      </tr>
+      <tr style="background-color: white;">
+        <td style="border: 1px solid #ddd; padding: 10px;">Audio</td>
+        <td style="border: 1px solid #ddd; padding: 10px;">MP3 (most compatible)</td>
+        <td style="border: 1px solid #ddd; padding: 10px;">.mp3</td>
+        <td style="border: 1px solid #ddd; padding: 10px;">audio/mpeg</td>
+      </tr>
+      <tr style="background-color: #f9f9f9;">
+        <td style="border: 1px solid #ddd; padding: 10px;">Audio</td>
+        <td style="border: 1px solid #ddd; padding: 10px;">OGG</td>
+        <td style="border: 1px solid #ddd; padding: 10px;">.ogg</td>
+        <td style="border: 1px solid #ddd; padding: 10px;">audio/ogg</td>
+      </tr>
+    </table>
+  </section>
+
+  <footer>
+    <p>Task complete! Test all media elements in your browser.</p>
+  </footer>
+
+</body>
+</html>

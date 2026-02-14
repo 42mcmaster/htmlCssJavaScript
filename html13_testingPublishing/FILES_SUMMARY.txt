@@ -1,0 +1,284 @@
+================================================================================
+LESSON 13: TESTING, PROTOCOLS & PUBLISHING
+CTE Web Design Course - Medina County Career Center
+================================================================================
+
+COMPLETE FILE LIST (16 files total):
+
+INSTRUCTIONAL MATERIALS:
+─────────────────────────────────────────────────────────────────────────────
+
+1. html13_Slides.md
+   - MARP presentation (10 slides)
+   - Covers 13a (Protocols), 13b (Testing), 13c (Publishing)
+   - ~20-30 minutes instruction
+   
+2. html13_StudyGuide.md
+   - 20 key vocabulary terms with definitions
+   - Quick cheat sheet with diagrams
+   - ODE competencies reference
+   - 15 practice questions
+
+3. html13_Walkthrough.md
+   - Guided step-by-step walkthrough (40-50 minutes)
+   - Part 1: Understanding web protocols (conceptual)
+   - Part 2: Validating HTML code
+   - Part 3: Cross-browser testing
+   - Part 4: Deploying to GitHub Pages
+   - "Try This" fill-in-the-blank sections for students
+
+4. html13_Walkthrough_Solutions.html
+   - Example validated HTML portfolio website
+   - Ready for deployment
+   - Demonstrates best practices (responsive, accessible)
+   - Can be used as reference or starting point
+
+TASK 13a: WEB PROTOCOLS & HOW THE WEB WORKS
+─────────────────────────────────────────────────────────────────────────────
+
+5. html13a_Task.md (25-30 minutes)
+   - 11 conceptual short-answer questions
+   - Topics: HTTP/HTTPS, DNS, TCP/IP, static vs dynamic, browser rendering
+   - Graded out of 11 points (+ 0.5 bonus)
+
+6. html13a_Task_Solutions.md
+   - Complete answer key with sample student answers
+   - Rubric and grading guide
+   - Common mistakes and corrections
+   - Extension questions for advanced students
+
+TASK 13b: CROSS-BROWSER TESTING & VALIDATION
+─────────────────────────────────────────────────────────────────────────────
+
+7. html13b_Task.md (40-45 minutes)
+   - Comprehensive testing checklist
+   - Part 1: HTML validation (W3C validator)
+   - Part 2: CSS validation (W3C validator)
+   - Part 3: Cross-browser testing (3+ browsers)
+   - Part 4: Mobile responsiveness testing
+   - Part 5: Issue fixing
+   - Part 6: Summary report
+   - Graded out of 10 points
+
+8. html13b_Task_Solutions.md
+   - Example completed testing report (restaurant project)
+   - Sample validation results with real errors and fixes
+   - Browser testing matrix with results
+   - Mobile testing documentation
+   - Common student findings and solutions
+   - Rubric and grading criteria
+
+TASK 13c: PUBLISHING TO GITHUB PAGES
+─────────────────────────────────────────────────────────────────────────────
+
+9. html13c_Task.md (45-60 minutes)
+   - Step-by-step GitHub Pages deployment guide
+   - Part 1: Create GitHub repository
+   - Part 2: Set up Git (clone or initialize)
+   - Part 3: Add project files
+   - Part 4: Stage, commit, and push
+   - Part 5: Enable GitHub Pages in settings
+   - Part 6: Verify live website
+   - Part 7: Making updates after deployment
+   - Part 8: Deployment checklist
+   - Comprehensive troubleshooting guide
+   - Graded out of 10 points
+
+10. html13c_Task_Solutions.md
+    - Example completed deployment (restaurant project)
+    - Real git commands and output
+    - GitHub Pages settings screenshot descriptions
+    - Live website verification with HTTP status
+    - Multiple update examples
+    - Troubleshooting solutions with real scenarios
+    - Complete deployment workflow reference
+    - Teacher evaluation notes
+
+INDEPENDENT CAPSTONE PROJECT
+─────────────────────────────────────────────────────────────────────────────
+
+11. html13_DIYTask.md (90 minutes, 2-3 class periods)
+    - Students select one previous project
+    - Validate HTML and CSS code
+    - Fix all validation errors
+    - Test in 3+ browsers and mobile
+    - Deploy to GitHub Pages
+    - Document testing results
+    - Write reflection on learning
+    - Graded out of 25 points
+    - Extra credit opportunities (3 levels)
+
+12. html13_DIYTask_Solutions.md
+    - Complete example with restaurant project
+    - Testing and validation results
+    - Browser testing documentation (4 browsers)
+    - Issues found and how they were fixed
+    - GitHub deployment walkthrough with commands
+    - Testing report template
+    - Reflection examples
+    - Summary metrics and grading rubric
+
+ASSESSMENT MATERIALS
+─────────────────────────────────────────────────────────────────────────────
+
+13. html13_Gimkit.csv (30 questions)
+    - Game-based quiz format
+    - Multiple choice questions
+    - Topics: Protocols, validation, testing, deployment, Git
+    - Engagement-focused assessment
+
+14. html13_GoogleQuiz.csv (35 questions)
+    - Google Forms compatible format
+    - Multiple choice (A/B/C/D format)
+    - Covers all lesson 13 content
+    - 1 point per question = 35 points total
+
+15. Unit4_EndOfUnit_GoogleQuiz.csv (48 questions)
+    - Comprehensive Unit 4 review
+    - ~70% from lessons 11-13 (Bootstrap, SEO, accessibility, protocols, testing, publishing)
+    - ~30% from earlier units
+    - 1 point each = 48 points total
+    - Suitable for summative assessment
+
+DOCUMENTATION
+─────────────────────────────────────────────────────────────────────────────
+
+16. README.md
+    - Complete lesson guide for teachers
+    - Lesson overview and learning objectives
+    - 5-day lesson timeline
+    - ODE competencies alignment (6.5.1, 6.5.4, 6.5.11, 6.5.12)
+    - Grading rubrics for all tasks
+    - Teaching notes and common challenges
+    - Differentiation strategies
+    - Extensions and real-world connections
+    - Resource links
+    - Full file checklist
+
+================================================================================
+KEY STATISTICS:
+================================================================================
+
+Total Files: 16
+Total Content: ~5,000 lines of code/text
+Total Word Count: ~35,000 words
+
+By Type:
+  - Markdown files: 12 (slides, guides, tasks)
+  - HTML files: 1 (example portfolio)
+  - CSV files: 3 (quizzes)
+  - Documentation: 1 (README)
+
+By Purpose:
+  - Instruction: 4 files
+  - Student Tasks: 6 files (3 tasks × 2 files each)
+  - Capstone Project: 2 files
+  - Assessment: 3 files
+  - Documentation: 1 file
+
+================================================================================
+LESSON OUTLINE:
+================================================================================
+
+DAY 1: Web Protocols (13a) — 50 minutes
+  Period 1-2: Lecture (html13_Slides.md sections 13a)
+  Period 2: Task 13a (Web Protocols short-answer questions)
+
+DAY 2: Testing & Validation (13b) — 90-100 minutes (2 periods)
+  Homework: Study html13_StudyGuide.md
+  Period 1-2: Walkthrough (html13_Walkthrough.md parts 1-2)
+  Period 3: Task 13b (Cross-browser testing checklist)
+
+DAY 3: GitHub Pages Deployment (13c) — 90-100 minutes (2 periods)
+  Period 1-2: Walkthrough continued (html13_Walkthrough.md parts 3-4)
+  Period 3: Task 13c (Deploy to GitHub Pages)
+
+DAY 4-5: Capstone Project & Assessment — 90-100 minutes
+  Full Period: html13_DIYTask.md (can extend to second day)
+  OR
+  Morning: Gimkit/GoogleQuiz (formative assessment)
+  Late: Unit4_EndOfUnit_GoogleQuiz.csv (summative assessment)
+
+================================================================================
+ODE COMPETENCIES COVERED:
+================================================================================
+
+✓ 6.5.1 — Web Standards & Protocols
+  - HTTP/HTTPS, TCP/IP, DNS, FTP understanding
+  - Static vs. dynamic websites
+  - Browser rendering process
+  - Evidence: Task 13a, quizzes
+
+✓ 6.5.4 — CMS Overview (awareness level)
+  - WordPress, Wix, Squarespace mentioned
+  - Evidence: Slides 13c, study guide
+
+✓ 6.5.11 — Cross-Browser Compatibility
+  - Testing in multiple browsers
+  - DevTools usage
+  - Responsive design testing
+  - Evidence: Task 13b, DIYTask
+
+✓ 6.5.12 — Publish to Web Server
+  - GitHub Pages deployment
+  - Git basics (add, commit, push)
+  - Live site verification
+  - Evidence: Task 13c, DIYTask
+
+================================================================================
+MATERIALS NEEDED (ALL FREE):
+================================================================================
+
+Software:
+  - Web browsers (Chrome, Firefox, Safari, Edge)
+  - Text editor (VS Code, Sublime, Notepad++)
+  - Git command line or GitHub Desktop
+  - GitHub account (free signup)
+
+Websites:
+  - https://validator.w3.org/ (W3C HTML Validator)
+  - https://jigsaw.w3.org/css-validator/ (W3C CSS Validator)
+  - https://github.com/ (GitHub)
+  - https://gimkit.com/ (Gimkit for quizzes)
+  - https://forms.google.com/ (Google Forms for quizzes)
+
+Student Requirement:
+  - At least one completed project from Units 1-4 (for Tasks 13b & DIYTask)
+
+================================================================================
+GRADING SUMMARY:
+================================================================================
+
+Task 13a (Protocols):           11 points (+ 0.5 bonus)
+Task 13b (Testing):            10 points
+Task 13c (Deployment):         10 points
+DIYTask (Capstone):            25 points
+Gimkit Quiz (optional):        30 points (formative)
+GoogleQuiz (optional):         35 points (formative)
+Unit4 End Quiz (optional):     48 points (summative)
+
+Total Points Possible: 56 points (tasks only)
+OR 131 points with all quizzes
+
+================================================================================
+QUICK START FOR TEACHERS:
+================================================================================
+
+1. Review README.md (full lesson guide)
+2. Use html13_Slides.md for 30-minute lecture
+3. Have students complete html13_Walkthrough.md (hands-on)
+4. Assign Tasks 13a, 13b, 13c in sequence
+5. Capstone: html13_DIYTask.md (student choice project)
+6. Assess with Gimkit, GoogleQuiz, or Unit4_EndOfUnit_GoogleQuiz
+7. Celebrate! Students now have live websites deployed!
+
+================================================================================
+FILES LOCATION:
+================================================================================
+
+All files are in:
+/sessions/youthful-brave-edison/mnt/htmlCssJavaScriptForGitHub/html13/
+
+Ready to use immediately. No additional setup needed.
+
+================================================================================

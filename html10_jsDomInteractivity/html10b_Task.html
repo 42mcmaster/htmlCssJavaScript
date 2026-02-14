@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 10b Task: Events & Form Validation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: Arial, sans-serif;
+            font-size: 1rem;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+
+        button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #229954;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .error-message {
+            background-color: #fadbd8;
+            color: #c0392b;
+            border-left: 4px solid #c0392b;
+            padding: 0.75rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .success-message {
+            background-color: #d5f4e6;
+            color: #27ae60;
+            border-left: 4px solid #27ae60;
+            padding: 0.75rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #2980b9;
+            transform: scale(1.1);
+        }
+
+        .instructions {
+            background-color: #e8f8f5;
+            border-left: 4px solid #1abc9c;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lesson 10b: Events & Form Validation</h1>
+
+        <div class="instructions">
+            <p><strong>Your Tasks:</strong></p>
+            <ul>
+                <li>Make the form validate on submit (check for empty fields)</li>
+                <li>Validate email format (must contain @)</li>
+                <li>Show/hide error messages</li>
+                <li>Add hover effects to nav links using JavaScript</li>
+            </ul>
+        </div>
+
+        <!-- Navigation Links with Hover Effects -->
+        <h2>Navigation (Add Hover Effects with JS)</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <!-- Contact Form with Validation -->
+        <h2>Contact Form</h2>
+
+        <!-- TODO: Add a success message div with id="successMsg" and class="success-message" -->
+        <!-- Text: "Form submitted successfully!" -->
+
+        <!-- Error messages (these show/hide based on validation) -->
+        <div id="emptyFieldsError" class="error-message">
+            All fields are required. Please fill them out.
+        </div>
+        <div id="emailError" class="error-message">
+            Please enter a valid email address (must contain @).
+        </div>
+
+        <!-- Form -->
+        <!-- TODO: Create a form with id="contactForm" -->
+        <!-- TODO: Add these form fields: -->
+        <!-- - input type="text" id="name" placeholder="Your Name" -->
+        <!-- - input type="email" id="email" placeholder="Your Email" -->
+        <!-- - textarea id="message" placeholder="Your Message" -->
+        <!-- - button type="submit" text="Send Message" -->
+
+        <!-- TODO: In JavaScript, do the following: -->
+        <!-- 1. Add event listener to form's submit event -->
+        <!-- 2. Use event.preventDefault() to stop the form from actually submitting -->
+        <!-- 3. Get the values from name, email, and message inputs -->
+        <!-- 4. Check if any field is empty - show emptyFieldsError if so -->
+        <!-- 5. Check if email contains @ - show emailError if not -->
+        <!-- 6. If validation passes, hide errors and show successMsg -->
+        <!-- 7. Clear the form fields (set value to '') -->
+
+        <!-- TODO: Add hover effects to nav links -->
+        <!-- - On mouseover: change background color and scale -->
+        <!-- - On mouseout: reset to original state -->
+        <!-- Note: This is already in CSS, but add JS version too for practice -->
+    </div>
+
+    <script>
+        // TODO: Write your JavaScript code here
+
+        // Step 1: Get the form element
+        // const form = document.getElementById('contactForm');
+
+        // Step 2: Get input elements
+        // const nameInput = document.getElementById('name');
+        // const emailInput = document.getElementById('email');
+        // const messageInput = document.getElementById('message');
+
+        // Step 3: Get error and success message elements
+        // const emptyError = document.getElementById('emptyFieldsError');
+        // const emailError = document.getElementById('emailError');
+        // const successMsg = document.getElementById('successMsg');
+
+        // Step 4: Add form submit listener
+        // form.addEventListener('submit', function(event) {
+        //     // Prevent default form submission
+        //     event.preventDefault();
+
+        //     // Get current values
+        //     const name = nameInput.value;
+        //     const email = emailInput.value;
+        //     const message = messageInput.value;
+
+        //     // Hide all error messages first
+        //     emptyError.classList.remove('show');
+        //     emailError.classList.remove('show');
+        //     successMsg.classList.remove('show');
+
+        //     // TODO: Check if fields are empty
+        //     // TODO: Check if email contains @
+        //     // TODO: If valid, show success message and clear form
+        // });
+
+        // Step 5: Add hover effects to nav links
+        // const navLinks = document.querySelectorAll('nav a');
+        // TODO: Loop through links and add mouseover/mouseout listeners
+    </script>
+</body>
+</html>

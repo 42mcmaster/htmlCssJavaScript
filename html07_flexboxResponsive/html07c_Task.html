@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Page Layout</title>
+  <link rel="stylesheet" href="html07c_Task_Solutions.css">
+</head>
+<body>
+  <!-- TODO: Create a page layout using CSS Grid with:
+       - Header (spans full width)
+       - Sidebar (left column)
+       - Main content (center, larger than sidebar)
+       - Footer (spans full width)
+
+       Use display: grid and grid-template-columns/rows
+       Use gap for spacing between sections
+  -->
+
+  <header class="header">
+    <h1>Web Design Blog</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="page-layout">
+    <!-- Sidebar navigation -->
+    <aside class="sidebar">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="#design">Design Trends</a></li>
+        <li><a href="#tutorial">Tutorials</a></li>
+        <li><a href="#tools">Tools & Resources</a></li>
+        <li><a href="#tips">Tips & Tricks</a></li>
+        <li><a href="#case">Case Studies</a></li>
+      </ul>
+
+      <h3>Archive</h3>
+      <ul>
+        <li><a href="#2025">2025</a></li>
+        <li><a href="#2024">2024</a></li>
+        <li><a href="#2023">2023</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main content area -->
+    <main class="main">
+      <article>
+        <h2>Understanding CSS Grid Layouts</h2>
+        <p class="date">Published on February 12, 2025</p>
+        <p>CSS Grid is a powerful two-dimensional layout system that allows you to create complex page layouts with precise control over rows and columns. Unlike Flexbox which is one-dimensional, Grid lets you define both horizontal and vertical alignments simultaneously.</p>
+        <p>The grid-template-columns property defines your column widths, and you can use various units like pixels, percentages, or the powerful fr (fraction) unit which represents a fraction of available space.</p>
+        <h3>Key Grid Properties</h3>
+        <ul>
+          <li><strong>grid-template-columns:</strong> Defines column structure (e.g., 200px 1fr 200px)</li>
+          <li><strong>grid-template-rows:</strong> Defines row heights (e.g., 100px auto 50px)</li>
+          <li><strong>gap:</strong> Sets spacing between grid items</li>
+          <li><strong>grid-column:</strong> Specifies which column(s) an item spans</li>
+          <li><strong>grid-row:</strong> Specifies which row(s) an item spans</li>
+        </ul>
+      </article>
+
+      <article>
+        <h2>Grid vs Flexbox: Choosing the Right Tool</h2>
+        <p class="date">Published on February 8, 2025</p>
+        <p>Both CSS Grid and Flexbox are essential modern layout tools, but they serve different purposes. Flexbox excels at one-dimensional layouts like navigation bars and component alignment. Grid is better suited for two-dimensional page layouts where you need precise control over both rows and columns.</p>
+        <p>The best practice is to use Grid for your overall page structure and Flexbox for component-level layouts. This combination gives you the power of both systems working together.</p>
+      </article>
+
+      <article>
+        <h2>Responsive Grid Layouts with Media Queries</h2>
+        <p class="date">Published on February 1, 2025</p>
+        <p>Making your Grid layouts responsive is straightforward. You can use media queries to change your grid-template-columns at different breakpoints. On mobile, you might use a single column, on tablet two columns, and on desktop three columns.</p>
+        <p>The fr unit is especially useful for responsive grids because it automatically adjusts to available space, making your layouts flexible and mobile-friendly without complicated calculations.</p>
+      </article>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Web Design Blog. All rights reserved.</p>
+      <p>Privacy Policy | Terms of Service | Contact Us</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 10a Task: DOM Manipulation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .task-section {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+
+        .task-section h2 {
+            color: #2c3e50;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .box {
+            background-color: #3498db;
+            color: white;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 0.5rem;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #229954;
+        }
+
+        .info {
+            background-color: #e8f8f5;
+            border-left: 4px solid #1abc9c;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lesson 10a: DOM Manipulation Tasks</h1>
+
+        <!-- Task 1: Change Text Content -->
+        <div class="task-section">
+            <h2>Task 1: Change Text Content</h2>
+            <div class="info">
+                <p id="originalText">This is the original text.</p>
+            </div>
+            <!-- TODO: Add a button here with id="changeTextBtn" -->
+            <!-- TODO: In your JavaScript, make this button change the text above to "The text has been changed!" -->
+        </div>
+
+        <!-- Task 2: Change Element Color -->
+        <div class="task-section">
+            <h2>Task 2: Change Element Colors</h2>
+            <div id="colorBox" class="box">
+                Click the button to change my color!
+            </div>
+            <!-- TODO: Add a button with id="changeColorBtn" -->
+            <!-- TODO: Make the button change the colorBox to a different background color (try #e74c3c for red) -->
+        </div>
+
+        <!-- Task 3: Hide and Show Elements -->
+        <div class="task-section">
+            <h2>Task 3: Hide and Show Elements</h2>
+            <div id="secretMessage" class="info">
+                <p>This is a secret message that can be hidden!</p>
+            </div>
+            <!-- TODO: Add two buttons: "Hide Message" and "Show Message" -->
+            <!-- TODO: hideBtn should hide the secretMessage -->
+            <!-- TODO: showBtn should show the secretMessage -->
+        </div>
+
+        <!-- Task 4: Add Multiple Properties -->
+        <div class="task-section">
+            <h2>Task 4: Change Multiple Styles</h2>
+            <div id="styleBox" class="box" style="background-color: #9b59b6;">
+                Change my size and color!
+            </div>
+            <!-- TODO: Add a button with id="styleBtn" -->
+            <!-- TODO: Make it change the font size, text color, and add a border -->
+            <!-- Example: fontSize = '1.5rem', color = 'yellow', border = '3px solid white' -->
+        </div>
+
+        <!-- Task 5: Change HTML Content -->
+        <div class="task-section">
+            <h2>Task 5: Change HTML Content</h2>
+            <div id="htmlContent">
+                <p>This is plain text.</p>
+            </div>
+            <!-- TODO: Add a button with id="changeHtmlBtn" -->
+            <!-- TODO: Change the HTML content to include <strong>bold text</strong> and <em>italic text</em> -->
+            <!-- Hint: Use innerHTML instead of textContent -->
+        </div>
+    </div>
+
+    <script>
+        // TODO: Write JavaScript to complete all 5 tasks above
+        // Reference the Lesson 10 slides and walkthrough for examples
+
+        // TASK 1: Select the button and add a click listener
+        // When clicked, change the text of #originalText
+
+
+        // TASK 2: Select the button and colorBox
+        // When button is clicked, change colorBox background color
+
+
+        // TASK 3: Select the hide and show buttons
+        // hideBtn should hide the secretMessage (display: 'none')
+        // showBtn should show the secretMessage (display: 'block')
+
+
+        // TASK 4: Select the style button and styleBox
+        // When clicked, change fontSize, color, and border
+
+
+        // TASK 5: Select the button and htmlContent div
+        // When clicked, use innerHTML to change the content
+    </script>
+</body>
+</html>

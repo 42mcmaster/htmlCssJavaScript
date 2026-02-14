@@ -1,0 +1,223 @@
+================================================================================
+LESSON 10: JS DOM & INTERACTIVITY - QUICK START GUIDE
+Medina County Career Center - CTE Web Design
+================================================================================
+
+WHAT'S IN THIS FOLDER:
+- 21 complete files for teaching DOM manipulation and events
+- All files are ready to use (no placeholders)
+- Includes lesson plans, tasks, solutions, and assessments
+
+================================================================================
+LESSON STRUCTURE (Total Time: ~2 hours instruction + assessments)
+================================================================================
+
+PHASE 1: INSTRUCTION (30 minutes)
+  1. Use html10_Slides.md to present concepts
+  2. Code along with html10_Walkthrough_Solutions.js
+  3. Have students follow with html10_Walkthrough.md
+
+PHASE 2: GUIDED PRACTICE (60 minutes)
+  1. Students complete html10a_Task.html (DOM manipulation)
+     - Check solutions: html10a_Task_Solutions.html/js
+  2. Students complete html10b_Task.html (events & validation)
+     - Check solutions: html10b_Task_Solutions.html/js/css
+
+PHASE 3: INDEPENDENT PROJECT (1-2 hours)
+  1. Students build html10_DIYTask.md requirements
+  2. Example solution: html10_DIYTask_Solutions.html/js/css
+  3. Grading rubric included in DIYTask.md
+
+PHASE 4: ASSESSMENT
+  - Formative: html10_Gimkit.csv (27 questions)
+  - Summative: Unit3_EndOfUnit_GoogleQuiz.csv (40 questions)
+
+================================================================================
+FILE OVERVIEW
+================================================================================
+
+INSTRUCTION MATERIALS:
+  • html10_Slides.md ......................... 10-slide MARP presentation
+  • html10_StudyGuide.md ..................... 22 vocab terms + cheat sheet
+  • html10_Walkthrough.md .................... Guided walkthrough with blanks
+
+WALKTHROUGH SOLUTIONS:
+  • html10_Walkthrough_Solutions.html ....... Complete page (6.8 KB)
+  • html10_Walkthrough_Solutions.css ........ Styling (2.6 KB)
+  • html10_Walkthrough_Solutions.js ......... Full implementation (4.2 KB)
+
+10A TASKS (DOM Manipulation):
+  • html10a_Task.html ....................... 5 tasks with TODO comments
+  • html10a_Task_Solutions.html ............ Complete solution
+  • html10a_Task_Solutions.js .............. JavaScript with comments
+
+10B TASKS (Events & Validation):
+  • html10b_Task.html ....................... Form validation tasks
+  • html10b_Task_Solutions.html ............ Complete form
+  • html10b_Task_Solutions.css ............ Form styling
+  • html10b_Task_Solutions.js .............. Validation logic
+
+DIY PROJECT:
+  • html10_DIYTask.md ....................... Project requirements (rubric)
+  • html10_DIYTask_Solutions.html ......... Example solution (FAQ + form)
+  • html10_DIYTask_Solutions.css ......... Professional styling
+  • html10_DIYTask_Solutions.js .......... Advanced features
+
+ASSESSMENTS:
+  • html10_Gimkit.csv ....................... 27 questions (Gimkit format)
+  • html10_GoogleQuiz.csv ................... 27 questions (Google Quiz)
+  • Unit3_EndOfUnit_GoogleQuiz.csv ......... 40 questions (Unit 3 cumulative)
+
+REFERENCE:
+  • README.md ............................... Full documentation
+  • QUICK_START.txt ......................... This file
+
+================================================================================
+KEY CONCEPTS COVERED
+================================================================================
+
+DOM MANIPULATION (10a):
+  ✓ Selecting elements (getElementById, querySelector, querySelectorAll)
+  ✓ Changing content (textContent, innerHTML)
+  ✓ Changing styles (style.property, camelCase)
+  ✓ Visibility (display: none/block)
+
+EVENTS & VALIDATION (10b):
+  ✓ Event listeners (addEventListener)
+  ✓ Event types (click, mouseover, mouseout, submit)
+  ✓ Form validation (empty fields, email format)
+  ✓ Error messages (show/hide with classList)
+  ✓ Hover effects (JavaScript alternative to CSS)
+
+INTERACTIVE PROJECTS:
+  ✓ FAQ Accordion (click to expand/collapse)
+  ✓ Contact Form with validation
+  ✓ Real-time feedback
+  ✓ Navigation hover effects
+
+================================================================================
+HOW TO USE EACH FILE TYPE
+================================================================================
+
+.md FILES (Markdown):
+  - Open in any text editor or Markdown viewer
+  - Use MARP for slides (Chrome extension or CLI)
+  - Print or display for class reference
+
+.html FILES:
+  - Open directly in web browser
+  - No server required
+  - All assets (CSS/JS) are linked
+
+.js FILES:
+  - Paired with HTML files (external scripts)
+  - Heavily commented for learning
+  - Can be used standalone for code review
+
+.csv FILES:
+  - Import into Gimkit or Google Quiz
+  - 27 questions per lesson quiz
+  - 40 questions for end-of-unit assessment
+
+================================================================================
+TIPS FOR INSTRUCTORS
+================================================================================
+
+BEFORE TEACHING:
+  1. Open each solution file in browser (test for errors)
+  2. Read through JavaScript comments
+  3. Familiarize yourself with the code flow
+  4. Plan your pacing (instruction time varies by class)
+
+DURING TEACHING:
+  1. Use slides (html10_Slides.md) with projector
+  2. Live code along with html10_Walkthrough_Solutions.js
+  3. Have backup solutions ready (copy files to temp folder)
+  4. Encourage students to read comments in code
+  5. Use browser console (F12) for debugging demos
+
+FOR STRUGGLING STUDENTS:
+  1. Provide html10_StudyGuide.md as reference
+  2. Have them trace through solutions line-by-line
+  3. Ask them to explain what each line does
+  4. Use simpler examples before DIY project
+
+FOR ADVANCED STUDENTS:
+  1. Challenge stretch goals in DIYTask.md
+  2. Have them modify solutions (different colors, more questions, etc.)
+  3. Encourage them to add features (localStorage, animations)
+  4. Ask them to teach concepts to peers
+
+ASSESSMENT STRATEGY:
+  - Gimkit quiz: formative (during/after instruction)
+  - Google Quiz: formative (review before assessment)
+  - End-of-Unit Quiz: summative (after lesson 10)
+  - DIY project: performance assessment
+
+================================================================================
+COMMON STUDENT MISTAKES
+================================================================================
+
+Covered in html10_StudyGuide.md:
+  • Forgetting quotes around selectors
+  • Using = instead of ===
+  • Confusing innerHTML and textContent
+  • Not using event.preventDefault()
+  • Trying to access elements before page loads
+
+Solutions are all commented to prevent these!
+
+================================================================================
+STANDARDS ALIGNMENT
+================================================================================
+
+ODE COMPETENCIES:
+  • 6.2.7 - Hover and mouseover effects
+  • 6.4.7 - Scripting to interact with data/forms
+  • 6.3.1 - Scripting languages
+
+This is the LAST lesson in Unit 3 - celebrate completion!
+
+================================================================================
+TECHNICAL NOTES
+================================================================================
+
+Browser Requirements:
+  - Modern browser (Chrome, Firefox, Edge, Safari)
+  - ES6 JavaScript support
+  - No frameworks or libraries (vanilla JS only)
+  - Responsive design (works on mobile too)
+
+Code Quality:
+  - All code has inline comments
+  - Valid HTML5, CSS3, and ES6+ JavaScript
+  - No console errors
+  - Accessibility considered (labels, focus states)
+  - Professional color scheme and styling
+
+Compatibility:
+  - Works offline (no CDN dependencies)
+  - No file uploads needed
+  - All assets self-contained
+  - Cross-browser compatible
+
+================================================================================
+QUESTIONS OR ISSUES?
+================================================================================
+
+If files don't work:
+  1. Check browser console for errors (F12)
+  2. Verify all HTML/CSS/JS files are in same folder
+  3. Try different browser
+  4. Check file paths in HTML (should be relative: 'file.css')
+
+Need to modify:
+  - All files are plain text - edit with any text editor
+  - Comments explain what each line does
+  - CSS color scheme can be changed easily
+  - JavaScript logic can be extended
+
+================================================================================
+Created for Medina County Career Center CTE Web Design Program
+Last Updated: February 2024
+================================================================================

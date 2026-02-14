@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- PROBLEM 1: Missing title tag (or too generic) -->
+    <!-- <title>Page</title> -->
+    <title></title>
+
+    <!-- PROBLEM 2: No meta description -->
+    <!-- Search engines won't show a snippet in results -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* PROBLEM: No focus styles for accessibility */
+        button:focus, a:focus {
+            /* Missing outline! Screen reader users won't see focus */
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            cursor: pointer;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero {
+            background-color: #f4f4f4;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- PROBLEM 3: Using divs instead of semantic <header> tag -->
+    <div class="header">
+        <!-- PROBLEM 4: H1 is vague, no keyword -->
+        <h1>Restaurant</h1>
+        <p>We have food</p>
+    </div>
+
+    <!-- PROBLEM 5: Using div instead of semantic <nav> tag -->
+    <div class="nav">
+        <a>Home</a>
+        <a>Menu</a>
+        <a>Contact</a>
+        <a>About</a>
+    </div>
+
+    <!-- PROBLEM 6: Using div instead of semantic <main> tag -->
+    <div class="content">
+        <!-- PROBLEM 7: Another div instead of <hero> or similar -->
+        <div class="hero">
+            <h1>Welcome</h1>
+            <p>Come eat at our restaurant. We serve food. It's good.</p>
+        </div>
+
+        <!-- PROBLEM 8: Heading hierarchy is broken (no h2s, jumping from h1 to paragraphs) -->
+        <div class="section">
+            <!-- PROBLEM 9: Missing image alt text completely! -->
+            <img src="food.jpg">
+            <h1>Food</h1>
+            <p>We serve delicious food every day. Our chefs are trained professionals. We use fresh ingredients from local suppliers. Our restaurant has been in business for many years.</p>
+        </div>
+
+        <div class="section">
+            <!-- PROBLEM 10: Another missing alt text -->
+            <img src="ambiance.jpg">
+            <h1>Ambiance</h1>
+            <p>Our restaurant has a nice atmosphere. It's a great place to eat with family and friends. The lighting is soft and the music is relaxing. Many customers enjoy coming here.</p>
+        </div>
+
+        <div class="section">
+            <!-- PROBLEM 11: Still no alt text -->
+            <img src="chef.jpg">
+            <h1>Our Chef</h1>
+            <p>Our head chef has 20 years of experience in the restaurant industry. He trained in Italy and France. He is passionate about cooking good food. Our menu reflects his expertise.</p>
+        </div>
+
+        <!-- PROBLEM 12: Contact form with labels not connected to inputs -->
+        <div class="section">
+            <h2>Contact Us</h2>
+            <!-- PROBLEM 13: Label not connected to input (no for/id) -->
+            <label>Name:</label>
+            <input type="text" placeholder="Your name">
+
+            <label>Email:</label>
+            <input type="email" placeholder="Your email">
+
+            <!-- PROBLEM 14: Button that's not a real <button> tag, missing aria-label -->
+            <div onclick="alert('Message sent!');" style="background: blue; color: white; padding: 10px; cursor: pointer; margin-top: 10px;">
+                Send Message
+            </div>
+        </div>
+    </div>
+
+    <!-- PROBLEM 15: Using div instead of semantic <footer> tag -->
+    <div class="footer">
+        <p>Copyright 2024 Restaurant</p>
+    </div>
+</body>
+</html>

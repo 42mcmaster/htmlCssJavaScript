@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tech Gadget Store</title>
+    <meta name="description" content="Buy the latest tech gadgets and electronics online">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            /* PROBLEM 1: Light gray text on white = poor color contrast, hard to read */
+            color: #999;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin-bottom: 10px;
+        }
+
+        /* PROBLEM 2: No focus outline for buttons - keyboard users can't see where they are */
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .search-box {
+            margin-bottom: 20px;
+        }
+
+        .search-box input {
+            padding: 8px;
+            width: 300px;
+            border: 1px solid #ddd;
+            /* PROBLEM 3: No focus outline for input */
+        }
+
+        .menu {
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* PROBLEM 4: Using divs as buttons instead of real <button> or <a> tags */
+        .menu div {
+            display: inline-block;
+            padding: 10px 15px;
+            margin-right: 10px;
+            cursor: pointer;
+            color: #007bff;
+        }
+
+        .menu div:hover {
+            text-decoration: underline;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+        }
+
+        .product-card img {
+            width: 100%;
+            max-width: 200px;
+            height: 200px;
+            margin-bottom: 10px;
+        }
+
+        .product-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            /* PROBLEM 5: Very light gray text on white - poor contrast */
+            color: #aaa;
+        }
+
+        .product-price {
+            font-size: 1.2em;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        /* PROBLEM 6: Using divs with onclick instead of real buttons */
+        .add-to-cart-btn {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #218838;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* PROBLEM 7: Social media icons with no labels or aria-labels */
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons span {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            background-color: white;
+            color: #333;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        }
+
+        .contact-form {
+            margin-top: 20px;
+        }
+
+        /* PROBLEM 8: Form labels not connected to inputs */
+        .contact-form label {
+            display: block;
+            margin-top: 10px;
+            /* PROBLEM 9: Another light text color on white background */
+            color: #888;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            font-family: Arial, sans-serif;
+        }
+
+        /* PROBLEM 10: No focus outline on form inputs */
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            /* Empty - no focus style! */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Tech Gadget Store</h1>
+        <p>Latest electronics and gadgets</p>
+    </div>
+
+    <div class="search-box">
+        <!-- PROBLEM 11: Search input with no connected label or placeholder -->
+        <input type="text">
+        <button>Search</button>
+    </div>
+
+    <!-- PROBLEM 12: Navigation using divs with onclick instead of real links or buttons -->
+    <div class="menu">
+        <div onclick="goToPage('phones')">Phones</div>
+        <div onclick="goToPage('laptops')">Laptops</div>
+        <div onclick="goToPage('tablets')">Tablets</div>
+        <div onclick="goToPage('accessories')">Accessories</div>
+    </div>
+
+    <div class="product-grid">
+        <!-- PROBLEM 13: Images with no alt text -->
+        <div class="product-card">
+            <img src="phone1.jpg">
+            <div class="product-name">Smartphone Pro Max</div>
+            <div class="product-price">$999</div>
+            <!-- PROBLEM 14: Using div with onclick instead of <button> -->
+            <div class="add-to-cart-btn" onclick="addToCart('phone1')">Add to Cart</div>
+        </div>
+
+        <div class="product-card">
+            <!-- PROBLEM 15: Image without alt text -->
+            <img src="laptop.jpg">
+            <div class="product-name">UltraBook 15</div>
+            <div class="product-price">$1,299</div>
+            <div class="add-to-cart-btn" onclick="addToCart('laptop1')">Add to Cart</div>
+        </div>
+
+        <div class="product-card">
+            <!-- PROBLEM 16: Image without alt text -->
+            <img src="tablet.jpg">
+            <div class="product-name">Tablet Plus</div>
+            <div class="product-price">$599</div>
+            <div class="add-to-cart-btn" onclick="addToCart('tablet1')">Add to Cart</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2>Contact Us</h2>
+
+        <!-- PROBLEM 17: Form labels not connected to inputs (no for/id) -->
+        <div class="contact-form">
+            <label>Name:</label>
+            <input type="text" placeholder="Your name">
+
+            <label>Email:</label>
+            <input type="email" placeholder="Your email">
+
+            <label>Message:</label>
+            <textarea placeholder="Your message"></textarea>
+
+            <!-- PROBLEM 18: Using div with onclick instead of <button> -->
+            <div style="background-color: #007bff; color: white; padding: 10px; margin-top: 10px; cursor: pointer;" onclick="submitForm()">
+                Submit
+            </div>
+        </div>
+
+        <!-- PROBLEM 19: Social media icons with no accessible labels -->
+        <div class="social-icons">
+            <!-- PROBLEM 20: Icon spans with no aria-label or text -->
+            <span onclick="goToSocial('facebook')">f</span>
+            <span onclick="goToSocial('twitter')">𝕏</span>
+            <span onclick="goToSocial('instagram')">📷</span>
+            <span onclick="goToSocial('linkedin')">in</span>
+        </div>
+
+        <p>&copy; 2024 Tech Gadget Store. All rights reserved.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Layout - Navigation & Cards</title>
+  <link rel="stylesheet" href="html07a_Task_Solutions.css">
+</head>
+<body>
+  <!-- TODO: Add flexbox navigation bar with logo and nav links -->
+  <nav class="navbar">
+    <div class="logo">MyWebsite</div>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <h1>Our Services</h1>
+
+    <!-- TODO: Create a card layout using flexbox
+         - Cards should be in a row on desktop
+         - Each card should have equal width
+         - Cards should have padding, shadow, and rounded corners
+         - Add gap between cards
+    -->
+    <div class="card-container">
+      <div class="card">
+        <h2>Web Design</h2>
+        <p>Beautiful, responsive websites that look great on all devices. Our design team creates modern, user-friendly interfaces.</p>
+        <button>Learn More</button>
+      </div>
+
+      <div class="card">
+        <h2>Development</h2>
+        <p>Clean, efficient code built with the latest technologies. We develop fast, secure applications that scale with your business.</p>
+        <button>Learn More</button>
+      </div>
+
+      <div class="card">
+        <h2>Consulting</h2>
+        <p>Expert guidance for your web projects. Our consultants help you plan, design, and launch successful digital solutions.</p>
+        <button>Learn More</button>
+      </div>
+    </div>
+
+    <!-- TODO: Create a testimonials section using flexbox
+         - Display customer testimonials in a row (or wrap)
+         - Each testimonial should have a quote, author name, and rating
+         - Use flexbox to align star ratings
+    -->
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p class="quote">"This team delivered exactly what we needed. Professional, creative, and on time!"</p>
+        <p class="author">- Sarah Johnson</p>
+        <div class="stars">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <p class="quote">"Great communication throughout the project. They really understood our vision."</p>
+        <p class="author">- Michael Chen</p>
+        <div class="stars">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <p class="quote">"Outstanding results! Our business has grown since launching the new website."</p>
+        <p class="author">- Emma Davis</p>
+        <div class="stars">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TODO: Create a footer with flexbox
+         - Footer should have multiple sections (about, links, contact)
+         - Sections should be distributed with space-between
+         - Footer text should be centered in each section
+    -->
+    <footer class="footer">
+      <div class="footer-section">
+        <h3>Company</h3>
+        <p>We create beautiful, functional websites for businesses of all sizes.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Email: info@example.com</p>
+        <p>Phone: (555) 123-4567</p>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

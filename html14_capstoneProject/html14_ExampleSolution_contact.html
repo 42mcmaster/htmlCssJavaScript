@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Mountain View Coffee Co.</title>
+    <meta name="description"
+        content="Contact Mountain View Coffee Co. for events, feedback, or to get in touch. We're located in Anytown, Ohio.">
+    <meta property="og:title" content="Contact | Mountain View Coffee Co.">
+    <link rel="stylesheet" href="html14_ExampleSolution_styles.css">
+</head>
+
+<body>
+    <!-- Header: consistent across all pages -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Mountain View Coffee Co.</h1>
+            </div>
+            <nav class="main-nav">
+                <button class="hamburger-menu" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="html14_ExampleSolution_index.html">Home</a></li>
+                    <li><a href="html14_ExampleSolution_about.html">About</a></li>
+                    <li><a href="html14_ExampleSolution_menu.html">Menu</a></li>
+                    <li><a href="html14_ExampleSolution_contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page header -->
+        <section class="page-header">
+            <h1>Get in Touch</h1>
+            <p>We'd love to hear from you</p>
+        </section>
+
+        <!-- Contact information section -->
+        <section class="contact-info-section">
+            <div class="contact-info-grid">
+                <!-- Address -->
+                <article class="contact-info-card">
+                    <h3>Visit Us</h3>
+                    <p>
+                        123 Main Street<br>
+                        Anytown, Ohio 44146<br>
+                        <strong>USA</strong>
+                    </p>
+                </article>
+
+                <!-- Phone -->
+                <article class="contact-info-card">
+                    <h3>Call Us</h3>
+                    <p>
+                        <strong>Phone:</strong> (330) 555-0123<br>
+                        <strong>Email:</strong> <a href="mailto:hello@mountainviewcoffee.com">hello@mountainviewcoffee.com</a>
+                    </p>
+                </article>
+
+                <!-- Hours -->
+                <article class="contact-info-card">
+                    <h3>Hours</h3>
+                    <p>
+                        <strong>Monday - Friday:</strong> 6am - 6pm<br>
+                        <strong>Saturday:</strong> 7am - 7pm<br>
+                        <strong>Sunday:</strong> 8am - 5pm
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact form section: THE REQUIRED FORM for the capstone project -->
+        <section class="contact-form-section">
+            <h2>Send Us a Message</h2>
+            <p>Whether you have feedback, want to host an event, or just want to say hi, we'd love to hear from you!</p>
+
+            <!-- Contact form with validation via JavaScript -->
+            <form id="contactForm" class="contact-form" novalidate>
+                <!-- Success/error message display area -->
+                <div id="formMessage" class="form-message"></div>
+
+                <!-- Name field -->
+                <div class="form-group">
+                    <label for="name">Your Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                <!-- Email field -->
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <!-- Phone field -->
+                <div class="form-group">
+                    <label for="phone">Phone Number (optional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(330) 555-0123">
+                    <span class="error-message" id="phoneError"></span>
+                </div>
+
+                <!-- Subject dropdown -->
+                <div class="form-group">
+                    <label for="subject">Reason for Contact <span class="required">*</span></label>
+                    <select id="subject" name="subject" required>
+                        <option value="">-- Select a reason --</option>
+                        <option value="feedback">Feedback about our coffee</option>
+                        <option value="event">Host an event at our cafe</option>
+                        <option value="wholesale">Wholesale/partnership inquiry</option>
+                        <option value="employment">Employment opportunity</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span class="error-message" id="subjectError"></span>
+                </div>
+
+                <!-- Message textarea -->
+                <div class="form-group">
+                    <label for="message">Message <span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="6" placeholder="Tell us what you're thinking..."
+                        required></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+
+                <!-- Newsletter checkbox -->
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Subscribe to our newsletter for updates and specials</label>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Other ways to connect section -->
+        <section class="connect-section">
+            <h2>Other Ways to Connect</h2>
+            <div class="connect-grid">
+                <article class="connect-card">
+                    <h3>Follow Us on Social Media</h3>
+                    <p>Stay updated with our latest specials, events, and coffee tips!</p>
+                    <p>
+                        <a href="#facebook" class="social-link">Facebook</a> •
+                        <a href="#instagram" class="social-link">Instagram</a> •
+                        <a href="#twitter" class="social-link">Twitter</a>
+                    </p>
+                </article>
+
+                <article class="connect-card">
+                    <h3>Visit Us In Person</h3>
+                    <p>The best way to experience Mountain View Coffee is to stop by. We'd love to see you!</p>
+                    <p><a href="html14_ExampleSolution_index.html" class="inline-link">See what's happening today</a></p>
+                </article>
+
+                <article class="connect-card">
+                    <h3>Email Us Directly</h3>
+                    <p>For urgent matters or specific inquiries, email us at hello@mountainviewcoffee.com</p>
+                    <p>We typically respond within 24 hours.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Map or directions section -->
+        <section class="directions-section">
+            <h2>Find Us</h2>
+            <p>We're located in the heart of downtown Anytown, just off Main Street. Easy parking available behind
+                the building.</p>
+            <!-- In a real website, you might embed a Google Map here -->
+            <img src="https://picsum.photos/800/400?random=14" alt="Map of downtown Anytown showing Mountain View Coffee location on Main Street"
+                class="map-image">
+        </section>
+    </main>
+
+    <!-- Footer: consistent across all pages -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Mountain View Coffee Co.</h3>
+                <p>123 Main Street<br>
+                    Anytown, Ohio 44146<br>
+                    Phone: (330) 555-0123</p>
+            </div>
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <p>Monday - Friday: 6am - 6pm<br>
+                    Saturday: 7am - 7pm<br>
+                    Sunday: 8am - 5pm</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <p>
+                    <a href="#facebook">Facebook</a> |
+                    <a href="#instagram">Instagram</a> |
+                    <a href="#twitter">Twitter</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mountain View Coffee Co. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Link to external JavaScript file for form validation -->
+    <script src="html14_ExampleSolution_script.js"></script>
+</body>
+
+</html>

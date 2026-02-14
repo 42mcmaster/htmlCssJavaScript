@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Styling Task</title>
+  <style>
+    /* TODO: Style the page body
+       - Set max-width to 600px
+       - Center the form with margin: auto
+       - Set padding to 20px
+       - Set background-color to #f5f5f5
+    */
+    /* YOUR CODE HERE */
+
+    /* TODO: Style the h1 heading
+       - Set color to #333
+       - Set text-align to center
+    */
+    /* YOUR CODE HERE */
+
+    /* TODO: Style the form
+       - Set background-color to white
+       - Set padding to 25px
+       - Set border-radius to 8px
+       - Add a box-shadow: 0 2px 8px rgba(0,0,0,0.1)
+    */
+    /* YOUR CODE HERE */
+
+    /* TODO: Style fieldset elements
+       - Set border to 1px solid #ddd
+       - Set padding to 15px
+       - Set margin to 15px 0
+       - Set background-color to #fafafa
+       - Set border-radius to 5px
+    */
+    /* YOUR CODE HERE */
+
+    /* TODO: Style legend elements
+       - Set font-weight to bold
+       - Set font-size to 1.05em
+       - Set color to #333
+    */
+    /* YOUR CODE HERE */
+
+    /* TODO: Style all labels
+       - Set display to block
+       - Set margin-top to 10px
+       - Set margin-bottom to 5px
+       - Set font-weight to bold
+       - Set color to #333
+    */
+    /* YOUR CODE HERE */
+
+    /* TODO: Style text inputs, email inputs, textarea, and select
+       - Set width to 100%
+       - Set padding to 10px
+       - Set margin-bottom to 15px
+       - Set border to 1px solid #ccc
+       - Set border-radius to 4px
+       - Set font-size to 16px
+       - Add box-sizing: border-box
+    */
+    /* YOUR CODE HERE */
+
+    /* TODO: Style the :focus state for inputs
+       - Remove outline with outline: none
+       - Change border-color to #007bff
+       - Add box-shadow: 0 0 5px rgba(0, 123, 255, 0.3)
+    */
+    /* YOUR CODE HERE */
+
+    /* TODO: Style buttons
+       - Set padding to 12px 20px
+       - Set background-color to #007bff
+       - Set color to white
+       - Remove border with border: none
+       - Set border-radius to 4px
+       - Set font-size to 16px
+       - Set font-weight to bold
+       - Set cursor to pointer
+       - Add transition: background-color 0.3s ease
+    */
+    /* YOUR CODE HERE */
+
+    /* TODO: Style button:hover state
+       - Change background-color to #0056b3
+    */
+    /* YOUR CODE HERE */
+
+    /* TODO: Style the button-group div
+       - Set text-align to center
+       - Set margin-top to 20px
+    */
+    /* YOUR CODE HERE */
+  </style>
+</head>
+<body>
+  <h1>Event Registration Form</h1>
+
+  <form action="/register-event" method="POST">
+
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <label for="firstName">First Name:</label>
+      <input id="firstName" name="firstName" type="text" placeholder="John" required>
+
+      <label for="lastName">Last Name:</label>
+      <input id="lastName" name="lastName" type="text" placeholder="Smith" required>
+
+      <label for="email">Email:</label>
+      <input id="email" name="email" type="email" placeholder="john@example.com" required>
+
+      <label for="phone">Phone:</label>
+      <input id="phone" name="phone" type="tel" placeholder="(555) 123-4567">
+    </fieldset>
+
+    <fieldset>
+      <legend>Event Details</legend>
+
+      <label for="eventDate">Preferred Date:</label>
+      <input id="eventDate" name="eventDate" type="date" required>
+
+      <label for="eventType">Event Type:</label>
+      <select id="eventType" name="eventType">
+        <option value="">-- Select --</option>
+        <option value="workshop">Workshop</option>
+        <option value="conference">Conference</option>
+        <option value="webinar">Webinar</option>
+        <option value="meetup">Meetup</option>
+      </select>
+
+      <label for="comments">Additional Comments:</label>
+      <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Tell us about yourself..."></textarea>
+    </fieldset>
+
+    <div class="button-group">
+      <button type="submit">Register</button>
+      <button type="reset">Clear</button>
+    </div>
+
+  </form>
+
+</body>
+</html>
