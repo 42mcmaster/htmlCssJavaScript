@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- TODO 1: Fix the title tag. Currently says "My Page" but this is a bakery website.
+       Change it to: "Fresh Sourdough Bread & Pastries | Sarah's Bakery"
+       This appears in search results and browser tab. (50-60 characters) -->
+  <title>My Page</title>
+
+  <!-- TODO 2: Add a meta description tag.
+       Write something like: "Fresh baked sourdough bread, croissants, and pastries made daily.
+       Free delivery on orders over $25. Visit our café in downtown."
+       This appears below the title in search results. (150-160 characters)
+       Hint: Use <meta name="description" content="..."> -->
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Georgia, serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #8B4513;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: #A0522D;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+    }
+
+    nav a:hover {
+      background: #8B4513;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      border: 1px solid #DDD;
+      padding: 20px;
+      margin: 20px 0;
+      background: #FFF5E1;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .icon-button {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    /* TODO 10: Fix focus styles. Currently there's no visible focus indicator when
+       keyboard users tab through buttons. Add CSS below to make focused elements have
+       a visible outline. Hint: Add styles for button:focus or *:focus
+       Example: outline: 2px solid #FF6B35; */
+
+    .form-group {
+      margin: 20px 0;
+    }
+
+    .form-group input {
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    footer {
+      background: #8B4513;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    /* TODO 9: Fix color contrast. Light tan text on light background is hard to read.
+       Change the form-group input text color to something darker (like #333 or #000).
+       Test contrast ratio should be 4.5:1 minimum.
+       Hint: Add "color: #333;" to the input styling above. */
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- TODO 3: Fix heading hierarchy. Currently: h1, then h3 (skipped h2!).
+         This confuses screen readers. Change the second heading to <h2>.
+         Rule: h1 → h2 → h3 (don't skip levels) -->
+    <h1>Sarah's Bakery</h1>
+    <h3>Handmade Sourdough & Fresh Pastries Since 2015</h3>
+  </header>
+
+  <nav>
+    <a href="/">Home</a>
+    <a href="/menu">Menu</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </nav>
+
+  <main>
+
+    <h2>Our Specialties</h2>
+
+    <section class="product-card">
+      <!-- TODO 4: Add alt text to this image. Currently has no alt attribute.
+           Write descriptive alt text that says what's in the image.
+           Hint: <img src="..." alt="Your description here"> -->
+      <img src="sourdough.jpg">
+      <h3>Classic Sourdough</h3>
+      <p>Our signature loaf with a crispy crust and tangy flavor. Baked fresh daily using traditional fermentation.</p>
+      <p>Price: $8.99</p>
+    </section>
+
+    <section class="product-card">
+      <img src="croissants.jpg" alt="">
+      <!-- TODO 4 (continued): The croissants image has alt="" which tells screen readers
+           it's decorative. That's wrong—croissants are the product! Change it to
+           descriptive alt text like: "Golden butter croissants with flaky layers" -->
+      <h3>Butter Croissants</h3>
+      <p>Authentic French croissants made with imported butter. Light, flaky, and irresistible.</p>
+      <p>Price: $4.50</p>
+    </section>
+
+    <section class="product-card">
+      <img src="chocolate-cake.jpg">
+      <h3>Chocolate Cake</h3>
+      <p>Rich, moist chocolate cake with homemade frosting. Perfect for celebrations or a sweet treat.</p>
+      <p>Price: $24.99 (serves 8)</p>
+    </section>
+
+    <h2>Why Choose Us?</h2>
+
+    <ul>
+      <li>Organic flour sourced from local farmers</li>
+      <li>No preservatives or additives</li>
+      <li>Baked fresh every morning</li>
+      <li>Free delivery on orders over $25</li>
+      <li>Gluten-free options available</li>
+    </ul>
+
+    <h2>Order Now</h2>
+
+    <!-- TODO 6: Fix the "click here" link. Currently says "click here to place an order"
+         which isn't descriptive. Screen readers will only hear "click here".
+         Change the link text to something like "Order online now" or "Place your order online".
+         Make it describe where the link goes. -->
+    <p><a href="/order">Click here to place an order</a></p>
+
+    <h2>Contact Us</h2>
+
+    <!-- TODO 5: Fix this div-as-button. It's currently a <div> with onclick handler,
+         but it should be a real <button> element. Screen readers won't recognize it
+         as a button, and keyboard users can't activate it.
+         Change: <div onclick="..."> to <button onclick="..."> and </div> to </button>
+         Also remove the style="cursor: pointer" since buttons are cursor:pointer by default. -->
+    <div onclick="alert('Message sent!')" style="background: #8B4513; color: white; padding: 10px 20px; margin: 10px 0; cursor: pointer; display: inline-block; border-radius: 4px;">
+      Send Us a Message
+    </div>
+
+    <form>
+      <!-- TODO 8: Fix this form input. Currently the label and input are NOT connected.
+           Screen readers won't know what the input is for.
+           The label needs a "for" attribute, and the input needs an "id".
+           Change:
+           <label>Your Name:</label>
+           <input type="text">
+           To:
+           <label for="name">Your Name:</label>
+           <input type="text" id="name">
+           Do this for both inputs below. -->
+      <div class="form-group">
+        <label>Your Name:</label>
+        <input type="text">
+      </div>
+
+      <div class="form-group">
+        <label>Your Email:</label>
+        <input type="email">
+      </div>
+
+      <div class="form-group">
+        <!-- TODO 7: Add aria-label to this icon button. Currently has no accessible name.
+             The button shows "☎" but screen readers don't know what it does.
+             Add: aria-label="Call us"
+             Hint: <button aria-label="Call us">☎</button> -->
+        <button class="icon-button">☎</button>
+        <button class="icon-button">✉</button>
+        <button class="icon-button">📍</button>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Sarah's Bakery. All rights reserved.</p>
+    <p>123 Main St, Downtown | Open Daily 7am-7pm</p>
+  </footer>
+
+  <script>
+    // TODO items that need fixing are marked in the HTML above.
+    // Complete each TODO in order. Estimated time: 35 minutes
+  </script>
+
+</body>
+</html>
+
+<!--
+TASK CHECKLIST (for students):
+
+✓ TODO 1: Fix title tag (5 min)
+✓ TODO 2: Add meta description (5 min)
+✓ TODO 3: Fix heading hierarchy (h3 → h2) (3 min)
+✓ TODO 4: Add alt text to images (7 min)
+✓ TODO 5: Fix div-as-button → real button (5 min)
+✓ TODO 6: Fix "click here" link text (3 min)
+✓ TODO 7: Add aria-label to icon button (5 min)
+✓ TODO 8: Fix form labels and input IDs (5 min)
+✓ TODO 9: Fix color contrast in CSS (3 min)
+✓ TODO 10: Add focus indicator CSS (4 min)
+
+TOTAL TIME: ~45 minutes (with buffer)
+
+AFTER COMPLETING:
+1. Open in Chrome and use DevTools to check:
+   - View Page Info → see your new title tag
+   - Check console for any errors
+2. Test keyboard navigation: Tab through the page
+3. Use WebAIM Contrast Checker: https://webaim.org/resources/contrastchecker/
+4. Deploy to GitHub Pages:
+   - git add .
+   - git commit -m "Fix SEO and accessibility"
+   - git push
+5. Share your live URL with the class!
+-->
