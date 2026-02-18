@@ -24,6 +24,8 @@ Bootstrap is a **front-end framework** that makes building responsive websites f
 - Mobile-first responsive design built in
 - CDN delivery (no installation needed)
 
+---
+
 ### Why Use Bootstrap?
 ✓ Save time on CSS
 ✓ Consistent design across browsers
