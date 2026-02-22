@@ -1,0 +1,653 @@
+Make,Model,Class,Engine_L,Cylinders,Drive,City_MPG,Hwy_MPG,Combined_MPG,Annual_Fuel_Cost,CO2_grams_per_mi
+Aston Martin Lagonda Ltd,Vanquish,Two Seaters,5.2,12,Rear-Wheel,13,21,16,3900,563
+Aston Martin Lagonda Ltd,Vanquish Volante,Two Seaters,5.2,12,Rear-Wheel,13,20,16,3900,568
+Aston Martin Lagonda Ltd,Vantage,Two Seaters,4.0,8,Rear-Wheel,15,22,18,3450,498
+BMW,Z4 M40i,Two Seaters,3.0,6,Rear-Wheel,23,29,25,2500,346
+BMW,Z4 M40i,Two Seaters,3.0,6,Rear-Wheel,19,26,22,2850,407
+BMW,Z4 sDrive30i,Two Seaters,2.0,4,Rear-Wheel,25,33,28,2200,312
+Chevrolet,CORVETTE,Two Seaters,6.2,8,Rear-Wheel,16,25,19,3300,474
+Chevrolet,CORVETTE E-RAY,Two Seaters,6.2,8,All-Wheel,16,24,19,3300,477
+Chevrolet,CORVETTE Z06,Two Seaters,5.5,8,Rear-Wheel,12,21,15,4150,597
+Chevrolet,CORVETTE Z06 CARBON AERO,Two Seaters,5.5,8,Rear-Wheel,12,19,14,4450,631
+Chevrolet,CORVETTE ZR1,Two Seaters,5.5,8,Rear-Wheel,12,18,14,4450,629
+Ferrari S.p.A.,12Cilindri,Two Seaters,6.5,12,Rear-Wheel,12,19,14,4450,619
+Ferrari S.p.A.,12Cilindri Spider,Two Seaters,6.5,12,Rear-Wheel,12,17,14,4450,633
+Lamborghini,Revuelto,Two Seaters,6.5,12,All-Wheel,10,17,12,4750,753
+Lamborghini,Temerario,Two Seaters,4.0,8,All-Wheel,14,19,16,3650,556
+Mercedes-Benz,AMG GT 55 4MATIC+ (coupe),Two Seaters,4.0,8,All-Wheel,14,20,16,3900,558
+Mercedes-Benz,AMG GT 63 4MATIC+ (coupe),Two Seaters,4.0,8,All-Wheel,14,20,16,3900,558
+Mercedes-Benz,AMG GT 63 PRO 4MATIC+ (coupe),Two Seaters,4.0,8,All-Wheel,14,20,16,3900,558
+NISSAN,Z,Two Seaters,3.0,6,Rear-Wheel,18,24,20,3100,435
+NISSAN,Z,Two Seaters,3.0,6,Rear-Wheel,19,28,22,2850,405
+NISSAN,Z NISMO,Two Seaters,3.0,6,Rear-Wheel,17,24,19,3300,469
+TOYOTA,Supra 2.0,Two Seaters,2.0,4,Rear-Wheel,25,31,27,2300,322
+TOYOTA,Supra 3.0,Two Seaters,3.0,6,Rear-Wheel,22,29,25,2500,349
+TOYOTA,Supra 3.0,Two Seaters,3.0,6,Rear-Wheel,19,26,21,2950,408
+Aston Martin Lagonda Ltd,DB12 V8,Minicompact Cars,4.0,8,Rear-Wheel,15,22,17,3650,507
+Ferrari S.p.A.,Roma Spider,Minicompact Cars,3.9,8,Rear-Wheel,17,22,19,3300,467
+LEXUS,LC 500 CONVERTIBLE,Minicompact Cars,5.0,8,Rear-Wheel,15,25,18,3450,489
+Mercedes-Benz,AMG SL 43,Minicompact Cars,2.0,4,Rear-Wheel,19,27,22,2850,400
+Mercedes-Benz,AMG SL 55 4MATIC+,Minicompact Cars,4.0,8,All-Wheel,14,21,16,3900,552
+Mercedes-Benz,AMG SL 63 4MATIC+,Minicompact Cars,4.0,8,All-Wheel,14,21,16,3900,552
+Mercedes-Benz,SL 680 Maybach,Minicompact Cars,4.0,8,All-Wheel,13,20,16,3900,558
+Mini,Cooper C Convertible,Minicompact Cars,2.0,4,Front-Wheel,27,37,30,2100,287
+Mini,Cooper S Convertible,Minicompact Cars,2.0,4,Front-Wheel,26,36,30,2100,292
+Mini,JCW Convertible,Minicompact Cars,2.0,4,Front-Wheel,26,35,30,2100,296
+Porsche,911 Carrera,Minicompact Cars,3.0,6,Rear-Wheel,18,25,21,2950,424
+Porsche,911 Carrera 4 GTS,Minicompact Cars,3.6,6,All-Wheel,17,23,19,3300,468
+Porsche,911 Carrera 4 GTS Cabriolet,Minicompact Cars,3.6,6,All-Wheel,17,23,19,3300,469
+Porsche,911 Carrera 4S,Minicompact Cars,3.0,6,All-Wheel,17,24,20,3100,453
+Porsche,911 Carrera 4S Cabriolet,Minicompact Cars,3.0,6,All-Wheel,17,24,20,3100,446
+Porsche,911 Carrera Cabriolet,Minicompact Cars,3.0,6,Rear-Wheel,18,25,21,2950,429
+Porsche,911 Carrera GTS,Minicompact Cars,3.6,6,Rear-Wheel,17,24,20,3100,453
+Porsche,911 Carrera GTS Cabriolet,Minicompact Cars,3.6,6,Rear-Wheel,17,23,19,3300,467
+Porsche,911 Carrera S,Minicompact Cars,3.0,6,Rear-Wheel,17,24,20,3100,445
+Porsche,911 Carrera S Cabriolet,Minicompact Cars,3.0,6,Rear-Wheel,17,24,20,3100,455
+Porsche,911 Carrera T,Minicompact Cars,3.0,6,Rear-Wheel,17,25,20,3100,448
+Porsche,911 Carrera T Cabriolet,Minicompact Cars,3.0,6,Rear-Wheel,17,25,19,3300,469
+Porsche,911 Targa 4 GTS,Minicompact Cars,3.6,6,All-Wheel,17,23,19,3300,467
+Porsche,911 Targa 4S,Minicompact Cars,3.0,6,All-Wheel,17,24,20,3100,447
+Subaru,BRZ,Minicompact Cars,2.4,4,Rear-Wheel,20,27,22,2850,399
+Subaru,BRZ,Minicompact Cars,2.4,4,Rear-Wheel,21,30,25,2500,362
+Audi,A3 quattro,Subcompact Cars,2.0,4,All-Wheel,24,34,28,2200,323
+Audi,RS 3,Subcompact Cars,2.5,5,All-Wheel,20,29,23,2700,387
+Audi,S3,Subcompact Cars,2.0,4,All-Wheel,23,31,26,2400,346
+BMW,230i Coupe,Subcompact Cars,2.0,4,Rear-Wheel,26,35,30,2100,296
+BMW,230i xDrive Coupe,Subcompact Cars,2.0,4,All-Wheel,25,33,28,2200,313
+BMW,430i Convertible,Subcompact Cars,2.0,4,Rear-Wheel,27,35,30,2100,295
+BMW,430i Coupe,Subcompact Cars,2.0,4,Rear-Wheel,28,36,31,2000,285
+BMW,430i xDrive Convertible,Subcompact Cars,2.0,4,All-Wheel,24,33,28,2200,316
+BMW,430i xDrive Coupe,Subcompact Cars,2.0,4,All-Wheel,27,34,30,2100,294
+BMW,840i Convertible,Subcompact Cars,3.0,6,Rear-Wheel,21,29,24,2600,368
+BMW,840i Coupe,Subcompact Cars,3.0,6,Rear-Wheel,21,29,24,2600,368
+BMW,840i xDrive Convertible,Subcompact Cars,3.0,6,All-Wheel,21,29,24,2600,373
+BMW,840i xDrive Coupe,Subcompact Cars,3.0,6,All-Wheel,21,29,24,2600,373
+BMW,M2 Coupe,Subcompact Cars,3.0,6,Rear-Wheel,16,23,19,3300,473
+BMW,M2 Coupe,Subcompact Cars,3.0,6,Rear-Wheel,16,23,19,3300,466
+BMW,M2 Coupe CS,Subcompact Cars,3.0,6,Rear-Wheel,16,23,19,3300,475
+BMW,M240i Coupe,Subcompact Cars,3.0,6,Rear-Wheel,23,32,26,2400,339
+BMW,M240i xDrive Coupe,Subcompact Cars,3.0,6,All-Wheel,23,32,26,2400,336
+BMW,M4 Competition Coupe,Subcompact Cars,3.0,6,Rear-Wheel,16,23,19,3300,470
+BMW,M4 Competition M xDrive Coupe,Subcompact Cars,3.0,6,All-Wheel,16,23,18,3450,472
+BMW,M4 Coupe,Subcompact Cars,3.0,6,Rear-Wheel,16,23,19,3300,472
+BMW,M440i Convertible,Subcompact Cars,3.0,6,Rear-Wheel,27,33,29,2150,300
+BMW,M440i Coupe,Subcompact Cars,3.0,6,Rear-Wheel,27,34,30,2100,296
+BMW,M440i xDrive Convertible,Subcompact Cars,3.0,6,All-Wheel,25,32,28,2200,312
+BMW,M440i xDrive Coupe,Subcompact Cars,3.0,6,All-Wheel,26,33,29,2150,301
+BMW,M4CompetitionMxDriveConvertible,Subcompact Cars,3.0,6,All-Wheel,16,22,18,3450,479
+BMW,M850i xDrive Convertible,Subcompact Cars,4.4,8,All-Wheel,17,24,19,3300,456
+BMW,M850i xDrive Coupe,Subcompact Cars,4.4,8,All-Wheel,17,24,19,3300,456
+Ford,MUSTANG,Subcompact Cars,5.0,8,Rear-Wheel,16,24,19,2600,468
+Ford,MUSTANG,Subcompact Cars,5.0,8,Rear-Wheel,15,23,18,2750,494
+Ford,MUSTANG,Subcompact Cars,2.3,4,Rear-Wheel,22,33,26,1900,341
+Ford,MUSTANG DARK HORSE,Subcompact Cars,5.0,8,Rear-Wheel,14,22,17,2900,525
+Ford,MUSTANG DARK HORSE,Subcompact Cars,5.0,8,Rear-Wheel,14,22,17,2900,533
+LEXUS,LC 500,Subcompact Cars,5.0,8,Rear-Wheel,16,24,18,3450,481
+MASERATI,Grancabrio,Subcompact Cars,3.0,6,All-Wheel,17,26,20,3100,430
+MASERATI,Grancabrio Trofeo,Subcompact Cars,3.0,6,All-Wheel,17,26,20,3100,430
+MASERATI,Granturismo,Subcompact Cars,3.0,6,All-Wheel,18,27,21,2950,412
+MASERATI,Granturismo Trofeo,Subcompact Cars,3.0,6,All-Wheel,18,27,21,2950,412
+Mercedes-Benz,AMG CLE 53 4MATIC+ (convertible),Subcompact Cars,3.0,6,All-Wheel,19,26,22,2850,408
+Mercedes-Benz,AMG CLE 53 4MATIC+ (coupe),Subcompact Cars,3.0,6,All-Wheel,20,27,23,2700,391
+Mercedes-Benz,AMG GT 43 (coupe),Subcompact Cars,2.0,4,Rear-Wheel,19,27,22,2850,405
+Mercedes-Benz,CLE 300 4MATIC (convertible),Subcompact Cars,2.0,4,All-Wheel,23,32,26,2400,340
+Mercedes-Benz,CLE 300 4MATIC (Coupe),Subcompact Cars,2.0,4,All-Wheel,24,33,27,2300,323
+Mercedes-Benz,CLE 450 4MATIC (Convertible),Subcompact Cars,3.0,6,All-Wheel,23,32,26,2400,338
+Mercedes-Benz,CLE 450 4MATIC (Coupe),Subcompact Cars,3.0,6,All-Wheel,23,33,26,2400,339
+Mini,Cooper C 2 Door,Subcompact Cars,2.0,4,Front-Wheel,27,39,32,1950,278
+Mini,Cooper S 2 Door,Subcompact Cars,2.0,4,Front-Wheel,28,39,32,1950,275
+Mini,JCW 2 Door,Subcompact Cars,2.0,4,Front-Wheel,27,37,30,2100,288
+BMW,228 Gran Coupe,Compact Cars,2.0,4,Front-Wheel,27,39,31,2000,279
+BMW,228 xDrive Gran Coupe,Compact Cars,2.0,4,All-Wheel,26,38,30,2100,288
+BMW,330i Sedan,Compact Cars,2.0,4,Rear-Wheel,28,35,31,2000,286
+BMW,330i xDrive Sedan,Compact Cars,2.0,4,All-Wheel,26,34,29,2150,298
+BMW,430i Gran Coupe,Compact Cars,2.0,4,Rear-Wheel,27,35,30,2100,290
+BMW,430i xDrive Gran Coupe,Compact Cars,2.0,4,All-Wheel,25,34,29,2150,305
+BMW,M235 xDrive Gran Coupe,Compact Cars,2.0,4,All-Wheel,24,33,27,2300,321
+BMW,M3 Competition M xDrive Sedan,Compact Cars,3.0,6,All-Wheel,16,23,18,3450,477
+BMW,M3 Competition Sedan,Compact Cars,3.0,6,Rear-Wheel,16,23,19,3300,470
+BMW,M3 Sedan,Compact Cars,3.0,6,Rear-Wheel,16,23,19,3300,472
+BMW,M340i Sedan,Compact Cars,3.0,6,Rear-Wheel,27,33,29,2150,299
+BMW,M340i xDrive Sedan,Compact Cars,3.0,6,All-Wheel,26,33,29,2150,304
+BMW,M440i Gran Coupe,Compact Cars,3.0,6,Rear-Wheel,26,32,28,2200,312
+BMW,M440i xDrive Gran Coupe,Compact Cars,3.0,6,All-Wheel,25,31,27,2300,320
+Cadillac,CT4,Compact Cars,2.7,4,Rear-Wheel,21,31,25,2500,356
+Cadillac,CT4,Compact Cars,2.0,4,Rear-Wheel,22,32,26,2400,345
+Cadillac,CT4 AWD,Compact Cars,2.7,4,All-Wheel,21,29,24,2600,371
+Cadillac,CT4 AWD ,Compact Cars,2.0,4,All-Wheel,21,31,25,2500,357
+Cadillac,CT4 V,Compact Cars,2.7,4,Rear-Wheel,20,29,23,2700,383
+Cadillac,CT4 V,Compact Cars,3.6,6,Rear-Wheel,16,24,19,3300,478
+Cadillac,CT4 V,Compact Cars,3.6,6,Rear-Wheel,15,23,18,3450,493
+Cadillac,CT4 V AWD,Compact Cars,2.7,4,All-Wheel,20,28,23,2700,387
+Ferrari S.p.A.,Purosangue,Compact Cars,6.5,12,All-Wheel,11,15,12,5200,711
+GENESIS,G70 AWD,Compact Cars,3.3,6,All-Wheel,17,23,19,3300,466
+GENESIS,G70 AWD,Compact Cars,2.5,4,All-Wheel,20,28,23,2700,385
+GENESIS,G70 RWD,Compact Cars,3.3,6,Rear-Wheel,17,25,20,3100,449
+GENESIS,G70 RWD,Compact Cars,2.5,4,Rear-Wheel,21,29,24,2600,373
+MAZDA,MAZDA3 4-Door 2WD,Compact Cars,2.5,4,Front-Wheel,27,36,30,1650,294
+MAZDA,MAZDA3 4-Door 4WD,Compact Cars,2.5,4,Four-Wheel,26,34,29,1700,306
+MAZDA,MAZDA3 4-Door 4WD,Compact Cars,2.5,4,Four-Wheel,23,32,27,1850,334
+Mercedes-Benz,AMG C 43 4MATIC,Compact Cars,2.0,4,All-Wheel,19,27,22,2850,405
+Mercedes-Benz,AMG CLA 35 4MATIC,Compact Cars,2.0,4,All-Wheel,22,29,25,2500,361
+Mercedes-Benz,AMG CLA 45 S 4MATIC,Compact Cars,2.0,4,All-Wheel,20,28,23,2700,379
+Mercedes-Benz,C 300,Compact Cars,2.0,4,Rear-Wheel,25,35,29,2150,307
+Mercedes-Benz,C 300 4MATIC,Compact Cars,2.0,4,All-Wheel,24,33,27,2300,329
+Mercedes-Benz,CLA 250,Compact Cars,2.0,4,Front-Wheel,26,36,30,2100,298
+Mercedes-Benz,CLA 250 4MATIC,Compact Cars,2.0,4,All-Wheel,25,34,29,2150,311
+Mini,Cooper C 4 Door,Compact Cars,2.0,4,Front-Wheel,28,39,32,1950,276
+Mini,Cooper S 4 Door,Compact Cars,2.0,4,Front-Wheel,28,39,32,1950,273
+TOYOTA,COROLLA,Compact Cars,2.0,4,Front-Wheel,32,41,35,1400,254
+TOYOTA,COROLLA,Compact Cars,2.0,4,Front-Wheel,31,40,34,1450,257
+TOYOTA,COROLLA,Compact Cars,2.0,4,Front-Wheel,31,38,34,1450,265
+TOYOTA,COROLLA HATCHBACK,Compact Cars,2.0,4,Front-Wheel,32,41,35,1400,254
+TOYOTA,COROLLA HATCHBACK FX,Compact Cars,2.0,4,Front-Wheel,30,38,33,1500,267
+TOYOTA,COROLLA HATCHBACK XSE,Compact Cars,2.0,4,Front-Wheel,30,38,33,1500,266
+TOYOTA,COROLLA HYBRID,Compact Cars,1.8,4,Front-Wheel,50,43,47,1050,186
+TOYOTA,COROLLA HYBRID,Compact Cars,1.8,4,Front-Wheel,53,46,50,1000,176
+TOYOTA,COROLLA HYBRID AWD,Compact Cars,1.8,4,All-Wheel,47,41,44,1100,199
+TOYOTA,COROLLA HYBRID AWD,Compact Cars,1.8,4,All-Wheel,51,44,48,1050,183
+Volkswagen,GLI,Compact Cars,2.0,4,Front-Wheel,26,35,29,1700,307
+Volkswagen,GLI,Compact Cars,2.0,4,Front-Wheel,26,36,29,1700,306
+Volkswagen,Jetta,Compact Cars,1.5,4,Front-Wheel,29,40,34,1450,265
+Volkswagen,Jetta Sport/SE/SEL,Compact Cars,1.5,4,Front-Wheel,29,40,33,1500,271
+ALFA ROMEO,Giulia AWD,Midsize Cars,2.0,4,All-Wheel,23,31,26,2400,348
+Audi,A6 Sedan,Midsize Cars,3.0,6,All-Wheel,20,29,23,2700,387
+Audi,RS 7,Midsize Cars,4.0,8,All-Wheel,14,21,16,3900,545
+BMW,530i Sedan,Midsize Cars,2.0,4,Rear-Wheel,28,35,31,2000,285
+BMW,530i xDrive Sedan,Midsize Cars,2.0,4,All-Wheel,27,35,30,2100,292
+BMW,540i xDrive Sedan,Midsize Cars,3.0,6,All-Wheel,26,32,28,2200,308
+BMW,840i Gran Coupe,Midsize Cars,3.0,6,Rear-Wheel,21,29,24,2600,368
+BMW,840i xDrive Gran Coupe,Midsize Cars,3.0,6,All-Wheel,21,29,24,2600,373
+BMW,M850i xDrive Gran Coupe,Midsize Cars,4.4,8,All-Wheel,17,24,19,3300,456
+Cadillac,CT5,Midsize Cars,3.0,6,Rear-Wheel,19,28,22,2850,399
+Cadillac,CT5,Midsize Cars,2.0,4,Rear-Wheel,22,31,26,2400,346
+Cadillac,CT5 AWD,Midsize Cars,3.0,6,All-Wheel,18,27,21,2950,418
+Cadillac,CT5 AWD,Midsize Cars,2.0,4,All-Wheel,21,30,24,2600,370
+Cadillac,CT5 V,Midsize Cars,3.0,6,Rear-Wheel,18,27,21,2950,423
+Cadillac,CT5 V,Midsize Cars,6.2,8,Rear-Wheel,13,20,15,4150,580
+Cadillac,CT5 V,Midsize Cars,6.2,8,Rear-Wheel,13,20,15,4150,587
+Cadillac,CT5 V AWD,Midsize Cars,3.0,6,All-Wheel,17,26,20,3100,445
+Honda,CIVIC 4Dr,Midsize Cars,1.5,4,Front-Wheel,27,37,31,2000,285
+Honda,CIVIC 4Dr,Midsize Cars,2.0,4,Front-Wheel,32,41,36,1400,248
+Honda,CIVIC 4Dr,Midsize Cars,2.0,4,Front-Wheel,31,39,34,1450,260
+Honda,CIVIC 4Dr,Midsize Cars,2.0,4,Front-Wheel,50,47,49,1000,181
+HYUNDAI MOTOR COMPANY,Elantra,Midsize Cars,1.6,4,Front-Wheel,28,35,31,1600,288
+HYUNDAI MOTOR COMPANY,Elantra Hybrid,Midsize Cars,1.6,4,Front-Wheel,49,52,50,1000,177
+HYUNDAI MOTOR COMPANY,Elantra Hybrid Blue,Midsize Cars,1.6,4,Front-Wheel,51,58,54,900,165
+HYUNDAI MOTOR COMPANY,Elantra N,Midsize Cars,2.0,4,Front-Wheel,20,27,23,2700,392
+HYUNDAI MOTOR COMPANY,Elantra N,Midsize Cars,2.0,4,Front-Wheel,21,29,24,2600,366
+HYUNDAI MOTOR COMPANY,Elantra non-ISG,Midsize Cars,2.0,4,Front-Wheel,30,40,34,1450,263
+HYUNDAI MOTOR COMPANY,Elantra w/ Stop-Start,Midsize Cars,2.0,4,Front-Wheel,31,40,35,1400,254
+MAZDA,MAZDA3 5-Door 2WD,Midsize Cars,2.5,4,Front-Wheel,25,34,28,1750,314
+MAZDA,MAZDA3 5-Door 2WD,Midsize Cars,2.5,4,Front-Wheel,26,34,29,1700,302
+MAZDA,MAZDA3 5-Door 4WD,Midsize Cars,2.5,4,Four-Wheel,25,34,28,1750,317
+MAZDA,MAZDA3 5-Door 4WD,Midsize Cars,2.5,4,Four-Wheel,23,31,26,1900,337
+Mercedes-Benz,E 350,Midsize Cars,2.0,4,Rear-Wheel,25,33,28,2200,316
+Mercedes-Benz,E 350 4MATIC,Midsize Cars,2.0,4,All-Wheel,24,33,27,2300,327
+Mercedes-Benz,E 450 4MATIC,Midsize Cars,3.0,6,All-Wheel,22,31,25,2500,355
+TOYOTA,CAMRY HEV AWD LE,Midsize Cars,2.5,4,All-Wheel,50,49,50,1000,178
+TOYOTA,CAMRY HEV AWD SE/XLE,Midsize Cars,2.5,4,All-Wheel,46,46,46,1100,192
+TOYOTA,CAMRY HEV AWD XSE,Midsize Cars,2.5,4,All-Wheel,43,43,43,1150,205
+TOYOTA,CAMRY HEV FF LE,Midsize Cars,2.5,4,Front-Wheel,52,49,51,950,173
+TOYOTA,CAMRY HEV FF SE/XLE/XSE,Midsize Cars,2.5,4,Front-Wheel,47,45,46,1100,191
+TOYOTA,PRIUS,Midsize Cars,2.0,4,Front-Wheel,57,56,57,850,155
+TOYOTA,PRIUS AWD,Midsize Cars,2.0,4,All-Wheel,53,54,54,900,163
+TOYOTA,PRIUS AWD XLE/LTD,Midsize Cars,2.0,4,All-Wheel,49,50,49,1000,179
+TOYOTA,PRIUS XLE/LTD,Midsize Cars,2.0,4,Front-Wheel,52,52,52,950,169
+TOYOTA,TOYOTA CROWN AWD,Midsize Cars,2.4,4,All-Wheel,29,32,30,1650,293
+TOYOTA,TOYOTA CROWN AWD Hybrid,Midsize Cars,2.5,4,All-Wheel,42,41,41,1200,214
+Volkswagen,Golf R,Midsize Cars,2.0,4,All-Wheel,22,31,25,2500,349
+Volkswagen,GTI,Midsize Cars,2.0,4,Front-Wheel,24,32,27,1850,326
+"Volvo Cars of North America, LLC",S90 B5,Midsize Cars,2.0,4,Front-Wheel,24,34,28,2200,318
+Acura,INTEGRA,Large Cars,1.5,4,Front-Wheel,29,37,32,1950,278
+Acura,INTEGRA,Large Cars,2.0,4,Front-Wheel,21,28,24,2600,371
+Acura,INTEGRA A-SPEC,Large Cars,1.5,4,Front-Wheel,29,37,32,1950,277
+Acura,INTEGRA A-SPEC,Large Cars,1.5,4,Front-Wheel,26,36,30,2100,293
+Audi,A8 quattro,Large Cars,3.0,6,All-Wheel,19,27,22,2850,414
+Audi,S8,Large Cars,4.0,8,All-Wheel,15,24,18,3450,502
+BMW,740i Sedan,Large Cars,3.0,6,Rear-Wheel,25,31,28,2200,317
+BMW,740i xDrive Sedan,Large Cars,3.0,6,All-Wheel,24,31,27,2300,326
+BMW,760i xDrive Sedan,Large Cars,4.4,8,All-Wheel,18,25,20,3100,427
+GENESIS,G80 AWD,Large Cars,2.5,4,All-Wheel,20,29,23,2700,382
+GENESIS,G80 AWD,Large Cars,3.5,6,All-Wheel,15,24,18,3450,485
+GENESIS,G90 AWD,Large Cars,3.5,6,All-Wheel,18,26,21,2950,426
+GENESIS,G90 MHEV,Large Cars,3.5,6,All-Wheel,17,24,20,3100,441
+Honda,CIVIC 5Dr,Large Cars,2.0,4,Front-Wheel,30,38,34,1450,268
+Honda,CIVIC 5Dr,Large Cars,2.0,4,Front-Wheel,50,45,48,1050,186
+HYUNDAI MOTOR COMPANY,Sonata AWD,Large Cars,2.5,4,All-Wheel,24,33,27,1850,327
+HYUNDAI MOTOR COMPANY,Sonata FWD,Large Cars,2.5,4,Front-Wheel,25,36,29,1700,310
+HYUNDAI MOTOR COMPANY,Sonata FWD,Large Cars,2.5,4,Front-Wheel,23,32,27,1850,333
+HYUNDAI MOTOR COMPANY,Sonata FWD w/ STOP-START,Large Cars,2.5,4,Front-Wheel,28,38,32,1550,281
+HYUNDAI MOTOR COMPANY,Sonata Hybrid,Large Cars,2.0,4,Front-Wheel,44,51,47,1050,188
+HYUNDAI MOTOR COMPANY,Sonata Hybrid Blue,Large Cars,2.0,4,Front-Wheel,47,56,51,950,175
+KIA,K5,Large Cars,2.5,4,Front-Wheel,25,36,29,1700,310
+KIA,K5,Large Cars,2.5,4,Front-Wheel,23,33,27,1850,331
+KIA,K5 AWD,Large Cars,2.5,4,All-Wheel,24,33,27,1850,329
+KIA,K5 w/ Stop-Start,Large Cars,2.5,4,Front-Wheel,26,37,30,1650,298
+Mercedes-Benz,S 500 4MATIC,Large Cars,3.0,6,All-Wheel,20,29,23,2700,380
+Mercedes-Benz,S 580 4MATIC,Large Cars,4.0,8,All-Wheel,17,27,20,3100,438
+Mercedes-Benz,S 580 4MATIC Maybach,Large Cars,4.0,8,All-Wheel,16,27,20,3100,451
+Mercedes-Benz,S 680 4MATIC Maybach,Large Cars,6.0,12,All-Wheel,12,20,15,4150,603
+Porsche,Panamera,Large Cars,2.9,6,Rear-Wheel,18,25,21,2950,431
+Porsche,Panamera 4,Large Cars,2.9,6,All-Wheel,18,25,21,2950,425
+Rolls-Royce Motor Cars Limited,Black Badge Ghost,Large Cars,6.7,12,All-Wheel,12,19,14,4450,609
+Rolls-Royce Motor Cars Limited,Ghost,Large Cars,6.7,12,All-Wheel,12,19,14,4450,609
+Rolls-Royce Motor Cars Limited,Ghost Extended,Large Cars,6.7,12,All-Wheel,12,19,14,4450,609
+Rolls-Royce Motor Cars Limited,Phantom,Large Cars,6.7,12,Rear-Wheel,12,19,14,4450,609
+Rolls-Royce Motor Cars Limited,Phantom Extended,Large Cars,6.7,12,Rear-Wheel,12,19,14,4450,609
+Buick,ENVISTA,Small Station Wagons,1.2,3,Front-Wheel,28,32,30,1650,296
+Buick,ENVISTA (Flex Fuel),Small Station Wagons,1.2,3,Front-Wheel,28,32,30,1650,297
+Chevrolet,TRAX,Small Station Wagons,1.2,3,Front-Wheel,28,31,29,1700,302
+Chevrolet,TRAX (Flex Fuel),Small Station Wagons,1.2,3,Front-Wheel,28,32,30,1650,296
+Honda,HR-V AWD,Small Station Wagons,2.0,4,All-Wheel,25,30,27,1850,328
+Honda,HR-V FWD,Small Station Wagons,2.0,4,Front-Wheel,26,32,28,1750,311
+Mercedes-Benz,AMG GLA 35 4MATIC,Small Station Wagons,2.0,4,All-Wheel,22,30,25,2500,350
+Mercedes-Benz,AMG GLC 43 4MATIC,Small Station Wagons,2.0,4,All-Wheel,19,26,22,2850,406
+Mercedes-Benz,AMG GLC 43 4MATIC (coupe),Small Station Wagons,2.0,4,All-Wheel,19,25,22,2850,411
+Mercedes-Benz,AMG GT 43 4MATIC+,Small Station Wagons,3.0,6,All-Wheel,19,24,21,2950,421
+Mercedes-Benz,AMG GT 53 4MATIC+,Small Station Wagons,3.0,6,All-Wheel,19,24,21,2950,422
+Mercedes-Benz,AMG GT 63 4MATIC+,Small Station Wagons,4.0,8,All-Wheel,15,21,17,3650,512
+Subaru,IMPREZA,Small Station Wagons,2.0,4,All-Wheel,27,33,29,1700,301
+Subaru,IMPREZA,Small Station Wagons,2.5,4,All-Wheel,26,33,29,1700,311
+"Volvo Cars of North America, LLC",V60CC B5 AWD,Small Station Wagons,2.0,4,All-Wheel,23,31,26,2400,338
+Audi,A6 allroad quattro,Midsize Station Wagons,3.0,6,All-Wheel,21,30,24,2600,365
+Audi,RS 6 Avant,Midsize Station Wagons,4.0,8,All-Wheel,14,21,16,3900,545
+Honda,CR-V FWD,Midsize Station Wagons,1.5,4,Front-Wheel,28,33,30,1650,296
+Honda,CR-V FWD,Midsize Station Wagons,2.0,4,Front-Wheel,43,36,40,1250,223
+Mercedes-Benz,AMG GLB 35 4MATIC,Midsize Station Wagons,2.0,4,All-Wheel,21,27,23,2700,387
+Mercedes-Benz,E 450 4MATIC All-Terrain Wagon,Midsize Station Wagons,3.0,6,All-Wheel,22,31,25,2500,351
+"Volvo Cars of North America, LLC",V90CC B6 AWD,Midsize Station Wagons,2.0,4,All-Wheel,22,29,25,2500,358
+Chevrolet,COLORADO 2WD,Standard Pick-up Trucks 2WD,2.7,4,Rear-Wheel,19,24,21,2350,420
+Chevrolet,SILVERADO 2WD ,Standard Pick-up Trucks 2WD,3.0,6,Rear-Wheel,23,28,25,2150,402
+Chevrolet,SILVERADO 2WD (5.3L with Sport Mode),Standard Pick-up Trucks 2WD,5.3,8,Rear-Wheel,16,21,18,2750,490
+Chevrolet,SILVERADO 2WD (5.3L),Standard Pick-up Trucks 2WD,5.3,8,Rear-Wheel,16,20,17,2900,513
+Chevrolet,SILVERADO 2WD 3M,Standard Pick-up Trucks 2WD,2.7,4,Rear-Wheel,18,21,20,2500,465
+Chevrolet,SILVERADO 2WD M5,Standard Pick-up Trucks 2WD,2.7,4,Rear-Wheel,17,21,19,2600,472
+GMC,CANYON 2WD,Standard Pick-up Trucks 2WD,2.7,4,Rear-Wheel,19,23,20,2500,443
+GMC,SIERRA 2WD,Standard Pick-up Trucks 2WD,5.3,8,Rear-Wheel,16,20,17,2900,514
+GMC,SIERRA 2WD,Standard Pick-up Trucks 2WD,3.0,6,Rear-Wheel,23,28,25,2150,402
+GMC,SIERRA 2WD 3M,Standard Pick-up Trucks 2WD,2.7,4,Rear-Wheel,18,21,20,2500,464
+GMC,SIERRA 2WD M5,Standard Pick-up Trucks 2WD,2.7,4,Rear-Wheel,17,21,19,2600,472
+GMC,SIERRA 2WD with Sport Mode,Standard Pick-up Trucks 2WD,5.3,8,Rear-Wheel,16,21,18,2750,495
+NISSAN,FRONTIER 2WD,Standard Pick-up Trucks 2WD,3.8,6,Rear-Wheel,19,24,21,2350,423
+RAM,1500 4X2,Standard Pick-up Trucks 2WD,3.0,6,Rear-Wheel,18,25,21,2350,433
+RAM,1500 4X2,Standard Pick-up Trucks 2WD,3.6,6,Rear-Wheel,20,25,22,2250,407
+TOYOTA,TUNDRA 2WD,Standard Pick-up Trucks 2WD,3.4,6,Rear-Wheel,18,23,20,2500,450
+TOYOTA,TUNDRA 2WD,Standard Pick-up Trucks 2WD,3.4,6,Rear-Wheel,18,23,20,2500,444
+TOYOTA,TUNDRA 2WD Hybrid,Standard Pick-up Trucks 2WD,3.4,6,Rear-Wheel,20,24,22,2250,407
+TOYOTA,TUNDRA 2WD HYBRID TRD Perf,Standard Pick-up Trucks 2WD,3.4,6,Rear-Wheel,20,24,22,2850,407
+TOYOTA,TUNDRA 2WD TRD Perf,Standard Pick-up Trucks 2WD,3.4,6,Rear-Wheel,18,23,20,3100,444
+Chevrolet,COLORADO 4WD,Standard Pick-up Trucks 4WD,2.7,4,Four-Wheel,17,22,19,2600,462
+Chevrolet,COLORADO 4WD MUD TERRAIN TIRES,Standard Pick-up Trucks 4WD,2.7,4,Four-Wheel,17,20,18,2750,494
+Chevrolet,COLORADO ZR2 4WD,Standard Pick-up Trucks 4WD,2.7,4,Four-Wheel,17,17,17,2900,527
+Chevrolet,COLORADO ZR2 BISON 4WD,Standard Pick-up Trucks 4WD,2.7,4,Four-Wheel,16,16,16,3100,564
+Chevrolet,SILVERADO 4WD,Standard Pick-up Trucks 4WD,6.2,8,Four-Wheel,15,20,17,3650,528
+Chevrolet,SILVERADO 4WD,Standard Pick-up Trucks 4WD,3.0,6,Four-Wheel,22,26,24,2250,428
+Chevrolet,SILVERADO 4WD,Standard Pick-up Trucks 4WD,3.0,6,Four-Wheel,22,25,23,2350,434
+Chevrolet,SILVERADO 4WD  (Flex Fuel),Standard Pick-up Trucks 4WD,5.3,8,Four-Wheel,15,19,17,2900,524
+Chevrolet,SILVERADO 4WD (5.3 L),Standard Pick-up Trucks 4WD,5.3,8,Four-Wheel,15,19,17,2900,531
+Chevrolet,SILVERADO 4WD 4M,Standard Pick-up Trucks 4WD,2.7,4,Four-Wheel,17,21,19,2600,473
+Chevrolet,SILVERADO 4WD M6 with Sport Mode,Standard Pick-up Trucks 4WD,2.7,4,Four-Wheel,17,20,18,2750,479
+Chevrolet,SILVERADO 4WD MUD TERRAIN TIRE,Standard Pick-up Trucks 4WD,5.3,8,Four-Wheel,15,18,16,3100,552
+Chevrolet,SILVERADO 4WD MUD TERRAIN TIRE  (Flex Fuel),Standard Pick-up Trucks 4WD,5.3,8,Four-Wheel,15,19,17,2900,524
+Chevrolet,SILVERADO 4WD MUD TERRAIN TIRE (6.2 L),Standard Pick-up Trucks 4WD,6.2,8,Four-Wheel,14,17,15,4150,593
+Chevrolet,SILVERADO 4WD MUD TERRAIN TIRE 4M,Standard Pick-up Trucks 4WD,2.7,4,Four-Wheel,16,17,17,2900,536
+Chevrolet,SILVERADO 4WD MUD TERRAIN TIRE M6,Standard Pick-up Trucks 4WD,2.7,4,Four-Wheel,16,17,17,2900,535
+Chevrolet,SILVERADO 4WD MUD TERRAIN TIRE with Sport Mode,Standard Pick-up Trucks 4WD,5.3,8,Four-Wheel,15,18,16,3100,553
+Chevrolet,SILVERADO 4WD MUD TERRAIN TIRES,Standard Pick-up Trucks 4WD,3.0,6,Four-Wheel,21,24,23,2350,451
+Chevrolet,SILVERADO 4WD MUD TERRAIN TIRES,Standard Pick-up Trucks 4WD,3.0,6,Four-Wheel,21,24,23,2350,448
+Chevrolet,SILVERADO 4WD with Sport Mode,Standard Pick-up Trucks 4WD,5.3,8,Four-Wheel,16,20,17,2900,514
+Chevrolet,SILVERADO 4WD ZR2,Standard Pick-up Trucks 4WD,6.2,8,Four-Wheel,14,17,15,4150,591
+Chevrolet,SILVERADO 4WD ZR2,Standard Pick-up Trucks 4WD,3.0,6,Four-Wheel,20,23,21,2550,480
+GMC,CANYON 4WD,Standard Pick-up Trucks 4WD,2.7,4,Four-Wheel,17,22,19,2600,462
+GMC,CANYON AT4X 4WD,Standard Pick-up Trucks 4WD,2.7,4,Four-Wheel,17,17,17,2900,527
+GMC,CANYON AT4X AEV 4WD,Standard Pick-up Trucks 4WD,2.7,4,Four-Wheel,16,16,16,3100,564
+GMC,SIERRA 4WD,Standard Pick-up Trucks 4WD,3.0,6,Four-Wheel,22,26,24,2250,428
+GMC,SIERRA 4WD  (5.3 L),Standard Pick-up Trucks 4WD,5.3,8,Four-Wheel,15,18,16,3100,550
+GMC,SIERRA 4WD  (Flex Fuel),Standard Pick-up Trucks 4WD,5.3,8,Four-Wheel,15,19,17,2900,524
+GMC,SIERRA 4WD (6.2L),Standard Pick-up Trucks 4WD,6.2,8,Four-Wheel,15,19,16,3900,539
+GMC,SIERRA 4WD (Municipal),Standard Pick-up Trucks 4WD,5.3,8,Four-Wheel,15,19,16,3100,546
+GMC,SIERRA 4WD 4M,Standard Pick-up Trucks 4WD,2.7,4,Four-Wheel,17,20,18,2750,491
+GMC,SIERRA 4WD AT4X,Standard Pick-up Trucks 4WD,6.2,8,Four-Wheel,14,16,15,4150,601
+GMC,SIERRA 4WD AT4X,Standard Pick-up Trucks 4WD,3.0,6,Four-Wheel,19,20,19,2850,524
+GMC,SIERRA 4WD M6,Standard Pick-up Trucks 4WD,2.7,4,Four-Wheel,17,18,17,2900,513
+GMC,SIERRA 4WD MUD TERRAIN TIRES,Standard Pick-up Trucks 4WD,6.2,8,Four-Wheel,14,17,15,4150,593
+GMC,SIERRA 4WD MUD TERRAIN TIRES,Standard Pick-up Trucks 4WD,5.3,8,Four-Wheel,14,17,16,3100,567
+GMC,SIERRA 4WD MUD TERRAIN TIRES,Standard Pick-up Trucks 4WD,3.0,6,Four-Wheel,21,24,23,2350,451
+GMC,SIERRA 4WD MUD TERRAIN TIRES (Flex Fuel),Standard Pick-up Trucks 4WD,5.3,8,Four-Wheel,15,19,17,2900,524
+GMC,SIERRA 4WD MUD TERRAIN TIRES (Municipal),Standard Pick-up Trucks 4WD,5.3,8,Four-Wheel,15,19,16,3100,546
+GMC,SIERRA 4WD MUD TERRAIN TIRES 4M,Standard Pick-up Trucks 4WD,2.7,4,Four-Wheel,16,17,17,2900,536
+GMC,SIERRA 4WD MUD TERRAIN TIRES with Sport Mode,Standard Pick-up Trucks 4WD,5.3,8,Four-Wheel,15,18,16,3100,561
+GMC,SIERRA 4WD with Sport Mode,Standard Pick-up Trucks 4WD,5.3,8,Four-Wheel,15,19,17,2900,522
+Honda,RIDGELINE AWD,Standard Pick-up Trucks 4WD,3.5,6,All-Wheel,18,24,21,2350,441
+Honda,RIDGELINE AWD TrailSport,Standard Pick-up Trucks 4WD,3.5,6,All-Wheel,18,23,20,2500,446
+Jeep,Gladiator 4X4,Standard Pick-up Trucks 4WD,3.6,6,Four-Wheel,17,22,19,2600,469
+NISSAN,FRONTIER 4WD,Standard Pick-up Trucks 4WD,3.8,6,Part-Time 4WD,17,21,19,2600,479
+NISSAN,FRONTIER 4WD PRO-4X,Standard Pick-up Trucks 4WD,3.8,6,Part-Time 4WD,16,20,18,2750,504
+RAM,1500 4X4,Standard Pick-up Trucks 4WD,3.0,6,Four-Wheel,18,24,20,2500,444
+RAM,1500 4X4,Standard Pick-up Trucks 4WD,3.6,6,Four-Wheel,19,24,21,2350,417
+RAM,1500 4X4,Standard Pick-up Trucks 4WD,5.7,8,Four-Wheel,16,20,18,3150,502
+RAM,1500 HO 4x4,Standard Pick-up Trucks 4WD,3.0,6,Four-Wheel,15,21,17,3650,521
+RAM,1500 RHO 4x4,Standard Pick-up Trucks 4WD,3.0,6,Four-Wheel,14,16,15,4150,602
+TOYOTA,TUNDRA 4WD,Standard Pick-up Trucks 4WD,3.4,6,Part-Time 4WD,17,22,19,2600,468
+TOYOTA,TUNDRA 4WD,Standard Pick-up Trucks 4WD,3.4,6,Part-Time 4WD,17,22,19,2600,462
+TOYOTA,TUNDRA 4WD Hybrid,Standard Pick-up Trucks 4WD,3.4,6,Part-Time 4WD,19,22,20,2500,439
+TOYOTA,TUNDRA 4WD HYBRID TRD Per,Standard Pick-up Trucks 4WD,3.4,6,Part-Time 4WD,19,22,20,3100,439
+TOYOTA,TUNDRA 4WD PRO Hybrid,Standard Pick-up Trucks 4WD,3.4,6,Part-Time 4WD,18,20,19,2600,461
+TOYOTA,TUNDRA 4WD PRO HYBRID TRD Perf,Standard Pick-up Trucks 4WD,3.4,6,Part-Time 4WD,18,20,19,3300,461
+TOYOTA,TUNDRA 4WD TRD Perf,Standard Pick-up Trucks 4WD,3.4,6,Part-Time 4WD,17,22,19,3300,462
+Mercedes-Benz,GLA 250,Special Purpose Vehicle 2WD,2.0,4,Front-Wheel,26,34,29,2150,306
+Mercedes-Benz,GLB 250,Special Purpose Vehicle 2WD,2.0,4,Front-Wheel,25,33,28,2200,311
+Chevrolet,SILVERADO 2WD CAB CHASSIS,Special Purpose Vehicle cab chassis,5.3,8,Rear-Wheel,15,18,16,3100,551
+Chevrolet,SILVERADO 4WD CAB CHASSIS,Special Purpose Vehicle cab chassis,5.3,8,Four-Wheel,14,16,15,3300,592
+GMC,SIERRA 2WD CAB CHASSIS,Special Purpose Vehicle cab chassis,5.3,8,Rear-Wheel,15,18,16,3100,551
+GMC,SIERRA 4WD CAB CHASSIS,Special Purpose Vehicle cab chassis,5.3,8,Four-Wheel,14,16,15,3300,592
+Chrysler,Pacifica,"Special Purpose Vehicle, minivan 2WD",3.6,6,Front-Wheel,19,28,22,2250,401
+Chrysler,Voyager,"Special Purpose Vehicle, minivan 2WD",3.6,6,Front-Wheel,19,28,22,2250,401
+Honda,ODYSSEY FWD,"Special Purpose Vehicle, minivan 2WD",3.5,6,Front-Wheel,19,28,22,2250,395
+KIA,Carnival,"Special Purpose Vehicle, minivan 2WD",3.5,6,Front-Wheel,18,25,21,2350,428
+KIA,Carnival Hybrid,"Special Purpose Vehicle, minivan 2WD",1.6,4,Front-Wheel,34,31,32,1550,275
+Acura,MDX FWD,Small SUV 2WD,3.5,6,Front-Wheel,19,26,22,2850,411
+Buick,ENCORE GX FWD,Small SUV 2WD,1.3,3,Front-Wheel,29,31,30,1650,297
+Buick,ENCORE GX FWD (Flex Fuel),Small SUV 2WD,1.2,3,Front-Wheel,30,31,30,1650,297
+Cadillac,XT5 FWD,Small SUV 2WD,3.6,6,Front-Wheel,19,26,21,2350,423
+Cadillac,XT5 FWD,Small SUV 2WD,2.0,4,Front-Wheel,22,29,24,2600,370
+Chevrolet,BLAZER FWD,Small SUV 2WD,3.6,6,Front-Wheel,19,26,22,2250,411
+Chevrolet,BLAZER FWD,Small SUV 2WD,2.0,4,Front-Wheel,22,29,25,2000,370
+Chevrolet,EQUINOX FWD,Small SUV 2WD,1.5,4,Front-Wheel,26,29,27,1850,329
+Chevrolet,TRAILBLAZER FWD,Small SUV 2WD,1.3,3,Front-Wheel,29,33,31,1600,287
+Chevrolet,TRAILBLAZER FWD (Flex Fuel),Small SUV 2WD,1.2,3,Front-Wheel,30,31,30,1650,297
+Ford,ESCAPE FWD,Small SUV 2WD,1.5,3,Front-Wheel,27,34,30,1650,298
+GENESIS,GV80 RWD,Small SUV 2WD,2.5,4,Rear-Wheel,20,26,22,2850,403
+GMC,TERRAIN FWD,Small SUV 2WD,1.5,4,Front-Wheel,26,28,27,1850,329
+HYUNDAI MOTOR COMPANY,Kona FWD,Small SUV 2WD,2.0,4,Front-Wheel,28,35,31,1600,288
+HYUNDAI MOTOR COMPANY,Kona FWD SX2 1.6T 8AT FWD,Small SUV 2WD,1.6,4,Front-Wheel,26,31,28,1750,320
+HYUNDAI MOTOR COMPANY,Kona FWD w/ STOP-START,Small SUV 2WD,2.0,4,Front-Wheel,29,34,31,1600,284
+HYUNDAI MOTOR COMPANY,Santa Cruz FWD,Small SUV 2WD,2.5,4,Front-Wheel,22,30,25,2000,356
+HYUNDAI MOTOR COMPANY,Santa Fe FWD,Small SUV 2WD,2.5,4,Front-Wheel,20,29,24,2050,374
+HYUNDAI MOTOR COMPANY,Santa Fe Hybrid FWD,Small SUV 2WD,1.6,4,Front-Wheel,37,36,36,1400,244
+HYUNDAI MOTOR COMPANY,Tucson FWD,Small SUV 2WD,2.5,4,Front-Wheel,25,33,28,1750,322
+HYUNDAI MOTOR COMPANY,Venue,Small SUV 2WD,1.6,4,Front-Wheel,29,33,31,1600,291
+KIA,Niro,Small SUV 2WD,1.6,4,Front-Wheel,53,45,49,1000,181
+KIA,Niro FE,Small SUV 2WD,1.6,4,Front-Wheel,53,54,53,950,167
+KIA,Sorento FWD,Small SUV 2WD,2.5,4,Front-Wheel,23,31,26,1900,339
+KIA,Sorento FWD,Small SUV 2WD,2.5,4,Front-Wheel,20,29,23,2150,382
+KIA,Sorento Hybrid FWD,Small SUV 2WD,1.6,4,Front-Wheel,37,36,37,1350,240
+KIA,Sportage FWD,Small SUV 2WD,2.5,4,Front-Wheel,25,33,28,1750,317
+KIA,Sportage Hybrid FWD,Small SUV 2WD,1.6,4,Front-Wheel,41,44,42,1200,209
+LEXUS,NX 350h,Small SUV 2WD,2.5,4,Front-Wheel,42,38,40,1550,220
+LEXUS,RX 350,Small SUV 2WD,2.4,4,Front-Wheel,22,29,25,2500,354
+Lincoln,CORSAIR FWD,Small SUV 2WD,2.0,4,Front-Wheel,22,30,25,2000,358
+Mercedes-Benz,GLC 300,Small SUV 2WD,2.0,4,Rear-Wheel,24,32,27,2300,323
+NISSAN,KICKS,Small SUV 2WD,2.0,4,Front-Wheel,28,35,31,1600,287
+NISSAN,ROGUE FWD,Small SUV 2WD,1.5,3,Front-Wheel,29,36,32,1550,279
+TOYOTA,COROLLA CROSS,Small SUV 2WD,2.0,4,Front-Wheel,31,33,32,1550,276
+Volkswagen,Atlas,Small SUV 2WD,2.0,4,Front-Wheel,20,27,23,2150,390
+Volkswagen,Atlas Cross Sport,Small SUV 2WD,2.0,4,Front-Wheel,20,27,23,2150,390
+Volkswagen,Taos,Small SUV 2WD,1.5,4,Front-Wheel,28,36,31,1600,287
+Volkswagen,Tiguan,Small SUV 2WD,2.0,4,Front-Wheel,25,32,28,1750,320
+Volkswagen,Tiguan S,Small SUV 2WD,2.0,4,Front-Wheel,26,34,29,1700,307
+"Volvo Cars of North America, LLC",XC40 B4,Small SUV 2WD,2.0,4,Front-Wheel,25,32,27,2300,326
+Acura,MDX AWD,Small SUV 4WD,3.5,6,All-Wheel,19,25,21,2950,423
+Acura,RDX AWD,Small SUV 4WD,2.0,4,All-Wheel,21,27,23,2700,385
+Acura,RDX AWD A-SPEC,Small SUV 4WD,2.0,4,All-Wheel,21,26,23,2700,386
+ALFA ROMEO,Stelvio AWD,Small SUV 4WD,2.0,4,All-Wheel,22,28,24,2600,364
+BMW,X1 M35i,Small SUV 4WD,2.0,4,All-Wheel,24,32,27,2300,327
+BMW,X1 xDrive28i,Small SUV 4WD,2.0,4,All-Wheel,25,34,28,2200,311
+BMW,X2 M35i,Small SUV 4WD,2.0,4,All-Wheel,23,31,26,2400,338
+BMW,X2 xDrive28i,Small SUV 4WD,2.0,4,All-Wheel,24,34,28,2200,314
+BMW,X3 M50,Small SUV 4WD,3.0,6,All-Wheel,25,30,27,2300,320
+BMW,X3 xDrive30,Small SUV 4WD,2.0,4,All-Wheel,27,33,29,2150,299
+Buick,ENCORE GX AWD,Small SUV 4WD,1.3,3,All-Wheel,26,28,27,1850,327
+Buick,ENVISION AWD,Small SUV 4WD,2.0,4,All-Wheel,22,28,25,2000,361
+Cadillac,XT5 AWD,Small SUV 4WD,3.6,6,All-Wheel,18,26,21,2350,424
+Cadillac,XT5 AWD,Small SUV 4WD,2.0,4,All-Wheel,21,27,23,2700,386
+Chevrolet,BLAZER AWD,Small SUV 4WD,3.6,6,All-Wheel,18,25,21,2350,424
+Chevrolet,BLAZER AWD,Small SUV 4WD,2.0,4,All-Wheel,22,27,24,2050,368
+Chevrolet,EQUINOX AWD,Small SUV 4WD,1.5,4,All-Wheel,25,29,26,1900,342
+Chevrolet,TRAILBLAZER AWD,Small SUV 4WD,1.3,3,All-Wheel,26,29,27,1850,329
+Ford,ESCAPE AWD,Small SUV 4WD,2.0,4,All-Wheel,23,31,26,1900,342
+Ford,ESCAPE AWD,Small SUV 4WD,1.5,3,All-Wheel,26,32,28,1750,317
+Ford,ESCAPE AWD HEV,Small SUV 4WD,2.5,4,Part-Time 4WD,42,36,39,1250,225
+GENESIS,GV70 AWD,Small SUV 4WD,3.5,6,All-Wheel,18,25,21,2950,433
+GENESIS,GV70 AWD w/ 4-mode transmission,Small SUV 4WD,2.5,4,All-Wheel,20,28,23,2700,393
+GENESIS,GV70 AWD w/ 5-mode transmission (Sport+),Small SUV 4WD,2.5,4,All-Wheel,20,26,22,2850,402
+GMC,TERRAIN AWD,Small SUV 4WD,1.5,4,All-Wheel,24,28,25,2000,356
+GMC,TERRAIN AWD Denali / AT4,Small SUV 4WD,1.5,4,All-Wheel,24,26,25,2000,358
+Honda,CR-V AWD,Small SUV 4WD,1.5,4,All-Wheel,27,31,29,1700,310
+Honda,CR-V AWD,Small SUV 4WD,2.0,4,All-Wheel,40,34,37,1350,237
+Honda,CR-V AWD TrailSport,Small SUV 4WD,2.0,4,All-Wheel,38,33,35,1400,252
+Honda,PASSPORT AWD,Small SUV 4WD,3.5,6,All-Wheel,19,25,21,2350,424
+Honda,PASSPORT AWD Trailsport,Small SUV 4WD,3.5,6,All-Wheel,18,23,20,2500,446
+HYUNDAI MOTOR COMPANY,Kona AWD,Small SUV 4WD,2.0,4,All-Wheel,26,29,27,1850,323
+HYUNDAI MOTOR COMPANY,Kona AWD SX2 1.6T 8AT AWD,Small SUV 4WD,1.6,4,All-Wheel,25,28,26,1900,340
+HYUNDAI MOTOR COMPANY,Kona AWD w/ STOP-START,Small SUV 4WD,2.0,4,All-Wheel,27,29,28,1750,319
+HYUNDAI MOTOR COMPANY,Santa Cruz AWD  NX4 OB 2.5 AWD 8AT,Small SUV 4WD,2.5,4,All-Wheel,21,29,24,2050,367
+HYUNDAI MOTOR COMPANY,Santa Cruz AWD NX4 OB 2.5T AWD 8AT,Small SUV 4WD,2.5,4,All-Wheel,18,25,20,2500,433
+HYUNDAI MOTOR COMPANY,Santa Cruz XRT AWD,Small SUV 4WD,2.5,4,All-Wheel,18,25,20,2500,435
+HYUNDAI MOTOR COMPANY,Santa Fe AWD,Small SUV 4WD,2.5,4,All-Wheel,20,28,23,2150,389
+HYUNDAI MOTOR COMPANY,Santa Fe AWD XRT,Small SUV 4WD,2.5,4,All-Wheel,19,25,21,2350,421
+HYUNDAI MOTOR COMPANY,Santa Fe Hybrid AWD,Small SUV 4WD,1.6,4,All-Wheel,35,34,34,1450,258
+HYUNDAI MOTOR COMPANY,Tucson AWD,Small SUV 4WD,2.5,4,All-Wheel,24,30,26,1900,337
+HYUNDAI MOTOR COMPANY,Tucson Hybrid,Small SUV 4WD,1.6,4,All-Wheel,36,37,36,1400,243
+HYUNDAI MOTOR COMPANY,Tucson Hybrid Blue,Small SUV 4WD,1.6,4,All-Wheel,38,38,38,1300,234
+Jaguar,F-PACE,Small SUV 4WD,2.0,4,All-Wheel,22,27,24,2600,376
+Jaguar,F-PACE MHEV,Small SUV 4WD,3.0,6,Four-Wheel,19,25,21,2950,418
+Jaguar,F-PACE SVR,Small SUV 4WD,5.0,8,All-Wheel,15,21,17,3650,519
+Jeep,Compass 4X4,Small SUV 4WD,2.0,4,All-Wheel,23,31,26,1900,335
+Jeep,Wrangler 2dr 4X4,Small SUV 4WD,2.0,4,Four-Wheel,20,23,21,2350,416
+Jeep,Wrangler 2dr 4X4,Small SUV 4WD,3.6,6,Four-Wheel,17,23,19,2600,462
+Jeep,Wrangler 4dr 4X4,Small SUV 4WD,2.0,4,Four-Wheel,20,22,21,2350,426
+Jeep,Wrangler 4dr 4X4,Small SUV 4WD,3.6,6,Four-Wheel,18,23,20,2500,451
+Jeep,Wrangler 4dr 4X4,Small SUV 4WD,3.6,6,Four-Wheel,16,22,19,2600,476
+KIA,Seltos AWD (1.6L),Small SUV 4WD,1.6,4,All-Wheel,24,27,25,2000,350
+KIA,Seltos AWD (2.0L),Small SUV 4WD,2.0,4,All-Wheel,27,31,29,1700,309
+KIA,Sorento AWD,Small SUV 4WD,2.5,4,All-Wheel,23,28,25,2000,357
+KIA,Sorento AWD,Small SUV 4WD,2.5,4,All-Wheel,20,27,23,2150,388
+KIA,Sorento Hybrid AWD,Small SUV 4WD,1.6,4,All-Wheel,32,35,34,1450,264
+KIA,Sportage AWD,Small SUV 4WD,2.5,4,All-Wheel,24,30,26,1900,339
+KIA,Sportage Hybrid AWD,Small SUV 4WD,1.6,4,All-Wheel,35,36,35,1400,251
+KIA,Sportage X-pro,Small SUV 4WD,2.5,4,All-Wheel,23,26,24,2050,374
+Land Rover,Discovery Sport,Small SUV 4WD,2.0,4,All-Wheel,19,23,20,3100,437
+Land Rover,Range Rover Evoque,Small SUV 4WD,2.0,4,All-Wheel,20,27,22,2850,398
+Land Rover,Range Rover Velar,Small SUV 4WD,2.0,4,All-Wheel,22,26,23,2700,381
+Land Rover,Range Rover Velar P340 MHEV,Small SUV 4WD,3.0,6,Four-Wheel,19,26,22,2850,407
+Land Rover,Range Rover Velar P400 MHEV,Small SUV 4WD,3.0,6,Four-Wheel,19,25,21,2950,420
+LEXUS,NX 350 AWD,Small SUV 4WD,2.4,4,All-Wheel,21,28,24,2600,370
+LEXUS,NX 350 AWD F SPORT,Small SUV 4WD,2.4,4,All-Wheel,21,28,24,2600,370
+LEXUS,NX 350h AWD,Small SUV 4WD,2.5,4,All-Wheel,41,37,39,1600,225
+LEXUS,RX 350 AWD,Small SUV 4WD,2.4,4,All-Wheel,21,28,24,2600,370
+LEXUS,RX 350h AWD,Small SUV 4WD,2.5,4,All-Wheel,37,34,36,1750,244
+LEXUS,RX 500h AWD,Small SUV 4WD,2.4,4,All-Wheel,27,28,27,2300,321
+Lincoln,CORSAIR AWD,Small SUV 4WD,2.0,4,All-Wheel,21,28,24,2050,376
+Lincoln,NAUTILUS AWD,Small SUV 4WD,2.0,4,All-Wheel,21,29,24,2050,369
+Lincoln,NAUTILUS HEV AWD,Small SUV 4WD,2.0,4,Part-Time 4WD,29,31,30,1650,311
+MASERATI,Grecale Modena V6,Small SUV 4WD,3.0,6,All-Wheel,18,25,20,3100,432
+MASERATI,Grecale Trofeo,Small SUV 4WD,3.0,6,All-Wheel,18,25,20,3100,432
+MAZDA,CX-30 4WD,Small SUV 4WD,2.5,4,Four-Wheel,24,31,27,1850,329
+MAZDA,CX-30 4WD,Small SUV 4WD,2.5,4,Four-Wheel,22,30,25,2000,353
+MAZDA,MAZDA CX-50 4WD,Small SUV 4WD,2.5,4,Four-Wheel,23,29,25,2000,355
+MAZDA,MAZDA CX-50 4WD,Small SUV 4WD,2.5,4,Four-Wheel,39,37,38,1300,233
+MAZDA,MAZDA CX-50 4WD,Small SUV 4WD,2.5,4,Four-Wheel,24,30,26,1900,344
+Mercedes-Benz,GLA 250 4MATIC,Small SUV 4WD,2.0,4,All-Wheel,25,33,28,2200,315
+Mercedes-Benz,GLB 250 4MATIC,Small SUV 4WD,2.0,4,All-Wheel,24,33,27,2300,324
+Mercedes-Benz,GLC 300 4MATIC,Small SUV 4WD,2.0,4,All-Wheel,23,31,26,2400,338
+Mercedes-Benz,GLC 300 4MATIC (Coupe),Small SUV 4WD,2.0,4,All-Wheel,23,31,26,2400,337
+Mercedes-Benz,GLE 350,Small SUV 4WD,2.0,4,Rear-Wheel,21,28,23,2700,382
+Mercedes-Benz,GLE 350 4MATIC,Small SUV 4WD,2.0,4,All-Wheel,19,26,22,2850,410
+Mini,Countryman S ALL4,Small SUV 4WD,2.0,4,All-Wheel,24,32,27,2300,324
+Mini,JCW Countryman ALL4,Small SUV 4WD,2.0,4,All-Wheel,23,30,25,2500,344
+Mitsubishi Motors Corporation,ECLIPSE CROSS 4WD,Small SUV 4WD,1.5,4,Four-Wheel,25,26,25,2000,353
+Mitsubishi Motors Corporation,ECLIPSE CROSS ES 4WD,Small SUV 4WD,1.5,4,Four-Wheel,25,28,26,1900,339
+NISSAN,KICKS AWD,Small SUV 4WD,2.0,4,All-Wheel,27,34,30,1650,299
+NISSAN,MURANO AWD,Small SUV 4WD,2.0,4,All-Wheel,21,27,23,2150,387
+NISSAN,ROGUE AWD,Small SUV 4WD,1.5,3,All-Wheel,28,35,31,1600,291
+NISSAN,ROGUE AWD ROCK CREEK,Small SUV 4WD,1.5,3,All-Wheel,27,32,29,1700,307
+Porsche,Macan,Small SUV 4WD,2.0,4,All-Wheel,19,25,21,2950,423
+Porsche,Macan GTS,Small SUV 4WD,2.9,6,All-Wheel,17,22,19,3300,466
+Porsche,Macan S,Small SUV 4WD,2.9,6,All-Wheel,17,23,19,3300,465
+Porsche,Macan T,Small SUV 4WD,2.0,4,All-Wheel,19,25,21,2950,423
+Subaru,CROSSTREK AWD,Small SUV 4WD,2.5,4,All-Wheel,26,33,29,1700,307
+Subaru,CROSSTREK HYBRID AWD,Small SUV 4WD,2.5,4,All-Wheel,36,36,36,1400,246
+Subaru,CROSSTREK WILDERNESS AWD,Small SUV 4WD,2.5,4,All-Wheel,24,29,26,1900,337
+Subaru,FORESTER AWD,Small SUV 4WD,2.5,4,All-Wheel,26,33,29,1700,310
+Subaru,FORESTER SPORT/TOURING AWD,Small SUV 4WD,2.5,4,All-Wheel,25,32,28,1750,317
+Subaru,FORESTER WILDERNESS AWD,Small SUV 4WD,2.5,4,All-Wheel,24,28,26,1900,347
+Subaru,OUTBACK AWD,Small SUV 4WD,2.5,4,All-Wheel,25,31,27,1850,330
+Subaru,OUTBACK AWD,Small SUV 4WD,2.4,4,All-Wheel,21,29,24,2050,369
+Subaru,OUTBACK WILDERNESS AWD,Small SUV 4WD,2.4,4,All-Wheel,21,27,23,2150,385
+TOYOTA,COROLLA CROSS AWD,Small SUV 4WD,2.0,4,All-Wheel,29,31,30,1650,295
+TOYOTA,COROLLA CROSS HYBRID AWD,Small SUV 4WD,2.0,4,All-Wheel,46,39,42,1200,211
+Volkswagen,Atlas 4Motion Peak Edition,Small SUV 4WD,2.0,4,All-Wheel,19,25,21,2350,421
+Volkswagen,Atlas Cross Sport 4Motion,Small SUV 4WD,2.0,4,All-Wheel,20,26,22,2250,407
+Volkswagen,Atlas SE 4Motion,Small SUV 4WD,2.0,4,All-Wheel,20,26,22,2250,407
+Volkswagen,Atlas SEL 4Motion,Small SUV 4WD,2.0,4,All-Wheel,19,25,21,2350,417
+Volkswagen,Taos 4Motion,Small SUV 4WD,1.5,4,Four-Wheel,25,33,28,1750,318
+Volkswagen,Tiguan 4Motion,Small SUV 4WD,2.0,4,All-Wheel,22,30,25,2000,351
+Volkswagen,Tiguan SEL 4Motion,Small SUV 4WD,2.0,4,All-Wheel,22,29,25,2000,360
+"Volvo Cars of North America, LLC",XC40 B5 AWD,Small SUV 4WD,2.0,4,All-Wheel,23,30,26,2400,343
+"Volvo Cars of North America, LLC",XC60 B5 AWD,Small SUV 4WD,2.0,4,All-Wheel,23,30,26,2400,343
+BMW,X5 sDrive40i,Standard SUV 2WD,3.0,6,Rear-Wheel,23,27,25,2500,360
+Buick,ENCLAVE FWD,Standard SUV 2WD,2.5,4,Front-Wheel,20,25,22,2250,404
+Chevrolet,SUBURBAN 2WD,Standard SUV 2WD,6.2,8,Rear-Wheel,15,19,16,3900,544
+Chevrolet,SUBURBAN 2WD,Standard SUV 2WD,5.3,8,Rear-Wheel,15,20,17,2900,530
+Chevrolet,SUBURBAN 2WD,Standard SUV 2WD,3.0,6,Rear-Wheel,21,26,23,2350,442
+Chevrolet,TAHOE 2WD,Standard SUV 2WD,6.2,8,Rear-Wheel,15,20,17,3650,523
+Chevrolet,TAHOE 2WD,Standard SUV 2WD,5.3,8,Rear-Wheel,15,20,17,2900,530
+Chevrolet,TAHOE 2WD,Standard SUV 2WD,3.0,6,Rear-Wheel,22,26,24,2250,427
+Chevrolet,TRAVERSE FWD,Standard SUV 2WD,2.5,4,Front-Wheel,20,26,22,2250,404
+Dodge,Durango RWD,Standard SUV 2WD,3.6,6,Rear-Wheel,18,25,20,2500,434
+Ford,EXPLORER RWD,Standard SUV 2WD,3.0,6,Rear-Wheel,18,25,21,2350,423
+Ford,EXPLORER RWD,Standard SUV 2WD,2.3,4,Rear-Wheel,20,29,24,2050,377
+GMC,ACADIA FWD,Standard SUV 2WD,2.5,4,Front-Wheel,20,26,22,2250,404
+GMC,YUKON 2WD,Standard SUV 2WD,6.2,8,Rear-Wheel,15,20,17,3650,523
+GMC,YUKON 2WD,Standard SUV 2WD,5.3,8,Rear-Wheel,15,20,17,2900,530
+GMC,YUKON 2WD,Standard SUV 2WD,3.0,6,Rear-Wheel,21,26,23,2350,442
+GMC,YUKON XL 2WD,Standard SUV 2WD,6.2,8,Rear-Wheel,15,19,16,3900,544
+GMC,YUKON XL 2WD,Standard SUV 2WD,5.3,8,Rear-Wheel,15,20,17,2900,530
+GMC,YUKON XL 2WD,Standard SUV 2WD,3.0,6,Rear-Wheel,21,26,23,2350,442
+HYUNDAI MOTOR COMPANY,Palisade FWD,Standard SUV 2WD,3.5,6,Front-Wheel,19,25,21,2350,418
+HYUNDAI MOTOR COMPANY,Palisade Hybrid FWD,Standard SUV 2WD,2.5,4,Front-Wheel,31,32,31,1600,283
+HYUNDAI MOTOR COMPANY,Palisade Hybrid FWD Blue,Standard SUV 2WD,2.5,4,Front-Wheel,33,35,34,1450,258
+INFINITI,QX60 FWD,Standard SUV 2WD,2.0,4,Front-Wheel,22,28,24,2600,371
+INFINITI,QX80 2WD,Standard SUV 2WD,3.5,6,Rear-Wheel,16,20,18,3450,504
+LEXUS,TX 350,Standard SUV 2WD,2.4,4,Front-Wheel,21,27,23,2700,382
+Lincoln,AVIATOR RWD,Standard SUV 2WD,3.0,6,Rear-Wheel,18,25,21,2350,423
+NISSAN,ARMADA 2WD,Standard SUV 2WD,3.5,6,Rear-Wheel,16,20,18,3450,506
+TOYOTA,GRAND HIGHLANDER HYBRID,Standard SUV 2WD,2.5,4,Front-Wheel,37,34,36,1400,246
+TOYOTA,GRAND HIGHLANDER LE/XLE,Standard SUV 2WD,2.4,4,Front-Wheel,21,28,24,2050,371
+TOYOTA,GRAND HIGHLANDER LIMITED,Standard SUV 2WD,2.4,4,Front-Wheel,21,28,24,2050,366
+TOYOTA,SEQUOIA 2WD,Standard SUV 2WD,3.4,6,Rear-Wheel,21,24,22,2250,395
+TOYOTA,SEQUOIA 2WD,Standard SUV 2WD,3.4,6,Rear-Wheel,21,24,22,2850,395
+Acura,MDX AWD Type-S,Standard SUV 4WD,3.0,6,All-Wheel,17,21,19,3300,474
+Aston Martin Lagonda Ltd,DBX 707,Standard SUV 4WD,4.0,8,Four-Wheel,15,20,17,3650,537
+Aston Martin Lagonda Ltd,DBX 727,Standard SUV 4WD,4.0,8,Four-Wheel,14,19,16,3900,546
+Audi,Q7,Standard SUV 4WD,2.0,4,All-Wheel,20,26,22,2850,405
+Audi,Q7 quattro,Standard SUV 4WD,3.0,6,All-Wheel,18,23,20,3100,442
+Audi,Q8 quattro,Standard SUV 4WD,3.0,6,All-Wheel,17,23,19,3300,459
+Audi,RS Q8 Performance,Standard SUV 4WD,4.0,8,All-Wheel,14,20,16,3900,547
+Audi,SQ7,Standard SUV 4WD,4.0,8,All-Wheel,14,20,16,3900,540
+Audi,SQ8,Standard SUV 4WD,4.0,8,All-Wheel,14,20,16,3900,540
+Bentley,Bentayga,Standard SUV 4WD,4.0,8,All-Wheel,14,21,16,3900,553
+Bentley,Bentayga EWB,Standard SUV 4WD,4.0,8,All-Wheel,14,21,16,3900,553
+BMW,ALPINA XB7,Standard SUV 4WD,4.4,8,All-Wheel,16,20,17,3650,506
+BMW,X5 M Competition,Standard SUV 4WD,4.4,8,All-Wheel,13,18,15,4150,589
+BMW,X5 M60i xDrive,Standard SUV 4WD,4.4,8,All-Wheel,17,22,19,3300,458
+BMW,X5 xDrive40i,Standard SUV 4WD,3.0,6,All-Wheel,23,27,25,2500,352
+BMW,X6 M Competition,Standard SUV 4WD,4.4,8,All-Wheel,13,18,15,4150,589
+BMW,X6 M60i xDrive,Standard SUV 4WD,4.4,8,All-Wheel,17,22,19,3300,458
+BMW,X6 xDrive40i,Standard SUV 4WD,3.0,6,All-Wheel,22,26,23,2700,372
+BMW,X7 M60i xDrive,Standard SUV 4WD,4.4,8,All-Wheel,16,20,18,3450,498
+BMW,X7 xDrive40i,Standard SUV 4WD,3.0,6,All-Wheel,21,25,23,2700,387
+Buick,ENCLAVE AWD,Standard SUV 4WD,2.5,4,All-Wheel,20,24,21,2350,423
+Cadillac,ESCALADE 4WD,Standard SUV 4WD,6.2,8,Four-Wheel,14,18,16,3900,572
+Cadillac,ESCALADE V AWD,Standard SUV 4WD,6.2,8,Four-Wheel,11,17,13,4800,691
+Chevrolet,SUBURBAN 4WD,Standard SUV 4WD,6.2,8,Four-Wheel,14,18,16,3900,572
+Chevrolet,SUBURBAN 4WD,Standard SUV 4WD,5.3,8,Four-Wheel,14,19,16,3100,571
+Chevrolet,SUBURBAN 4WD,Standard SUV 4WD,3.0,6,Four-Wheel,20,24,22,2450,460
+Chevrolet,TAHOE 4WD,Standard SUV 4WD,3.0,6,Four-Wheel,20,24,22,2450,460
+Chevrolet,TAHOE 4WD (5.3L),Standard SUV 4WD,5.3,8,Four-Wheel,15,19,17,2900,536
+Chevrolet,TAHOE 4WD (6.2L),Standard SUV 4WD,6.2,8,Four-Wheel,14,18,16,3900,572
+Chevrolet,TRAVERSE AWD,Standard SUV 4WD,2.5,4,All-Wheel,20,24,21,2350,423
+Dodge,Durango AWD,Standard SUV 4WD,3.6,6,All-Wheel,17,24,20,2500,449
+Dodge,Durango AWD,Standard SUV 4WD,5.7,8,All-Wheel,14,21,16,3550,541
+Ford,EXPLORER AWD,Standard SUV 4WD,3.0,6,Part-Time 4WD,18,25,20,2500,439
+Ford,EXPLORER AWD,Standard SUV 4WD,2.3,4,Part-Time 4WD,20,27,23,2150,394
+Ford,EXPLORER TREMOR AWD,Standard SUV 4WD,3.0,6,Part-Time 4WD,17,22,19,2600,467
+Ford,EXPLORER TREMOR AWD,Standard SUV 4WD,2.3,4,Part-Time 4WD,19,23,21,2350,424
+GENESIS,GV80 AWD,Standard SUV 4WD,2.5,4,All-Wheel,19,24,21,2950,427
+GENESIS,GV80 AWD,Standard SUV 4WD,3.5,6,All-Wheel,16,22,19,3300,473
+GENESIS,GV80 MHEV,Standard SUV 4WD,3.5,6,All-Wheel,17,22,19,3300,467
+GMC,ACADIA AWD,Standard SUV 4WD,2.5,4,All-Wheel,20,23,21,2350,423
+GMC,YUKON 4WD,Standard SUV 4WD,6.2,8,Four-Wheel,14,18,16,3900,572
+GMC,YUKON 4WD,Standard SUV 4WD,5.3,8,Four-Wheel,15,19,17,2900,536
+GMC,YUKON 4WD,Standard SUV 4WD,3.0,6,Four-Wheel,20,24,22,2450,460
+GMC,YUKON XL 4WD,Standard SUV 4WD,6.2,8,Four-Wheel,14,18,16,3900,572
+GMC,YUKON XL 4WD,Standard SUV 4WD,5.3,8,Four-Wheel,14,19,16,3100,571
+GMC,YUKON XL 4WD,Standard SUV 4WD,3.0,6,Four-Wheel,20,24,22,2450,460
+HYUNDAI MOTOR COMPANY,Palisade AWD,Standard SUV 4WD,3.5,6,All-Wheel,18,24,20,2500,444
+HYUNDAI MOTOR COMPANY,Palisade Hybrid AWD,Standard SUV 4WD,2.5,4,All-Wheel,29,30,29,1700,300
+HYUNDAI MOTOR COMPANY,Palisade XRT Pro,Standard SUV 4WD,3.5,6,All-Wheel,16,22,19,2600,479
+INFINITI,QX60 AWD,Standard SUV 4WD,2.0,4,All-Wheel,22,27,24,2600,374
+INFINITI,QX80 4WD,Standard SUV 4WD,3.5,6,Four-Wheel,16,19,17,3650,522
+Land Rover,Defender 110,Standard SUV 4WD,2.0,4,Four-Wheel,18,22,20,3100,452
+Land Rover,Defender 110,Standard SUV 4WD,5.0,8,Four-Wheel,14,18,16,3900,574
+Land Rover,Defender 110 MHEV,Standard SUV 4WD,3.0,6,Four-Wheel,18,22,20,3100,453
+Land Rover,Defender 110 MHEV,Standard SUV 4WD,4.4,8,Four-Wheel,15,19,17,3650,534
+Land Rover,Defender 110 Trophy MHEV,Standard SUV 4WD,3.0,6,Four-Wheel,17,18,17,3650,512
+Land Rover,Defender 130,Standard SUV 4WD,5.0,8,Four-Wheel,14,19,16,3900,567
+Land Rover,Defender 130 Outbound,Standard SUV 4WD,3.0,6,Four-Wheel,17,19,18,3450,500
+Land Rover,Defender 130 P300 MHEV,Standard SUV 4WD,3.0,6,Four-Wheel,17,21,19,3300,468
+Land Rover,Defender 130 P400 MHEV,Standard SUV 4WD,3.0,6,Four-Wheel,16,20,18,3450,491
+Land Rover,Defender 90,Standard SUV 4WD,2.0,4,Four-Wheel,18,21,19,3300,465
+Land Rover,Defender 90,Standard SUV 4WD,5.0,8,Four-Wheel,15,19,16,3900,550
+Land Rover,Defender 90 MHEV,Standard SUV 4WD,3.0,6,Four-Wheel,18,23,20,3100,448
+Land Rover,Discovery MHEV,Standard SUV 4WD,3.0,6,Four-Wheel,17,23,19,3300,457
+Land Rover,Range Rover LWB MHEV,Standard SUV 4WD,4.4,8,Four-Wheel,16,22,18,3450,501
+Land Rover,Range Rover MHEV,Standard SUV 4WD,4.4,8,Four-Wheel,16,23,19,3300,477
+Land Rover,Range Rover P400 LWB MHEV,Standard SUV 4WD,3.0,6,Four-Wheel,19,24,21,2950,428
+Land Rover,Range Rover P400 MHEV,Standard SUV 4WD,3.0,6,Four-Wheel,19,24,21,2950,428
+Land Rover,Range Rover Sport MHEV,Standard SUV 4WD,4.4,8,Four-Wheel,16,23,19,3300,477
+Land Rover,Range Rover Sport SVR MHEV,Standard SUV 4WD,4.4,8,Four-Wheel,16,22,18,3450,497
+Land Rover,Range Rover SV LWB MHEV,Standard SUV 4WD,4.4,8,Four-Wheel,16,22,18,3450,501
+Land Rover,Range Rover SV MHEV,Standard SUV 4WD,4.4,8,Four-Wheel,16,23,18,3450,487
+LEXUS,TX 350 AWD,Standard SUV 4WD,2.4,4,All-Wheel,20,26,23,2700,387
+LEXUS,TX 500h AWD,Standard SUV 4WD,2.4,4,All-Wheel,27,28,27,2300,322
+Lincoln,AVIATOR AWD,Standard SUV 4WD,3.0,6,Part-Time 4WD,17,25,20,2500,447
+MAZDA,MAZDA CX-90 4WD,Standard SUV 4WD,3.3,6,Four-Wheel,23,28,25,2000,358
+MAZDA,MAZDA CX-90 4WD,Standard SUV 4WD,3.3,6,Four-Wheel,23,28,25,2500,354
+Mercedes-Benz,AMG G 63,Standard SUV 4WD,4.0,8,Four-Wheel,14,16,15,4150,608
+Mercedes-Benz,AMG GLE 53 4MATIC+,Standard SUV 4WD,3.0,6,All-Wheel,18,23,20,3100,439
+Mercedes-Benz,AMG GLE 53 4MATIC+ (coupe),Standard SUV 4WD,3.0,6,All-Wheel,18,22,20,3100,454
+Mercedes-Benz,AMG GLE 63 S 4MATIC+,Standard SUV 4WD,4.0,8,All-Wheel,15,20,17,3650,528
+Mercedes-Benz,AMG GLE 63 S 4MATIC+ (coupe),Standard SUV 4WD,4.0,8,All-Wheel,15,21,17,3650,523
+Mercedes-Benz,AMG GLS 63 4MATIC+,Standard SUV 4WD,4.0,8,All-Wheel,15,20,17,3650,538
+Mercedes-Benz,G 550,Standard SUV 4WD,3.0,6,Four-Wheel,17,19,18,3450,490
+Mercedes-Benz,GLE 450 4MATIC,Standard SUV 4WD,3.0,6,All-Wheel,19,25,21,2950,424
+Mercedes-Benz,GLE 450 4MATIC (coupe),Standard SUV 4WD,3.0,6,All-Wheel,19,25,21,2950,424
+Mercedes-Benz,GLE 580 4MATIC,Standard SUV 4WD,4.0,8,All-Wheel,15,21,18,3450,506
+Mercedes-Benz,GLS 450 4MATIC,Standard SUV 4WD,3.0,6,All-Wheel,19,24,21,2950,428
+Mercedes-Benz,GLS 580 4MATIC,Standard SUV 4WD,4.0,8,All-Wheel,14,20,16,3900,539
+Mercedes-Benz,GLS 600 4MATIC Maybach,Standard SUV 4WD,4.0,8,All-Wheel,13,18,15,4150,585
+NISSAN,ARMADA 4WD,Standard SUV 4WD,3.5,6,Four-Wheel,16,19,17,3650,524
+NISSAN,ARMADA 4WD PRO-4X,Standard SUV 4WD,3.5,6,Four-Wheel,15,18,16,3900,556
+Porsche,Cayenne,Standard SUV 4WD,3.0,6,All-Wheel,17,23,19,3300,469
+Porsche,Cayenne Coupe,Standard SUV 4WD,3.0,6,All-Wheel,17,23,19,3300,469
+Porsche,Cayenne GTS,Standard SUV 4WD,4.0,8,All-Wheel,15,22,18,3450,512
+Porsche,Cayenne GTS Coupe,Standard SUV 4WD,4.0,8,All-Wheel,16,22,18,3450,489
+Porsche,Cayenne S,Standard SUV 4WD,4.0,8,All-Wheel,16,21,18,3450,492
+Porsche,Cayenne S Coupe,Standard SUV 4WD,4.0,8,All-Wheel,16,21,18,3450,492
+Porsche,Cayenne Turbo GT,Standard SUV 4WD,4.0,8,All-Wheel,15,20,17,3650,521
+Rolls-Royce Motor Cars Limited,Black Badge Cullinan,Standard SUV 4WD,6.7,12,All-Wheel,12,19,14,4450,609
+Rolls-Royce Motor Cars Limited,Cullinan,Standard SUV 4WD,6.7,12,All-Wheel,12,19,14,4450,609
+Subaru,ASCENT AWD,Standard SUV 4WD,2.4,4,All-Wheel,19,26,22,2250,405
+Subaru,ASCENT LIMITED/TOURING/ONYX EDITION AWD,Standard SUV 4WD,2.4,4,All-Wheel,19,25,21,2350,421
+TOYOTA,GRAND HIGHLANDER AWD LE/XLE,Standard SUV 4WD,2.4,4,All-Wheel,21,27,23,2150,379
+TOYOTA,GRAND HIGHLANDER AWD LIMITED/PLATINUM,Standard SUV 4WD,2.4,4,All-Wheel,20,26,22,2250,400
+TOYOTA,GRAND HIGHLANDER HYBRID AWD,Standard SUV 4WD,2.5,4,All-Wheel,36,32,34,1450,260
+TOYOTA,GRAND HIGHLANDER HYBRID AWD,Standard SUV 4WD,2.4,4,All-Wheel,26,27,27,1850,332
+TOYOTA,LAND CRUISER,Standard SUV 4WD,2.4,4,Four-Wheel,22,25,23,2700,379
+TOYOTA,SEQUOIA 4WD,Standard SUV 4WD,3.4,6,Part-Time 4WD,19,22,20,2500,439
+TOYOTA,SEQUOIA 4WD,Standard SUV 4WD,3.4,6,Part-Time 4WD,19,22,20,3100,439
+"Volvo Cars of North America, LLC",XC90 B5 AWD,Standard SUV 4WD,2.0,4,All-Wheel,22,27,24,2600,369
+"Volvo Cars of North America, LLC",XC90 B6 AWD,Standard SUV 4WD,2.0,4,All-Wheel,20,26,23,2700,393
