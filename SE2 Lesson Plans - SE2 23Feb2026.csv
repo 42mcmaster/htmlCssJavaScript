@@ -1,0 +1,61 @@
+Date,Topic (Instruction Focus),Daily Objectives (Learner Will Be Able To),State Competencies (Standards),Assessment / Grade Entry
+"Monday  |  February 23  |  2026 ","MOS Excel Associate Practice (BLS Wage Data)
+
+ AI Business Dashboard Challenge (Summit Construction)
+
+ Python Refresher Workbook
+
+ Workplace Success — Complete modules due 4 March
+
+ Mr. McMaster is at BPA State Competition in Columbus with contest students. Sub will be present.","Complete MOS practice tasks using COUNTA, AVERAGE, MAX, MIN, COUNTIF, AVERAGEIF, SUMIF, and VLOOKUP on BLS occupation and wage data; begin AI Business Dashboard Challenge by selecting 2 tasks from the Summit Construction dataset and using AI tools (Gemini or Copilot) to analyze project, materials, or labor data; start Python Refresher Workbook (Parts 1–2: variables, data types, lists, dictionaries, functions); work on Workplace Success modules due 4 March.","2.11.1 Demonstrate workplace-readiness skills; 5.1.1 Safety procedures; 2.6.1 Demonstrate understanding of AI tools and their applications; 5.2.1 Data types and variables; 5.2.3 Arithmetic operations.","Formative: MOS Practice worksheet (BLS Wages) progress check
+
+ AI Business Dashboard — task selection and initial AI-assisted analysis
+
+ Python Refresher Workbook progress (Parts 1–2)
+
+ Workplace Success module completion (due 4 March)"
+"Tuesday  |  February 24  |  2026 ","MOS Excel Associate Practice (continued)
+
+ AI Business Dashboard Challenge (continued)
+
+ Python Refresher Workbook (continued)
+
+ Workplace Success — Continue modules due 4 March
+
+ Mr. McMaster is at BPA State Competition in Columbus. Sub will be present.","Continue and complete MOS Excel practice; continue AI Business Dashboard Challenge — finalize charts, findings, recommendations, and reflection, and submit Google Doc; continue Python Refresher Workbook (Parts 3–4: os library, file manipulation, CSV processing); finish any remaining tasks from Monday; continue Workplace Success modules.","2.11.1 Demonstrate workplace-readiness skills; 5.1.1 Safety procedures; 2.6.1 Demonstrate understanding of AI tools and their applications; 5.2.1 Data types and variables; 5.3.8 Nested loops.","Formative: MOS Practice worksheet completion
+
+ AI Business Dashboard Challenge — Google Doc submission (analysis, screenshots, reflection)
+
+ Python Refresher Workbook progress (Parts 3–4)
+
+ Workplace Success module progress"
+"Wednesday  |  February 25  |  2026 ","Guest Instructor: Jared Henderson — Introduction to C and Computing (prog01)
+
+ Block 1: Jared's background and career path; why C matters; compilation vs interpretation (gcc pipeline); binary, hex, and overflow; ASCII and character encoding.
+
+ Block 2: Types and memory (int, float, char, sizeof); pointers and memory layout (stack vs heap, malloc/free); strings as byte arrays; functions with typed signatures; scanf for user input.","1. Explain why C is foundational to modern computing. 2. Describe the compilation pipeline (preprocess, compile, assemble, link). 3. Convert between decimal, binary, and hexadecimal. 4. Identify ASCII values for common characters. 5. Declare typed variables (int, float, char) and use sizeof. 6. Explain pointers, memory addresses, and stack vs heap.","2.3.1 ASCII character encoding; 2.3.2 Binary, hexadecimal, and overflow; 5.1.7 Compilers and compilation; 5.2.1 Data types and variables; 5.2.3 Arithmetic operations.","Formative: Follow-along code check — students should have working hello.c compiled with gcc by end of session.
+"
+"Thursday  |  February 26  |  2026 ","prog01 Session A — Syntax, Compilation, and Number Systems (prog01a_Task)
+
+ Exercise 1: Translate JS/Python snippets to C (variable declaration, printing, if/else, loops, functions). Compile and run each.
+
+ Exercise 2: Encoding and number systems — print ASCII values, uppercase conversion via arithmetic, binary printing, integer overflow exploration.","1. Translate basic programs from JS/Python to equivalent C code. 2. Compile C programs using gcc and fix compiler errors. 3. Print ASCII values of characters and perform character arithmetic. 4. Print a number in binary using loops. 5. Demonstrate integer overflow behavior with unsigned char.","5.1.7 Compilers and compilation; 5.2.1 Data types and variables; 2.3.1 ASCII character encoding; 2.3.2 Binary, hexadecimal, and overflow; 5.4.6 Testing and debugging; 5.4.7 Error identification.","Due: prog01a_Task (Session A exercises)
+
+
+Formative: Compiled and working C programs for each exercise"
+"Friday  |  February 27  |  2026 ","prog01 Session B — Functions, Arrays, and Memory (prog01b_Task)
+
+ Exercise 3: Functions, types, and math — temperature converter, clamp function, weighted average, grade calculator.
+
+ Exercise 4: Arrays and loops — find max, compute average, reverse array in place.
+
+ Exercise 5: Strings and dynamic memory — my_strlen, Caesar cipher, malloc/scanf/free exercise.
+
+ Certification Prep — Student-driven certification study (CodeHS, Stukent, GMetrix, etc.). Select from: Data Analytics; HTML/CSS; JavaScript; AI; Database; Device Configuration; MOS.","1. Write C functions with typed parameters and return values. 2. Distinguish between int and float division in calculations. 3. Use arrays with loops to find max, average, and reverse elements. 4. Implement string functions using pointer arithmetic and null terminators. 5. Allocate and free dynamic memory using malloc and free. 6. Work toward industry certification goals.","5.2.1 Data types and variables; 5.2.3 Arithmetic operations; 5.3.8 Nested loops; 2.3.1 ASCII character encoding; 5.4.6 Testing and debugging; 5.4.7 Error identification.","Due: prog01b_Task (Session B exercises)
+
+ Certification Prep progress
+
+
+ Weekly Participation Points (25pts)"
+,,,,
+"Teacher Note: AI was used to help draft portions of this crosswalk. I checked the overall accuracy, but not every line has been manually validated.",,,,
