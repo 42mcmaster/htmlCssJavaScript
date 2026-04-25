@@ -1,0 +1,4 @@
+﻿Question,Option A,Option B,Option C,Option D,Correct Answer,Points
+Which keyword is used to create a variable in Python?,var,let,No keyword needed,dim,C,1
+What will this code print? print(5 + 3 * 2),10,16,11,13,C,1
+Which data type is the value 3.14?,int,str,float,bool,C,1
