@@ -10,8 +10,9 @@ In this guided walkthrough, you will build your first HTML page from scratch. Yo
 ## Part 1: Setting Up Your Project
 
 ### Step 1: Create a Project Folder
-1. On your computer, create a new folder called `html01_MyFirstPage`
-2. Remember where you put it (Desktop is fine)
+1. On your computer, go to your Documents folder (C Drive)
+2. Create a new folder in documents called `html01_MyFirstPage`
+
 
 ### Step 2: Open VS Code
 1. Open Visual Studio Code
@@ -24,6 +25,15 @@ In this guided walkthrough, you will build your first HTML page from scratch. Yo
 2. Click the **New File** icon (or right-click and select "New File")
 3. Name it `index.html` and press Enter
 4. You now have a blank file ready for HTML code
+
+
+### Step 4: Turn of VS Code's suggestions
+Before we start, we're going to turn off Quick Suggestions because it is distracting as you're first learning: 
+1. Go to File → Preferences → Settings
+2. Search for:
+  "Inline suggest" 
+3. Find "Editor > Inline Suggest > Enabled
+4. Uncheck it so it is disabled
 
 ---
 
@@ -178,17 +188,17 @@ Add a few more comments to sections of your page. For example:
 
 ### Step 14: Open in the Browser
 
-**Option A: Using Live Server (Recommended)**
+**Option A: Using Live Server**
 1. Right-click on your `index.html` file in the Explorer panel
 2. Select **Open with Live Server**
 3. Your browser opens automatically and shows your page
 4. Any time you save changes, the browser auto-refreshes
 
 **Option B: Manual Open**
-1. In File Explorer (Windows) or Finder (Mac), navigate to your project folder
+1. In File Explorer (Windows), navigate to your project folder
 2. Right-click `index.html` → **Open with** → **Your browser** (Chrome, Firefox, Edge, etc.)
 
-### Step 15: View the Page Source
+### Step 15: View the Page Source (this likely won't work due to developer tools being turned off for students, but we'll try)
 In your browser:
 1. Right-click anywhere on the page
 2. Select **Inspect** or **View Page Source**

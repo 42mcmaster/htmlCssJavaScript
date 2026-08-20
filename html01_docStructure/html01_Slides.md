@@ -20,7 +20,7 @@ paginate: true
 - It defines the **structure** of web pages
 - Uses **tags** like `<p>`, `<h1>`, `<body>` to organize content
 - Not for styling or design (that's CSS)
-- Every modern web page starts with HTML
+- Every web page is ultimately built from HTML, which provides the structure and content that the browser displays.
 
 ---
 
