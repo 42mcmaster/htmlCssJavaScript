@@ -212,7 +212,7 @@ In your browser:
 Now it's your turn. Edit your `index.html` file and complete these tasks:
 
 ### Task A: Change the Title
-Change the `<title>` tag to something more personal. What should the browser tab say?
+Change the `<title>` tag to something more personal - like add your name "Mr. M's Fabulous Webpage." What should the browser tab say after you change it?
 
 ```html
 <title>_________________________</title>
