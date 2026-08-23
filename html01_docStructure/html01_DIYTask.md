@@ -4,8 +4,7 @@
 
 Create a complete "About Me" page from scratch that showcases who you are. This is an **independent project** with no starter code—you'll build everything yourself using the skills from lessons 01a and 01b.
 
-**Time Estimate:** 45 minutes
-**What you'll submit:** One HTML file named `aboutMe.html`
+**What you'll submit:** One HTML file named `aboutMe.html` to your GitHub folder. 
 
 ---
 
