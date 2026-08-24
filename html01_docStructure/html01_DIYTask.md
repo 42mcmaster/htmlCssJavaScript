@@ -122,8 +122,8 @@ Here's one possible outline (you can use a different structure if you prefer):
 
 After completing this task:
 - Review the Study Guide to make sure you understand all the vocabulary
-- Take the Gimkit quiz to test your knowledge
-- Take the Google Quiz for assessment
+- We will play Gimkit quiz to test your knowledge
+- Then we'll take a Quiz for assessment
 
 Good luck! Have fun creating your About Me page.
 
