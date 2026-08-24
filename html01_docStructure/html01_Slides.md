@@ -134,6 +134,7 @@ Save as `index.html` and open in browser!
 
 ## What's Coming
 
+- A walkthrough we'll do together
 - 01a task: Build a basic page with proper structure
 - 01b task: Add headings, paragraphs, and comments
 - DIY task: Create a complete "About Me" page from scratch
