@@ -98,7 +98,7 @@ paginate: true
 
 <!-- _header: "Sub-Lesson 01b — Development Environment" -->
 
-## Your First HTML File
+## Basic Structure of an HTML File
 
 ```html
 <!DOCTYPE html>
