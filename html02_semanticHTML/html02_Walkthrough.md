@@ -219,9 +219,9 @@ The `<aside>` element contains tangentially related content.
 <aside>
   <h3>Related Recipes</h3>
   <ul>
-    <li><a href="#">___</a></li>
-    <li><a href="#">___</a></li>
-    <li><a href="#">___</a></li>
+    <li>___</li>
+    <li>___</li>
+    <li>___</li>
   </ul>
 </aside>
 ```
@@ -240,13 +240,11 @@ The `<footer>` contains copyright info, contact details, or other closing conten
 ```html
 <footer>
   <p>&copy; 2024 ___. All rights reserved.</p>
-  <p>Contact: <a href="mailto:___">___</a></p>
 </footer>
 ```
 
 **What to fill in:**
 - Site name or your name
-- Email address
 
 ---
 
