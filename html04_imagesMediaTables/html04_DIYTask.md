@@ -117,16 +117,16 @@ Warranty: 1yr | Warranty: 2yrs | Warranty: 3yrs
 
 ---
 
-## Grading Rubric (20 points)
+## Grading Rubric
 
-| Criteria | Points | Notes |
-|----------|--------|-------|
-| **HTML Structure** | 3 | Valid HTML5, semantic elements |
-| **Images** | 4 | Alt text, captions, responsive, at least 3 images |
-| **Media** | 4 | YouTube/video/audio embedded properly, controls visible |
-| **Table** | 4 | Proper structure, headers, 4+ rows, colspan/rowspan used |
-| **Design & Polish** | 3 | Clean layout, spacing, readability, professional appearance |
-| **Functionality** | 2 | All media works, no broken links, responsive design |
+| Criteria | Looking for |
+|----------|-------------|
+| **HTML Structure** | Valid HTML5, semantic elements |
+| **Images** | Alt text, captions, responsive, at least 3 images |
+| **Media** | YouTube/video/audio embedded properly, controls visible |
+| **Table** | Proper structure, headers, 4+ rows, colspan/rowspan used |
+| **Design & Polish** | Clean layout, spacing, readability, professional appearance |
+| **Functionality** | All media works, no broken links, responsive design |
 
 ---
 

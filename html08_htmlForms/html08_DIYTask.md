@@ -10,100 +10,100 @@ Create a complete, professionally-styled survey form that demonstrates mastery o
 
 ## Requirements
 
-### Part 1: HTML Structure (25 points)
+### Part 1: HTML Structure
 
 Your survey form MUST include:
 
-1. **Form Container** (2 points)
+1. **Form Container**
    - `<form>` tag with `action="/submit-survey"` and `method="POST"`
    - Meaningful `<h1>` title
 
-2. **Multiple Fieldsets** (5 points)
+2. **Multiple Fieldsets**
    - At least 4 `<fieldset>` elements
    - Each fieldset has a `<legend>` with a clear section name
    - Examples: Demographics, Preferences, Experience, Additional Info
 
-3. **Text Inputs** (5 points)
+3. **Text Inputs**
    - Text input for name
    - Email input with validation
    - At least one other text input (city, company, etc.)
    - All with labels, placeholders, and appropriate `id/name` attributes
 
-4. **Numeric/Date Inputs** (3 points)
+4. **Numeric/Date Inputs**
    - At least one `type="number"` input
    - At least one `type="date"` input
    - Both with labels
 
-5. **Radio Buttons** (3 points)
+5. **Radio Buttons**
    - At least one group of 4+ radio buttons
    - Proper `name` grouping
    - Clear labels for each option
 
-6. **Checkboxes** (3 points)
+6. **Checkboxes**
    - At least one group of 3+ checkboxes
    - Proper `name` grouping
    - Clear labels for each option
 
-7. **Select Dropdown** (2 points)
+7. **Select Dropdown**
    - At least one `<select>` with 4+ `<option>` elements
    - Placeholder option included
 
-8. **Textarea** (2 points)
+8. **Textarea**
    - Multi-line text input with `rows` and `cols`
    - Placeholder text
 
-### Part 2: CSS Styling (20 points)
+### Part 2: CSS Styling
 
-1. **Page Layout** (3 points)
+1. **Page Layout**
    - Responsive design (works on mobile and desktop)
    - Appropriate max-width (500-800px)
    - Centered with proper margins and padding
    - Clean background color or image
 
-2. **Form Styling** (4 points)
+2. **Form Styling**
    - White background (or light color)
    - Padding and rounded corners
    - Subtle shadow or border
    - Clear visual hierarchy
 
-3. **Fieldset & Legend** (3 points)
+3. **Fieldset & Legend**
    - Distinct styling for each fieldset
    - Clear, readable legend text
    - Proper spacing between sections
 
-4. **Input Styling** (4 points)
+4. **Input Styling**
    - Consistent padding and borders
    - Rounded corners
    - Full width (or appropriate width)
    - Focus state with color change or shadow
    - Distinct styling for different input types
 
-5. **Label Styling** (2 points)
+5. **Label Styling**
    - Bold font for standalone labels
    - Proper spacing above inputs
    - Clear association with inputs
 
-6. **Button Styling** (2 points)
+6. **Button Styling**
    - Submit button is visually prominent (different color)
    - Hover effects on buttons
    - Proper padding and font size
    - Optional: Reset button with different style
 
-7. **Responsive Design** (2 points)
+7. **Responsive Design**
    - Uses media queries for mobile (max-width: 600px)
    - Buttons may stack on mobile
    - Text remains readable on all screens
    - Form controls scale appropriately
 
-### Part 3: Accessibility & Usability (10 points)
+### Part 3: Accessibility & Usability
 
-1. **Accessibility** (5 points)
+1. **Accessibility**
    - Every input has an associated `<label>`
    - Proper use of `for/id` attributes
    - Semantic HTML structure
    - `required` attribute on important fields
 
-2. **User Experience** (5 points)
+2. **User Experience**
    - Clear, helpful placeholder text
    - Logical field order and grouping
    - Consistent spacing and alignment
@@ -194,7 +194,7 @@ your-project/
 
 ---
 
-## Grading Rubric (55 points total)
+## Grading Rubric
 
 | Category | Points | Criteria |
 |----------|--------|----------|

@@ -111,9 +111,9 @@ Comprehensive CTE Web Design lesson materials for teaching HTML Forms at Medina 
 13. **html08_DIYTask.md** (267 lines)
     - Independent project: Build a multi-section survey
     - Complete requirements breakdown
-    - Part 1: HTML Structure (25 points)
-    - Part 2: CSS Styling (20 points)
-    - Part 3: Accessibility & UX (10 points)
+    - Part 1: HTML Structure
+    - Part 2: CSS Styling
+    - Part 3: Accessibility & UX
     - Multiple survey topic suggestions
     - Grading rubric
     - Bonus challenges
@@ -153,7 +153,6 @@ Comprehensive CTE Web Design lesson materials for teaching HTML Forms at Medina 
 17. **html08_GoogleQuiz.csv** (31 lines)
     - 30 quiz questions for Google Forms/Quiz
     - Format: Question, Option A/B/C/D, Correct Answer, Points
-    - All questions worth 1 point
     - Comprehensive assessment coverage
 
 ## File Statistics

@@ -170,10 +170,10 @@ Submit TWO files:
 ## Helpful Tips
 
 1. **Start Simple**: Build the basic structure first (header, footer, cards)
-2. **Use DevTools**: Right-click elements and inspect box model to verify spacing
+2. **Use the X-ray trick**: temporarily add `* { outline: 1px solid red; }` to see every box while you verify spacing (remove it before submitting)
 3. **Comment Your Code**: Explain what each CSS rule does
 4. **Test Scrolling**: Make sure header/footer stay fixed when scrolling
-5. **Mobile View**: Test on smaller browser widths (or use DevTools device emulation)
+5. **Mobile View**: Test by narrowing the browser window
 6. **Color Palette**: Choose 2-3 main colors and stick with them
 7. **Consistent Spacing**: Use multiples of 5-10 for padding/margin (e.g., 5px, 10px, 15px, 20px)
 
@@ -184,7 +184,7 @@ Submit TWO files:
 - **MDN Box Model Guide**: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model
 - **CSS Display Property**: https://developer.mozilla.org/en-US/docs/Web/CSS/display
 - **CSS Position Property**: https://developer.mozilla.org/en-US/docs/Web/CSS/position
-- **Using DevTools**: Open DevTools (F12), right-click an element, select "Inspect"
+- **X-ray trick**: `* { outline: 1px solid red; }` at the top of your CSS shows every box edge (take it out when done)
 
 ---
 

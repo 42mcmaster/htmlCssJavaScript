@@ -30,19 +30,7 @@
 
 14. **CSS Grid** — A two-dimensional layout system for creating complex page layouts with rows and columns.
 
-15. **grid-template-columns** — Property that defines the width and number of grid columns.
-
-16. **grid-template-rows** — Property that defines the height and number of grid rows.
-
-17. **grid-gap** (or **gap**) — Property that sets space between grid rows and columns.
-
-18. **fr unit (Fraction Unit)** — CSS unit used in grid that represents a fraction of available space; `1fr` = one part, `2fr` = two parts.
-
-19. **auto-fill** — Grid keyword that fills columns automatically based on available space while maintaining a minimum size.
-
-20. **auto-fit** — Grid keyword similar to auto-fill but collapses empty tracks.
-
-21. **minmax()** — Grid function that sets a minimum and maximum size for columns or rows.
+15. *(Scope note: Grid is recognition level for both exams — know that `display: grid` does rows AND columns and that `gap` spaces cells. The full toolkit — `repeat()`, `minmax()`, `auto-fit` — lives in this unit's Extension Task.)*
 
 ---
 
@@ -105,36 +93,19 @@ body { font-size: 14px; }
 
 ---
 
-## CSS Grid Cheat Sheet
+## CSS Grid — Recognition Level
 
-### Container Properties
+All either exam wants: **Grid is the two-dimensional layout system** (rows AND columns at once, where flexbox is one direction at a time).
+
 ```css
 .grid-container {
-  display: grid;                              /* Enable grid */
-  grid-template-columns: 1fr 2fr 1fr;         /* Define column widths */
-  grid-template-rows: 100px auto 50px;        /* Define row heights */
-  gap: 20px;                                  /* Space between cells */
-  grid-template-columns: repeat(3, 1fr);      /* 3 equal columns */
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive */
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;   /* three columns */
+  gap: 20px;                            /* same gap idea as flexbox */
 }
 ```
 
-### Item Properties
-```css
-.grid-item {
-  grid-column: 1 / 3;        /* Span from column 1 to 3 */
-  grid-row: 1 / 2;           /* Span from row 1 to 2 */
-  grid-column: span 2;       /* Span 2 columns */
-}
-```
-
-### Common Units
-- `1fr` — One fraction of available space
-- `200px` — Fixed pixels
-- `50%` — Percentage of container
-- `auto` — Size based on content
-
----
+That is the whole graded scope. The real-world toolkit (`repeat()`, `minmax()`, `auto-fit`, spanning) is this unit's **Extension Task** — worth doing, not tested.
 
 ## ODE Competencies
 

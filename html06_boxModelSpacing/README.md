@@ -55,13 +55,13 @@ This complete lesson covers the CSS Box Model and spacing properties, plus displ
 ### 2. Guided Walkthrough (15 minutes)
 - Work through html06_Walkthrough.md
 - Have students open Walkthrough_Solutions.html
-- Demonstrate DevTools box model inspection
+- Demonstrate the CSS outline "X-ray trick" (dev tools are disabled on student machines)
 - Complete "Try This" exercises together
 
 ### 3. Task 06a (15 minutes)
 - Students complete html06a_Task.html
 - Emphasize box-sizing: border-box
-- Use DevTools to verify spacing
+- Use the outline X-ray trick to verify spacing
 - Review with html06a_Task_Solutions
 
 ### 4. Task 06b (15 minutes)
@@ -93,7 +93,7 @@ Students will be able to:
 - [ ] Understand position property values (static, relative, absolute, fixed)
 - [ ] Create multi-column layouts using display and position
 - [ ] Create fixed headers and footers
-- [ ] Use DevTools to inspect and debug box model issues
+- [ ] Debug box model issues with the outline X-ray trick and the W3C validator
 - [ ] Build professional card components with proper spacing
 - [ ] Design responsive page layouts
 
@@ -126,20 +126,13 @@ Students will be able to:
 
 ---
 
-## DevTools Tips
+## Debugging Without DevTools
 
-To inspect box model:
-1. Right-click any element
-2. Select "Inspect"
-3. Look at Styles tab
-4. Scroll to Box Model section
-5. Colors show:
-   - Blue = Content
-   - Green = Padding
-   - Yellow = Border
-   - Orange = Margin
+Browser dev tools are disabled on student machines. The classroom substitutes:
 
----
+1. **X-ray trick:** `* { outline: 1px solid red; }` at the top of the stylesheet — every box edge becomes visible, nothing shifts
+2. **W3C validator** (validator.w3.org) for "why is my page broken" questions
+3. **Paper box-model diagrams** for computing total element width
 
 ## Common Mistakes
 
@@ -163,7 +156,7 @@ Topics covered:
 - Property purposes and values
 - CSS calculations and formulas
 - Display and position values
-- DevTools usage
+- X-ray trick usage
 - Common misconceptions
 
 ---
@@ -171,7 +164,7 @@ Topics covered:
 ## Extensions & Challenges
 
 ### Beginner
-- Change padding/margin values and observe changes in DevTools
+- Change padding/margin values and observe the boxes move (X-ray trick on)
 - Create cards with different color schemes
 - Add hover effects to buttons
 

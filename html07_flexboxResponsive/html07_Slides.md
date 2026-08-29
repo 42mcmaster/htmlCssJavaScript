@@ -166,24 +166,11 @@ body { font-size: 14px; }
 
 ---
 
-# CSS Grid Properties
+# Grid: What You Need vs. What Exists
 
-**Grid Container:**
-- `grid-template-columns`: define column widths (e.g., `1fr 1fr 1fr`)
-- `grid-template-rows`: define row heights
-- `grid-gap` or `gap`: space between cells
-- `fr` unit: fraction of available space
+**Need to know (exams):** `display: grid` = rows AND columns at once; `gap` spaces the cells; columns defined like `1fr 2fr 1fr`.
 
-**Grid Item:**
-- `grid-column`: which column(s) the item spans
-- `grid-row`: which row(s) the item spans
-
-**Responsive Grid:**
-```css
-@media (min-width: 768px) {
-  .grid { grid-template-columns: repeat(3, 1fr); }
-}
-```
+**Exists (Extension Task):** `repeat()`, `minmax()`, `auto-fit`, spanning cells — the real-world gallery toolkit. Worth learning; not tested.
 
 ---
 

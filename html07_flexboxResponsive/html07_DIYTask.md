@@ -10,6 +10,12 @@ You will build a **fully responsive photo gallery website** from scratch. This i
 
 ---
 
+## Bonus Requirement: Your Reusable Template (competency 6.5.6)
+
+Before you style anything, save a copy of your bare page skeleton — header, nav, main, footer, linked stylesheet, viewport meta — as `template.html`. From now on, every new page you make all year starts by copying this file. That's what a page template IS, and creating/editing one is a state competency.
+
+---
+
 ## Requirements
 
 Your gallery must meet ALL of these requirements:
@@ -252,16 +258,15 @@ Create a folder named `html07_DIYTask_YourName/` containing:
 
 ## Grading Rubric
 
-| Criteria | Points | Notes |
-|----------|--------|-------|
-| **HTML Structure** | 15 | Valid HTML, viewport tag, semantic elements |
-| **Responsive Layout** | 20 | Flexbox or Grid, works on 3+ breakpoints |
-| **Media Queries** | 15 | Mobile-first, min-width breakpoints, correct transitions |
-| **Responsive Images** | 10 | max-width: 100%, height: auto, display: block |
-| **Styling & Polish** | 15 | Colors, typography, spacing, hover effects |
-| **Additional Features** | 15 | At least 2 bonus features implemented |
-| **Testing & Performance** | 10 | No scrollbars, smooth interactions, works on mobile |
-| **Total** | 100 | |
+| Criteria | Looking for |
+|----------|-------------|
+| **HTML Structure** | Valid HTML, viewport tag, semantic elements |
+| **Responsive Layout** | Flexbox or Grid, works on 3+ breakpoints |
+| **Media Queries** | Mobile-first, min-width breakpoints, correct transitions |
+| **Responsive Images** | max-width: 100%, height: auto, display: block |
+| **Styling & Polish** | Colors, typography, spacing, hover effects |
+| **Additional Features** | At least 2 bonus features implemented |
+| **Testing & Performance** | No scrollbars, smooth interactions, works on mobile |
 
 ---
 
