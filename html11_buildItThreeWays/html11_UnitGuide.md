@@ -10,7 +10,7 @@ Real web professionals don't hand-code everything — they choose between hand-c
 
 | Segment | Content | Materials |
 |---|---|---|
-| 11a | Client brief & mini-proposal (scope, audience, objectives, timeline, deliverables) | html11_ClientScenarios, html11_ProposalTemplate |
+| 11a | Kickoff + client brief & mini-proposal (scope, audience, objectives, timeline, deliverables) | html11_KickoffSlides, html11_ClientScenarios, html11_ProposalTemplate |
 | 11b | The hand-coded entry: polish your semester site against the brief — **dark mode + mobile nav required** (from html09) | your repo |
 | 11c | The AI build: direct an AI, naming Bootstrap components from the menu; then critique its output line by line | html11_AIBuildGuide (+ enrichment/bootstrapBasics as component menu) |
 | 11d | The builder builds: Google Sites, then WordPress.com (a real CMS, configured hands-on — competency 6.5.4) | html11_BuilderGuide |
@@ -20,7 +20,7 @@ Real web professionals don't hand-code everything — they choose between hand-c
 
 ## Grading
 
-Rubric in `teacher/html11_Rubric.md` — criteria bands, no points, consistent with course policy. The old capstone rubric (`teacher/html11_Rubric_DRAFT.md`) is source material for the hand-coded build's quality bands.
+Rubric in `teacher/html11_Rubric.md` — criteria bands, no points, consistent with course policy. Worked exemplars (proposal, AI critique, matrix+verdict) in `teacher/exemplar/` — show AFTER students draft their own. The old capstone rubric (`teacher/html11_Rubric_DRAFT.md`) is source material for the hand-coded build's quality bands.
 
 ## Open items (from the master plan)
 

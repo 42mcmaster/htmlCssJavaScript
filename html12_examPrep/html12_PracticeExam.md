@@ -192,11 +192,11 @@ Instructions: Select the BEST answer for each question. Read carefully—some qu
 - c) To test JavaScript functionality
 - d) To check search engine rankings
 
-**28. Which browser developer tool would you use to see network requests and response times?**
-- a) Console tab
-- b) Inspector tab
-- c) Network tab
-- d) Storage tab
+**28. A page loads slowly on school WiFi but fine at home on fiber. The images are small. What is the most likely culprit?**
+- a) Bandwidth — the school connection moves less data per second
+- b) The HTML is invalid
+- c) Latency and/or congestion on the school network delaying each request
+- d) The page needs more CSS
 
 **29. Before publishing a website, which of these should NOT be tested?**
 - a) Different browsers (Chrome, Firefox, Safari, Edge)
@@ -377,8 +377,8 @@ Instructions: Select the BEST answer for each question. Read carefully—some qu
 **27. b) To verify HTML code conforms to standards**
 - W3C HTML Validator (validator.w3.org) checks if your HTML is valid. W3C CSS Validator checks CSS. They help catch errors.
 
-**28. c) Network tab**
-- The Network tab shows HTTP requests, response status, file sizes, load times. Inspector shows HTML/CSS. Console shows errors/logs. Storage shows data.
+**28. c) Latency and/or congestion delaying each request**
+- Small images means the data volume is low, so bandwidth (a) is less likely the bottleneck — each request's round-trip delay (latency) adds up instead. Knowing which lever is which is competency 2.7.5.
 
 **29. c) The developer's personal favorites feature**
 - Wrong question. Should NOT be tested is "personal favorites" is not a standard feature. All others ARE important: browsers, screen sizes, accessibility, functionality.

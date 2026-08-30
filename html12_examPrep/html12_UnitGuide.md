@@ -19,8 +19,8 @@ Built on `certiportStudyGuidesForGitHub/Certiport_HTML_CSS_StudyGuide.md` — th
 |---|---|---|
 | 1 | Cert-only content: image maps (`usemap`/`<area>`), character entities, HTTP GET vs POST, `<track>`, meta-tag details, `display` vs `visibility` vs `overflow` | Modules 2, 4, 5, 6, 7, 12 |
 | 2 | Cert-depth content: the specificity ladder and cascade arithmetic, inheritance, `!important`, CSS units (relative vs absolute) | Modules 9, 10, 11 |
-| 3 | Drills: the guide's 12-question mock quiz as distractor autopsy; GMetrix practice attempts | Module 13 |
-| 4 | Exam-day cheat card review + final GMetrix pass | Cheat card + glossary |
+| 3 | Drills: distractor autopsy on the guide's mock quiz (worksheet: html12_CertLane_DistractorAutopsy.md); GMetrix practice attempts | Module 13 |
+| 4 | Cheat card review (print html12_CertLane_CheatCard.md) + final GMetrix pass | Cheat card + glossary |
 
 ## Notes
 
