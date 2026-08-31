@@ -155,17 +155,19 @@ Apply this to ALL projects to avoid width calculation surprises.
 
 ---
 
-## How DevTools Shows the Box Model
+## Seeing the Box Model Without DevTools
 
-1. Right-click element → "Inspect"
-2. Go to **Styles** tab
-3. Scroll to **Box Model** section
-4. Colors represent:
-   - **Blue** = Content
-   - **Green** = Padding
-   - **Yellow** = Border
-   - **Orange** = Margin
-5. Hover/click to highlight on page
+*(Browser dev tools are disabled on school machines, so we make the invisible visible with CSS itself.)*
+
+**The X-ray trick** — temporarily add this to the top of your stylesheet:
+
+```css
+* { outline: 1px solid red; }
+```
+
+Every element's edges appear (outline draws OUTSIDE the border and takes no space, so nothing shifts). Now widen a margin or padding and watch which box moves. Remove the line when you're done.
+
+**The paper method** — for any element, draw four nested rectangles and label them from inside out: content, padding, border, margin. Write the actual pixel values from your CSS on each ring, then compute total width: content + left/right padding + left/right border + left/right margin.
 
 ---
 
