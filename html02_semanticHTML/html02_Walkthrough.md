@@ -51,7 +51,7 @@ The `<header>` element contains the site title and introductory content.
 - p: A tagline (e.g., "Easy, delicious recipes for home cooks")
 
 ### Step 3: Add Navigation
-The `<nav>` element contains links to main sections of the site.
+Don't worry about this syntax yet - we'll get there in the next unit, but for now just understand you are creating the links to the other pages on the website.  This container is called the `<nav>` element and contains links to main sections of the website.
 
 **Try This:** After the `<header>`, add a `<nav>` with links:
 
