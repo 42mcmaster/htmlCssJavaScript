@@ -1,12 +1,12 @@
 # html02 Extension Task: Div Soup Rescue
 
-**For fast finishers. Extra credit — no points, no rubric. Finish the regular html02 tasks first.**
+**For fast finishers. This is extra credit — Mr. M will assign points when complete. But, make sure you finish the regular html02 tasks first.**
 
 ## The situation
 
 A "web developer" delivered the page in `html02_ExtensionStarter.html`. It *looks* okay in a browser — but the markup underneath is a disaster: everything is a `<div>`, the "headings" are just bold text, the "list" is built with `<br>` tags, and `<b>`/`<i>` are used where `<strong>`/`<em>` belong.
 
-Your job: rescue it.
+Your job: fix it with the knowledge you have learned regarding semantic tags. 
 
 ## The task
 
