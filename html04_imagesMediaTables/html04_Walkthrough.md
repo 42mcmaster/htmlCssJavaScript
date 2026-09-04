@@ -11,6 +11,26 @@ In this guided walkthrough, you will build a **Product Showcase page** that incl
 
 ---
 
+## Before you start: get the images
+
+The pictures for this lesson are in the **`images`** folder inside `html04_imagesMediaTables` on GitHub:
+https://github.com/42mcmaster/htmlCssJavaScript/tree/main/html04_imagesMediaTables/images
+
+Download them and put them in a folder named **`images`** right next to your task file, like this:
+
+```
+my-repo/
+  html04a_Task.html
+  images/
+    nature-scene-1.png
+    nature-scene-2.png
+    ...
+```
+
+The `<img>` tags use paths like `images/nature-scene-1.png`. If the folder isn't there, or is named something else, the image shows as a broken icon. That's not a bug in your code — it's the path.
+
+---
+
 ## Part 1: Setting Up the HTML Structure
 
 Start with a basic HTML5 document. Fill in the missing parts (marked with `___`):
@@ -22,32 +42,11 @@ Start with a basic HTML5 document. Fill in the missing parts (marked with `___`)
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>___</title>
+  <!-- The block below is CSS. It only draws borders on tables so you can
+       see rows and cells. CSS is Lesson 05 - leave this alone for now. -->
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #f5f5f5;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background-color: white;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 12px;
-      text-align: left;
-    }
-    th {
-      background-color: #333;
-      color: white;
-    }
+    table, th, td { border: 1px solid #333; border-collapse: collapse; }
+    th, td { padding: 6px; }
   </style>
 </head>
 <body>
@@ -82,19 +81,19 @@ Add this section inside the `<body>` (after `<header>`):
   <h2>Product Gallery</h2>
 
   <figure>
-    <img src="https://via.placeholder.com/400x300?text=Product+View+1"
+    <img src="images/product-view-1.png"
          alt="___">
     <figcaption>Front view of the wireless headphones</figcaption>
   </figure>
 
   <figure>
-    <img src="https://via.placeholder.com/400x300?text=Product+View+2"
+    <img src="images/product-view-2.png"
          alt="___">
     <figcaption>Side view showing ear cup design</figcaption>
   </figure>
 
   <figure>
-    <img src="https://via.placeholder.com/400x300?text=Product+View+3"
+    <img src="images/product-view-3.png"
          alt="___">
     <figcaption>Top view with control buttons visible</figcaption>
   </figure>
@@ -225,7 +224,6 @@ Modify the table to merge the header row. Replace the first `<tr>` with:
    - All images load with proper alt text (use developer tools)
    - Video embeds and has controls
    - Table displays correctly with aligned columns
-   - Page is responsive (test on mobile view)
 3. Use the W3C HTML Validator: https://validator.w3.org/
 
 ---
@@ -237,7 +235,6 @@ You've built a product showcase page with:
 - ✓ Descriptive alt text for accessibility
 - ✓ Embedded external video via `<iframe>`
 - ✓ Data-driven table with proper headers
-- ✓ Responsive design
 
 **Next:** Move to the individual tasks (04a, 04b, 04c) to practice each skill independently!
 

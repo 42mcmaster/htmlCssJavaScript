@@ -228,16 +228,13 @@ Before submitting, verify:
 
 ## Image Resources
 
-**Free image sources:**
-- https://via.placeholder.com/ (placeholder images)
-- https://unsplash.com/ (high-quality free photos)
-- https://pexels.com/ (high-quality free photos)
-- https://pixabay.com/ (free stock images)
-
-Or create placeholder images with placeholder.com:
-```html
-<img src="https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=Photo+1" alt="Photo 1">
-```
+**Image sources:**
+- The `images/` folder in this unit has ready-made placeholder images (`photo-1.png` through `photo-6.png`, and more). Use them like this:
+  ```html
+  <img src="images/photo-1.png" alt="Photo 1">
+  ```
+- Your own photos or screenshots, saved into your `images/` folder
+- Free stock photos: https://unsplash.com/ · https://pexels.com/ · https://pixabay.com/ (download the file and save it locally — don't link to the site)
 
 ---
 

@@ -1,49 +1,13 @@
 <!DOCTYPE html>
+<!-- IMAGES: this file uses pictures from the images/ folder.
+     Get them from GitHub (html04_imagesMediaTables/images) and put them in a
+     folder named images next to this file, or the pictures won't show. -->
 <html lang="en">
 <head>
   <!-- Character encoding and viewport meta tag for responsive design -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Image Gallery Task</title>
-  <style>
-    /* Global body styling */
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #f9f9f9;
-    }
-
-    /* Make images responsive and add spacing */
-    img {
-      max-width: 100%;
-      height: auto;
-      margin: 15px 0;
-    }
-
-    /* Figure styling for image containers */
-    figure {
-      margin: 20px 0;
-      padding: 15px;
-      background-color: white;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-    }
-
-    /* Figcaption styling */
-    figcaption {
-      font-style: italic;
-      color: #555;
-      margin-top: 10px;
-      font-size: 14px;
-    }
-
-    /* Section header styling */
-    section {
-      margin: 30px 0;
-    }
-  </style>
 </head>
 <body>
 
@@ -52,7 +16,7 @@
 
   <!-- ===== TODO 1: Add an image with alt text ===== -->
   <!-- Task: Add an <img> tag with:
-       - src="https://via.placeholder.com/300x200?text=Nature+Scene+1"
+       - src="images/nature-scene-1.png"
        - alt="A scenic mountain landscape with clear blue sky"
        - width="300"
        - height="200"
@@ -65,7 +29,7 @@
     ___
 
     <!-- Image 2: Placeholder -->
-    <img src="https://via.placeholder.com/300x200?text=Nature+Scene+2"
+    <img src="images/nature-scene-2.png"
          alt="Forest path lined with tall evergreen trees"
          width="300"
          height="200">
@@ -74,7 +38,7 @@
   <!-- ===== TODO 2: Create a figure with figcaption ===== -->
   <!-- Task: Add a <figure> element containing:
        - An <img> tag with:
-         - src="https://via.placeholder.com/400x300?text=Product+Photo"
+         - src="images/product-photo.png"
          - alt="Professional camera with telephoto lens"
          - width="400"
          - height="300"
@@ -91,9 +55,11 @@
   <!-- ===== TODO 3: Add a responsive image ===== -->
   <!-- Task: Create a <figure> with:
        - An <img> with:
-         - src="https://via.placeholder.com/600x400?text=Responsive+Image"
+         - src="images/responsive-image.png"
          - alt="Wide landscape photo that adapts to screen size"
          - style="max-width: 100%; height: auto;"
+       (The style attribute is CSS. You'll learn CSS in Lesson 05 -
+        for now, copy it exactly as written.)
        - <figcaption>: "This image scales responsively on mobile and desktop"
   -->
   <section id="responsive">
@@ -108,11 +74,11 @@
   <!-- Task: Add THREE <figure> elements (use any of the placeholders below),
        each with an <img> and <figcaption>. Create a gallery effect.
        Suggestions for images:
-       1. src="https://via.placeholder.com/250x200?text=Gallery+1"
+       1. src="images/gallery-1.png"
           alt="Colorful painted wall with geometric patterns"
-       2. src="https://via.placeholder.com/250x200?text=Gallery+2"
+       2. src="images/gallery-2.png"
           alt="Coastal beach at sunset with golden light"
-       3. src="https://via.placeholder.com/250x200?text=Gallery+3"
+       3. src="images/gallery-3.png"
           alt="Urban street with modern architecture"
   -->
   <section id="gallery">
@@ -136,7 +102,7 @@
        2. Choose the right file format (JPG for photos, PNG for graphics)
        3. Optimize file size (compress images to load faster)
        4. Use width/height attributes (reserves space, prevents layout shift)
-       5. Make images responsive (max-width: 100%; height: auto;)
+       5. Make images scale to the screen (the style attribute from TODO 3)
   -->
   <section id="practices">
     <h2>Image Best Practices</h2>
@@ -145,7 +111,7 @@
       <li><strong>File format:</strong> Use JPG for photos, PNG for graphics with transparency, SVG for icons</li>
       <li><strong>File size:</strong> Compress images to improve page loading speed</li>
       <li><strong>Width/Height:</strong> Define dimensions to prevent layout shift when image loads</li>
-      <li><strong>Responsive:</strong> Use CSS to make images scale on mobile devices</li>
+      <li><strong>Scaling:</strong> The style attribute can make images shrink to fit small screens (CSS, coming in Lesson 05)</li>
     </ul>
   </section>
 

@@ -5,54 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Table Task</title>
+  <!-- The block below is CSS. It only draws borders on tables so you can
+       see rows and cells. CSS is Lesson 05 - leave this alone for now. -->
   <style>
-    /* Global styling */
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #f5f5f5;
-    }
-
-    /* Table styling */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background-color: white;
-      margin: 20px 0;
-    }
-
-    th, td {
-      border: 1px solid #ddd;
-      padding: 12px;
-      text-align: left;
-    }
-
-    th {
-      background-color: #333;
-      color: white;
-    }
-
-    tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-
-    /* Section styling */
-    section {
-      margin: 30px 0;
-      padding: 20px;
-      background-color: white;
-      border-radius: 5px;
-    }
-
-    /* Info box */
-    .info-box {
-      background-color: #e8f4f8;
-      padding: 15px;
-      border-left: 4px solid #0288d1;
-      margin: 15px 0;
-    }
+    table, th, td { border: 1px solid #333; border-collapse: collapse; }
+    th, td { padding: 6px; }
   </style>
 </head>
 <body>
@@ -73,9 +30,9 @@
     <h2>Simple Table</h2>
     <p>Create a basic table with headers and data rows.</p>
 
-    <div class="info-box">
+    <p>
       <strong>Remember:</strong> Use &lt;th&gt; for header cells and &lt;td&gt; for data cells.
-    </div>
+    </p>
 
     <!-- TODO 1: Add table here -->
     ___
@@ -95,9 +52,9 @@
     <h2>Table with colspan (Column Spanning)</h2>
     <p>Merge cells across columns using the <code>colspan</code> attribute.</p>
 
-    <div class="info-box">
+    <p>
       <strong>colspan Example:</strong> &lt;td colspan="2"&gt; merges 2 columns
-    </div>
+    </p>
 
     <!-- TODO 2: Add table with colspan here -->
     ___
@@ -117,9 +74,9 @@
     <h2>Table with rowspan (Row Spanning)</h2>
     <p>Merge cells across rows using the <code>rowspan</code> attribute.</p>
 
-    <div class="info-box">
+    <p>
       <strong>rowspan Example:</strong> &lt;td rowspan="2"&gt; merges 2 rows
-    </div>
+    </p>
 
     <!-- TODO 3: Add table with rowspan here -->
     ___
@@ -140,9 +97,9 @@
     <h2>Complex Table (Challenge)</h2>
     <p>Combine colspan and rowspan for a schedule-style layout.</p>
 
-    <div class="info-box">
+    <p>
       <strong>Challenge:</strong> Plan your colspan and rowspan carefully to avoid overlaps!
-    </div>
+    </p>
 
     <!-- TODO 4: Add complex table here -->
     ___

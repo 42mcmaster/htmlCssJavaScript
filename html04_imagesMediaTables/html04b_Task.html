@@ -5,45 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML5 Media Task</title>
+  <!-- The block below is CSS. It only draws borders on tables so you can
+       see rows and cells. CSS is Lesson 05 - leave this alone for now. -->
   <style>
-    /* Global styling */
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #f5f5f5;
-    }
-
-    /* Media container styling */
-    section {
-      margin: 30px 0;
-      padding: 20px;
-      background-color: white;
-      border-radius: 5px;
-    }
-
-    /* Video and audio styling */
-    video, audio {
-      width: 100%;
-      max-width: 500px;
-      margin: 15px 0;
-      display: block;
-    }
-
-    /* iframe styling for responsive embedding */
-    iframe {
-      max-width: 100%;
-      margin: 15px 0;
-    }
-
-    /* Info boxes */
-    .info-box {
-      background-color: #e8f4f8;
-      padding: 15px;
-      border-left: 4px solid #0288d1;
-      margin: 15px 0;
-    }
+    table, th, td { border: 1px solid #333; border-collapse: collapse; }
+    th, td { padding: 6px; }
   </style>
 </head>
 <body>
@@ -65,9 +31,9 @@
     <h2>Embed HTML5 Video</h2>
     <p>Use the <code>&lt;video&gt;</code> tag to embed local video files.</p>
 
-    <div class="info-box">
+    <p>
       <strong>Tip:</strong> Provide multiple source formats (MP4, WebM) for browser compatibility.
-    </div>
+    </p>
 
     <!-- TODO 1: Add video element here -->
     ___
@@ -86,9 +52,9 @@
     <h2>Embed HTML5 Audio</h2>
     <p>Use the <code>&lt;audio&gt;</code> tag for podcasts, music, or sound effects.</p>
 
-    <div class="info-box">
+    <p>
       <strong>Tip:</strong> Always include the <code>controls</code> attribute so users can play, pause, and adjust volume.
-    </div>
+    </p>
 
     <!-- TODO 2: Add audio element here -->
     ___
@@ -108,9 +74,9 @@
     <h2>Embed YouTube Video</h2>
     <p>Use <code>&lt;iframe&gt;</code> to embed videos from external sources like YouTube.</p>
 
-    <div class="info-box">
+    <p>
       <strong>Important:</strong> Use the EMBED URL (ends with /embed/VIDEO_ID), not the share URL!
-    </div>
+    </p>
 
     <!-- TODO 3: Add YouTube iframe here -->
     ___
@@ -142,36 +108,36 @@
   <!-- Media file formats reference -->
   <section id="formats">
     <h2>Media Format Reference</h2>
-    <table style="width: 100%; border-collapse: collapse;">
-      <tr style="background-color: #333; color: white;">
-        <th style="border: 1px solid #ddd; padding: 10px;">Type</th>
-        <th style="border: 1px solid #ddd; padding: 10px;">Format</th>
-        <th style="border: 1px solid #ddd; padding: 10px;">File Extension</th>
-        <th style="border: 1px solid #ddd; padding: 10px;">MIME Type</th>
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Format</th>
+        <th>File Extension</th>
+        <th>MIME Type</th>
       </tr>
-      <tr style="background-color: white;">
-        <td style="border: 1px solid #ddd; padding: 10px;">Video</td>
-        <td style="border: 1px solid #ddd; padding: 10px;">MP4 (most compatible)</td>
-        <td style="border: 1px solid #ddd; padding: 10px;">.mp4</td>
-        <td style="border: 1px solid #ddd; padding: 10px;">video/mp4</td>
+      <tr>
+        <td>Video</td>
+        <td>MP4 (most compatible)</td>
+        <td>.mp4</td>
+        <td>video/mp4</td>
       </tr>
-      <tr style="background-color: #f9f9f9;">
-        <td style="border: 1px solid #ddd; padding: 10px;">Video</td>
-        <td style="border: 1px solid #ddd; padding: 10px;">WebM</td>
-        <td style="border: 1px solid #ddd; padding: 10px;">.webm</td>
-        <td style="border: 1px solid #ddd; padding: 10px;">video/webm</td>
+      <tr>
+        <td>Video</td>
+        <td>WebM</td>
+        <td>.webm</td>
+        <td>video/webm</td>
       </tr>
-      <tr style="background-color: white;">
-        <td style="border: 1px solid #ddd; padding: 10px;">Audio</td>
-        <td style="border: 1px solid #ddd; padding: 10px;">MP3 (most compatible)</td>
-        <td style="border: 1px solid #ddd; padding: 10px;">.mp3</td>
-        <td style="border: 1px solid #ddd; padding: 10px;">audio/mpeg</td>
+      <tr>
+        <td>Audio</td>
+        <td>MP3 (most compatible)</td>
+        <td>.mp3</td>
+        <td>audio/mpeg</td>
       </tr>
-      <tr style="background-color: #f9f9f9;">
-        <td style="border: 1px solid #ddd; padding: 10px;">Audio</td>
-        <td style="border: 1px solid #ddd; padding: 10px;">OGG</td>
-        <td style="border: 1px solid #ddd; padding: 10px;">.ogg</td>
-        <td style="border: 1px solid #ddd; padding: 10px;">audio/ogg</td>
+      <tr>
+        <td>Audio</td>
+        <td>OGG</td>
+        <td>.ogg</td>
+        <td>audio/ogg</td>
       </tr>
     </table>
   </section>

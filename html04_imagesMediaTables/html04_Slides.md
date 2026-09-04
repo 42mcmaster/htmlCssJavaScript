@@ -39,20 +39,19 @@ paginate: true
 
 ---
 
-## Image Sizing & Responsive Design
+## Image Sizing
 
 ```html
-<!-- Fixed size with width/height attributes -->
+<!-- Set the size with width and height attributes (pixels) -->
 <img src="images/photo.jpg" alt="Description" width="400" height="300">
 
-<!-- CSS for responsive sizing -->
+<!-- Let the image shrink to fit a small screen -->
 <img src="images/photo.jpg" alt="Description" style="max-width: 100%; height: auto;">
-
-<!-- Container-based approach -->
-<div style="max-width: 500px;">
-  <img src="images/photo.jpg" alt="Description" style="width: 100%; height: auto;">
-</div>
 ```
+
+`width` and `height` are HTML attributes. Always set them — the browser saves the space before the image loads.
+
+The second line uses the `style` attribute. **That's CSS.** We start CSS in Lesson 05. For now, copy it when you need it.
 
 ---
 

@@ -37,7 +37,7 @@ Your page must include:
   - Descriptive alt text (2-5 words)
   - Use `<figure>` and `<figcaption>` elements
   - Different views (front, side, top, detail, etc.)
-  - Responsive sizing
+  - `width` and `height` attributes on every image
 
 #### Section 3: Media (Choose One)
 - **Option A:** Embedded YouTube video (e.g., product demo, review, unboxing)
@@ -63,8 +63,8 @@ Your page must include:
 
 ## Design Guidelines
 
-- **Responsive:** Test on mobile view—images should scale
-- **Clean Layout:** Use CSS for spacing, colors, and alignment (optional but recommended)
+- **Image size:** Every image has `width` and `height` attributes
+- **No CSS required:** This project is graded on HTML. Styling comes in Lesson 05.
 - **Accessibility:** All images have alt text, table headers are clear, media has controls
 - **Valid HTML5:** No errors in W3C validator
 
@@ -73,9 +73,9 @@ Your page must include:
 ## Starter Tips
 
 ### Image URLs
-- Use placeholder images from:
-  - `https://via.placeholder.com/400x300?text=Product+Name`
-  - Real product images from search (save locally or use URL)
+- Where to get images:
+  - The `images/` folder in this unit has placeholder images you can use (for example `images/product-name.png`)
+  - Real product photos — download the file and save it in your own `images/` folder, then use a relative path
   - Screenshots or photos you've taken
 
 ### Video URLs
@@ -98,7 +98,7 @@ Warranty: 1yr | Warranty: 2yrs | Warranty: 3yrs
 - [ ] Page has valid HTML5 structure (DOCTYPE, html, head, body)
 - [ ] All images display with alt text
 - [ ] Figure/figcaption used for at least 2 images
-- [ ] Images are responsive (work on mobile)
+- [ ] Every image has width and height attributes
 - [ ] Media (video/audio/YouTube) embeds and plays
 - [ ] Table displays properly with headers and data
 - [ ] Table includes colspan or rowspan usage
@@ -122,11 +122,11 @@ Warranty: 1yr | Warranty: 2yrs | Warranty: 3yrs
 | Criteria | Looking for |
 |----------|-------------|
 | **HTML Structure** | Valid HTML5, semantic elements |
-| **Images** | Alt text, captions, responsive, at least 3 images |
+| **Images** | Alt text, captions, width/height set, at least 3 images |
 | **Media** | YouTube/video/audio embedded properly, controls visible |
 | **Table** | Proper structure, headers, 4+ rows, colspan/rowspan used |
-| **Design & Polish** | Clean layout, spacing, readability, professional appearance |
-| **Functionality** | All media works, no broken links, responsive design |
+| **Organization** | Sections in a sensible order, headings used, easy to read |
+| **Functionality** | All media works, no broken links |
 
 ---
 
@@ -134,12 +134,7 @@ Warranty: 1yr | Warranty: 2yrs | Warranty: 3yrs
 
 Want to go further? Try these:
 
-1. **Add CSS Styling**
-   - Custom colors, fonts, grid layout
-   - Hover effects on images
-   - Dark mode toggle
-
-2. **Add Interactivity (JavaScript)**
+1. **Add Interactivity (JavaScript)**
    - Image carousel/slider
    - Video playlist
    - Filter table rows
@@ -162,7 +157,6 @@ Want to go further? Try these:
 - **Alt text stuck?** Describe what someone would see if the image didn't load
 - **Table colspan confused?** Draw it out on paper first—sketch the grid!
 - **Video won't embed?** Check you're using the EMBED URL, not the SHARE URL
-- **Mobile test failing?** Add `max-width: 100%; height: auto;` to img CSS
 
 Good luck! This is a real portfolio-ready project.
 

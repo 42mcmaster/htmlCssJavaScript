@@ -36,7 +36,8 @@
 <!-- Image with sizing -->
 <img src="images/photo.jpg" alt="Description" width="400" height="300">
 
-<!-- Responsive image -->
+<!-- Image that shrinks to fit a small screen -->
+<!-- (the style attribute is CSS - covered in Lesson 05) -->
 <img src="images/photo.jpg" alt="Description" style="max-width: 100%; height: auto;">
 
 <!-- Figure with caption -->
@@ -119,7 +120,7 @@
 
 1. **Always use descriptive alt text** — Screen readers depend on it; it's also good for SEO
 2. **Choose the right image format** — Photos = JPG, Graphics/logos = PNG, Icons = SVG, Modern = WebP
-3. **Responsive images** — Use `max-width: 100%` and `height: auto` for mobile-friendly design
+3. **Image size** — Set `width` and `height` attributes on every image; `style="max-width: 100%"` lets it shrink on small screens (that's CSS, Lesson 05)
 4. **Multiple media sources** — Provide fallback formats in `<video>` and `<audio>` for browser compatibility
 5. **Semantic tables** — Use `<th>` for headers, `<caption>` for titles, `scope` for accessibility
 6. **External media** — Use `<iframe>` for YouTube; embed URL differs from share URL
@@ -128,7 +129,7 @@
 
 1. What's the difference between JPG and PNG?
 2. Why is alt text important in images?
-3. How do you make an image responsive?
+3. What two attributes set an image's size in HTML?
 4. What attribute allows you to span a cell across multiple columns?
 5. What's the difference between `<video>` and `<iframe>` for embedding media?
 

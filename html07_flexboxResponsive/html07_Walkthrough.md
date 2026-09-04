@@ -11,6 +11,15 @@ This walkthrough shows you three approaches to the same problem, demonstrating h
 
 ---
 
+## Before you start: get the images
+
+The photos for this lesson are in the **`images`** folder inside `html07_flexboxResponsive` on GitHub:
+https://github.com/42mcmaster/htmlCssJavaScript/tree/main/html07_flexboxResponsive/images
+
+Download them into a folder named **`images`** next to your task files. The `<img>` tags use paths like `images/photo-1.png`, so the folder name and location have to match.
+
+---
+
 ## Part 1: Flexbox Gallery (Mobile-First)
 
 ### Step 1: Create HTML Structure
