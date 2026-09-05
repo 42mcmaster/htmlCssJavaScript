@@ -19,21 +19,21 @@ https://github.com/42mcmaster/htmlCssJavaScript/tree/main/html04_imagesMediaTabl
 Download them and put them in a folder named **`images`** right next to your task file, like this:
 
 ```
-my-repo/
+html04/
   html04a_Task.html
   images/
-    nature-scene-1.png
-    nature-scene-2.png
+    nature-scene-1.jpg
+    nature-scene-2.jpg
     ...
 ```
 
-The `<img>` tags use paths like `images/nature-scene-1.png`. If the folder isn't there, or is named something else, the image shows as a broken icon. That's not a bug in your code — it's the path.
+The `<img>` tags use paths like `images/nature-scene-1.jpg`. If the folder isn't there, or is named something else, the image shows as a broken icon. That's not a bug in your code — it's the path.
 
 ---
 
 ## Part 1: Setting Up the HTML Structure
 
-Start with a basic HTML5 document. Fill in the missing parts (marked with `___`):
+Start with a basic HTML5 document. Let's call the doc `html04Walkthrough.html`.  Fill in the missing parts (marked with `___`):
 
 ```html
 <!DOCTYPE html>
@@ -81,34 +81,34 @@ Add this section inside the `<body>` (after `<header>`):
   <h2>Product Gallery</h2>
 
   <figure>
-    <img src="images/product-view-1.png"
+    <img src="images/product-view-1.jpg"
          alt="___">
     <figcaption>Front view of the wireless headphones</figcaption>
   </figure>
 
   <figure>
-    <img src="images/product-view-2.png"
+    <img src="images/product-view-2.jpg"
          alt="___">
-    <figcaption>Side view showing ear cup design</figcaption>
+    <figcaption>Headphones next to the carrying case</figcaption>
   </figure>
 
   <figure>
-    <img src="images/product-view-3.png"
+    <img src="images/product-view-3.jpg"
          alt="___">
-    <figcaption>Top view with control buttons visible</figcaption>
+    <figcaption>Headphones hanging on a wall hook</figcaption>
   </figure>
 </section>
 ```
 
 **FILL IN THE BLANKS:**
-- Alt text for image 1: `Black wireless headphones with blue accent, front view`
-- Alt text for image 2: `Wireless headphones showing padded ear cup with gold trim`
-- Alt text for image 3: `Overhead view of headphones with labeled control buttons`
+- Alt text for image 1: `Black over-ear headphones, angled front view`
+- Alt text for image 2: `Black headphones beside a zippered carrying case`
+- Alt text for image 3: `Black headphones hanging on a white wall hook`
 
 **Key concepts:**
 - Use descriptive `alt` text for accessibility (screen readers, image fails to load)
 - `<figure>` + `<figcaption>` keeps images and captions semantically related
-- Images use placeholder URLs (students replace with their own later)
+- The photos come from the unit `images/` folder (free Creative Commons photos - see `images/CREDITS.md`)
 
 ---
 
@@ -130,7 +130,7 @@ Add this section (after the gallery section):
 ```
 
 **FILL IN THE BLANK:**
-- YouTube video ID: `dQw4w9WgXcQ` (famous Rick Roll video for demo; students find a real product video)
+- YouTube video ID: `aqz-KE-bpKQ` (Big Buck Bunny, a free Creative Commons short film, for the demo; students find a real product video)
 
 **Key concepts:**
 - `<iframe>` embeds external content (like YouTube)

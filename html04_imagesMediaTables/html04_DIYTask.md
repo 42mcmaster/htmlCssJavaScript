@@ -74,13 +74,13 @@ Your page must include:
 
 ### Image URLs
 - Where to get images:
-  - The `images/` folder in this unit has placeholder images you can use (for example `images/product-name.png`)
+  - The `images/` folder in this unit has free photos you can use (see `images/CREDITS.md` for who took them)
   - Real product photos — download the file and save it in your own `images/` folder, then use a relative path
   - Screenshots or photos you've taken
 
 ### Video URLs
 - YouTube: Search for product demo or review, copy embed URL
-- Sample royalty-free videos: `https://www.youtube.com/embed/9bZkp7q19f0`
+- Free Creative Commons sample video (Big Buck Bunny): `https://www.youtube.com/embed/aqz-KE-bpKQ`
 
 ### Sample Product Data for Table
 ```

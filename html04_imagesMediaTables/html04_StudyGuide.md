@@ -2,12 +2,15 @@
 
 ## Vocabulary
 
+JPEG, PNG, SVG, OR WEBP? How the Right Image Format Makes Your site FASTER!
+https://www.youtube.com/watch?v=IfLFLmRHuo0
+
 1. **img tag** — HTML element used to embed images on a web page
 2. **src attribute** — Specifies the path or URL of the image file
 3. **alt text (alt attribute)** — Descriptive text for accessibility and SEO; displays if image fails to load
 4. **figure element** — Semantic container for images and related captions
 5. **figcaption element** — Provides a caption or explanation for a figure
-6. **JPG (JPEG)** — Compressed image format best for photos; smaller file size, lossy compression
+6. **JPG (JPEG)** — Compressed image format best for photos; smaller file size, lossy compression (an encoding method that reduces file size https://www.youtube.com/watch?v=3nym3fkHqyk)
 7. **PNG** — Image format that supports transparency; lossless compression, larger than JPG
 8. **SVG (Scalable Vector Graphics)** — Vector-based format for icons and scalable graphics; crisp at any size
 9. **WebP** — Modern image format with better compression; smaller than JPG/PNG but newer browser support
@@ -17,7 +20,7 @@
 13. **audio tag** — HTML5 element for embedding audio content
 14. **controls attribute** — Shows playback controls (play, pause, volume) for audio/video
 15. **source tag** — Specifies media file format and path; multiple sources for browser compatibility
-16. **iframe tag** — Embeds external content (e.g., YouTube videos) from another website
+16. **iframe tag** — Embeds external content (e.g., YouTube, Google Maps, Data Dashboards, and more) from another website
 17. **table tag** — Container for structured tabular data
 18. **tr tag** — Table row; contains table cells
 19. **th tag** — Table header cell; typically bold and centered
