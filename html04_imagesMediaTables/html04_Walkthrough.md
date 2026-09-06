@@ -44,6 +44,9 @@ Start with a basic HTML5 document. Let's call the doc `html04Walkthrough.html`. 
   <title>___</title>
   <!-- The block below is CSS. It only draws borders on tables so you can
        see rows and cells. CSS is Lesson 05 - leave this alone for now. -->
+       <!-- border: adds a 1px solid dark line around the table and cells -->
+  <!-- border-collapse: merges double cell borders into a single clean line -->
+  <!-- padding: adds 6px of inner space between cell borders and text -->
   <style>
     table, th, td { border: 1px solid #333; border-collapse: collapse; }
     th, td { padding: 6px; }
@@ -67,8 +70,8 @@ Start with a basic HTML5 document. Let's call the doc `html04Walkthrough.html`. 
 ```
 
 **FILL IN THE BLANKS:**
-- Title tag: `Premium Wireless Headphones`
-- Header h1: `Premium Wireless Headphones`
+- Title tag: `Premium Headphones`
+- Header h1: `Premium Headphones`
 
 ---
 
@@ -130,11 +133,11 @@ Add this section (after the gallery section):
 ```
 
 **FILL IN THE BLANK:**
-- YouTube video ID: `aqz-KE-bpKQ` (Big Buck Bunny, a free Creative Commons short film, for the demo; students find a real product video)
+- YouTube video ID: `m5V5jP1VCzo` (Bose Quiet Comfort Headphones)
 
 **Key concepts:**
 - `<iframe>` embeds external content (like YouTube)
-- Use the **embed URL** (ends with `/embed/VIDEO_ID`), not the share URL
+- Use the **embed URL** (ends with `/embed/VIDEO_ID`), not the share URL.  Let's go to YouTube and find the `EMBED` link (start with `Share`)
 - `allowfullscreen` attribute lets users expand to full screen
 - `title` improves accessibility
 
@@ -149,7 +152,7 @@ Add this section (after the video section):
   <h2>Product Comparison</h2>
 
   <table>
-    <caption>Wireless Headphone Models Comparison</caption>
+    <caption>Bose Quiet Comfort Headphone Models Comparison</caption>
     <tr>
       <th>Feature</th>
       <th>___</th>
@@ -201,19 +204,24 @@ Add this section (after the video section):
 
 ## CHALLENGE: Add colspan/rowspan
 
-Modify the table to merge the header row. Replace the first `<tr>` with:
+`colspan` makes one cell stretch across more than one column. Right now the table has 4 columns: Feature, Basic Model, Premium Plus, Professional. Add a new first row with one big "Product Models" header that stretches across the whole table.
+
+Add this row **above** the existing header row (right after the `<caption>`):
 
 ```html
 <tr>
   <th colspan="___">Product Models</th>
-  <th>Basic Model</th>
-  <th>Premium Plus</th>
-  <th>Professional</th>
 </tr>
 ```
 
 **FILL IN THE BLANK:**
-- colspan value: `1` (spans just 1 column, the "Feature" column)
+- colspan value: `4` (one cell stretched across all four columns)
+
+**What you should see:** a new top row where "Product Models" is one wide cell running the full width of the table.
+
+**Why the row has 1 cell, not 4:** every row has to add up to 4 columns. A normal row does that with 4 cells. This row does it with a single cell that counts as 4.
+
+**Try it:** change the value to `3` and look at the table again. The row only adds up to 3, so the browser leaves a gap on the right. Change it back to `4`. Then run the page through the W3C validator (Part 5) with the value set to `5`. The validator reports an extra column that has no cells in it. That's how you catch a colspan that's too big, since the browser won't show you the mistake.
 
 ---
 
