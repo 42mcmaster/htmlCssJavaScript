@@ -1,119 +1,90 @@
-# Lesson 04 DIY Task: Product Showcase Page
+# Lesson 04 DIY Task: Add Images, Media, and a Table to Your Mini-Site
 
-## Challenge Overview
+## Overview
 
-Build a **complete Product Showcase page** that incorporates everything you've learned in Lesson 04:
-- Images with alt text and captions
-- Embedded media (video/audio or YouTube)
-- A data table for comparison
+This week you add three things to the mini-site you built in Lesson 03:
+- A photo gallery with alt text and captions
+- A 20-second promo video you make yourself (Lego figures, your voice, Canva)
+- A comparison table
 
-This is a real-world project that combines HTML5 skills with creative design!
+You work on it a little each day, right after that day's task. By Friday it is finished and pushed to GitHub.
 
-**Time:** 45-60 minutes
-**Skill Level:** Intermediate
+**This is the one thing graded for Lesson 04.** The a/b/c tasks are practice.
 
----
-
-## Project Requirements
-
-### 1. Choose a Product
-Pick any product to showcase (real or fictional). Examples:
-- Smartphone, laptop, or smartwatch
-- Bicycle, skateboard, or sports equipment
-- Coffee maker, blender, or kitchen gadget
-- Camera, headphones, or gaming console
-- Anything you're interested in!
-
-### 2. Build Your Page Structure
-
-Your page must include:
-
-#### Section 1: Header
-- Page title (product name)
-- Brief tagline or description
-
-#### Section 2: Image Gallery
-- **At least 3 product images** with:
-  - Descriptive alt text (2-5 words)
-  - Use `<figure>` and `<figcaption>` elements
-  - Different views (front, side, top, detail, etc.)
-  - `width` and `height` attributes on every image
-
-#### Section 3: Media (Choose One)
-- **Option A:** Embedded YouTube video (e.g., product demo, review, unboxing)
-  - Use proper `<iframe>` embed syntax
-  - Include title and allowfullscreen attributes
-- **Option B:** HTML5 `<video>` or `<audio>`
-  - Provide at least 2 source formats for compatibility
-  - Include controls attribute
-
-#### Section 4: Feature Comparison Table
-- Compare your product to 2-3 competitors OR compare different models/versions
-- **Minimum 4 rows, 3+ columns**
-- Must include:
-  - `<caption>` element for table title
-  - `<th>` header cells with descriptive labels
-  - At least one use of `colspan` or `rowspan`
-  - Proper `<tr>` and `<td>` structure
-
-#### Section 5: Footer
-- Basic footer with copyright or additional info
+**No CSS.** This is graded on HTML. Styling starts in Lesson 05.
 
 ---
 
-## Design Guidelines
+## Day 1 (Tuesday): Photo Gallery
 
-- **Image size:** Every image has `width` and `height` attributes
-- **No CSS required:** This project is graded on HTML. Styling comes in Lesson 05.
-- **Accessibility:** All images have alt text, table headers are clear, media has controls
-- **Valid HTML5:** No errors in W3C validator
+Do this after `html04a_Task.html`.
 
----
+1. Pick a page on your site for the gallery, or add a new page called `gallery.html` and link it in your nav.
+2. Add **at least 3 photos** that fit your site's topic.
+3. Every photo needs:
+   - `alt` text that describes the photo (a short phrase, not a sentence)
+   - `width` and `height` attributes
+   - A `<figure>` around it and a `<figcaption>` under it
+4. Save the photos in an `images` folder next to your HTML files and use a relative path (`images/photo.jpg`).
 
-## Starter Tips
-
-### Image URLs
-- Where to get images:
-  - The `images/` folder in this unit has free photos you can use (see `images/CREDITS.md` for who took them)
-  - Real product photos — download the file and save it in your own `images/` folder, then use a relative path
-  - Screenshots or photos you've taken
-
-### Video URLs
-- YouTube: Search for product demo or review, copy embed URL
-- Free Creative Commons sample video (Big Buck Bunny): `https://www.youtube.com/embed/aqz-KE-bpKQ`
-
-### Sample Product Data for Table
-```
-Product X | Product Y | Product Z
-Standard | Premium | Pro
-Price: $99 | Price: $149 | Price: $249
-Battery: 20hrs | Battery: 30hrs | Battery: 40hrs
-Warranty: 1yr | Warranty: 2yrs | Warranty: 3yrs
-```
+**Where to get photos:**
+- Take your own, or use screenshots.
+- Free photo sites: Wikimedia Commons (commons.wikimedia.org), Unsplash, Pexels, Pixabay. Download the file; do not link to the site.
+- If you use someone else's photo, put the photographer's name in the `<figcaption>` or in a credits line at the bottom of the page. See `images/CREDITS.md` in this unit for an example.
+- Photos must be school-appropriate.
 
 ---
 
-## Checklist Before Submission
+## Day 2 (Wednesday): Media Section
 
-- [ ] Page has valid HTML5 structure (DOCTYPE, html, head, body)
-- [ ] All images display with alt text
-- [ ] Figure/figcaption used for at least 2 images
-- [ ] Every image has width and height attributes
-- [ ] Media (video/audio/YouTube) embeds and plays
-- [ ] Table displays properly with headers and data
-- [ ] Table includes colspan or rowspan usage
-- [ ] No broken links or missing files
-- [ ] Page has a header and footer
-- [ ] Tested in W3C HTML Validator: https://validator.w3.org/
+Do this after `html04b_Task.html`.
+
+Today is production day. You make a **20-second Lego promo video** for your site. The full instructions are in **`html04_MediaProduction.md`**: script, voice recording in Audacity, shooting the Lego figures, putting it together in Canva, exporting.
+
+What ends up on your site:
+
+1. A section on one of your pages for the promo.
+2. Your exported `promo-lastname.mp4` in a `media` folder next to your HTML files.
+3. A `<video>` tag with the `controls` attribute and one `<source>` pointing at the MP4. MP4 is the only format you need.
+
+Most people will finish the video Wednesday and embed it Friday. If your video isn't exported yet, put in the `<video>` tag today with the file name you plan to use, so the HTML is ready when the file is.
 
 ---
 
-## Submission Instructions
+## Day 3 (Thursday): Comparison Table
 
-1. Save your file as `product-showcase.html`
-2. Upload to your course folder
-3. Test in multiple browsers (Chrome, Firefox, Safari, Edge)
-4. Optional: Deploy to GitHub Pages or a web server for sharing
+Do this after `html04c_Task.html`.
+
+1. Add a table that compares 3 or more things related to your topic (products, teams, characters, plans, whatever fits).
+2. Requirements:
+   - A `<caption>` that says what the table compares
+   - A header row using `<th>`
+   - At least 4 data rows
+   - At least one `colspan` or `rowspan` that does something useful (a title row across the top, a label down the side)
+3. Keep the table on the same page as the thing it relates to.
+
+---
+
+## Day 4 (Friday): Finish and Push
+
+After the Unit 1 quiz.
+
+1. Finish and export your promo video if you didn't Wednesday. Check that the MP4 is **under 10 MB** before you put it in the `media` folder.
+2. Open every page and check that all images, media, and links work. Play the video with sound on.
+3. Run each page through the W3C validator: https://validator.w3.org/ and fix any errors.
+4. Commit and push to GitHub. Check on github.com that the `images` and `media` folders are there.
+
+---
+
+## Checklist
+
+- [ ] At least 3 photos, each with alt text, width, height, figure, and figcaption
+- [ ] Photo credits included if you used someone else's photos
+- [ ] Promo video (MP4, under 10 MB) embedded with `<video>` and `controls`, plays with sound
+- [ ] Table has a caption, th header row, 4+ data rows, and a useful colspan or rowspan
+- [ ] No broken images, media, or links
+- [ ] All pages pass the W3C validator
+- [ ] Pushed to GitHub, with the images and media folders included
 
 ---
 
@@ -121,42 +92,18 @@ Warranty: 1yr | Warranty: 2yrs | Warranty: 3yrs
 
 | Criteria | Looking for |
 |----------|-------------|
-| **HTML Structure** | Valid HTML5, semantic elements |
-| **Images** | Alt text, captions, width/height set, at least 3 images |
-| **Media** | YouTube/video/audio embedded properly, controls visible |
-| **Table** | Proper structure, headers, 4+ rows, colspan/rowspan used |
-| **Organization** | Sections in a sensible order, headings used, easy to read |
-| **Functionality** | All media works, no broken links |
+| **Images** | 3+ photos, alt text, width/height, figure/figcaption, credits where needed |
+| **Media** | 20-second Lego promo, MP4 under 10 MB, embedded with controls, plays with sound |
+| **Table** | Caption, headers, 4+ rows, colspan/rowspan used for a reason |
+| **Site still works** | Nav links work, nothing broken, new content fits the site |
+| **Valid HTML** | Passes the W3C validator |
+| **Pushed** | On GitHub with images and media folders |
 
 ---
 
-## Extension Challenges
+## Stuck?
 
-Want to go further? Try these:
-
-1. **Add Interactivity (JavaScript)**
-   - Image carousel/slider
-   - Video playlist
-   - Filter table rows
-
-3. **SEO Optimization**
-   - Add meta descriptions, keywords
-   - Use semantic HTML (article, section, nav)
-   - Proper heading hierarchy
-
-4. **Additional Sections**
-   - Customer testimonials
-   - Specifications list
-   - Price/availability info
-   - Call-to-action button
-
----
-
-## Questions? Tips?
-
-- **Alt text stuck?** Describe what someone would see if the image didn't load
-- **Table colspan confused?** Draw it out on paper first—sketch the grid!
-- **Video won't embed?** Check you're using the EMBED URL, not the SHARE URL
-
-Good luck! This is a real portfolio-ready project.
-
+- **Alt text stuck?** Describe what someone would see if the image didn't load.
+- **Image won't show?** It's almost always the path. Check the folder name and the file name, including capital letters and the file extension.
+- **Colspan confused?** Draw the table on paper first and count the columns in each row. Every row has to add up to the same number.
+- **Video won't play?** Check the file name in `src` matches the real file exactly, and that the file is in the `media` folder. More help in `html04_MediaProduction.md`.

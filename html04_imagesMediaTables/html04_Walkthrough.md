@@ -7,7 +7,11 @@ In this guided walkthrough, you will build a **Product Showcase page** that incl
 - An embedded product video
 - A comparison table of product features
 
-**Time:** 30-35 minutes
+**Time:** 30-35 minutes total, split across three days
+
+> **INSTRUCTOR NOTE - this walkthrough is a live demo, done in three pieces.**
+> Build Parts 1 and 2 on Tuesday, Part 3 on Wednesday, Part 4 on Thursday.
+> There is a **STOP** line at the end of each piece. When you reach it, stop the demo and have students do that day's task. Do not keep going into the next part.
 
 ---
 
@@ -115,6 +119,12 @@ Add this section inside the `<body>` (after `<header>`):
 
 ---
 
+> ## STOP - End of Tuesday's demo
+> Students now do **`html04a_Task.html`** (images), then add a gallery to their own mini-site (see `html04_DIYTask.md`, Day 1).
+> Pick the demo back up at Part 3 on Wednesday.
+
+---
+
 ## Part 3: Embedding a Product Video
 
 Add this section (after the gallery section):
@@ -140,6 +150,12 @@ Add this section (after the gallery section):
 - Use the **embed URL** (ends with `/embed/VIDEO_ID`), not the share URL.  Let's go to YouTube and find the `EMBED` link (start with `Share`)
 - `allowfullscreen` attribute lets users expand to full screen
 - `title` improves accessibility
+
+---
+
+> ## STOP - End of Wednesday's demo
+> Students now do **`html04b_Task.html`** (media), then start the Lego promo video (see `html04_MediaProduction.md`).
+> Pick the demo back up at Part 4 on Thursday.
 
 ---
 
@@ -222,6 +238,12 @@ Add this row **above** the existing header row (right after the `<caption>`):
 **Why the row has 1 cell, not 4:** every row has to add up to 4 columns. A normal row does that with 4 cells. This row does it with a single cell that counts as 4.
 
 **Try it:** change the value to `3` and look at the table again. The row only adds up to 3, so the browser leaves a gap on the right. Change it back to `4`. Then run the page through the W3C validator (Part 5) with the value set to `5`. The validator reports an extra column that has no cells in it. That's how you catch a colspan that's too big, since the browser won't show you the mistake.
+
+---
+
+> ## STOP - End of Thursday's demo
+> Students now do **`html04c_Task.html`** (tables), then add a comparison table to their own mini-site (see `html04_DIYTask.md`, Day 3).
+> Part 5 (testing and validation) is Friday, after the Unit 1 quiz, when students finish and push their site.
 
 ---
 
