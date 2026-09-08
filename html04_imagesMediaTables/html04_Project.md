@@ -25,6 +25,8 @@ Then validate and push. **No CSS.** Styling starts in Lesson 05.
 
 A 20-second ad for your site, acted out by Lego figures. You are not on camera.
 
+**Work with a partner.** Pair up for the video. You help each other time the script, run the mic, move the figures, and figure out Audacity and Canva. Give each other ideas. But **each of you makes your own video** for your own site. Two people, two videos.
+
 **Hard limits:** 20 seconds max. Under 10 MB. Canva's built-in music only. School-appropriate: Mr. McMaster and your parents could watch it.
 
 ### 2a. Script (on paper first)
@@ -36,13 +38,13 @@ A 20-second ad for your site, acted out by Lego figures. You are not on camera.
 | 14–20 | Closing line with the site name |
 
 - About 45 words. Two characters max. Say the site name at the end.
-- Read it out loud three times while a partner times you. Over 17 seconds? Cut words.
+- Read it out loud three times while your partner times you. Over 17 seconds? Cut words.
 - Write a shot list: one line per picture you'll take.
 - **Show Mr. McMaster the timed script before you record.**
 
 ### 2b. Record the voice (Audacity, on the Mac)
 
-Sign up for a 4-minute slot on the board once your script is approved. Shoot your pictures while you wait.
+Sign up for a 4-minute slot on the board once your script is approved. Go with your partner: one records, the other runs Audacity, then switch. Shoot your pictures while you wait.
 
 1. Open Audacity. In the microphone dropdown, pick the condenser mic, not the built-in one.
 2. Sit a hand's width from the mic and talk slightly across it.
@@ -58,7 +60,7 @@ Sign up for a 4-minute slot on the board once your script is approved. Shoot you
 Stop motion: lots of still pictures played fast. Use **2 pictures per second** (about 40 pictures) or **3 per second** (about 60) if you want it smoother.
 
 - Small set on a desk, plain background, one or two props.
-- Phone must not move between shots. Prop it against books or tape it down.
+- Phone must not move between shots. Prop it against books or tape it down. One partner moves the figures, the other takes the pictures, then switch for the second video.
 - Steady light, no flash. **Landscape**, every picture.
 - Take a picture, move the figure a tiny bit, take another. Small moves look smooth, big moves look like teleporting.
 - Take a few extra of the last pose to hold while the site name is said.
@@ -78,7 +80,7 @@ Shortcut: shoot a short video clip of you moving the figure by hand and trim it 
 8. Length at the bottom of the screen must be **20.0 s or less**. Over? Cut pictures, not words.
 
 **Getting creative (optional).** Mr. McMaster doesn't mind if you get creative, as long as the hard limits hold:
-- Click the voice track and change its **speed** in Canva. Faster makes it shorter and higher, so a longer script can fit. Slower makes it deeper. If a partner can't repeat the site name back after hearing it, it's too fast.
+- Click the voice track and change its **speed** in Canva. Faster makes it shorter and higher, so a longer script can fit. Slower makes it deeper. If your partner can't repeat the site name back after hearing it, it's too fast.
 - Two characters at two speeds: export each voice as its own MP3 from Audacity.
 - Canva sound effects (a door, a ding) where something happens on screen, quieter than the voice.
 
@@ -123,7 +125,7 @@ If the video isn't done yet, put the `<video>` tag in now with the file name you
 ## Checklist
 
 - [ ] 3+ photos, each with alt, width, height, figure, figcaption; credits where needed
-- [ ] Script timed at 17 s or under and approved by Mr. McMaster
+- [ ] Partner picked; script timed at 17 s or under and approved by Mr. McMaster
 - [ ] Voice recorded in Audacity, exported as MP3
 - [ ] 40–60 landscape pictures, camera didn't move
 - [ ] Canva video: voice, pictures, site name on screen, music under the voice, 20 s or less
@@ -139,7 +141,7 @@ If the video isn't done yet, put the `<video>` tag in now with the file name you
 | Criteria | Looking for |
 |---|---|
 | **Images** | 3+ photos, alt, width/height, figure/figcaption, credits where needed |
-| **Video** | 20-second Lego promo, your own voice, MP4 under 10 MB, plays with controls and sound |
+| **Video** | Your own 20-second Lego promo (not your partner's), your own voice, MP4 under 10 MB, plays with controls and sound |
 | **Table** | Caption, headers, 4+ rows, colspan/rowspan used for a reason |
 | **Site still works** | Nav works, nothing broken, new content fits the site |
 | **Valid HTML** | Passes the W3C validator |
