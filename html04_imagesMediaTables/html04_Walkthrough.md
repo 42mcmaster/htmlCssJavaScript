@@ -120,7 +120,7 @@ Add this section inside the `<body>` (after `<header>`):
 ---
 
 > ## STOP - End of Tuesday's demo
-> Students now do **`html04a_Task.html`** (images), then add a gallery to their own mini-site (see `html04_DIYTask.md`, Day 1).
+> Students now do **`html04a_Task.html`** (images), then work on `html04_Project.md` (gallery; start the promo script).
 > Pick the demo back up at Part 3 on Wednesday.
 
 ---
@@ -154,7 +154,7 @@ Add this section (after the gallery section):
 ---
 
 > ## STOP - End of Wednesday's demo
-> Students now do **`html04b_Task.html`** (media), then start the Lego promo video (see `html04_MediaProduction.md`).
+> Students now do **`html04b_Task.html`** (media), then work on `html04_Project.md` (record and shoot the promo).
 > Pick the demo back up at Part 4 on Thursday.
 
 ---
@@ -242,7 +242,7 @@ Add this row **above** the existing header row (right after the `<caption>`):
 ---
 
 > ## STOP - End of Thursday's demo
-> Students now do **`html04c_Task.html`** (tables), then add a comparison table to their own mini-site (see `html04_DIYTask.md`, Day 3).
+> Students now do **`html04c_Task.html`** (tables), then work on `html04_Project.md` (comparison table; finish the promo in Canva).
 > Part 5 (testing and validation) is Friday, after the Unit 1 quiz, when students finish and push their site.
 
 ---
