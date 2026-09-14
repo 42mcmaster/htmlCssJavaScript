@@ -7,11 +7,8 @@ In this guided walkthrough, you will build a **Product Showcase page** that incl
 - An embedded product video
 - A comparison table of product features
 
-**Time:** 30-35 minutes total, split across three days
-
-> **INSTRUCTOR NOTE - this walkthrough is a live demo, done in three pieces.**
-> Build Parts 1 and 2 on Tuesday, Part 3 on Wednesday, Part 4 on Thursday.
-> There is a **STOP** line at the end of each piece. When you reach it, stop the demo and have students do that day's task. Do not keep going into the next part.
+> ** NOTE - this walkthrough is a live demo, done in pieces.**
+> We will build this is chunks, one part at a time.
 
 ---
 
@@ -119,9 +116,9 @@ Add this section inside the `<body>` (after `<header>`):
 
 ---
 
-> ## STOP - End of Tuesday's demo
+> ## STOP - End of This Part of the Demo
 > Students now do **`html04a_Task.html`** (images), then work on `html04_Project.md` (gallery; start the promo script).
-> Pick the demo back up at Part 3 on Wednesday.
+> Pick the demo back up at Part 3... later.
 
 ---
 
@@ -153,9 +150,9 @@ Add this section (after the gallery section):
 
 ---
 
-> ## STOP - End of Wednesday's demo
+> ## STOP - End of the demo for now. 
 > Students now do **`html04b_Task.html`** (media), then work on `html04_Project.md` (record and shoot the promo).
-> Pick the demo back up at Part 4 on Thursday.
+> Pick the demo back up at Part 4 later.
 
 ---
 
@@ -241,9 +238,8 @@ Add this row **above** the existing header row (right after the `<caption>`):
 
 ---
 
-> ## STOP - End of Thursday's demo
-> Students now do **`html04c_Task.html`** (tables), then work on `html04_Project.md` (comparison table; finish the promo in Canva).
-> Part 5 (testing and validation) is Friday, after the Unit 1 quiz, when students finish and push their site.
+> ## Nice work - this is the end of the demo portion.  We'll work on the last task then the project for unit 04. 
+> Students now do **`html04c_Task.html`** (tables), then work on `html04_Project.md`.
 
 ---
 
@@ -266,5 +262,4 @@ You've built a product showcase page with:
 - ✓ Embedded external video via `<iframe>`
 - ✓ Data-driven table with proper headers
 
-**Next:** Move to the individual tasks (04a, 04b, 04c) to practice each skill independently!
 
