@@ -38,37 +38,37 @@ A 20-second ad for your site, acted out by Lego figures. You are not on camera.
 | 14–20 | Closing line with the site name |
 
 - About 45 words. Two characters max. Say the site name at the end.
-- Read it out loud three times while your partner times you. Over 17 seconds? Cut words.
-- Write a shot list: one line per picture you'll take.
+- Read it out loud a few times while your partner times you. Over 17 seconds? Cut some words.
+- Write a shot (picture/photo) list: one line per picture you'll take.
 - **Show Mr. McMaster the timed script before you record.**
 
-### 2b. Record the voice (Audacity, on the Mac)
+### 2b. Record the voice (Audacity, on the Mac(s))
 
-Sign up for a 4-minute slot on the board once your script is approved. Go with your partner: one records, the other runs Audacity, then switch. Shoot your pictures while you wait.
+Go with your partner: one records, the other runs Audacity, then switch. Shoot your pictures while you wait.
 
-1. Open Audacity. In the microphone dropdown, pick the condenser mic, not the built-in one.
-2. Sit a hand's width from the mic and talk slightly across it.
-3. Record one test line. The waveform should reach about half to two-thirds of the track height. Too small: move closer. Hits the top: back off.
+1. Open Audacity. Mr McMaster can assist with setup.
+2. Have the mic about ten inches from you and speak at a normal volume, and speak CLEARLY.
+3. Record one test line. The waveform should reach about half to two-thirds of the track height. If it's too small: move closer. If it hits the top: back off of the mic a little.
 4. Record the whole script. Mess up? Pause, say the line again, keep going.
-5. Cut mistakes: drag across the bad part, press Delete. Trim dead air at both ends.
-6. Select All, then **Effect > Volume and Compression > Normalize**, Apply.
-7. **File > Export Audio** as MP3, named `promo-voice-lastname`, to the Desktop. Also Save Project.
-8. Copy the MP3 to the class thumb drive. **Eject before you pull it.** Put it in your site's `media` folder.
+5. Cut mistakes: cut at the beginning and end of the bad part(s) and press Delete.  Drag the audio that remains back together. Trim dead air at both ends.
+6. Optional: Select All, then **Effect > Volume and Compression > Normalize**, Apply.
+7. **File > Export Audio** as MP3, named `promo-voice-lastname` or something similar, to the Documents folder. Also Save Project to Documents.
+8. Login to Google Drive (your account) and drop your MP3 into it. You can now access it from your computer and add the file to Canva to incorporate with your video/stop motion.
 
 ### 2c. Shoot the pictures (phone)
 
 Stop motion: lots of still pictures played fast. Use **2 pictures per second** (about 40 pictures) or **3 per second** (about 60) if you want it smoother.
 
 - Small set on a desk, plain background, one or two props.
-- Phone must not move between shots. Prop it against books or tape it down. One partner moves the figures, the other takes the pictures, then switch for the second video.
+- Phone must not move between shots. Prop it against books or tape it down or rig up a stand. One partner moves the figures, the other takes the pictures, then switch for the second video.
 - Steady light, no flash. **Landscape**, every picture.
 - Take a picture, move the figure a tiny bit, take another. Small moves look smooth, big moves look like teleporting.
 - Take a few extra of the last pose to hold while the site name is said.
-- Get them to Canva with the Canva phone app (Uploads), or email them to yourself.
-
-Shortcut: shoot a short video clip of you moving the figure by hand and trim it in Canva. Less stop-motion feel. Ask Mr. McMaster first.
+- Get them to Canva with the Canva phone app (Uploads), email them to yourself, or put them in Google Drive (school account) from your phone.
 
 ### 2d. Build it in Canva
+
+PLEASE TAKE NOTES IF THESE STEPS ARE OFF, and report to Mr. M
 
 1. Create a design > **Video** (landscape, 1920 x 1080).
 2. Upload the voice MP3 and the pictures.
@@ -79,9 +79,8 @@ Shortcut: shoot a short video clip of you moving the figure by hand and trim it 
 7. Add music from **Elements > Audio**. Turn it down to about 15–20% so the voice wins.
 8. Length at the bottom of the screen must be **20.0 s or less**. Over? Cut pictures, not words.
 
-**Getting creative (optional).** Mr. McMaster doesn't mind if you get creative, as long as the hard limits hold:
+**Getting creative (optional).** Mr. McMaster prefers that you get creative, as long as there is time and you've met the base requirements. 
 - Click the voice track and change its **speed** in Canva. Faster makes it shorter and higher, so a longer script can fit. Slower makes it deeper. If your partner can't repeat the site name back after hearing it, it's too fast.
-- Two characters at two speeds: export each voice as its own MP3 from Audacity.
 - Canva sound effects (a door, a ding) where something happens on screen, quieter than the voice.
 
 ### 2e. Export and embed
