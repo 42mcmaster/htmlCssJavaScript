@@ -5,152 +5,146 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My CSS Notes</title>
 
-  <!-- TODO Step 1: Link your stylesheet here.
+  <!-- ============================================================
+       html05 SUBSTITUTE DAY: STYLE THIS PAGE
+       This page has notes from the video. Your job is to style it.
+
+       1. In VS Code, create a new file named html05_Substitute.css
+          in this same folder. All of your CSS goes in that file.
+       2. Do each TODO step below, in order. Put a comment above
+          each rule with its step number, like this:
+             /* Step 3: body */
+       3. Do NOT change the HTML except for Step 1 and your name
+          in the footer. No <style> tag. No style="" attributes.
+       4. Stuck? Go back to the video. Every step is in it.
+       ============================================================ -->
+
+  <!-- TODO Step 1: Link your stylesheet here with a <link> tag.
        File name: html05_Substitute.css
-       The video shows the <link> tag near the end of the "three ways to add CSS" part.
-       Do NOT use a <style> tag or style="" attributes on this page. -->
+       Save, then open this page in Chrome. Refresh after every save. -->
 
 </head>
 <body>
 
+  <!-- TODO Step 2: Use the everything selector (*) to set a font-family
+       for the whole page. Example: Arial, sans-serif -->
+
+  <!-- TODO Step 3: Style the body with a background-color and a text color.
+       Notice that all the text changes color. That is inheritance. -->
+
   <header>
+    <!-- TODO Step 4: Style h1 (element selector). Give it a color and a
+         font-size in rem. Example: 2.5rem -->
+    <!-- TODO Step 5: Style this id with #page-title. Give it a
+         background-color, a text color, and padding. -->
     <h1 id="page-title">My CSS Notes</h1>
     <p>Notes from the video "Learn CSS in 20 Minutes" by Web Dev Simplified</p>
   </header>
 
   <main>
 
-    <!-- ============================================================
-         PART 1: Answer the questions while you watch.
-         Replace each ___ with your answer. Keep the <p class="answer"> tags.
-         ============================================================ -->
+    <!-- TODO Step 6: Write ONE rule that styles both h2 and h3 with the
+         same color. Use a comma between the selectors. -->
+
+    <!-- TODO Step 7: Style the class .note (every note below has it).
+         Give it padding: 10px; and a see-through background using rgba().
+         Example: rgba(0, 128, 255, 0.2) -->
 
     <section>
-      <h2>1. What CSS Is</h2>
-
-      <p class="question">Q1. The video says CSS is NOT a programming language. What kind of language is it, and what is it used for?</p>
-      <p class="answer">___</p>
-
-      <p class="question">Q2. Fill in the blanks: HTML is used for the ______ of a web page. CSS is used for the ______ of that content.</p>
-      <p class="answer">___</p>
+      <h2>What CSS Is</h2>
+      <p class="note">CSS is a styling language, not a programming language. HTML is for the content of a page. CSS is for how that content looks.</p>
     </section>
 
     <section>
-      <h2>2. CSS Syntax</h2>
-
-      <p class="question">Q3. A CSS rule has three parts. Name them in order.</p>
-      <p class="answer">___</p>
-
-      <p class="question">Q4. Write the CSS rule from the video that makes all h1 elements blue.</p>
-      <p class="answer">___</p>
+      <h2>CSS Syntax</h2>
+      <p class="note">A rule starts with a selector, then curly brackets. Inside the brackets are property: value pairs, each ending with a semicolon. Example: h1 { color: blue; }</p>
     </section>
 
     <section>
-      <h2>3. Selectors</h2>
-
-      <p class="question">Q5. What symbol goes in front of a class name in a selector? What symbol goes in front of an id?</p>
-      <p class="answer">___</p>
-
-      <p class="question">Q6. How is a class different from an id? (How many classes can one element have? How many times should an id be used on a page?)</p>
-      <p class="answer">___</p>
-
-      <p class="question">Q7. Describe what each selector picks on the page.</p>
-      <p class="answer">a) h1.large-heading (no space): ___</p>
-      <p class="answer">b) div p (a space): ___</p>
-      <p class="answer">c) .big, .large (a comma): ___</p>
-      <p class="answer">d) * (asterisk): ___</p>
+      <h2>Selectors</h2>
+      <p class="note">Element selector: h1 picks every h1. Class selector: .intro picks every element with class="intro". Id selector: #main picks the one element with id="main".</p>
+      <p class="note">An element can have many classes but only one id. An id should be used only once on a page.</p>
+      <p class="note">No space (h1.big) means both at once. A space (div p) means inside. A comma (.big, .large) means share the same styles. The * selector picks everything.</p>
     </section>
 
     <section>
-      <h2>4. Three Ways to Add CSS</h2>
-
-      <p class="question">Q8. List the three ways to add CSS to a page, from worst to best.</p>
-      <p class="answer">___</p>
-
-      <p class="question">Q9. Give one reason inline styles are a bad idea.</p>
-      <p class="answer">___</p>
-
-      <p class="question">Q10. The link tag uses two attributes: rel and href. What does each one do? What value goes in rel for a CSS file?</p>
-      <p class="answer">___</p>
+      <h2>Three Ways to Add CSS</h2>
+      <p class="note">Worst: inline, with a style="" attribute. Middle: a style tag in the head. Best: a separate .css file connected with a link tag.</p>
     </section>
 
     <section>
-      <h2>5. Which Style Wins</h2>
-
-      <p class="question">Q11. Two rules both select h1. One sets the color to blue and one sets it to green. Which one wins?</p>
-      <p class="answer">___</p>
-
-      <p class="question">Q12. Put these in order from weakest to strongest: class selector, inline style, element selector, id selector.</p>
-      <p class="answer">___</p>
-
-      <p class="question">Q13. In the video, he set a color on the body and all the text on the page changed. Why did that happen?</p>
-      <p class="answer">___</p>
+      <h2>Which Style Wins</h2>
+      <p class="note">If two rules are equally strong, the one written last wins. Id beats class, and class beats element. Inline styles beat everything. Text color is inherited from the parent element.</p>
     </section>
 
     <section>
-      <h2>6. Colors</h2>
-
-      <p class="question">Q14. In the hex color #0000ff, what do the three pairs of digits stand for? What color is it?</p>
-      <p class="answer">___</p>
-
-      <p class="question">Q15. What color is rgb(255, 255, 0)? In rgba(), what does the fourth number do? What does 0 mean and what does 1 mean?</p>
-      <p class="answer">___</p>
-
-      <p class="question">Q16. What do the letters in HSL stand for?</p>
-      <p class="answer">___</p>
+      <h2>Colors</h2>
+      <p class="note">Named: red. Hex: #0000ff (pairs for red, green, blue). RGB: rgb(255, 255, 0). RGBA adds transparency from 0 (see-through) to 1 (solid). HSL: hue, saturation, lightness.</p>
     </section>
 
     <section>
-      <h2>7. Box Model and Units</h2>
-
-      <p class="question">Q17. Name the four layers of the box model, from the inside out.</p>
-      <p class="answer">___</p>
-
-      <p class="question">Q18. What is the difference between padding and margin?</p>
-      <p class="answer">___</p>
-
-      <p class="question">Q19. What is the difference between px and %? What is the difference between em and rem?</p>
-      <p class="answer">___</p>
+      <h2>Box Model and Units</h2>
+      <p class="note">From the inside out: content, padding, border, margin. Padding is space inside the border. Margin is space outside it.</p>
+      <p class="note">px is a fixed size. % is a percent of the parent. em scales off the parent's font size. rem scales off the root font size.</p>
     </section>
 
     <!-- ============================================================
-         PART 2: Practice area. Style these in html05_Substitute.css.
-         Do not change the HTML below except to type your answers to Q20 and Q21.
+         PRACTICE AREA
          ============================================================ -->
 
     <section id="practice">
       <h2>Practice Area</h2>
 
-      <h3>Buttons (Step 10)</h3>
+      <h3>Combined Selector</h3>
+      <!-- TODO Step 8: Write a rule for p.highlight (NO space) that gives it a
+           background-color. Only the paragraph should change, not the div. -->
+      <p class="highlight">This paragraph has the class highlight.</p>
+      <div class="highlight">This div also has the class highlight.</div>
+
+      <h3>Buttons</h3>
+      <!-- TODO Step 9: These buttons have TWO classes each, like the video's
+           button example.
+           - Write a .btn rule for what all buttons share: padding, font-size, border.
+           - Write .btn-red, .btn-green, and .btn-blue rules that only set
+             background-color. Use a different color format for each:
+             hex for red, rgb() for green, hsl() for blue. -->
       <button class="btn btn-red">Red Button</button>
       <button class="btn btn-green">Green Button</button>
       <button class="btn btn-blue">Blue Button</button>
 
-      <h3>Combined Selector (Step 7)</h3>
-      <p class="highlight">This paragraph has the class highlight.</p>
-      <div class="highlight">This div also has the class highlight.</div>
-
-      <h3>Box Model (Step 11)</h3>
+      <h3>Box Model</h3>
+      <!-- TODO Step 10: Build the box from the video. Style .box with:
+           width: 100px; height: 100px; padding: 20px; margin: 50px;
+           border: 10px solid black; and a background-color.
+           Save and look at it. Then change the margin to 10px and save.
+           In a CSS comment under the rule, write what moved and why. -->
       <div class="box"></div>
       <p>This text comes right after the box.</p>
 
-      <h3>Percent Width (Step 12)</h3>
+      <h3>Percent Width</h3>
+      <!-- TODO Step 11: Style .half with width: 50%; and a background-color.
+           Make the browser window narrower and wider. The box should
+           change size with it. -->
       <div class="half">This box should be half as wide as the page.</div>
 
-      <h3>Specificity Test (Step 13)</h3>
+      <h3>Specificity Test</h3>
+      <!-- TODO Step 12: Add these three rules at the BOTTOM of your CSS,
+           in this order:
+               #test { color: green; }
+               .test-class { color: blue; }
+               p { color: red; }
+           Guess the color before you save. Then save and refresh.
+           In a CSS comment, write which color won and why.
+           (The p rule will turn other paragraphs red too. That's fine.) -->
       <p id="test" class="test-class">Which color am I?</p>
-
-      <p class="question">Q20. Which color did the specificity test text end up? Explain why, using what the video said about ids, classes, and elements.</p>
-      <p class="answer">___</p>
-
-      <p class="question">Q21. In Step 11 you changed the box's margin from 50px to 10px. What moved on the page, and why?</p>
-      <p class="answer">___</p>
     </section>
 
   </main>
 
   <footer>
-    <!-- TODO: Put your name in place of ___ -->
+    <!-- TODO Step 13: Put your name in place of ___. Then write a rule for
+         footer p (WITH a space) that makes the footer text smaller and a
+         different color. -->
     <p>Made by ___ | html05 Substitute Day</p>
   </footer>
 
