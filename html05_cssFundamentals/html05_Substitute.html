@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My CSS Notes</title>
+
+  <!-- TODO Step 1: Link your stylesheet here.
+       File name: html05_Substitute.css
+       The video shows the <link> tag near the end of the "three ways to add CSS" part.
+       Do NOT use a <style> tag or style="" attributes on this page. -->
+
+</head>
+<body>
+
+  <header>
+    <h1 id="page-title">My CSS Notes</h1>
+    <p>Notes from the video "Learn CSS in 20 Minutes" by Web Dev Simplified</p>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         PART 1: Answer the questions while you watch.
+         Replace each ___ with your answer. Keep the <p class="answer"> tags.
+         ============================================================ -->
+
+    <section>
+      <h2>1. What CSS Is</h2>
+
+      <p class="question">Q1. The video says CSS is NOT a programming language. What kind of language is it, and what is it used for?</p>
+      <p class="answer">___</p>
+
+      <p class="question">Q2. Fill in the blanks: HTML is used for the ______ of a web page. CSS is used for the ______ of that content.</p>
+      <p class="answer">___</p>
+    </section>
+
+    <section>
+      <h2>2. CSS Syntax</h2>
+
+      <p class="question">Q3. A CSS rule has three parts. Name them in order.</p>
+      <p class="answer">___</p>
+
+      <p class="question">Q4. Write the CSS rule from the video that makes all h1 elements blue.</p>
+      <p class="answer">___</p>
+    </section>
+
+    <section>
+      <h2>3. Selectors</h2>
+
+      <p class="question">Q5. What symbol goes in front of a class name in a selector? What symbol goes in front of an id?</p>
+      <p class="answer">___</p>
+
+      <p class="question">Q6. How is a class different from an id? (How many classes can one element have? How many times should an id be used on a page?)</p>
+      <p class="answer">___</p>
+
+      <p class="question">Q7. Describe what each selector picks on the page.</p>
+      <p class="answer">a) h1.large-heading (no space): ___</p>
+      <p class="answer">b) div p (a space): ___</p>
+      <p class="answer">c) .big, .large (a comma): ___</p>
+      <p class="answer">d) * (asterisk): ___</p>
+    </section>
+
+    <section>
+      <h2>4. Three Ways to Add CSS</h2>
+
+      <p class="question">Q8. List the three ways to add CSS to a page, from worst to best.</p>
+      <p class="answer">___</p>
+
+      <p class="question">Q9. Give one reason inline styles are a bad idea.</p>
+      <p class="answer">___</p>
+
+      <p class="question">Q10. The link tag uses two attributes: rel and href. What does each one do? What value goes in rel for a CSS file?</p>
+      <p class="answer">___</p>
+    </section>
+
+    <section>
+      <h2>5. Which Style Wins</h2>
+
+      <p class="question">Q11. Two rules both select h1. One sets the color to blue and one sets it to green. Which one wins?</p>
+      <p class="answer">___</p>
+
+      <p class="question">Q12. Put these in order from weakest to strongest: class selector, inline style, element selector, id selector.</p>
+      <p class="answer">___</p>
+
+      <p class="question">Q13. In the video, he set a color on the body and all the text on the page changed. Why did that happen?</p>
+      <p class="answer">___</p>
+    </section>
+
+    <section>
+      <h2>6. Colors</h2>
+
+      <p class="question">Q14. In the hex color #0000ff, what do the three pairs of digits stand for? What color is it?</p>
+      <p class="answer">___</p>
+
+      <p class="question">Q15. What color is rgb(255, 255, 0)? In rgba(), what does the fourth number do? What does 0 mean and what does 1 mean?</p>
+      <p class="answer">___</p>
+
+      <p class="question">Q16. What do the letters in HSL stand for?</p>
+      <p class="answer">___</p>
+    </section>
+
+    <section>
+      <h2>7. Box Model and Units</h2>
+
+      <p class="question">Q17. Name the four layers of the box model, from the inside out.</p>
+      <p class="answer">___</p>
+
+      <p class="question">Q18. What is the difference between padding and margin?</p>
+      <p class="answer">___</p>
+
+      <p class="question">Q19. What is the difference between px and %? What is the difference between em and rem?</p>
+      <p class="answer">___</p>
+    </section>
+
+    <!-- ============================================================
+         PART 2: Practice area. Style these in html05_Substitute.css.
+         Do not change the HTML below except to type your answers to Q20 and Q21.
+         ============================================================ -->
+
+    <section id="practice">
+      <h2>Practice Area</h2>
+
+      <h3>Buttons (Step 10)</h3>
+      <button class="btn btn-red">Red Button</button>
+      <button class="btn btn-green">Green Button</button>
+      <button class="btn btn-blue">Blue Button</button>
+
+      <h3>Combined Selector (Step 7)</h3>
+      <p class="highlight">This paragraph has the class highlight.</p>
+      <div class="highlight">This div also has the class highlight.</div>
+
+      <h3>Box Model (Step 11)</h3>
+      <div class="box"></div>
+      <p>This text comes right after the box.</p>
+
+      <h3>Percent Width (Step 12)</h3>
+      <div class="half">This box should be half as wide as the page.</div>
+
+      <h3>Specificity Test (Step 13)</h3>
+      <p id="test" class="test-class">Which color am I?</p>
+
+      <p class="question">Q20. Which color did the specificity test text end up? Explain why, using what the video said about ids, classes, and elements.</p>
+      <p class="answer">___</p>
+
+      <p class="question">Q21. In Step 11 you changed the box's margin from 50px to 10px. What moved on the page, and why?</p>
+      <p class="answer">___</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <!-- TODO: Put your name in place of ___ -->
+    <p>Made by ___ | html05 Substitute Day</p>
+  </footer>
+
+</body>
+</html>
