@@ -218,4 +218,4 @@ Submit TWO files:
 
 Complete this project by [INSERT DATE]. Submit both files to [INSERT SUBMISSION METHOD].
 
-Good luck! Remember to use DevTools to inspect and debug your layout.
+Good luck! Remember to use the X-ray trick (`* { outline: 1px solid red; }`) to debug your layout, and take it out before you submit.

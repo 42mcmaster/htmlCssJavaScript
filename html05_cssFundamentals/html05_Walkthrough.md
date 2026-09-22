@@ -184,7 +184,7 @@ p {
 </head>
 ```
 
-**Try This:** The `<link>` tag has four attributes. Can you match them?
+**Try This:** The `<link>` tag needs two attributes. Can you fill them in?
 
 ```html
 <link ___ = "stylesheet" ___ = "styles.css">

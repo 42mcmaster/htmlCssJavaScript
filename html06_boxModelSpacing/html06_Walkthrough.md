@@ -1,7 +1,7 @@
 # HTML06 Walkthrough: Box Model & Spacing
 
 ## Overview
-In this guided walkthrough, you'll build a **styled card component** from scratch, exploring padding, margin, and borders. Then you'll experiment with the **display** and **position** properties to create a simple page layout. You'll use DevTools to inspect the box model at each step.
+In this guided walkthrough, you'll build a **styled card component** from scratch, exploring padding, margin, and borders. Then you'll experiment with the **display** and **position** properties to create a simple page layout. You'll use the outline X-ray trick to see the box model at each step (browser dev tools are turned off on school computers).
 
 ---
 
@@ -143,24 +143,27 @@ Create a second card to see margin in action:
 
 ---
 
-### Step 5: Inspect with DevTools
+### Step 5: See the Box Model with the X-Ray Trick
 
-**Right-click the card** → Select "Inspect"
+Browser dev tools (Inspect) are turned off on school computers, so we use CSS itself to see the boxes.
 
-In the DevTools:
-1. Look at the **Styles** tab
-2. Scroll down to **Box Model** diagram
-3. You should see:
-   - **Orange** border = Margin (30px)
-   - **Yellow** border = Border (2px)
-   - **Green** = Padding (20px)
-   - **Blue** = Content (text)
+**Add this line at the very top of your CSS:**
+
+```css
+* { outline: 1px solid red; }
+```
+
+Every element now has a thin red line around its edge. An outline does not take up any space, so nothing on the page moves.
+
+Look at the card:
+- The **background color** fills the content and the **padding**
+- The **border** is the line you set on the card
+- The **margin** is the empty space outside the border, between the card and the next thing
 
 **Try This:**
-- Hover over each color section
-- In DevTools, change `padding: 20px;` to `padding: 40px;` in the Styles tab
-- Watch the green section grow
-- Change back (press Escape or reload)
+- Change `padding: 20px;` to `padding: 40px;`. The background area grows, and the text moves farther from the border.
+- Change `margin: 30px;` to `margin: 60px;`. The card stays the same size, but the space around it grows.
+- Change both back, then **delete the outline line** when you're done.
 
 ---
 
@@ -466,7 +469,7 @@ Create `positioning-advanced.html`:
    - `absolute` = relative to positioned parent
    - `fixed` = relative to viewport
 
-5. **DevTools** is essential for debugging box model and layout issues
+5. **The X-ray trick** (`* { outline: 1px solid red; }`) shows every box's edges so you can debug spacing and layout
 
 ---
 
@@ -477,7 +480,7 @@ Try these modifications to deepen your understanding:
 1. Add a second card and change margin/padding between them
 2. Make cards display inline-block so they sit side-by-side
 3. Add a positioned badge (position: absolute) to card corner
-4. Use DevTools to inspect box model and verify your changes
+4. Turn on the X-ray trick to check your changes
 5. Create a card with different padding on each side: `padding: 10px 20px 30px 40px;`
 
-Open DevTools after each change to confirm your understanding!
+Turn on the X-ray trick after each change to check your work, then take it out.
