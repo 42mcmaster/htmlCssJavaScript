@@ -15,23 +15,32 @@
 <body>
 
   <h1>HTML Tables Task</h1>
-  <p>Practice building data tables with proper structure, headers, and advanced features.</p>
+  <p>Practice building data tables with captions, header cells, colspan, and rowspan.</p>
 
   <!-- ===== TODO 1: Build a simple table ===== -->
-  <!-- Task: Create a table with:
-       - <caption>Student Grades</caption>
-       - Header row with: "Name", "Math", "English", "Science"
-       - 3 data rows with student information:
-         1. Alice, 95, 87, 92
-         2. Bob, 88, 91, 85
-         3. Carol, 92, 94, 89
+  <!-- Task: Build this table.
+       1. Add <caption>Student Grades</caption>
+       2. Header row (use <th>): Name, Math, English, Science
+       3. Data row: Alice, 95, 87, 92
+       4. Data row: Bob, 88, 91, 85
+       5. Data row: Carol, 92, 94, 89
+
+       Your finished table should look like this:
+       +-------+------+---------+---------+
+       | Name  | Math | English | Science |
+       +-------+------+---------+---------+
+       | Alice | 95   | 87      | 92      |
+       | Bob   | 88   | 91      | 85      |
+       | Carol | 92   | 94      | 89      |
+       +-------+------+---------+---------+
   -->
   <section id="simple-table">
     <h2>Simple Table</h2>
-    <p>Create a basic table with headers and data rows.</p>
+    <p>A basic table has a caption, one header row, and data rows.</p>
 
     <p>
       <strong>Remember:</strong> Use &lt;th&gt; for header cells and &lt;td&gt; for data cells.
+      Each row goes inside its own &lt;tr&gt;.
     </p>
 
     <!-- TODO 1: Add table here -->
@@ -40,53 +49,87 @@
   </section>
 
   <!-- ===== TODO 2: Build a table with colspan ===== -->
-  <!-- Task: Create a table with:
-       - <caption>Monthly Sales by Region</caption>
-       - Header row with: "Region", "Q1", "Q2", "Q3"
-       - A merged header row using colspan:
-         - "East Region" spanning 3 columns
-         - Data: "East", $50000, $55000, $60000
-       - "West Region" (normal header) with data: "West", $45000, $48000, $52000
+  <!-- Task: Build this table.
+       1. Add <caption>Quarterly Sales by Region</caption>
+       2. Header row (use <th>): Region, Q1, Q2, Q3
+       3. Data row: East, $50,000, $55,000, $60,000
+       4. Data row: West, $45,000, $48,000, $52,000
+       5. Last row: ONE cell that says "All amounts are in US dollars."
+          Use colspan="4" so it stretches across all 4 columns.
+
+       Your finished table should look like this:
+       +--------+---------+---------+---------+
+       | Region | Q1      | Q2      | Q3      |
+       +--------+---------+---------+---------+
+       | East   | $50,000 | $55,000 | $60,000 |
+       | West   | $45,000 | $48,000 | $52,000 |
+       +--------+---------+---------+---------+
+       | All amounts are in US dollars.        |
+       +---------------------------------------+
+
+       Rule to remember: every row must add up to the same
+       number of columns. The last row has 1 cell, but
+       colspan="4" makes it count as 4.
   -->
   <section id="colspan-table">
     <h2>Table with colspan (Column Spanning)</h2>
-    <p>Merge cells across columns using the <code>colspan</code> attribute.</p>
+    <p>The <code>colspan</code> attribute makes one cell stretch across more than one column.</p>
 
     <p>
-      <strong>colspan Example:</strong> &lt;td colspan="2"&gt; merges 2 columns
+      <strong>Example:</strong> &lt;td colspan="2"&gt; makes one cell as wide as 2 columns.
     </p>
 
-    <!-- TODO 2: Add table with colspan here -->
+    <!-- TODO 2: Add table here -->
     ___
 
   </section>
 
   <!-- ===== TODO 3: Build a table with rowspan ===== -->
-  <!-- Task: Create a table with:
-       - <caption>Product Inventory</caption>
-       - Header row: "Product", "Location", "Quantity"
-       - Data rows:
-         1. "Laptop" (rowspan="2"), "Warehouse A", "15"
-         2. (same product), "Warehouse B", "10"
-         3. "Monitor", "Warehouse A", "20"
+  <!-- Task: Build this table.
+       1. Add <caption>Product Inventory</caption>
+       2. Header row (use <th>): Product, Location, Quantity
+       3. Data row: Laptop, Warehouse A, 15
+          Give the Laptop cell rowspan="2" so it stretches down into the next row.
+       4. Data row: Warehouse B, 10
+          This row has only 2 cells. Do NOT type Laptop again -
+          the Laptop cell from the row above already fills that spot.
+       5. Data row: Monitor, Warehouse A, 20
+
+       Your finished table should look like this:
+       +---------+-------------+----------+
+       | Product | Location    | Quantity |
+       +---------+-------------+----------+
+       | Laptop  | Warehouse A | 15       |
+       |         +-------------+----------+
+       |         | Warehouse B | 10       |
+       +---------+-------------+----------+
+       | Monitor | Warehouse A | 20       |
+       +---------+-------------+----------+
+
+       Rule to remember: a cell with rowspan="2" also takes up a spot
+       in the row below it, so that row gets one fewer cell.
   -->
   <section id="rowspan-table">
     <h2>Table with rowspan (Row Spanning)</h2>
-    <p>Merge cells across rows using the <code>rowspan</code> attribute.</p>
+    <p>The <code>rowspan</code> attribute makes one cell stretch down across more than one row.</p>
 
     <p>
-      <strong>rowspan Example:</strong> &lt;td rowspan="2"&gt; merges 2 rows
+      <strong>Example:</strong> &lt;td rowspan="2"&gt; makes one cell as tall as 2 rows.
     </p>
 
-    <!-- TODO 3: Add table with rowspan here -->
+    <!-- TODO 3: Add table here -->
     ___
 
   </section>
 
-  <!-- Accessible table example -->
+  <!-- ===== Reference: Accessible table (already done - just read it) ===== -->
+  <!-- The scope attribute tells screen readers what a header cell labels:
+       scope="col" = this header labels the column below it
+       scope="row" = this header labels the row beside it
+  -->
   <section id="accessible-table">
     <h2>Accessible Table (Reference)</h2>
-    <p>Best practice: Use <code>scope</code> attribute for better accessibility.</p>
+    <p>Best practice: add the <code>scope</code> attribute to header cells so screen readers can tell which cells they label.</p>
 
     <table>
       <caption>Product Performance Report</caption>
@@ -109,7 +152,7 @@
   </section>
 
   <footer>
-    <p>Task complete! Verify all tables display correctly and are accessible.</p>
+    <p>Check your work: open this page in a browser and compare each table to the picture in its TODO comment.</p>
   </footer>
 
 </body>
