@@ -82,6 +82,8 @@ background-color: rgb(200, 200, 200); /* Gray */
 
 ### Font Properties
 
+Font families can be found here: https://www.w3.org/Style/Examples/007/fonts.en.html
+
 ```css
 /* Font family */
 font-family: Arial, sans-serif;

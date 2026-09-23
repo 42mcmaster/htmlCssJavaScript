@@ -21,17 +21,6 @@ In this walkthrough you'll learn CSS by building it one step at a time. You'll s
 
 ---
 
-## You've Already Seen CSS
-
-Two things from Lesson 04 were CSS, even though we didn't call them that:
-
-- `style="max-width: 100%; height: auto;"` on an image. That's an **inline style**, the first method below.
-- The small `<style>` block at the top of the table tasks that drew the borders. That's an **internal stylesheet**, the second method below.
-
-This lesson explains what those were and gives you the third method, which is the one real websites use.
-
----
-
 ## Part 1: Start with Plain HTML
 
 Here's a simple HTML page with no CSS. It has a header, a nav, a link, a small table, and a footer, so you'll have something to style for every part of this walkthrough.

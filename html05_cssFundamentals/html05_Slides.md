@@ -113,6 +113,28 @@ Hex and RGB let you make custom colors. Named colors are simple for beginners.
 
 ---
 
+# 3-Digit Hex Colors
+
+**3-digit hex is a shortcut for 6-digit hex.**
+
+Each pair of characters is shortened to **one character**:
+
+```text
+#FF0000  →  #F00
+#336699  →  #369
+#333333  →  #333
+```
+
+**The characters must be repeated in pairs** to use the shortcut.
+
+```css
+color: #F00;  /* Same as #FF0000 */
+color: #369;  /* Same as #336699 */
+```
+
+---
+
+
 <!-- _header: "05b — Colors, Fonts & Text" -->
 
 # Font Properties
@@ -133,6 +155,8 @@ p { font-size: 16px; }
 strong { font-weight: bold; }
 p { font-weight: 700; }
 ```
+
+---
 
 **Google Fonts** — Free professional fonts
 ```html
