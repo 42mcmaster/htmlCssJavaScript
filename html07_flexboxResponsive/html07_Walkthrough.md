@@ -281,18 +281,10 @@ Every responsive page MUST have this in the `<head>`:
 
 ## Testing Your Gallery
 
-### Browser DevTools Steps:
+### Testing Steps (resize the browser window):
 
-1. Open your HTML file in a browser
-2. Press `F12` to open DevTools
-3. Click the **device toggle** (mobile icon) in DevTools
-4. Select different devices: iPhone, iPad, Desktop
-5. Verify:
-   - Mobile: 1 column
-   - Tablet: 2 columns
-   - Desktop: 3 columns
+Browser dev tools are turned off on school computers, so test by dragging the edge of the browser window.
 
-### Manual Testing Steps:
 
 1. Open browser to full width → Should see 3 columns
 2. Resize window to ~800px width → Should see 2 columns

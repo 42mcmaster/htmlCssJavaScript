@@ -169,18 +169,20 @@ footer {
 
 ---
 
-# DevTools: Inspect Box Model
+# The X-Ray Trick: See the Box Model
 
-1. **Right-click** any element → "Inspect"
-2. Look at **Styles** tab
-3. Scroll down to **Box Model** diagram
-4. Click/hover colors to see:
-   - Content (blue)
-   - Padding (green)
-   - Border (yellow)
-   - Margin (orange)
+Dev tools are turned off on school computers, so we use CSS to see the boxes.
 
-**Try it:** Inspect a card, change padding in DevTools, see it update live!
+```css
+* { outline: 1px solid red; }
+```
+
+1. Add this line at the **top** of your CSS
+2. Every element gets a red line around its edge
+3. An outline takes up **no space**, so nothing moves
+4. Change padding or margin and watch which box moves
+
+**Try it:** Turn on the X-ray trick, change a card's padding, save, and refresh. Delete the line when you're done.
 
 ---
 
@@ -191,7 +193,7 @@ footer {
 - Use `box-sizing: border-box;` to prevent width surprises
 - **Display** changes how elements flow
 - **Position** changes where elements appear
-- **DevTools** is your best friend for debugging layouts
+- The **X-ray trick** shows every box edge when a layout looks wrong
 
 ---
 

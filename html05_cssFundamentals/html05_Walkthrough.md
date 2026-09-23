@@ -217,6 +217,7 @@ p {
 <link rel="stylesheet" href="styles.css">
 ```
 
+<<<<<<< HEAD
 **Step 4:** Delete the inline styles from Part 2. Remove `style="color: blue;"` from the `<h1>` and `style="background-color: yellow;"` from the highlight paragraph. Leave `class="highlight"`, because the stylesheet uses it.
 
 **Why Step 4 matters:** when an inline style and a stylesheet rule set the same property on the same tag, **the inline style wins**. If you leave the inline styles in, the color changes you make in `styles.css` later will seem to do nothing.
@@ -224,6 +225,9 @@ p {
 Save and refresh. The heading should be black again and the highlight paragraph white. That's correct. You'll add colors back in Part 5, this time in `styles.css`.
 
 **Try This:** The `<link>` tag has two attributes. Fill them in:
+=======
+**Try This:** The `<link>` tag needs two attributes. Can you fill them in?
+>>>>>>> e4c8290b659fe6e1c3ffa6f3249b709e34abbaab
 
 ```html
 <link ___="stylesheet" ___="styles.css">

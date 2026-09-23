@@ -44,7 +44,7 @@
 
 21. **z-index** — Controls stacking order of positioned elements (higher value = on top).
 
-22. **DevTools** — Browser developer tools used to inspect and debug HTML/CSS, including box model visualization.
+22. **X-Ray Trick** — A temporary CSS rule, `* { outline: 1px solid red; }`, that draws a line around every element so you can see the box model. Used because browser dev tools are turned off on school computers.
 
 ---
 
@@ -176,7 +176,7 @@ Every element's edges appear (outline draws OUTSIDE the border and takes no spac
 **6.5.8 — Format Website Layout**
 - Apply box model properties (margin, padding, border) to control spacing
 - Use display and position properties to arrange page elements
-- Utilize DevTools to inspect and debug layouts
+- Use the outline X-ray trick to see and debug layouts
 - Create consistent, professional layouts using modern CSS techniques
 
 ---
@@ -190,7 +190,7 @@ Every element's edges appear (outline draws OUTSIDE the border and takes no spac
 | box-sizing | Control width/height calculation | border-box (recommended) |
 | Display | Control element flow | block, inline, inline-block |
 | Position | Control element placement | static, relative, absolute, fixed |
-| DevTools | Debug layouts visually | Inspect → Box Model |
+| X-ray trick | Debug layouts visually | `* { outline: 1px solid red; }` |
 
 ---
 
@@ -212,6 +212,6 @@ Every element's edges appear (outline draws OUTSIDE the border and takes no spac
 - [ ] Is padding making width wider than expected?
 - [ ] Are margins collapsing? (vertical margins merge)
 - [ ] Is position: absolute parent set to relative/absolute/fixed?
-- [ ] Check DevTools box model colors match expectations
+- [ ] Turn on the X-ray trick: do the box edges match what you expected?
 - [ ] Is z-index high enough to show on top?
 - [ ] Did you test on different screen sizes?
