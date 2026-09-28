@@ -116,8 +116,8 @@ body {
 
 **Rule: divide the px value by 16.**
 
-1. Point at `.headline` in `styles.css`. Ask: "32 divided by 16?" → 2.
-2. Point at `.intro`. Ask: "18 divided by 16?" → 1.125.
+1. Look at `.headline` in `styles.css`. Question: "What is 32 divided by 16?" → 2.
+2. Look at `.intro`. Question: "What is 18 divided by 16?" → 1.125.
 3. Change both rules and save:
 
 ```css
@@ -131,7 +131,7 @@ body {
 }
 ```
 
-4. Reload the page. **Nothing changed.** That's the point: same size today, but now the text follows the user's browser setting.
+4. Reload the page. **Do you see that Nothing changed?** That's the point: same size today, but now the text follows the user's browser setting.
 
 ---
 
@@ -165,7 +165,7 @@ Each `.box` is `1.5em`. Each box sits inside the one before it.
 
 ## Demo 3: Fix the Shrinking Text
 
-1. Point at `.comment` (`0.85em`). Ask: "What happens to each reply?"
+1. Look at `.comment` (`0.85em`). Question: "What happens to each reply?"
 
 | Comment | Math | Size |
 |---------|------|------|
