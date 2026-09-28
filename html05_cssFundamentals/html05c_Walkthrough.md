@@ -102,7 +102,7 @@ body {
 
 ---
 
-## Key Facts to Put on the Board
+## Key Facts 
 
 - The browser's default font size is **16px**.
 - **px** = fixed size. Always the same.
@@ -202,12 +202,11 @@ Common mistake: `1.5 rem` (with a space) does not work. Write `1.5rem`.
 
 ---
 
-## Assign the Task
+## Do the Task
 
-Students open `html05c_Task.html`. It follows the same three demos:
+Open `html05c_Task.html`. It follows the same three demos:
 
 - **Step 1:** convert three px font sizes to rem (Demo 1)
 - **Step 2:** predict three nested `1.25em` sizes and show the math (Demo 2)
 - **Step 3:** fix a shrinking menu by changing one unit (Demo 3)
 
-Answers are in `teacher/html05c_Task_Solutions.html`. Step 2 answers: 20px, 25px, 31.25px.
