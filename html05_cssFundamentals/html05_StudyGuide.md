@@ -1,6 +1,6 @@
 # CSS Fundamentals Study Guide (html05)
 
-## Vocabulary (22 terms)
+## Vocabulary (26 terms)
 
 1. **CSS** — Cascading Style Sheets; language for styling HTML elements
 2. **Selector** — Part of CSS rule that targets which HTML elements to style
@@ -18,12 +18,16 @@
 14. **RGB** — Color model using Red, Green, Blue values 0-255; e.g., `rgb(255, 0, 0)`
 15. **Named Color** — Color specified by English name; e.g., `red`, `blue`, `navy`
 16. **font-family** — CSS property specifying the typeface
-17. **font-size** — CSS property specifying text size in pixels (px)
+17. **font-size** — CSS property specifying text size (in px, rem, or em)
 18. **font-weight** — CSS property controlling boldness (normal, bold, or 400-900)
 19. **line-height** — CSS property controlling vertical space between text lines
 20. **text-align** — CSS property controlling horizontal alignment (left, center, right)
 21. **text-decoration** — CSS property for underline, overline, line-through, or none
 22. **Google Fonts** — Free library of professional fonts linked via `<link>` tag
+23. **px (pixel)** — A fixed unit; `20px` is always 20 pixels
+24. **rem** — Multiplies the font size of the `<html>` tag (16px by default); `1.5rem` = 24px
+25. **em** — Multiplies the parent's font size; `1.5em` inside a 20px parent = 30px
+26. **Compounding** — When em values nested inside each other keep multiplying at each level
 
 ---
 
@@ -118,6 +122,29 @@ text-decoration: line-through;
 letter-spacing: 2px;
 ```
 
+### CSS Units: px, rem, em
+
+The browser's default font size is **16px**.
+
+| Unit | Based on | Example |
+|------|----------|---------|
+| `px` | Nothing (always the same size) | `16px` = 16px |
+| `rem` | The `<html>` font size (16px) | `1.5rem` = 1.5 × 16 = 24px |
+| `em` | The parent's font size | `1.5em` in a 20px parent = 30px |
+
+**px to rem:** divide by 16 (24px ÷ 16 = `1.5rem`).
+
+```css
+h1   { font-size: 2.5rem; }       /* 40px: rem for font sizes */
+.card { padding: 1.5rem; }        /* 24px: rem for spacing */
+.btn  { padding: 0.5em 1em; }     /* em: padding grows with the button's text */
+.card { border: 1px solid #ccc; } /* px for borders */
+```
+
+**Why use rem instead of px for text?** rem text grows when a user makes their browser text bigger. px text does not.
+
+**Watch out:** em inside em stacks. Three nested boxes at `1.5em` are 24px, 36px, then 54px. With `1.5rem`, all three are 24px.
+
 ### Linking External Stylesheet
 
 ```html
@@ -179,6 +206,7 @@ body {
 4. **Not linking the stylesheet** — External CSS file won't work unless you add `<link>` in HTML `<head>`
 5. **Misspelled property names** — `font-size` not `fontSize`; `text-align` not `textAlign`
 6. **Forgetting to close brackets** — Always match opening `{` with closing `}`
+7. **Space before a unit** — `1.5 rem` does not work; write `1.5rem`
 
 ---
 
@@ -194,6 +222,8 @@ body {
 8. What property centers text horizontally?
 9. What happens if two CSS rules apply to the same element?
 10. Write an element selector for all `<h2>` tags.
+11. What is `1.5rem` in pixels?
+12. A div has `font-size: 20px`. A paragraph inside it has `font-size: 2em`. How big is the paragraph text?
 
 ---
 
@@ -209,3 +239,5 @@ body {
 8. `text-align: center;`
 9. The more specific or later rule wins (cascade and specificity).
 10. `h2 { }`
+11. 24px (1.5 × 16)
+12. 40px (2 × 20; em uses the parent's size)

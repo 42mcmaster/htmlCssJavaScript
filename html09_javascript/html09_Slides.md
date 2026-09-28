@@ -5,182 +5,326 @@ class: invert
 paginate: true
 ---
 
-# Lesson 09: JavaScript Basics
+# Lesson 09: JavaScript
 
 ## Web Development
 ### Medina County Career Center
 
 ---
 
-<!-- _header: "Sub-Lesson 09a — Scripts & Variables" -->
+# What We Are Doing
+
+- **JavaScript basics:** variables, data types, functions, if / else, comments
+- **The DOM:** find an element, change it, respond to a click
+- **Two real features:** a dark mode button and a form that checks itself
+
+**This lesson:** walkthrough, one practice task, then add JavaScript to **your** website.
+
+---
 
 # What Does JavaScript Do?
 
-- Makes web pages **interactive** and **dynamic**
-- Responds to user actions (clicks, typing, scrolling)
-- Changes content, styles, and behavior in real-time
-- Runs **in the browser** (client-side)
-- Examples: form validation, animations, games, Mad Libs generators
+| Language | Job |
+|---|---|
+| HTML | What is on the page |
+| CSS | How it looks |
+| **JavaScript** | **What it does** |
+
+- A **scripting language** that runs **in the browser** (client-side)
+- Changes the page after it loads, responds to clicks, checks forms
+- Hover effects are still CSS (`a:hover`). Use JavaScript for what CSS can't do.
 
 ---
 
-# The Script Tag
+# The script Tag
 
-## Inline Script (in HTML):
 ```html
+<!-- Internal: code in the HTML file -->
 <script>
-  console.log('Hello from inline JavaScript!');
+  // JavaScript here
 </script>
-```
 
-## External Script (separate .js file):
-```html
+<!-- External: code in its own file (use this for your site) -->
 <script src="script.js"></script>
 ```
 
-**Best Practice:** Use external scripts for organization and reusability.
+- Put it **right before `</body>`** so the HTML exists before the script runs
+- Or in the `<head>` with `defer`: `<script src="script.js" defer></script>`
+- One `script.js` linked on every page, just like one `styles.css`
 
 ---
 
-# console.log() — Your Debugging Friend
+# Seeing Your Output
 
-```javascript
-// Print messages to the browser console
-console.log('This is a message');
-console.log('Age:', 25);
-console.log(3 + 5);  // Prints: 8
+Programmers use `console.log('Hello');` but **the console is off on our computers.**
+
+We print to a box on the page instead:
+
+```html
+<div id="output"></div>
+<script>
+  // say() adds a message to the #output box
+  function say(msg) {
+    document.getElementById('output').textContent += msg + '\n';
+  }
+  say('Hello, world!');
+</script>
 ```
 
-**How to view:** Press F12 → Console tab
-
-Use it to test code and find bugs!
+Nothing shows up? There is a typo. One mistake stops the whole script.
 
 ---
 
-# Variables: Storing Data
+# Comments
 
-```javascript
-// let — modern, block-scoped (USE THIS)
-let studentName = 'Alex';
-let score = 95;
+```js
+// One-line comment
 
-// const — cannot be reassigned (USE THIS for fixed values)
-const courseCode = 'WEB101';
-const PI = 3.14159;
-
-// var — old style (avoid, but you'll see it)
-var legacyCode = 'old-style';
-```
-
-Variable names use **camelCase**: `myFirstVariable`, `studentAge`
-
----
-
-# Data Types in JavaScript
-
-```javascript
-// String — text, enclosed in quotes
-let color = 'blue';
-let message = "Hello World";
-
-// Number — integers and decimals
-let age = 16;
-let temperature = 98.6;
-
-// Boolean — true or false
-let isStudent = true;
-let hasPassport = false;
-
-// Undefined — no value assigned yet
-let emptyVar;
-
-// Null — intentionally empty
-let noValue = null;
-```
-
----
-
-<!-- _header: "Sub-Lesson 09b — Functions & Operators" -->
-
-# Functions: Reusable Code Blocks
-
-```javascript
-// Define a function
-function greetUser(name) {
-  return 'Hello, ' + name + '!';
-}
-
-// Call the function with an argument
-let greeting = greetUser('Maya');
-console.log(greeting);  // Prints: Hello, Maya!
-```
-
-- **Parameter** (name): what the function expects
-- **Argument** ('Maya'): what you actually pass in
-- **return**: sends data back to the caller
-
----
-
-# Operators & String Concatenation
-
-```javascript
-// Basic operators
-let x = 10 + 5;   // Addition: 15
-let y = 10 - 3;   // Subtraction: 7
-let z = 4 * 6;    // Multiplication: 24
-
-// String concatenation — joining strings
-let firstName = 'John';
-let greeting = 'Hello ' + firstName + '!';  // Hello John!
-
-// Template Literals (easier, modern)
-let better = `Hello ${firstName}!`;  // Hello John!
-```
-
-Template literals use backticks and `${variable}` for interpolation.
-
----
-
-# Comments: Documentation for Code
-
-```javascript
-// Single-line comment — explains one line
+let tries = 3;   // comment at the end of a line
 
 /*
   Multi-line comment
-  Useful for explaining entire sections
-  or adding notes to yourself
+  for longer notes
 */
-
-// Always explain WHY, not just WHAT
-let taxRate = 0.07;  // Ohio sales tax is 7%
-
-// BAD comment:
-let x = 5;  // x is 5
-
-// GOOD comment:
-let studentCount = 5;  // Total students in first period
 ```
 
----
-
-# Your First Mad Libs Generator
-
-We'll build a page that:
-1. Stores words in JavaScript variables
-2. Uses a function to combine them into a story
-3. Displays the funny result on the page
-
-**Next:** Walkthroughs, practice tasks, then build your own Mad Libs!
+- The browser skips comments
+- Say **what the code is for**, not just what it says
+- Your DIY is graded on comments
 
 ---
 
-# Questions & Practice
+# Variables: let and const
 
-- What's the difference between `let` and `const`?
-- Why use console.log()?
-- How do functions make code reusable?
-- What's a template literal used for?
+```js
+let score = 0;        // let: can change
+score = 10;           // OK
 
-**Key Takeaway:** JavaScript makes websites interactive, variables store data, functions organize code, and comments explain your thinking!
+const school = 'MCCC';  // const: set once
+school = 'Other';       // ERROR, and the script stops
+```
 
+- Use `const` when it never changes, `let` when it will
+- `var` is the old way. Don't use it.
+- Names use **camelCase**: `firstName`, `isStudent`
+
+---
+
+# Data Types
+
+```js
+let firstName = 'Alex';   // string: text in quotes
+let age = 16;             // number: no quotes
+let isStudent = true;     // boolean: true or false
+```
+
+Quotes change everything:
+
+```js
+say(5 + 3);       // 8
+say('5' + '3');   // 53
+```
+
+Also: `undefined` (no value yet) and `null` (nothing on purpose)
+
+---
+
+# Joining Strings
+
+```js
+let name = 'Alex';
+let age = 16;
+
+// + joins strings (this is the one to know)
+say('My name is ' + name + ' and I am ' + age + '.');
+
+// Template literal: backticks and ${ } (you'll see it online)
+say(`My name is ${name} and I am ${age}.`);
+```
+
+Spaces go **inside** the quotes: `'My name is ' + name`
+
+---
+
+# Functions
+
+```js
+// Define it once
+function greet(name) {            // name is a parameter
+  return 'Hello, ' + name + '!';  // return sends a value back
+}
+
+// Call it as many times as you want
+say(greet('Maya'));               // 'Maya' is an argument
+say(greet('Marco'));
+```
+
+More than one parameter: `function addNumbers(num1, num2) { return num1 + num2; }`
+
+---
+
+# if and else
+
+```js
+function checkScore(score) {
+  if (score >= 70) {
+    return 'Pass';
+  } else {
+    return 'Try again';
+  }
+}
+```
+
+| `===` equal | `!==` not equal | `>` `<` `>=` `<=` |
+|---|---|---|
+| `&&` and | `\|\|` or | `!` not |
+
+One `=` stores a value. Three `===` compare.
+
+---
+
+# The DOM
+
+The browser turns your HTML into the **DOM** (Document Object Model). JavaScript can find any element and change it.
+
+```js
+// Find one element by id (use this most)
+const title = document.getElementById('page-title');
+
+// Find the first match for any CSS selector
+const firstP = document.querySelector('p');
+
+// Change its text
+title.textContent = 'New heading!';
+```
+
+`innerHTML` turns tags into real HTML. `textContent` keeps them as plain text.
+
+---
+
+# Responding to a Click
+
+```js
+const btn = document.getElementById('click-btn');
+const msg = document.getElementById('message');
+
+btn.addEventListener('click', function () {
+  msg.textContent = 'You clicked!';
+});
+```
+
+**The pattern for every feature:**
+1. **Find** the element
+2. **Listen** for an event
+3. **Change** something
+
+---
+
+# Turning a Class On and Off
+
+```css
+.hidden { display: none; }
+```
+
+```js
+secret.classList.add('hidden');      // on
+secret.classList.remove('hidden');   // off
+secret.classList.toggle('hidden');   // flip it
+secret.classList.contains('hidden'); // true or false
+```
+
+Put the look in CSS. JavaScript just switches the class.
+
+(You can also set one style: `box.style.backgroundColor = 'red';`)
+
+---
+
+# Dark Mode: The CSS
+
+```css
+:root {                         /* light (default) */
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+}
+body.dark-mode {                /* dark: same names */
+  --bg-color: #1a1a1a;
+  --text-color: #eeeeee;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+```
+
+**Custom properties** (CSS variables): change them in one place and every rule updates.
+
+---
+
+# Dark Mode: The JavaScript
+
+```js
+const themeBtn = document.getElementById('theme-toggle');
+
+themeBtn.addEventListener('click', function () {
+  document.body.classList.toggle('dark-mode');
+
+  if (document.body.classList.contains('dark-mode')) {
+    themeBtn.textContent = 'Light mode';
+  } else {
+    themeBtn.textContent = 'Dark mode';
+  }
+});
+```
+
+Find, listen, toggle. The button is a `<button>`, not a link.
+
+---
+
+# Checking a Form Before It Sends
+
+```js
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', function (event) {
+  event.preventDefault();     // don't send yet
+
+  const email = document.getElementById('email').value;
+  const emailError = document.getElementById('email-error');
+
+  if (!email.includes('@')) {
+    emailError.textContent = 'Please enter an email with an @.';
+  } else {
+    emailError.textContent = '';
+  }
+});
+```
+
+- Listen on the **form** for `'submit'`, not on the button
+- `.value` is what they typed. `.length` counts characters.
+- Show the message **on the page**, never `alert()`
+- `novalidate` on the form turns off the browser's pop-up bubbles
+
+---
+
+# After the Form Is Sent
+
+1. The browser sends the data to a **web server**
+2. The server **checks it again** (users can get around JavaScript)
+3. The server saves it in a **database**
+4. It may pass it to a **web service** (like an email service)
+
+Browser checks = quick, friendly feedback.
+Server checks = safety.
+
+---
+
+# Your DIY Task
+
+In your `DiyWebsite_Lastname` folder:
+
+1. New `script.js`, linked before `</body>` on every page
+2. **Dark mode button** in the header on every page
+3. **Contact form checks:** name, email with @, message of 10+ characters
+4. **Comments** on every part, plus a comment on what the server does
+
+Push with GitHub Desktop.

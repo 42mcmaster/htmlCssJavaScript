@@ -5,86 +5,70 @@ class: invert
 paginate: true
 ---
 
-# Lesson 06: Box Model & Spacing
+# Lesson 06: Box Model, Spacing, Display, and Position
 
-## Web Development
+## Web Design
 ### Medina County Career Center
 
 ---
-
-<!-- _header: "Sub-Lesson 06a — The Box Model" -->
 
 # The Box Model
 
 Every HTML element is a **box** with four layers:
 
 ```
-┌──────────────────────────────────┐
-│          MARGIN                  │
-│  ┌────────────────────────────┐  │
-│  │      BORDER                │  │
-│  │  ┌──────────────────────┐  │  │
-│  │  │     PADDING          │  │  │
-│  │  │  ┌──────────────────┐│  │  │
-│  │  │  │    CONTENT       ││  │  │
-│  │  │  │  (text, images)  ││  │  │
-│  │  │  └──────────────────┘│  │  │
-│  │  └──────────────────────┘  │  │
-│  └────────────────────────────┘  │
-└──────────────────────────────────┘
++----------------------------------+
+|  MARGIN                          |
+|  +----------------------------+  |
+|  |  BORDER                    |  |
+|  |  +----------------------+  |  |
+|  |  |  PADDING             |  |  |
+|  |  |  +----------------+  |  |  |
+|  |  |  |  CONTENT       |  |  |  |
+|  |  |  +----------------+  |  |  |
+|  |  +----------------------+  |  |
+|  +----------------------------+  |
++----------------------------------+
 ```
 
-- **Content**: Your element (text, images)
-- **Padding**: Space *inside* the border
-- **Border**: Line around padding
-- **Margin**: Space *outside* the border
+- **Content**: the text or image
+- **Padding**: space *inside* the border
+- **Border**: the line around the padding
+- **Margin**: space *outside* the border
 
 ---
 
 # Box Model Properties
 
 ```css
-/* Content dimensions */
-width: 300px;
-height: 200px;
-
-/* Padding (inside) */
-padding: 20px;
-
-/* Border */
-border: 2px solid black;
-
-/* Margin (outside) */
-margin: 15px;
+.card {
+  padding: 1.5rem;            /* inside space (rem) */
+  border: 2px solid #1565c0;  /* width, style, color (px) */
+  border-radius: 8px;         /* rounded corners */
+  margin: 1rem;               /* outside space (rem) */
+}
 ```
 
-**Order of values (shorthand):**
-- `10px` → all sides
-- `10px 20px` → top/bottom, left/right
-- `10px 20px 30px 40px` → top, right, bottom, left
+**Shorthand:**
+- `1rem` → all sides
+- `1rem 2rem` → top/bottom, left/right
+- `1rem 2rem 3rem 4rem` → top, right, bottom, left (clockwise)
 
 ---
 
 # box-sizing: border-box
 
-By default, width includes ONLY content. Add padding/border and it gets wider!
+By default, padding and border are **added on top of** the width.
 
 ```css
-/* Default: width = content only */
-box-sizing: content-box;
-width: 300px;
-padding: 20px;
-/* Total width = 340px! */
-
-/* Better: width = content + padding + border */
-box-sizing: border-box;
 width: 300px;
 padding: 20px;
 border: 2px solid black;
-/* Total width = 300px (stays fixed) */
+/* content-box (default): 300 + 40 + 4 = 344px on screen */
+/* border-box:            300px on screen                */
 ```
 
-**Best Practice:** Use `box-sizing: border-box;` for all elements.
+**Always put this at the top of your CSS:**
 
 ```css
 * {
@@ -94,84 +78,23 @@ border: 2px solid black;
 
 ---
 
-<!-- _header: "Sub-Lesson 06b — Display & Positioning" -->
-
-# Display Property
-
-**Display** controls how an element appears on the page:
+# Centering a Box
 
 ```css
-display: block;         /* Full width, starts new line */
-display: inline;        /* Flows with text, width/height ignored */
-display: inline-block;  /* Inline but respects width/height */
-display: none;          /* Hidden from page entirely */
-```
-
-| Display | Width/Height | Line Break | Example |
-|---------|-------------|-----------|---------|
-| block | Yes | Yes | `<div>`, `<p>` |
-| inline | No | No | `<span>`, `<a>` |
-| inline-block | Yes | No | custom buttons |
-| none | N/A | Hidden | hide elements |
-
----
-
-# Position Property
-
-**Position** controls where an element appears:
-
-```css
-position: static;    /* Default, flow of document */
-position: relative;  /* Relative to normal position */
-position: absolute;  /* Relative to nearest positioned parent */
-position: fixed;     /* Relative to viewport, stays when scrolling */
-```
-
-With `relative`, `absolute`, `fixed`, use offset properties:
-```css
-top: 10px;
-right: 20px;
-bottom: 30px;
-left: 40px;
-z-index: 5;  /* Stacking order (higher = on top) */
-```
-
----
-
-# Layout Example: Header + Content
-
-```html
-<body>
-  <header>Navigation Bar</header>
-  <main>Page Content</main>
-  <footer>Footer</footer>
-</body>
-```
-
-```css
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 60px;
-  z-index: 100;
-}
-
 main {
-  margin-top: 60px;  /* Prevent overlap */
-  display: block;
-}
-
-footer {
-  margin-top: 40px;
+  max-width: 60rem;  /* a width is required */
+  margin: 0 auto;    /* auto left and right = centered */
 }
 ```
+
+- `margin: auto` centers the **box**
+- `text-align: center` centers the **text inside** the box
 
 ---
 
 # The X-Ray Trick: See the Box Model
 
-Dev tools are turned off on school computers, so we use CSS to see the boxes.
+Developer tools are turned off on school computers, so we use CSS to see the boxes.
 
 ```css
 * { outline: 1px solid red; }
@@ -180,27 +103,92 @@ Dev tools are turned off on school computers, so we use CSS to see the boxes.
 1. Add this line at the **top** of your CSS
 2. Every element gets a red line around its edge
 3. An outline takes up **no space**, so nothing moves
-4. Change padding or margin and watch which box moves
+4. Change padding or margin and watch which space grows
 
-**Try it:** Turn on the X-ray trick, change a card's padding, save, and refresh. Delete the line when you're done.
+Remove the line when you're done.
+
+---
+
+# Display Property
+
+| Display | New line? | Width/height work? | Example |
+|---------|-----------|--------------------|---------|
+| block | Yes | Yes | `<div>`, `<p>`, `<section>` |
+| inline | No | No | `<a>`, `<span>` |
+| inline-block | No | Yes | nav buttons, cards in a row |
+| none | Hidden | n/a | hide an element |
+
+```css
+nav a {
+  display: inline-block;   /* padding now works on all sides */
+  padding: 0.5rem 1rem;
+}
+```
+
+---
+
+# Hover Effects: :hover
+
+The rule applies **only while the mouse is on the element**.
+
+```css
+nav a {
+  background-color: #1565c0;
+}
+
+nav a:hover {
+  background-color: #ff9800;   /* changes on hover */
+}
+```
+
+Hover tells visitors "you can click this."
+
+---
+
+# Position Property
+
+| Value | What it does |
+|-------|--------------|
+| static | Default. Normal flow. |
+| relative | Stays in flow. Anchor for absolute children. |
+| absolute | Leaves flow. Placed inside nearest positioned parent. |
+| fixed | Leaves flow. Stuck to the window while scrolling. |
+| sticky | Scrolls, then sticks at its `top` value. |
+
+`top`, `right`, `bottom`, `left` move positioned boxes.
+`z-index`: higher number = on top.
+
+---
+
+# Sticky Header
+
+```css
+header {
+  position: sticky;
+  top: 0;                     /* stick at the top */
+  z-index: 10;                /* stay on top */
+  background-color: #0d2a4a;  /* solid, so content doesn't show through */
+}
+```
+
+Sticky keeps its space on the page. A fixed header leaves the flow and covers the top of your content.
 
 ---
 
 # Key Takeaways
 
-- **Box Model** = Content + Padding + Border + Margin
-- **Padding** = inside space | **Margin** = outside space
-- Use `box-sizing: border-box;` to prevent width surprises
-- **Display** changes how elements flow
-- **Position** changes where elements appear
-- The **X-ray trick** shows every box edge when a layout looks wrong
+- **Box model** = content + padding + border + margin
+- **Padding** is inside, **margin** is outside
+- `box-sizing: border-box` keeps widths honest
+- `max-width` + `margin: 0 auto` centers a box
+- **display** changes how boxes flow; **:hover** styles the mouse-over state
+- **position** is for special jobs: sticky headers, badges, fixed buttons
+- The **X-ray trick** shows every box edge
 
 ---
 
-# Practice Ahead
+# This Lesson
 
-You'll build:
-1. A **styled card component** with padding, margin, borders
-2. A **page layout** with fixed header, content, footer using positioning
-
-Let's code!
+1. **Walkthrough**: build a practice page with cards, nav buttons, and a sticky header
+2. **Task** (`html06_Task.html`): fill in the TODOs
+3. **DIY**: set up your `DiyWebsite_Lastname` folder, then add spacing, nav buttons with hover, a sticky header, and gallery cards to your website

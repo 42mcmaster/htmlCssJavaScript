@@ -344,35 +344,38 @@ git diff                          # See changes not staged
 git diff --staged                 # See staged changes
 ```
 
-### GitHub Pages Deployment (Static Sites)
+### Publishing with Firebase Hosting (Static Sites)
+
+We publish with **Firebase Hosting**, Google's free web host. (The school network blocks GitHub Pages.) The code still goes to GitHub with GitHub Desktop. Firebase puts the site online.
 
 **Step-by-Step:**
 
-1. **Create GitHub Repository**
-   - Go to github.com, click "New repository"
-   - Name it: `username.github.io` for user site, or any name for project site
-   - Add README, .gitignore for Node
-   - Clone to local computer
+1. **Commit and push** your site in GitHub Desktop (Commit to main, Push origin).
 
-2. **Add Project Files**
-   - Copy index.html, CSS, JavaScript to repo folder
-   - Stage and commit: `git add .` then `git commit -m "Initial commit"`
+2. **Make a Firebase project**
+   - Go to console.firebase.google.com and sign in with your school Google account
+   - Click **Add project**, name it like `diywebsite-lastname`
+   - Turn off Google Analytics, then create it (free Spark plan)
 
-3. **Push to GitHub**
-   - `git push -u origin main`
+3. **Set up the computer (one time only)**
+   - Open the site folder in VS Code, then **Terminal > New Terminal**
+   - `node -v` (checks that Node.js is installed)
+   - `npm install -g firebase-tools` (installs the Firebase CLI, a command-line tool)
+   - `firebase login` (sign in with the same Google account)
 
-4. **Enable GitHub Pages**
-   - Go to repo Settings → Pages
-   - Under "Build and deployment", select "Deploy from a branch"
-   - Select branch: `main` (or `gh-pages`)
-   - Click Save
+4. **Connect the folder: `firebase init hosting`**
+   - Use an existing project, then pick yours
+   - Public directory: `.` (a single period = "this folder")
+   - Single-page app: **No**
+   - Automatic builds with GitHub: **No**
+   - Overwrite index.html: **No** (Yes replaces your Home page)
+   - This creates `firebase.json` and `.firebaserc`. Commit them.
 
-5. **Access Your Site**
-   - User site: `https://username.github.io`
-   - Project site: `https://username.github.io/repo-name`
-   - Takes 1-2 minutes to publish
+5. **Deploy: `firebase deploy --only hosting`**
+   - It prints the **Hosting URL**: `https://PROJECT-ID.web.app`
+   - After every change: save, commit and push, then deploy again. Pushing alone does not update the live site.
 
-**Example:** If GitHub username is `jsmith` and repo is `portfolio`, site is at `https://jsmith.github.io/portfolio`
+**Example:** If the Firebase project ID is `diywebsite-smith`, the site is at `https://diywebsite-smith.web.app`
 
 ---
 
@@ -617,7 +620,7 @@ Notes: [Any observations]
 **Portfolio:**
 - Showcase 3-5 best projects
 - Include: Screenshots, description, tools used
-- Links to live sites (GitHub Pages)
+- Links to live sites (Firebase Hosting)
 - Show variety (layout, functionality, design)
 - Update regularly as skills improve
 - Quality over quantity
@@ -761,7 +764,7 @@ The official competency list is the 2025 ODE course outline for 145010 (Strands 
 3. **SEO:** Title tag, meta description, H1, alt text, keywords
 4. **Accessibility:** 4.5:1 contrast, alt text, keyboard nav, ARIA, ADA is law
 5. **HTTPS:** Required for security, SEO, trust—use always
-6. **Publishing:** commit → push (GitHub Desktop), GitHub Pages deploy, FTP/HTTP/HTTPS protocols
+6. **Publishing:** commit → push (GitHub Desktop), Firebase Hosting deploy (`firebase deploy --only hosting`), FTP/HTTP/HTTPS protocols
 7. **Troubleshooting:** Top-down, bottom-up, follow the path, spot differences
 8. **Copyright:** Don't use without permission, Creative Commons, fair use is limited
 9. **Semantic HTML:** one h1, no skipped levels, header/nav/main/footer, real lists and tables

@@ -1,90 +1,216 @@
-# HTML 08: Forms — Study Guide
+# HTML 08: Forms Study Guide
 
-## Vocabulary (20 terms)
+## Table of Contents
 
-1. **form** — Container element that collects user input; uses `<form>` tag
-2. **action** — Attribute on `<form>` that specifies where data is sent
-3. **method** — Attribute on `<form>` specifying how data is sent (GET or POST)
-4. **GET** — HTTP method; sends data in URL (visible, limited size)
-5. **POST** — HTTP method; sends data in message body (hidden, larger size)
-6. **input** — Form control element for single-line text, numbers, dates, etc.
-7. **type** — Attribute on `<input>` that defines what kind of data (text, email, password, etc.)
-8. **text** — Input type for basic text entry
-9. **email** — Input type with built-in email validation
-10. **password** — Input type that hides characters as user types
-11. **number** — Input type that only accepts numeric values
-12. **date** — Input type that provides a date picker
-13. **label** — Element that describes a form control; improves accessibility
-14. **for** — Attribute on `<label>` that connects it to an input by ID
-15. **placeholder** — Attribute showing hint text inside an input (disappears when user types)
-16. **required** — Attribute making a field mandatory before form submission
-17. **radio** — Input type allowing ONE choice from a group
-18. **checkbox** — Input type allowing MULTIPLE choices from a group
-19. **select** — Dropdown menu; paired with `<option>` elements
-20. **option** — Individual choice within a `<select>` element
-21. **textarea** — Form control for multi-line text input
-22. **fieldset** — Element grouping related form controls together
-23. **legend** — Element labeling a `<fieldset>` group
-24. **submit** — Button type that sends form data to the action URL
-25. **reset** — Button type that clears all form fields
-26. **tabindex** — Attribute setting the order fields are focused when Tab is pressed
+1. [Vocabulary](#vocabulary)
+2. [Form Structure](#form-structure)
+3. [action and method (GET vs POST)](#action-and-method-get-vs-post)
+4. [Connecting Labels to Inputs](#connecting-labels-to-inputs)
+5. [Input Types](#input-types)
+6. [Radio Buttons vs Checkboxes](#radio-buttons-vs-checkboxes)
+7. [Dropdowns and Textarea](#dropdowns-and-textarea)
+8. [Buttons](#buttons)
+9. [Tab Order and tabindex](#tab-order-and-tabindex)
+10. [Form Styling Basics](#form-styling-basics)
+11. [Attribute Quick Reference](#attribute-quick-reference)
+12. [ODE Competencies Covered](#ode-competencies-covered)
+13. [Review Questions](#review-questions)
+14. [Summary](#summary)
 
 ---
 
-## Key Concepts
+## Vocabulary
 
-### Form Structure
+1. **form**: The element that holds all the parts of a form: `<form>`
+2. **action**: Attribute on `<form>` that says where the answers are sent
+3. **method**: Attribute on `<form>` that says how the answers are sent (`get` or `post`)
+4. **GET**: Sends the answers in the address bar after a `?` (visible)
+5. **POST**: Sends the answers hidden inside the request (not in the address bar)
+6. **server**: A computer running a program that receives form answers and saves or emails them
+7. **input**: A one-line form control: `<input>`
+8. **type**: Attribute on `<input>` that sets what kind of data it takes (text, email, password, and so on)
+9. **label**: Text that says what a control is for: `<label>`
+10. **for**: Attribute on `<label>` that must match the `id` of its control
+11. **id**: A unique name for one element on the page
+12. **name**: The name sent with a control's answer (`name=value`)
+13. **value**: What gets sent for a radio button, checkbox, or option
+14. **placeholder**: Gray hint text inside a box that disappears when you type
+15. **required**: The browser won't submit the form until this is filled in
+16. **radio button**: Lets the visitor pick ONE choice from a group
+17. **checkbox**: Lets the visitor pick ANY number of choices
+18. **select**: A dropdown list: `<select>`
+19. **option**: One choice in a dropdown: `<option>`
+20. **textarea**: A box for several lines of text: `<textarea>`
+21. **fieldset**: Draws a box around a group of related controls
+22. **legend**: The title of a fieldset
+23. **submit button**: Checks and sends the form: `<button type="submit">`
+24. **reset button**: Clears the form: `<button type="reset">`
+25. **tabindex**: Attribute that changes whether and when the Tab key reaches an element
+26. **:focus**: CSS pseudo-class for the control the cursor is in
+
+---
+
+## Form Structure
+
 ```html
-<form action="/submit-page" method="POST">
-  <!-- Form controls go here -->
+<!-- id names the form, action = where, method = how -->
+<form id="contact-form" action="#" method="get">
+
+  <fieldset>
+    <legend>About You</legend>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+  </fieldset>
+
   <button type="submit">Send</button>
+  <button type="reset">Clear</button>
 </form>
 ```
 
-### Connecting Labels to Inputs
-```html
-<!-- Method 1: for/id pairing -->
-<label for="username">Username:</label>
-<input id="username" name="username" type="text">
+---
 
-<!-- Method 2: label wrapping -->
+## action and method (GET vs POST)
+
+- On a real site, `action` is the web address of a program on a **server**, like `action="https://example.com/contact"`.
+- Our sites have **no server** yet, so we use `action="#"`. That sends the answers back to the same page. Nothing is saved.
+
+| | GET | POST |
+|---|---|---|
+| Where the answers go | In the address bar, after `?` | Hidden inside the request |
+| Can you see them? | Yes | No |
+| Can you bookmark it? | Yes | No |
+| Use for | Searches, filters | Passwords, personal info, anything that saves data |
+
+A GET submit looks like this in the address bar:
+
+```
+contact.html?name=Ana+Lopez&email=ana%40example.com#
+```
+
+---
+
+## Connecting Labels to Inputs
+
+```html
+<!-- Way 1: for/id. The for must match the id exactly. -->
+<label for="email">Email:</label>
+<input type="email" id="email" name="email">
+
+<!-- Way 2: put the input inside the label. Used for radio buttons and checkboxes. -->
 <label>
-  <input type="checkbox" name="agree">
-  I agree to terms
+  <input type="checkbox" name="news" value="yes">
+  Send me the newsletter
 </label>
 ```
 
-### Input Types Cheat Sheet
-- `text` — Regular text
-- `email` — Email with validation
-- `password` — Hidden characters
-- `number` — Numbers only
-- `date` — Date picker
-- `tel` — Telephone
-- `url` — Website URL
-- `search` — Search field
+Why labels matter:
+- Clicking the label puts the cursor in the box (or checks the box).
+- Screen readers read the label out loud.
+- A placeholder is **not** a label. It disappears when you type.
 
-### Radio vs Checkbox
-| Feature | Radio | Checkbox |
-|---------|-------|----------|
-| **Choices** | One only | Multiple |
-| **Same name?** | Yes | Yes |
-| **Visual** | Circle | Square |
-| **Use case** | Size, Gender, Rating | Interests, Agree, Features |
+---
 
-### Form Styling Basics
+## Input Types
+
+| type | What it's for | Extra attributes |
+|---|---|---|
+| `text` | Short text | `maxlength`, `minlength` |
+| `email` | Email address; browser checks for @ and a domain | |
+| `password` | Hides the letters | `minlength` |
+| `tel` | Phone number; opens number keypad on phones | |
+| `number` | Numbers only | `min`, `max` |
+| `date` | Date picker | |
+| `url` | Web address starting with http:// or https:// | |
+| `radio` | Pick one from a group | `name`, `value` |
+| `checkbox` | Pick any from a group | `name`, `value` |
+
+---
+
+## Radio Buttons vs Checkboxes
+
+| | Radio | Checkbox |
+|---|---|---|
+| How many can be picked | One | Any number |
+| Same `name` in the group? | Yes | Yes |
+| Different `value` for each? | Yes | Yes |
+| Shape | Circle | Square |
+| Example | T-shirt size, yes/no | Interests, toppings |
+
+`required` on one radio button makes the whole group required.
+
+---
+
+## Dropdowns and Textarea
+
+```html
+<label for="size">Size:</label>
+<select id="size" name="size" required>
+  <!-- value="" + required = the visitor must pick a real option -->
+  <option value="">-- Choose one --</option>
+  <option value="s">Small</option>   <!-- "s" is sent, "Small" is shown -->
+  <option value="l">Large</option>
+</select>
+
+<label for="message">Message:</label>
+<!-- rows = lines tall, cols = characters wide. Nothing between the tags. -->
+<textarea id="message" name="message" rows="5" cols="40"></textarea>
+```
+
+---
+
+## Buttons
+
+| Button | What it does |
+|---|---|
+| `<button type="submit">` | Checks the form, then sends it to the `action` |
+| `<button type="reset">` | Clears every field. Nothing is sent. |
+| `<button type="button">` | Nothing by itself. JavaScript gives it a job. |
+| `<input type="submit" value="Send">` | Older way to make a submit button |
+
+---
+
+## Tab Order and tabindex
+
+- Tab moves forward through controls, Shift+Tab moves back.
+- Tab follows the order of your HTML. If the HTML is in order, you don't need `tabindex`.
+
+| Value | Meaning |
+|---|---|
+| `tabindex="0"` | Tab can reach this element (for things that normally can't be focused) |
+| `tabindex="-1"` | Tab skips this element |
+| `tabindex="1"` or higher | Tab goes here first. Avoid it: it makes the order confusing. |
+
+---
+
+## Form Styling Basics
+
 ```css
-input, textarea, select {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
+/* Labels on their own line */
 label {
   display: block;
   margin-top: 10px;
   font-weight: bold;
+}
+
+/* Attribute selectors pick inputs by type. Leave out radio and checkbox. */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;       /* textarea matches the page font */
+  box-sizing: border-box;     /* width includes padding and border */
+}
+
+/* The control the cursor is in. Always replace the outline if you remove it. */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #007bff;
 }
 
 button {
@@ -103,86 +229,63 @@ button:hover {
 
 ---
 
-## Common Attributes Quick Reference
+## Attribute Quick Reference
 
-| Attribute | Used On | Purpose | Example |
-|-----------|---------|---------|---------|
-| `action` | `<form>` | Where to send data | `action="/submit"` |
-| `method` | `<form>` | How to send (GET/POST) | `method="POST"` |
-| `type` | `<input>` | Type of input | `type="email"` |
-| `name` | Input controls | Identifies field in data | `name="email"` |
-| `value` | Input controls | Data sent or default text | `value="default"` |
-| `for` | `<label>` | Connects to input ID | `for="username"` |
-| `placeholder` | `<input>`, `<textarea>` | Hint text | `placeholder="Enter email"` |
-| `required` | Input controls | Field is mandatory | `required` |
-| `id` | Any element | Unique identifier | `id="password"` |
-| `rows` | `<textarea>` | Number of visible rows | `rows="5"` |
-| `cols` | `<textarea>` | Number of visible columns | `cols="40"` |
-| `tabindex` | Any focusable element | Tab order | `tabindex="1"` |
+| Attribute | Used on | What it does | Example |
+|---|---|---|---|
+| `action` | `<form>` | Where to send the answers | `action="#"` |
+| `method` | `<form>` | How to send them | `method="get"` |
+| `type` | `<input>`, `<button>` | Kind of control | `type="email"` |
+| `id` | Any element | Unique name on the page | `id="email"` |
+| `for` | `<label>` | Matches a control's id | `for="email"` |
+| `name` | Controls | Name sent with the answer | `name="email"` |
+| `value` | Radio, checkbox, option | What gets sent | `value="small"` |
+| `placeholder` | Text boxes, textarea | Gray hint text | `placeholder="you@example.com"` |
+| `required` | Controls | Must be filled in | `required` |
+| `minlength` / `maxlength` | Text boxes, textarea | Fewest / most characters | `minlength="8"` |
+| `min` / `max` | `number`, `date` | Lowest / highest value | `min="13"` |
+| `rows` / `cols` | `<textarea>` | Height / width | `rows="5"` |
+| `tabindex` | Any element | Changes Tab order | `tabindex="0"` |
 
 ---
 
 ## ODE Competencies Covered
 
-### 6.4.1 Design Forms from Specifications
-- Create forms matching project requirements
-- Identify appropriate input types for data
-- Plan form layout and organization
-
-### 6.4.2 Add Forms to Web Pages
-- Insert `<form>` tags correctly
-- Set action and method attributes
-- Ensure forms are valid HTML5
-
-### 6.4.3 Use Text Fields, Radios, Checkboxes, and Dropdowns
-- Implement `<input type="text">`, `<input type="email">`, etc.
-- Create radio button groups with proper naming
-- Build checkbox groups for multiple selections
-- Create dropdown menus with `<select>` and `<option>`
-
-### 6.4.4 Apply Form Action Concept
-- Understand form action attribute purpose
-- Understand GET vs POST methods
-- Recognize where form data is submitted
-
-### 6.4.5 Create Submit and Reset Buttons
-- Add submit buttons to trigger form submission
-- Add reset buttons to clear form fields
-- Use appropriate button types
-
-### 6.4.6 Style Forms with CSS
-- Apply padding and margins to form controls
-- Style labels, inputs, buttons, and fieldsets
-- Create visually appealing form layouts
-- Ensure forms are responsive
-
-### 6.5.9 Incorporate Forms into Web Pages
-- Embed forms within page content
-- Combine forms with other HTML elements
-- Create multi-section forms using fieldsets
+- **6.4.1 Design forms from specifications:** plan a form that fits a site and its visitors; pick the right control for each question.
+- **6.4.2 Add a form to a web page:** write the `<form>` tag and its controls in valid HTML.
+- **6.4.3 Text fields, radio buttons, checkboxes, and dropdowns:** `<input>` types, radio and checkbox groups, `<select>`, `<textarea>`.
+- **6.4.4 Form action:** explain what `action` and `method` do, and the difference between GET and POST.
+- **6.4.5 Submit and reset buttons:** add both and know what each does.
+- **6.4.6 Style forms with CSS:** style labels, boxes, fieldsets, and buttons; know what `tabindex` does.
 
 ---
 
 ## Review Questions
 
-1. What tag is used to create a form?
-2. What does the `action` attribute do?
-3. What's the difference between GET and POST?
+1. What tag holds a whole form?
+2. What does the `action` attribute do? Why do we use `action="#"` right now?
+3. What is the difference between GET and POST?
 4. How do you connect a label to an input?
-5. What input types provide built-in validation?
-6. How many choices can a user select from radio buttons? Checkboxes?
-7. What's the purpose of the `placeholder` attribute?
-8. Why use `<fieldset>` and `<legend>`?
-9. What does the `required` attribute do?
-10. How do you style a submit button with CSS?
+5. What happens to a control's answer if it has no `name`?
+6. How many radio buttons in a group can be picked? How many checkboxes?
+7. What makes several radio buttons into one group?
+8. What is the difference between an option's text and its `value`?
+9. Why use `<fieldset>` and `<legend>`?
+10. What does `required` do? Name two other attributes the browser checks before submitting.
+11. What is the difference between a submit button and a reset button?
+12. Why should you avoid `tabindex="1"`?
+13. Why do form inputs need `box-sizing: border-box` when `width` is 100%?
+14. Why must you add your own `:focus` style if you use `outline: none`?
 
 ---
 
-## Key Takeaways
+## Summary
 
-- **Forms collect user data** through various input types (text, email, radios, checkboxes, etc.)
-- **Labels improve accessibility** and usability—always use them
-- **Radio buttons = one choice; checkboxes = many choices**
-- **action and method control where and how data is sent**
-- **Styling forms requires CSS targeting inputs, labels, buttons, and fieldsets**
-- **Accessibility matters**: Use `for/id`, proper labels, and semantic HTML
+- `<form>` holds the form. `action` = where the answers go. `method` = how (`get` shows them, `post` hides them).
+- No server yet, so `action="#"`.
+- Every control needs a `name`. Every box needs a label whose `for` matches its `id`.
+- Radio = pick one. Checkbox = pick any. Same `name` makes a group.
+- `required`, `type="email"`, `minlength`, `min`, and `max` let the browser check answers with no JavaScript.
+- `<fieldset>` + `<legend>` split a form into titled sections.
+- Keep the HTML in order and Tab works without `tabindex`.
+- Style with block labels, full-width boxes with `box-sizing: border-box`, and a visible `:focus`.

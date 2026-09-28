@@ -1,338 +1,337 @@
-# Lesson 07: Independent Project — Responsive Photo Gallery
+# Lesson 07 DIY: Make Your Website Responsive
 
-## Overview
+Add this lesson's skills to the website you are already building in `DiyWebsite_Lastname`. This is the one graded item for Lesson 07. The walkthrough and `html07_Task.html` are practice.
 
-You will build a **fully responsive photo gallery website** from scratch. This is your opportunity to demonstrate mastery of flexbox, media queries, and CSS Grid. You choose which layout approach to use.
+You will add five things:
 
-**Time:** 45-60 minutes
-**Complexity:** Intermediate
-**Skills:** Responsive design, flexbox or grid, media queries, responsive images
+1. The viewport meta tag on **every page**
+2. A **flexbox nav bar** in the header
+3. A **flexbox gallery** on `gallery.html` (wrap and gap)
+4. **Responsive images** (and video) that shrink to fit
+5. A **media query** so the site works on a phone
 
----
+Then you will save a bare page skeleton as **`template.html`**, and push.
 
-## Bonus Requirement: Your Reusable Template (competency 6.5.6)
-
-Before you style anything, save a copy of your bare page skeleton — header, nav, main, footer, linked stylesheet, viewport meta — as `template.html`. From now on, every new page you make all year starts by copying this file. That's what a page template IS, and creating/editing one is a state competency.
-
----
-
-## Requirements
-
-Your gallery must meet ALL of these requirements:
-
-### 1. HTML Structure
-- [ ] Valid HTML5 with doctype, meta tags, and semantic elements
-- [ ] Viewport meta tag: `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
-- [ ] At least 6 photos/images
-- [ ] Gallery wrapper container with individual photo items
-- [ ] Photo captions or titles
-- [ ] Proper alt text on all images
-
-### 2. Layout (Choose ONE approach)
-
-**OPTION A: Flexbox Layout**
-- [ ] Use `display: flex` on gallery container
-- [ ] Implement `flex-wrap` for multi-line layout
-- [ ] Use `gap` for consistent spacing
-- [ ] Use `justify-content` for alignment
-- [ ] Responsive flex items with `flex-basis` or `flex: 1`
-
-**OPTION B: CSS Grid Layout**
-- [ ] Use `display: grid` on gallery container
-- [ ] Use `grid-template-columns` with responsive units
-- [ ] Implement `gap` for spacing
-- [ ] Use `repeat()` and `auto-fit` or `auto-fill` for responsive grid
-- [ ] Example: `grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))`
-
-**OPTION C: Combination (Flexbox + Grid)**
-- [ ] Grid for overall page layout (header, gallery, footer)
-- [ ] Flexbox for gallery items or navigation
-
-### 3. Responsive Design (Mobile-First)
-- [ ] **Mobile (default, < 768px):** 1 column, full width images
-- [ ] **Tablet (768px+):** 2 columns
-- [ ] **Desktop (1024px+):** 3 or 4 columns
-- [ ] Use `@media (min-width: Xpx)` media queries
-- [ ] Test at minimum three breakpoints
-
-### 4. Responsive Images
-- [ ] All images use `max-width: 100%`
-- [ ] All images use `height: auto` to maintain aspect ratio
-- [ ] Images display as `block` to remove inline spacing
-- [ ] Images scale properly on all screen sizes
-
-### 5. Styling
-- [ ] Clean, professional appearance
-- [ ] Consistent color scheme (at least 3 colors)
-- [ ] Proper spacing and padding
-- [ ] Hover effects on photos (shadow, scale, or opacity change)
-- [ ] Readable typography with proper line-height
-
-### 6. Additional Features (Choose at least 2)
-- [ ] Photo hover effect (scale, shadow, overlay)
-- [ ] Lightbox effect or modal on click
-- [ ] Category/filter buttons
-- [ ] Search functionality
-- [ ] Star rating or like button
-- [ ] Animated transitions
-- [ ] Dark mode toggle
-- [ ] Lazy loading images (advanced)
+All CSS goes in your one `styles.css` file. No `style` attributes and no `<style>` blocks in your pages.
 
 ---
 
-## Suggested Page Structure
+## Where Everything Goes
+
+Work in your `DiyWebsite_Lastname` folder at the top of your `htmlCssJavaScript` repo. When you are done, it should look like this:
+
+```
+htmlCssJavaScript/
+└── DiyWebsite_Lastname/
+    ├── index.html      <- viewport tag check
+    ├── about.html      <- viewport tag check
+    ├── contact.html    <- viewport tag check
+    ├── gallery.html    <- viewport tag check + wrap the photos in <div class="gallery">
+    ├── template.html   <- NEW: bare page skeleton (Part 6)
+    ├── styles.css      <- most of today's work: nav, gallery, images, media query
+    ├── images/
+    └── media/
+```
+
+| File | What changes |
+|---|---|
+| All 4 pages | Viewport meta tag in the `<head>` |
+| `gallery.html` | Put one `<div class="gallery">` around your `<figure>`s |
+| `styles.css` | Flexbox header and nav, gallery layout, responsive images, media query |
+| `template.html` | New file. Header, nav, empty main, footer. |
+
+---
+
+## Part 1: Viewport Meta Tag (every page)
+
+Open each of your 4 pages. In the `<head>`, right under `<meta charset="UTF-8">`, make sure this line is there. Add it if it is missing:
 
 ```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+Without it, a phone shows your site as a tiny zoomed-out desktop page, and your media query in Part 5 will not work.
+
+---
+
+## Part 2: Flexbox Nav Bar in the Header
+
+Your header has your site name and your nav. Make them one bar: site name on the left, links on the right.
+
+**Check your header HTML first.** Flexbox moves the header's **direct children**. You want exactly two: the site name and the nav. If your header has a site name **and** a tagline, wrap those two in a `<div>` so they count as one item:
+
+```html
+<header>
+  <!-- Flex item 1: site name (and tagline, if you have one) -->
+  <div>
+    <h1>Your Site Name</h1>
+    <p>Your tagline</p>
+  </div>
+
+  <!-- Flex item 2: the nav -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+```
+
+Do the same on all 4 pages so every header matches.
+
+Now add this to `styles.css`. Keep your own colors and fonts from Lessons 05 and 06.
+
+```css
+/* Header: site name on the left, nav on the right */
+header {
+  display: flex;
+  justify-content: space-between;   /* push the two items to opposite ends */
+  align-items: center;              /* line them up in the middle */
+  padding: 1rem 2rem;
+}
+
+/* The nav links in a row with space between them */
+header nav {
+  display: flex;
+  gap: 1rem;
+}
+```
+
+Using `header nav` means this only changes the nav **in the header**. Your footer nav is left alone. (If you want the footer nav in a row too, add a `footer nav` rule the same way.)
+
+---
+
+## Part 3: Flexbox Gallery (gallery.html)
+
+Right now your photos stack down the page. Make them sit side by side and wrap to a new row when they run out of room.
+
+### 3a. Wrap the figures in one div
+
+In `gallery.html`, put one `<div class="gallery">` around **all** your `<figure>`s. Leave the `<h2>` outside it, or it becomes a flex item too.
+
+```html
+<section id="photos">
+  <h2>Photo Gallery</h2>
+
+  <div class="gallery">
+    <figure>
+      <img src="images/latte.jpg" alt="Latte with a leaf drawn in the foam" width="400" height="300">
+      <figcaption>Our house latte</figcaption>
+    </figure>
+
+    <!-- The rest of your figures, all inside the gallery div -->
+
+  </div>
+</section>
+```
+
+### 3b. Style it
+
+```css
+/* Gallery: photos in a row that wraps */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;   /* extra photos drop to the next row */
+  gap: 1rem;         /* space between photos */
+}
+
+/* Each photo box grows to fill the row but never gets narrower than 15rem */
+.gallery figure {
+  flex: 1;
+  min-width: 15rem;
+  margin: 0;         /* figure has a built-in margin; gap does the spacing now */
+}
+```
+
+You can add your card look from Lesson 06 (background, padding, border-radius, shadow, `:hover`) to `.gallery figure` too.
+
+---
+
+## Part 4: Responsive Images and Video
+
+Your `<img>` tags have `width` and `height` attributes. On a phone, a 400px-wide photo can stick out past the edge of the screen. This rule fixes that for every image on the site:
+
+```css
+/* Every image shrinks to fit its box and keeps its shape */
+img {
+  max-width: 100%;   /* never wider than its box */
+  height: auto;      /* keep the shape (no squishing) */
+  display: block;    /* remove the small gap under the image */
+}
+
+/* Same idea for the promo video on the Home page */
+video {
+  max-width: 100%;
+  height: auto;
+}
+```
+
+---
+
+## Part 5: Media Query for Phones
+
+Add this at the **very bottom** of `styles.css`. It only runs when the screen is 768px wide or narrower.
+
+```css
+/* ===== Phones: 768px wide and narrower ===== */
+@media (max-width: 768px) {
+
+  /* Header: site name on top, nav underneath */
+  header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Nav links: stack them (or use flex-wrap: wrap if they fit two to a row) */
+  header nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Gallery: one photo per row */
+  .gallery {
+    flex-direction: column;
+  }
+}
+```
+
+**Test it.** Dev tools are turned off on school computers, so drag the edge of the browser window until it is about as narrow as a phone. You should see:
+
+- The header change from one bar to site name on top, links underneath
+- The gallery go to one photo per row
+- No side-to-side scrolling on any page
+
+Drag it wide again and everything should go back to rows. If you can, open your published site on your own phone too.
+
+You can change anything else inside the media query if it helps your site on a phone, like smaller heading sizes or less padding.
+
+---
+
+## Part 6: Save Your Page Template (template.html)
+
+Save a copy of your bare page skeleton (header, nav, main, footer, linked stylesheet, viewport meta) as `template.html`. From now on, every new page you make all year starts by copying this file. That is what a page template **is**, and creating and editing one is a state competency (6.5.6).
+
+1. Make a copy of `index.html` and rename it `template.html`.
+2. Delete everything **inside** `<main>`. Leave a comment in its place.
+3. Change the `<title>` to `Your Site Name - Page Title`.
+4. Check that it still has the viewport tag, the `<link>` to `styles.css`, the header with the nav, and the footer.
+
+It should look like this (with your own site name, tagline, and footer):
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Site Name - Page Title</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
   <header>
-    <h1>Gallery Title</h1>
-    <p>Subtitle or description</p>
+    <div>
+      <h1>Your Site Name</h1>
+      <p>Your tagline</p>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
   <main>
-    <!-- Optional: Category/filter buttons -->
-    <nav class="filters">
-      <button>All</button>
-      <button>Category 1</button>
-      <button>Category 2</button>
-    </nav>
-
-    <!-- Gallery container -->
-    <div class="gallery">
-      <div class="photo-card">
-        <img src="..." alt="...">
-        <p class="caption">Photo Title</p>
-      </div>
-      <!-- More photos -->
-    </div>
+    <!-- Page content goes here -->
   </main>
 
   <footer>
-    <p>Copyright and contact info</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p>&copy; 2026 Your Name</p>
   </footer>
 </body>
+</html>
 ```
 
----
-
-## Step-by-Step Guide
-
-### Step 1: Plan Your Design (5 minutes)
-- Sketch your layout on paper
-- Decide: Flexbox, Grid, or combination?
-- Choose your color scheme
-- Plan your breakpoints (mobile, tablet, desktop)
-
-### Step 2: Create HTML (15 minutes)
-- Build semantic structure
-- Add viewport meta tag
-- Add at least 6 photos (use placeholder images)
-- Write proper alt text
-- Add captions for each photo
-
-### Step 3: Add Basic Styles (10 minutes)
-- Body/general styles (font, background)
-- Header and footer
-- Basic card styling (background, border-radius, shadow)
-
-### Step 4: Create Gallery Layout (15 minutes)
-- Implement flexbox OR grid
-- Add `gap` for spacing
-- Style photo containers
-- Make images responsive
-
-### Step 5: Add Media Queries (10 minutes)
-- Mobile: 1 column
-- Tablet: 2 columns
-- Desktop: 3+ columns
-- Test at each breakpoint
-
-### Step 6: Polish and Add Effects (10 minutes)
-- Hover effects on photos
-- Additional features from the list
-- Final styling tweaks
-- Test responsiveness
+Do **not** add `template.html` to your nav. It is a starting file for you, not a page for visitors.
 
 ---
 
-## Flexbox Gallery Example (Minimal)
+## Part 7: Finish and Push
 
-```css
-.gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-@media (min-width: 768px) {
-  .gallery {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .photo-card {
-    flex: 0 1 calc(50% - 10px);  /* 2 columns */
-  }
-}
-
-@media (min-width: 1024px) {
-  .photo-card {
-    flex: 0 1 calc(33.333% - 14px);  /* 3 columns */
-  }
-}
-```
+1. Open all 4 pages wide, then narrow. Check the header, nav, and gallery at both sizes.
+2. Click every nav link on every page (header and footer).
+3. Run each page through https://validator.w3.org/ and fix the errors.
+4. In GitHub Desktop, write a summary like `html07 responsive site`, **Commit to main**, then **Push origin**.
+5. Check on github.com that `styles.css` changed and `template.html` is in your `DiyWebsite_Lastname` folder.
 
 ---
 
-## Grid Gallery Example (Minimal)
+## Checklist
 
-```css
-.gallery {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
+**Every page**
+- [ ] Viewport meta tag in the `<head>` of all 4 pages
+- [ ] Header has two flex items: site name (block) and nav
+- [ ] No `style` attributes or `<style>` blocks
 
-@media (min-width: 768px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+**styles.css**
+- [ ] `header` uses `display: flex`, `justify-content: space-between`, `align-items: center`
+- [ ] `header nav` uses `display: flex` and `gap`
+- [ ] `.gallery` uses `display: flex`, `flex-wrap: wrap`, and `gap`
+- [ ] `.gallery figure` uses `flex: 1` and a `min-width`
+- [ ] `img` has `max-width: 100%` and `height: auto`
+- [ ] `@media (max-width: 768px)` at the bottom: header stacks, gallery goes to one column
 
-@media (min-width: 1024px) {
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-```
+**gallery.html**
+- [ ] One `<div class="gallery">` around all the figures, `<h2>` outside it
 
----
+**template.html**
+- [ ] In the `DiyWebsite_Lastname` folder
+- [ ] Viewport tag, stylesheet link, header with nav, empty main with a comment, footer
 
-## Testing Checklist
-
-Before submitting, verify:
-
-- [ ] Valid HTML5 (no errors in browser console)
-- [ ] Viewport meta tag present
-- [ ] Mobile view (375px): 1 column, readable
-- [ ] Tablet view (768px): 2 columns, responsive
-- [ ] Desktop view (1024px): 3+ columns, correct
-- [ ] Images scale properly on all sizes
-- [ ] No horizontal scrollbars on any screen size
-- [ ] Text is readable on mobile (font size adequate)
-- [ ] Hover effects work smoothly
-- [ ] All links/buttons work
-- [ ] Footer is accessible on all screen sizes
+**Finish**
+- [ ] Looks right wide and narrow, no side-to-side scrolling when narrow
+- [ ] Every link works; all pages pass the validator
+- [ ] Pushed with GitHub Desktop
 
 ---
 
-## Image Resources
-
-**Image sources:**
-- The `images/` folder in this unit has ready-made placeholder images (`photo-1.png` through `photo-6.png`, and more). Use them like this:
-  ```html
-  <img src="images/photo-1.png" alt="Photo 1">
-  ```
-- Your own photos or screenshots, saved into your `images/` folder
-- Free stock photos: https://unsplash.com/ · https://pexels.com/ · https://pixabay.com/ (download the file and save it locally — don't link to the site)
-
----
-
-## Submission Requirements
-
-Create a folder named `html07_DIYTask_YourName/` containing:
-
-1. **index.html** — Your complete HTML file
-2. **styles.css** — Your complete CSS file
-3. **README.md** — Brief description of your gallery:
-   - Layout approach used (Flexbox/Grid/Combination)
-   - Color scheme explanation
-   - Features implemented
-   - Any challenges and how you solved them
-   - Browser compatibility notes
-
----
-
-## Grading Rubric
+## Grading
 
 | Criteria | Looking for |
-|----------|-------------|
-| **HTML Structure** | Valid HTML, viewport tag, semantic elements |
-| **Responsive Layout** | Flexbox or Grid, works on 3+ breakpoints |
-| **Media Queries** | Mobile-first, min-width breakpoints, correct transitions |
-| **Responsive Images** | max-width: 100%, height: auto, display: block |
-| **Styling & Polish** | Colors, typography, spacing, hover effects |
-| **Additional Features** | At least 2 bonus features implemented |
-| **Testing & Performance** | No scrollbars, smooth interactions, works on mobile |
+|---|---|
+| **Viewport tag** | On all 4 pages |
+| **Flexbox nav** | Header is one bar: site name on one side, nav links in a row with a gap on the other |
+| **Flexbox gallery** | Photos sit side by side, wrap to new rows, and have even gaps |
+| **Responsive images** | `max-width: 100%` and `height: auto`; no image or video sticks out past the screen when narrow |
+| **Media query** | When the window is narrow, the header stacks and the gallery goes to one column |
+| **Template** | `template.html` in the site folder with the full skeleton and an empty main |
+| **Site still works** | All pages match, every link works, pages pass the validator, pushed to GitHub |
+
+| Level | What it looks like |
+|---|---|
+| **Complete** | Everything on the checklist works, wide and narrow. |
+| **Mostly there** | The nav, gallery, and media query work, but one or two small things are missing (a page without the viewport tag, no template, a nav that does not stack). |
+| **Started** | Some flexbox is in place, but several parts are missing or the site does not change when the window is narrow. |
+| **Missing** | No Lesson 07 changes pushed to the `DiyWebsite_Lastname` folder. |
 
 ---
 
-## Common Issues & Solutions
+## If something goes wrong
 
-**Problem:** Images aren't scaling on mobile
-**Solution:** Check for `max-width: 100%` and `height: auto` on all images
-
-**Problem:** Layout breaks on some screen sizes
-**Solution:** Test media queries at exact breakpoints (375px, 768px, 1024px)
-
-**Problem:** Text too small on mobile
-**Solution:** Use mobile-first approach with larger font sizes on mobile, adjust down on desktop
-
-**Problem:** Gallery items unequal width
-**Solution:** With flexbox, use `flex-basis` or percentage widths consistently
-
-**Problem:** Gaps between grid items are uneven
-**Solution:** Use `gap` property instead of margins; it's more consistent
-
----
-
-## Inspiration & Ideas
-
-**Gallery Themes:**
-- Travel photography
-- Product showcase
-- Portfolio/artwork
-- Nature/wildlife
-- Food photography
-- Student work/projects
-- Local business showcase
-
-**Additional Polish:**
-- Add shadow effects on hover
-- Increase image brightness on hover
-- Smooth color transitions
-- Animated borders or underlines
-- Gradient overlays on images
-- Icon overlays on hover
-
----
-
-## Example Project Structure
-
-```
-html07_DIYTask_YourName/
-├── index.html          (Your gallery HTML)
-├── styles.css          (Your gallery CSS)
-├── README.md           (Project description)
-└── images/            (Optional: local image folder)
-    ├── photo1.jpg
-    ├── photo2.jpg
-    └── ...
-```
-
----
-
-## Questions to Ask Yourself
-
-1. Does my layout work on mobile first, then enhance for larger screens?
-2. Are my images responsive and maintaining aspect ratios?
-3. Is my color scheme cohesive and professional?
-4. Do hover effects enhance the user experience?
-5. Is my code clean, readable, and well-organized?
-6. Have I tested on multiple screen sizes?
-7. Are there any accessibility issues (alt text, color contrast)?
-8. Does my gallery tell a story or showcase content effectively?
-
----
-
-Good luck! Have fun creating your gallery!
+- **Nothing changed at all:** the page is not using `styles.css`. Check the `<link>` tag and the file name, and make sure you saved the CSS file.
+- **The header title and tagline are side by side:** they are two separate flex items. Wrap them in one `<div>` (Part 2).
+- **The gallery heading is squished next to the photos:** the `<h2>` is inside `<div class="gallery">`. Move it above the div.
+- **Photos are all on one line and tiny:** you are missing `flex-wrap: wrap;` on `.gallery`.
+- **Photos are different heights:** your images are different shapes. Use photos that are close to the same shape, or crop them to match.
+- **The media query does nothing:** check that it is at the very bottom of `styles.css`, that the curly braces match (the `@media` block has its own `{ }` around the rules), and that the window is really narrower than 768px.
+- **Media query works on the computer but not on a phone:** the page is missing the viewport tag.
+- **The page scrolls sideways when narrow:** something is too wide. Usually it is an image or video without `max-width: 100%`, or your About page table. For the table, you can make the font smaller inside the media query.
+- **Footer nav changed too:** you used `nav` instead of `header nav` in your CSS.
+- **Pushed but GitHub shows old files:** you committed but did not click **Push origin** in GitHub Desktop.

@@ -1,211 +1,64 @@
-# HTML 12: SEO & Accessibility Lesson Package
+# html10: Site Quality and Publishing
 
-> **v2 note:** this folder is now the merged **html10 — Site Quality & Publishing** unit. Start with `html10_UnitGuide.md`. Seo* files are the former html12; Publish* files are the former html13.
+The last content lesson before exam prep. Students learn SEO, accessibility, proofreading, testing, and troubleshooting, publish their `DiyWebsite_Lastname` site with Firebase Hosting, and learn the "how the web works" vocabulary that appears on the certification exams. The DIY is the finish line for the running website.
 
-Complete lesson materials for teaching SEO and accessibility in a high school CTE Web Design course.
+## Files
 
-## Files Included
+| File | What it is |
+|---|---|
+| `html10_Walkthrough.md` | The one walkthrough. SEO, accessibility, proofreading, testing, troubleshooting methods, publishing, and web vocabulary. Linked table of contents, commented code. |
+| `html10_Slides.md` | Marp slide deck for the lesson (about 24 slides). |
+| `html10_StudyGuide.md` | Printable study guide: full vocabulary tables, cheat sheets, comparison tables, competencies, practice questions with answers. |
+| `html10_Task.html` | Practice task. A bakery page with 22 numbered TODOs (SEO, accessibility, proofreading, validator errors), testing steps, and 11 written vocabulary questions in a comment at the bottom. Uses the `images/` folder. |
+| `html10_DIYTask.md` | Graded task. SEO pass, accessibility pass, proofread, validate, two-browser and narrow-window test, publish with Firebase Hosting, `test-log.md`, turn in the live URL. |
+| `images/` | Three placeholder photos used by `html10_Task.html`. |
+| `teacher/html10_Task_Solutions.html` | Fixed bakery page. Each fix marked `FIX n` to match `TODO n`. Expected validator results and the vocabulary answer key are at the bottom. |
+| `teacher/html10_GoogleQuiz.csv` | 40 multiple-choice questions for Google Forms (trimmed to the most-tested SEO, accessibility, testing, publishing, and web vocabulary items). |
+| `teacher/html10_Gimkit.csv` | The same 40 questions in Gimkit format. |
+| `archive/` | Old files from before the trim (two walkthroughs, three slide decks, two study guides, five a-e tasks, two DIYs, the extension task, the unit guide, and all old teacher files in `archive/teacher/`). Kept for reference. Not for students. |
 
-### 1. **html10_SeoSlides.md** (MARP presentation)
-- 10 slides covering SEO (12a) and Accessibility (12b)
-- Professional, clean design suitable for classroom presentation
-- Covers: title tags, meta descriptions, semantic HTML, heading hierarchy, alt text, WCAG, screen readers, color contrast, ARIA labels, keyboard navigation
-- Duration: 20-30 minutes of instruction
+## Suggested Days (about 3-4 class days)
 
-### 2. **html10_SeoStudyGuide.md**
-- 23 vocabulary terms (SEO, search engine, crawl, index, rank, title tag, meta description, heading hierarchy, alt text, keyword, organic traffic, SERP, ADA, WCAG, accessibility, screen reader, color contrast, aria-label, aria-describedby, role, keyboard navigation, focus indicator, semantic HTML)
-- SEO Best Practices cheat sheet with examples
-- Accessibility Best Practices cheat sheet with examples
-- ODE Competency alignments (6.5.14, 6.1.2, 6.1.4, 6.5.10)
-- Quick review questions
-- Resource links
+| Day | Class time |
+|---|---|
+| 1 | Slides and walkthrough Parts 1-3 (SEO, accessibility, proofreading). Keyboard tab-through and screen reader demo (VoiceOver: Cmd + F5). Start `html10_Task.html` TODOs. |
+| 2 | Walkthrough Parts 4-5 (validators, two-browser testing, troubleshooting methods). Finish the task TODOs and testing steps. Start the DIY SEO and accessibility passes. |
+| 3 | Walkthrough Parts 6-7 (publishing, web vocabulary). Task vocabulary questions. DIY: proofread, validate, test, then publish with Firebase Hosting (`firebase init hosting`, `firebase deploy --only hosting`). |
+| 4 | DIY: test the live site, write `test-log.md`, turn in the live URL. Gimkit review. Google Quiz. |
 
-### 3. **html10_SeoWalkthrough.md**
-- Guided walkthrough for students to analyze an intentionally bad example
-- Part 1A: SEO audit with fill-in-the-blank questions
-- Part 1B: Accessibility audit with fill-in-the-blank questions
-- Part 2: Good example showing all fixes
-- Part 3: Reusable audit checklist
-- Summary table showing how practices help both SEO and accessibility
+Strong classes can do this in 3 days by assigning the task vocabulary questions as homework.
 
-### 4. **html10a_Task.html** (SEO Task - Bad Example)
-- Intentionally flawed restaurant website with clear SEO problems
-- 15 labeled comments marking each issue:
-  1. Missing/empty title tag
-  2. No meta description
-  3. Missing image alt text (multiple)
-  4. Poor heading hierarchy
-  5. Vague H1 text
-  6. Excessive divs instead of semantic HTML
-  7. Contact form with unconnected labels
-  8. No focus styles
-- Realistic content for high school students
-- 30-45 minute task to identify and fix all issues
+## Ohio Competencies
 
-### 5. **html10a_Task_Solutions.html** (SEO Task - Fixed Version)
-- Same restaurant website with all SEO issues fixed
-- Includes comments explaining each fix
-- Shows proper: title tag, meta description, semantic HTML (header, nav, main, article, footer), heading hierarchy, descriptive alt text, connected form labels, focus styles
-- Valid HTML5 with professional styling
+| Code | Topic | Where |
+|---|---|---|
+| 6.5.14 | Search engine optimization | Walkthrough Part 1, Task TODOs 1-2, 7, 12-17, DIY Part 1 |
+| 6.1.2 | Plan for accessibility (ADA) | Walkthrough Part 2, Task, DIY Part 2 |
+| 2.7.4 | Assistive technology (screen readers) | Walkthrough Part 2 |
+| 6.1.4 | Proofreading | Walkthrough Part 3, Task TODO 11, DIY Part 3 |
+| 6.5.10 | Usability testing | Walkthrough Part 4, DIY Part 5 |
+| 6.5.11 | Cross-browser/device testing, validators | Walkthrough Part 4, Task testing steps, DIY Parts 4-5 |
+| 2.11 | Troubleshooting methods (introduced) | Walkthrough Part 5 |
+| 6.5.12 | Publish to a web server | Walkthrough Part 6, DIY Part 6 |
+| 6.5.1 | Standards and protocols (HTTP/HTTPS, FTP, TCP/IP, DNS, W3C) | Walkthrough Part 7, Task questions 1-4, 10 |
+| 2.7.8 | Static vs dynamic sites | Walkthrough Part 7, Task question 5 |
+| 2.7.5 | Bandwidth and latency | Walkthrough Part 7, Task question 6 |
+| 2.7.6 | Browser plug-ins | Walkthrough Part 7, Task question 7 |
+| 6.5.4 | Content management systems (describe level) | Walkthrough Part 7, Task question 8 |
+| 2.7.2 | Ways to present data | Walkthrough Part 7, Task question 9 |
 
-### 6. **html10b_Task.html** (Accessibility Task - Bad Example)
-- Intentionally flawed tech gadget store website with accessibility problems
-- 20 labeled comments marking each issue:
-  1. Poor color contrast (light gray on white)
-  2. Missing focus outlines on buttons
-  3. Missing focus outlines on inputs
-  4. Divs used as buttons instead of real <button>
-  5. Poor product name contrast
-  6. Divs with onclick instead of buttons
-  7. No accessible social media icon labels
-  8. Form labels not connected to inputs
-  9. Light text on dark background (contrast)
-  10. No focus outlines on form elements
-  11. Search input without label
-  12. Navigation divs instead of links
-  13-16. Images without alt text
-  17. Form labels not connected with for/id
-  18. Div with onclick instead of button
-  19-20. Icon elements with no aria-labels
-- Realistic e-commerce scenario
-- 30-45 minute task to identify and fix all issues
+## Scope Decisions
 
-### 7. **html10b_Task_Solutions.html** (Accessibility Task - Fixed Version)
-- Same tech store website with all accessibility issues fixed
-- Includes comments explaining each fix
-- Shows proper: color contrast (dark on light), focus indicators, semantic buttons/links, connected form labels, semantic HTML, aria-labels for icons, keyboard navigation
-- Valid HTML5 with professional styling and responsive design
-
-### 8. **html10_SeoDIYTask.md** (Independent Audit & Improvement Project)
-- Students audit one of their own previous projects (HTML 1-11)
-- Comprehensive 3-part checklist:
-  - **SEO Audit** (13 items): title tag, meta description, images, heading hierarchy, HTML structure, URL, technical SEO
-  - **Accessibility Audit** (13 items): color contrast, images, forms, interactive elements, keyboard navigation, headings, semantic HTML, ARIA, readability
-- Step-by-step audit documentation template
-- Priority-based fix roadmap (Priority 1, 2, 3)
-- Testing requirements (keyboard navigation, color contrast, screen reader optional)
-- Submission requirements with grading rubric
-- Example "before and after" showing transformation of bad code to accessible/SEO-friendly code
-
-### 9. **html10_SeoDIYTask_Solutions.html** (DIY Example - Fully Optimized)
-- Portfolio website example showing all SEO and accessibility best practices
-- Demonstrates:
-  - Proper title tag and meta description
-  - Semantic HTML throughout (header, nav, main, sections, articles, footer)
-  - Perfect heading hierarchy (one h1, logical h2/h3 flow)
-  - Descriptive alt text on all images
-  - Excellent color contrast (dark on light)
-  - Connected form labels with for/id
-  - Real <button> elements with proper styling
-  - Real <a> tags for navigation
-  - Clear focus indicators (3px outline)
-  - ARIA labels on icon links
-  - Responsive CSS Grid layout
-  - Professional design suitable as portfolio template
-- Comments explain each accessibility/SEO feature
-
-### 10. **html10_SeoGimkit.csv** (Game-Based Assessment)
-- 35 questions covering both SEO and accessibility
-- Format: Question, Correct Answer, Incorrect Answer 1-3
-- Topics: title tags, meta descriptions, alt text, heading hierarchy, WCAG, screen readers, color contrast, ARIA, semantic HTML, keyboard navigation
-- Perfect for Gimkit (free game-based learning platform)
-- Engaging, competitive classroom assessment
-
-### 11. **html10_SeoGoogleQuiz.csv** (Google Forms Assessment)
-- 31 multiple-choice questions
-- Format: Question, Option A-D, Correct Answer (letter), Points
-- Mix of definition, conceptual, and practical questions
-- Focus on: SEO fundamentals, accessibility basics, best practices
-- Covers ODE competencies
-- Can be imported directly into Google Forms
-
-## ODE Competencies Aligned
-
-- **6.5.14**: Search Engine Optimization
-- **6.1.2**: Plan with Accessibility (ADA)
-- **6.1.4**: Proofreading & Quality Assurance
-- **6.5.10**: Usability Testing
-
-## Lesson Flow (45-60 min class period)
-
-### Option 1: Lecture + Tasks (2-3 days)
-1. **Day 1** (30 min): Present slides, use walkthrough as guided demo
-2. **Day 2** (45 min): Students complete html10a_Task (SEO audit/fix)
-3. **Day 3** (45 min): Students complete html10b_Task (Accessibility audit/fix)
-
-### Option 2: Flipped + Independent (1 week)
-1. **Homework**: Read Study Guide, review Slides
-2. **Class 1** (30 min): Q&A + Gimkit game review
-3. **Class 2-3** (90 min): html10a_Task + html10b_Task
-4. **Class 4** (30 min): Present findings, debrief, Google Quiz
-
-### Option 3: Project-Based (Full Unit - 2 weeks)
-1. **Day 1-2**: Instruction + guided practice (walkthrough)
-2. **Day 3-5**: Complete html10a_Task and html10b_Task
-3. **Day 6-10**: Complete html10_SeoDIYTask (audit own project)
-4. **Day 11**: Present findings, assessment (Gimkit + Google Quiz)
-
-## Difficulty Level
-
-- **Slides & Study Guide**: Beginner-friendly, clear explanations
-- **Walkthrough**: Beginner-guided with fill-in-the-blank practice
-- **Tasks (12a, 12b)**: Intermediate, students identify and fix 15-20 problems
-- **DIY Task**: Advanced, students audit their own real code
-
-## Tools & Resources Needed
-
-- **Free tools** (built into lesson):
-  - WebAIM Contrast Checker
-  - Google Lighthouse (in Chrome DevTools)
-  - WAVE browser extension
-  - NVDA screen reader (optional, free)
-
-- **Platforms for quizzes**:
-  - Gimkit.com (free account)
-  - Google Forms (free)
-
-## Tips for Teachers
-
-1. **SEO & Accessibility are interconnected**: Emphasize that fixing one often helps the other
-2. **Focus on practicality**: This is about real skills developers use daily
-3. **Use keyboard navigation demo**: Show students what it's like to navigate with Tab key only
-4. **Real impact**: Discuss why accessibility matters—it's the law + ethical
-5. **Common mistakes**: Have students predict what's wrong before revealing answers
-
-## File Statistics
-
-| File | Type | Size | Lines |
-|------|------|------|-------|
-| html10_SeoSlides.md | Markdown | 6.4 KB | 268 |
-| html10_SeoStudyGuide.md | Markdown | 9.0 KB | 162 |
-| html10_SeoWalkthrough.md | Markdown | 8.7 KB | 335 |
-| html10a_Task.html | HTML | 4.6 KB | 155 |
-| html10a_Task_Solutions.html | HTML | 8.5 KB | 274 |
-| html10b_Task.html | HTML | 7.3 KB | 253 |
-| html10b_Task_Solutions.html | HTML | 9.3 KB | 327 |
-| html10_SeoDIYTask.md | Markdown | 14 KB | 453 |
-| html10_SeoDIYTask_Solutions.html | HTML | 16 KB | 487 |
-| html10_SeoGimkit.csv | CSV | 5.2 KB | 36 |
-| html10_SeoGoogleQuiz.csv | CSV | 5.0 KB | 32 |
-| **TOTAL** | | **88 KB** | 2,782 |
-
-## Standards Compliance
-
-- ✓ All HTML files are valid HTML5
-- ✓ All code includes explanatory comments
-- ✓ SEO content focuses on technical/developer-controlled elements
-- ✓ Accessibility content uses WCAG 2.1 Level AA standards
-- ✓ Examples are realistic and age-appropriate for high school
-- ✓ Both tasks are completable in 30-45 minutes
-- ✓ No external dependencies required (all standalone files)
-
-## Quick Start
-
-1. **Present slides** to introduce concepts
-2. **Walk through** html10a_Task with students using html10_SeoWalkthrough.md
-3. **Assign html10a_Task**: Students audit bad SEO example
-4. **Assign html10b_Task**: Students audit bad accessibility example
-5. **Assign html10_SeoDIYTask**: Students audit and improve their own project
-6. **Assess** with Gimkit game or Google Quiz
-
-All files are ready to use in the classroom!
+- **One lesson, one task, one DIY.** The old a-e tasks were merged into `html10_Task.html`. There is no extension task.
+- **No command-line git.** Students commit and push with GitHub Desktop only. The one exception to typing commands is Firebase: students type three Firebase commands (`firebase login`, `firebase init hosting`, `firebase deploy --only hosting`) in the VS Code terminal. Git stays in GitHub Desktop.
+- **Publishing uses Firebase Hosting, not GitHub Pages.** The school network blocks GitHub Pages. The site folder `DiyWebsite_Lastname` stays in the `htmlCssJavaScript` repo and is still pushed to GitHub with GitHub Desktop. Each student makes a Firebase project (like `diywebsite-lastname`) and deploys that folder with the Firebase CLI. The public directory is `.` (the site folder itself). The live site is at `https://PROJECT-ID.web.app`. The repo does not need to be public for publishing. `firebase init` adds `firebase.json` and `.firebaserc` to the folder; students commit them.
+- **Firebase deploys are manual.** Pushing to GitHub does not update the live site. Students run `firebase deploy --only hosting` after every change. Automatic GitHub builds are turned off during `firebase init`.
+- **Teacher check before the lesson:**
+  - (a) School Google accounts can open console.firebase.google.com and create a project. A Workspace admin may need to allow Firebase for student accounts.
+  - (b) Node.js and npm are installed on student machines, or can be installed (`node -v` shows a version).
+  - (c) `npm install -g firebase-tools` works without admin rights. If not, Mr. McMaster may need to run the install once per machine.
+  - Hosting on the free Spark plan needs no credit card. Students should not change plans.
+- **ARIA is `aria-label` only.** The rest of the ARIA catalog is beyond both exams.
+- **CMS is describe level.** What a CMS is, static vs CMS-driven, WordPress as the example. Students do not install or configure one.
+- **No dev tools.** Dev tools are disabled on student machines, so testing uses the W3C validators, two browsers, a narrowed window, and the keyboard. WAVE (wave.webaim.org) and PageSpeed Insights (pagespeed.web.dev) are optional, only if the school filter allows them.
+- **Troubleshooting methods are introduced here** (top-down, bottom-up, follow the path, spot the differences) and reviewed in exam prep.

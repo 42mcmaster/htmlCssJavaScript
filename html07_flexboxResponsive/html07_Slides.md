@@ -5,205 +5,176 @@ class: invert
 paginate: true
 ---
 
-# Lesson 07: Flexbox & Responsive Design
+# Lesson 07: Flexbox and Responsive Design
 
 ## Web Development
 ### Medina County Career Center
 
 ---
 
-<!-- _header: "Sub-Lesson 07a — Flexbox Layout" -->
+# What We Are Doing
+
+- **Flexbox:** put things in a row or a column and line them up
+- **Responsive design:** one site that works on a phone, a tablet, and a desktop
+- **CSS Grid:** know what it is (rows and columns)
+
+**This lesson:** walkthrough, one practice task, then make **your** website responsive.
+
+---
 
 # What is Flexbox?
 
-- **Flexible Box Layout** makes aligning elements easy
-- One-dimensional layout system (rows or columns)
-- Perfect for navigation bars, cards, and component layouts
-- Uses `display: flex` on container, not children
+- A layout tool for **one direction at a time** (a row or a column)
+- Put `display: flex` on the **parent** (the container)
+- The **children** (flex items) are what move
 
 ```css
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.cards {
+  display: flex;   /* children now sit side by side */
 }
 ```
 
 ---
 
-# Flexbox Key Properties
+# Flexbox Container Properties
 
-**Container Properties:**
-- `flex-direction`: `row` (default), `column`, `row-reverse`, `column-reverse`
-- `justify-content`: distribute along main axis (`flex-start`, `center`, `space-between`)
-- `align-items`: align along cross axis (`flex-start`, `center`, `stretch`)
-- `flex-wrap`: `nowrap` (default), `wrap`, `wrap-reverse`
-- `gap`: space between items
+| Property | What it does |
+|---|---|
+| `flex-direction` | `row` (default) or `column` |
+| `justify-content` | Spacing **along** the row: `center`, `space-between` |
+| `align-items` | Lining up **across** the row: `center`, `stretch` |
+| `gap` | Space between items |
+| `flex-wrap` | `wrap` lets items drop to the next line |
 
-**Item Properties:**
-- `flex`: grow, shrink, basis shorthand
-- `align-self`: override container's align-items
+**Item property:** `flex: 1` = grow to an equal share of the space
 
 ---
 
-# Flexbox Example: Navigation Bar
-
-```html
-<nav class="navbar">
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-</nav>
-```
+# Example: Nav Bar
 
 ```css
+/* Logo on the left, links on the right */
 .navbar {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  padding: 15px;
-  background: #333;
+  align-items: center;
+  padding: 1rem 2rem;
 }
 
-.navbar a {
-  color: white;
-  text-decoration: none;
+/* The links group is also a flex container */
+.nav-links {
+  display: flex;
+  gap: 1rem;
 }
 ```
 
 ---
 
-<!-- _header: "Sub-Lesson 07b — Media Queries & Responsive Design" -->
-
-# Mobile-First Approach
-
-**Write CSS for mobile first, then add larger screens:**
+# Example: Gallery That Wraps
 
 ```css
-/* Mobile styles (small screens) */
-body { font-size: 14px; }
-
-/* Tablets and up */
-@media (min-width: 768px) {
-  body { font-size: 16px; }
+.gallery {
+  display: flex;
+  flex-wrap: wrap;   /* extra photos move to the next row */
+  gap: 1rem;
 }
 
-/* Desktop and up */
-@media (min-width: 1024px) {
-  body { font-size: 18px; }
+.gallery figure {
+  flex: 1;           /* grow to fill the row */
+  min-width: 15rem;  /* but wrap before getting too skinny */
 }
 ```
-
-**Advantages:**
-- Mobile-optimized experience for everyone
-- Progressive enhancement (add features for larger screens)
-- Lighter, faster on mobile devices
 
 ---
 
-# Responsive Images
+# Responsive Images and the Viewport Tag
 
-**Make images scale with screen size:**
-
-```html
-<img src="photo.jpg" alt="description" class="responsive-image">
-```
-
+**Every image:**
 ```css
-.responsive-image {
-  max-width: 100%;
-  height: auto;
-  display: block;
+img {
+  max-width: 100%;   /* never wider than its box */
+  height: auto;      /* keep its shape */
+  display: block;    /* no gap underneath */
 }
 ```
 
-**Viewport Meta Tag (required in all HTML files):**
+**Every page, in the `<head>`:**
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
 
+Without the viewport tag, a phone shows a tiny zoomed-out desktop page.
+
 ---
 
-# Media Query Breakpoints
+# Media Queries
 
-**Common breakpoints (mobile-first):**
-
-| Device | Width | Query |
-|--------|-------|-------|
-| Mobile | < 768px | default |
-| Tablet | 768px+ | `@media (min-width: 768px)` |
-| Desktop | 1024px+ | `@media (min-width: 1024px)` |
+CSS that only runs when the screen matches a condition.
 
 ```css
-/* Single column on mobile */
-.grid { display: flex; flex-direction: column; }
-
-/* 2 columns on tablet */
-@media (min-width: 768px) {
-  .grid { flex-direction: row; }
+/* 768px wide and narrower (phones) */
+@media (max-width: 768px) {
+  .navbar  { flex-direction: column; }
+  .gallery { flex-direction: column; }
 }
 ```
 
+- Put media queries at the **bottom** of the CSS
+- The width where the layout changes is a **breakpoint**
+- Common breakpoints: **768px** (tablet), **1024px** (desktop)
+
 ---
 
-<!-- _header: "Sub-Lesson 07c — CSS Grid Basics" -->
+# max-width vs. min-width
 
-# What is CSS Grid?
+| Query | Means | Used for |
+|---|---|---|
+| `@media (max-width: 768px)` | 768px **and narrower** | Fixing a desktop layout for phones (what we use) |
+| `@media (min-width: 768px)` | 768px **and wider** | **Mobile-first:** phone layout is the default, bigger screens are added |
 
-- **Two-dimensional** layout system (rows and columns)
-- Define grid structure with `display: grid`
-- Best for page layouts, not components
-- More powerful but more complex than flexbox
+**Testing:** dev tools are off. Drag the browser window narrow.
+
+---
+
+# CSS Grid: Know What It Is
+
+- **Two-dimensional:** rows **and** columns at the same time
+- Flexbox is one-dimensional
 
 ```css
-.container {
+.page-layout {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 100px auto 50px;
-  gap: 20px;
+  grid-template-columns: 15rem 1fr;   /* sidebar + the rest */
+  gap: 1.5rem;
 }
 ```
 
----
-
-# Grid: What You Need vs. What Exists
-
-**Need to know (exams):** `display: grid` = rows AND columns at once; `gap` spaces the cells; columns defined like `1fr 2fr 1fr`.
-
-**Exists (Extension Task):** `repeat()`, `minmax()`, `auto-fit`, spanning cells — the real-world gallery toolkit. Worth learning; not tested.
+- `fr` = a fraction of the leftover space
+- `repeat(3, 1fr)` = three equal columns
 
 ---
 
-# Flexbox vs Grid
+# Flexbox vs. Grid
 
-| Feature | Flexbox | Grid |
-|---------|---------|------|
-| Dimensions | 1D (rows or columns) | 2D (rows and columns) |
-| Best for | Components, navigation | Page layouts |
-| Alignment | Main and cross axis | Rows and columns |
-| Complexity | Simple | More options |
+| | Flexbox | Grid |
+|---|---|---|
+| Directions | One | Two (rows and columns) |
+| Turn it on | `display: flex` | `display: grid` |
+| Good for | Nav bars, cards, galleries | Whole-page layouts |
 
-**Use both:** Flexbox inside grid cells, grid for page layout.
-
----
-
-# Putting It Together: Responsive Gallery
-
-```css
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  padding: 20px;
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .gallery { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 767px) {
-  .gallery { grid-template-columns: 1fr; }
-}
-```
+Real sites use both: grid for the page, flexbox for the parts inside.
 
 ---
+
+# Your DIY: Make Your Site Responsive
+
+In `DiyWebsite_Lastname`:
+
+1. Viewport tag on every page
+2. Flexbox nav bar in the header
+3. Flexbox gallery with `flex-wrap` and `gap`
+4. Responsive images
+5. Media query: nav stacks, gallery goes to one column
+6. Save a bare page skeleton as `template.html`
+
+Push with GitHub Desktop.

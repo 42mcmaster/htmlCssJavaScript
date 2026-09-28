@@ -1,172 +1,38 @@
-# HTML09 Walkthrough: Your First JavaScript
+# Lesson 09 Walkthrough: JavaScript
 
-## Part 1: Open the Console & Test console.log()
+In this walkthrough you build one small page, step by step. It starts with a blank box that JavaScript writes into. By the end, the page has buttons that change it, a dark mode button, and a form that checks itself before it sends.
 
-1. Open a browser and press **F12** (or right-click → Inspect → Console)
-2. In the Console tab, type:
-   ```javascript
-   console.log('Hello World!');
-   ```
-3. Press Enter. You should see:
-   ```
-   Hello World!
-   ```
+Everything here is practiced in `html09_Task.html` and used in the DIY task, where you add JavaScript to your own website.
 
-**Try This:**
-- Print your name to the console: `console.log(___);`
-- Print a number: `console.log(___);`
-- Print the result of math: `console.log(___ + ___);`
+## Table of Contents
 
----
-
-## Part 2: Create Variables
-
-In the console, create variables to store information:
-
-```javascript
-// Create a string variable (use quotes)
-let myName = 'Alex';
-
-// Create a number variable
-let myAge = 16;
-
-// Create a boolean variable
-let isStudent = true;
-```
-
-Now print them:
-```javascript
-console.log(myName);   // Prints: Alex
-console.log(myAge);    // Prints: 16
-console.log(isStudent); // Prints: true
-```
-
-**Try This:**
-- Create a variable called `favoriteColor` and set it to a color name (string)
-  ```javascript
-  let favoriteColor = ___;
-  ```
-- Create a variable called `score` and set it to a number
-  ```javascript
-  let score = ___;
-  ```
-- Print both to the console using console.log()
-  ```javascript
-  console.log(___);
-  console.log(___);
-  ```
+1. [Before You Start](#1-before-you-start)
+2. [What JavaScript Does](#2-what-javascript-does)
+3. [The script Tag](#3-the-script-tag)
+4. [Showing Output on the Page](#4-showing-output-on-the-page)
+5. [Comments](#5-comments)
+6. [Variables: let and const](#6-variables-let-and-const)
+7. [Data Types: String, Number, Boolean](#7-data-types-string-number-boolean)
+8. [Joining Strings](#8-joining-strings)
+9. [Functions and Parameters](#9-functions-and-parameters)
+10. [Making a Choice with if and else](#10-making-a-choice-with-if-and-else)
+11. [The DOM: Finding an Element](#11-the-dom-finding-an-element)
+12. [Changing Text with textContent](#12-changing-text-with-textcontent)
+13. [Responding to a Click](#13-responding-to-a-click)
+14. [Turning a Class On and Off](#14-turning-a-class-on-and-off)
+15. [Dark Mode](#15-dark-mode)
+16. [Checking a Form Before It Sends](#16-checking-a-form-before-it-sends)
+17. [What Happens After a Form Is Sent](#17-what-happens-after-a-form-is-sent)
+18. [Moving the Script to Its Own File](#18-moving-the-script-to-its-own-file)
+19. [Try This Answers](#19-try-this-answers)
 
 ---
 
-## Part 3: Understand let vs. const
+## 1. Before You Start
 
-```javascript
-// Use let when the value might change
-let counter = 0;
-counter = 5;        // This works - you can reassign let
-console.log(counter); // Prints: 5
-
-// Use const when the value should NOT change
-const courseCode = 'WEB101';
-courseCode = 'WEB102';  // ERROR! You cannot reassign const
-```
-
-**Try This:**
-- Create a const for something that shouldn't change (like your school name):
-  ```javascript
-  const schoolName = ___;
-  ```
-- Create a let for something that might change (like points in a game):
-  ```javascript
-  let gamePoints = ___;
-  ```
-
----
-
-## Part 4: String Concatenation (Joining Strings)
-
-```javascript
-// Old way: using + to join strings
-let firstName = 'John';
-let greeting = 'Hello ' + firstName + '!';
-console.log(greeting);  // Prints: Hello John!
-```
-
-**Try This:**
-- Build a greeting for yourself:
-  ```javascript
-  let name = ___;
-  let greeting = 'Welcome, ' + ___ + '!';
-  console.log(___);
-  ```
-
----
-
-## Part 5: Template Literals (Modern & Clean)
-
-```javascript
-// Modern way: backticks and ${variable}
-let firstName = 'Maya';
-let greeting = `Hello ${firstName}!`;
-console.log(greeting);  // Prints: Hello Maya!
-
-// Even better with multiple variables
-let firstName = 'Alex';
-let lastName = 'Johnson';
-let greeting = `Hi, I'm ${firstName} ${lastName}.`;
-console.log(greeting);  // Prints: Hi, I'm Alex Johnson.
-```
-
-**Try This:**
-- Create a template literal with your name and age:
-  ```javascript
-  let name = ___;
-  let age = ___;
-  let intro = `My name is ${___} and I am ${___} years old.`;
-  console.log(___);
-  ```
-
----
-
-## Part 6: Write Your First Function
-
-A function is a reusable block of code. Let's create one:
-
-```javascript
-// Define a function
-function sayHello(name) {
-  // Inside the function, we use the parameter 'name'
-  return `Hello, ${name}!`;
-}
-
-// Call the function
-let result = sayHello('Sarah');
-console.log(result);  // Prints: Hello, Sarah!
-
-// Call it again with a different name
-console.log(sayHello('Marco'));  // Prints: Hello, Marco!
-```
-
-**Breaking it down:**
-- `function sayHello(name)` — Define the function and its parameter
-- `return` — Send a value back from the function
-- `sayHello('Sarah')` — Call the function with an argument
-
-**Try This:**
-- Write a function that combines two numbers and returns their sum:
-  ```javascript
-  function addNumbers(num1, num2) {
-    return ___ + ___;
-  }
-
-  console.log(addNumbers(5, 3));  // Should print: 8
-  ```
-
----
-
-## Part 7: Connect JavaScript to an HTML Page
-
-Create an HTML file with JavaScript:
+1. In your `htmlCssJavaScript` repo, open the `html09_javascript` folder.
+2. Make a new file named `html09_Walkthrough_lastname.html` (use your real last name).
+3. Paste in this starter. You will add JavaScript inside the `<script>` block at the bottom as you go.
 
 ```html
 <!DOCTYPE html>
@@ -174,83 +40,778 @@ Create an HTML file with JavaScript:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First JavaScript</title>
-</head>
-<body>
-  <h1>JavaScript Test</h1>
-  <p>Check the console (F12) to see messages!</p>
-
-  <!-- Write JavaScript here -->
-  <script>
-    // Create variables
-    let studentName = 'YOU';
-    let courseNumber = 9;
-
-    // Use console.log to test
-    console.log('Welcome to Lesson ' + courseNumber);
-    console.log(`Your name is ${studentName}`);
-
-    // Create a function
-    function buildGreeting(name, lesson) {
-      return `${name} is learning JavaScript in Lesson ${lesson}!`;
+  <title>html09 Walkthrough</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 1rem;
+      margin: 0;
+      padding: 1rem;
     }
 
-    // Call the function and print the result
-    console.log(buildGreeting(studentName, courseNumber));
+    #output {
+      white-space: pre-line;   /* each message starts on a new line */
+      font-family: monospace;
+      background-color: #1e1e1e;
+      color: #9fef00;
+      padding: 1rem;
+      min-height: 3rem;
+    }
+
+    /* Your walkthrough CSS goes below this line */
+
+  </style>
+</head>
+<body>
+  <h1 id="page-title">html09 Walkthrough</h1>
+
+  <h2>Output</h2>
+  <div id="output"></div>
+
+  <!-- Your walkthrough HTML goes below this line -->
+
+
+  <!-- Scripts go at the end of the body -->
+  <script>
+    // Your walkthrough JavaScript goes below this line
+
   </script>
 </body>
 </html>
 ```
 
-**Try This:**
-1. Save this as `myFirstJS.html`
-2. Open it in your browser
-3. Press F12 and look at the Console
-4. Change the variable values and see what prints
-5. Modify the function to return something different:
-   ```javascript
-   function buildGreeting(name, lesson) {
-     return `___ ${___} is learning JavaScript in Lesson ${___}!`;
-   }
-   ```
+---
+
+## 2. What JavaScript Does
+
+A web page is built from three languages:
+
+| Language | Job | Example |
+|---|---|---|
+| HTML | What is on the page | a heading, a form, a button |
+| CSS | How it looks | colors, fonts, layout |
+| JavaScript | What it does | a button that switches to dark mode, a form that checks your email |
+
+JavaScript is a **scripting language**. It runs **in the browser**, on the visitor's computer. That is called **client-side**. The web server sends the file, and the browser runs it.
+
+JavaScript can:
+
+- Change text and styles on the page after it loads
+- Respond when someone clicks, types, or sends a form
+- Check what a user typed before the form is sent
+
+Things CSS can already do stay in CSS. A hover effect, for example, is `a:hover` in your stylesheet. You don't need JavaScript for it.
 
 ---
 
-## Part 8: Add Comments to Your Code
+## 3. The script Tag
 
-```javascript
-// Always comment your code to explain what it does
+JavaScript goes on a page with the `<script>` tag. There are two ways to do it.
 
-// This variable stores the student's name
-let studentName = 'Alex';
+**Internal script:** the code goes between the tags, in the HTML file.
 
-// Function that creates a friendly greeting message
-function makeGreeting(firstName, lastName) {
-  // Use a template literal to build the message
-  return `Hi ${firstName} ${lastName}, welcome to web dev!`;
-}
+```html
+<script>
+  // JavaScript code goes here
+</script>
+```
 
-// Call the function and print the result to the console
-console.log(makeGreeting('John', 'Smith'));
+**External script:** the code goes in its own `.js` file. The tag points to it with `src`, and the tags are empty.
 
-/*
-  Multi-line comment:
-  This is useful when you need to explain
-  a bigger block of code or add detailed notes.
-*/
+```html
+<script src="script.js"></script>
+```
+
+External is better for a real site. One `script.js` file can be linked on every page, the same way one `styles.css` file styles every page. Your DIY task uses an external file. This walkthrough uses an internal script so everything stays in one file while you learn.
+
+**Where the tag goes:** put it at the **end of the body**, right before `</body>`. The browser reads the page from top to bottom. If the script runs before your button exists, it can't find the button.
+
+You may also see it in the `<head>` with `defer`. `defer` tells the browser to wait until the page is loaded before running the script. Both ways work.
+
+```html
+<head>
+  <script src="script.js" defer></script>
+</head>
 ```
 
 ---
 
-## Summary: What You Learned
+## 4. Showing Output on the Page
 
-✓ How to use console.log() to test code
-✓ How to create variables with let and const
-✓ Different data types (string, number, boolean)
-✓ How to build strings with concatenation and template literals
-✓ How to write and call functions
-✓ How to add comments to explain your code
-✓ How to connect JavaScript to HTML
+When you write code, you need to see what it is doing. Programmers usually use `console.log()`, which prints to the browser's console:
 
-**Next step:** Complete the practice tasks (09a and 09b) to strengthen your skills!
+```js
+console.log('Hello, world!');
+```
 
+**The console is turned off on our school computers.** So in this class, we print to a box on the page instead. Add this `say()` function to your `<script>` block. You will use it through the whole walkthrough.
+
+```js
+// say() adds a message to the #output box on the page.
+// Use say() wherever you would use console.log().
+function say(msg) {
+  document.getElementById('output').textContent += msg + '\n';
+}
+
+say('Hello, world!');
+say('JavaScript is running.');
+```
+
+Save and refresh the page. Both lines should show up in the black box.
+
+If nothing shows up, there is a typo somewhere in your script. One mistake stops the whole script. Check the spelling, the quotes, and that every `(` and `{` has a matching `)` and `}`.
+
+You don't need to understand every part of `say()` yet. By Step 12 you will.
+
+> **Try This 4:** Use `say()` to print your name, then your favorite food.
+
+---
+
+## 5. Comments
+
+A **comment** is a note in your code. The browser skips it. Comments explain what the code does, for other people and for you next week.
+
+```js
+// A one-line comment starts with two slashes.
+
+let score = 0;   // A comment can go at the end of a line too.
+
+/*
+  A multi-line comment starts with slash-star
+  and ends with star-slash.
+  Use it for longer notes.
+*/
+```
+
+Good comments say **what** the code is for, not just repeat the code:
+
+```js
+// Bad: set x to 5
+// Good: number of tries the user gets before the form locks
+let triesLeft = 5;
+```
+
+From here on, put a comment above each new part you add. Your DIY task is graded on comments.
+
+---
+
+## 6. Variables: let and const
+
+A **variable** is a named box that holds a value. You make one with `let` or `const`.
+
+```js
+// let: the value can change later
+let score = 0;
+score = 10;          // this works
+say('Score: ' + score);
+
+// const: the value is set once and never changes
+const schoolName = 'Medina County Career Center';
+say('School: ' + schoolName);
+```
+
+What happens if you try to change a `const`?
+
+```js
+// schoolName = 'Another School';   // ERROR: can't change a const
+```
+
+That line causes an error, and the error stops the script. Everything after it won't run.
+
+**Which one should you use?** Use `const` when the value should never change. Use `let` when it will. You may see `var` in older code online. It is the old way. Use `let` and `const`.
+
+**Naming:** use **camelCase**. Start lowercase, and start each new word with a capital: `firstName`, `favoriteColor`, `isStudent`. No spaces or dashes. Pick names that say what the box holds.
+
+> **Try This 6:** Make a `let` variable called `favoriteColor` and a `const` called `birthYear`. Print both with `say()`.
+
+---
+
+## 7. Data Types: String, Number, Boolean
+
+The kind of value a variable holds is its **data type**. You need these three:
+
+```js
+// String: text, always inside quotes
+let firstName = 'Alex';
+
+// Number: no quotes. Can be whole or decimal.
+let age = 16;
+let price = 3.75;
+
+// Boolean: only true or false. No quotes.
+let isStudent = true;
+
+say(firstName);
+say(age);
+say(isStudent);
+```
+
+Quotes matter. `'16'` is a string. `16` is a number. Watch what `+` does with each:
+
+```js
+say(5 + 3);       // 8   (two numbers: adds them)
+say('5' + '3');   // 53  (two strings: joins them)
+```
+
+You will also run into two more values:
+
+- `undefined`: a variable that was made but never given a value (`let answer;`)
+- `null`: "nothing here" on purpose. `getElementById` gives `null` when it can't find the id.
+
+---
+
+## 8. Joining Strings
+
+Joining strings together is called **concatenation**. You do it with `+`.
+
+```js
+let firstName = 'Alex';
+let age = 16;
+
+// Join strings and variables with +
+let sentence = 'My name is ' + firstName + ' and I am ' + age + ' years old.';
+say(sentence);
+```
+
+Watch the spaces. `'My name is' + firstName` prints `My name isAlex`. The space has to be inside the quotes.
+
+There is also a newer way called a **template literal**. It uses backticks (`` ` ``, the key left of 1) and `${ }` around each variable:
+
+```js
+let sentence2 = `My name is ${firstName} and I am ${age} years old.`;
+say(sentence2);
+```
+
+Both lines print the same thing. You will see template literals in code online. In this class, `+` is the one you need to know.
+
+> **Try This 8:** Make a variable `city`. Print `I live in ___.` using `+`.
+
+---
+
+## 9. Functions and Parameters
+
+A **function** is a named set of steps you can run over and over. You **define** it once and **call** it as many times as you want.
+
+```js
+// Define: makes a greeting for any name
+function greet(name) {
+  return 'Hello, ' + name + '!';
+}
+
+// Call: run it with different names
+say(greet('Maya'));    // Hello, Maya!
+say(greet('Marco'));   // Hello, Marco!
+```
+
+The parts:
+
+| Part | What it means |
+|---|---|
+| `function greet` | Makes a function named `greet` |
+| `(name)` | A **parameter**: a box that gets filled when the function is called |
+| `'Maya'` | An **argument**: the actual value sent in when you call it |
+| `return` | Sends a value back to wherever the function was called |
+
+A function can have more than one parameter. Separate them with commas:
+
+```js
+// Adds two numbers and sends back the total
+function addNumbers(num1, num2) {
+  return num1 + num2;
+}
+
+say(addNumbers(5, 3));      // 8
+say(addNumbers(10, 20));    // 30
+```
+
+You already wrote a function: `say(msg)`. It has one parameter, `msg`. It doesn't `return` anything. It just does a job.
+
+> **Try This 9:** Write `calculateArea(width, height)` that returns `width * height`. Print the area of a 4 by 6 rectangle.
+
+---
+
+## 10. Making a Choice with if and else
+
+`if` runs code only when something is true. `else` runs when it is not.
+
+```js
+// Returns Pass or Try again based on the score
+function checkScore(score) {
+  if (score >= 70) {
+    return 'Pass';
+  } else {
+    return 'Try again';
+  }
+}
+
+say(checkScore(85));   // Pass
+say(checkScore(50));   // Try again
+```
+
+Ways to compare two values:
+
+| Code | Means |
+|---|---|
+| `a === b` | a is equal to b |
+| `a !== b` | a is not equal to b |
+| `a > b` / `a < b` | greater than / less than |
+| `a >= b` / `a <= b` | greater than or equal / less than or equal |
+
+Use `===` (three equals) to compare. One `=` puts a value in a variable. It does not compare.
+
+You can check two things at once:
+
+- `&&` means **and**: both must be true
+- `||` means **or**: at least one must be true
+- `!` means **not**: flips true to false
+
+```js
+let name = '';
+if (name === '' || name === 'none') {
+  say('Please enter a name.');
+}
+```
+
+---
+
+## 11. The DOM: Finding an Element
+
+When the browser loads your HTML, it builds a model of the page called the **DOM** (Document Object Model). Every tag on the page is an object in the DOM. JavaScript can find those objects and change them.
+
+Everything in the DOM starts at `document`, which means "this page."
+
+The most common way to find one element is by its `id`:
+
+```js
+// Find the element with id="page-title"
+const title = document.getElementById('page-title');
+```
+
+There is also `querySelector`, which takes any CSS selector and gives back the **first** match:
+
+```js
+const firstParagraph = document.querySelector('p');        // first <p>
+const header = document.querySelector('header');           // first <header>
+const note = document.querySelector('.note');              // first class="note"
+```
+
+In this class, use `getElementById` for most things. Use `querySelector` when the element doesn't have an id.
+
+If the id is spelled wrong, you get `null` (nothing found), and the next line that uses it causes an error.
+
+---
+
+## 12. Changing Text with textContent
+
+Once you have an element, `.textContent` reads or changes the text inside it.
+
+```js
+// Change the heading text
+const title = document.getElementById('page-title');
+title.textContent = 'JavaScript changed this heading!';
+```
+
+Save and refresh. The heading on the page is different, but your HTML file didn't change. JavaScript changed the page after it loaded.
+
+Now look at `say()` again. It finds `#output` and adds (`+=`) your message to its `textContent`. That's all it does.
+
+**textContent vs innerHTML:** `textContent` puts in plain text. If you give it `<strong>hi</strong>`, the tags show up as text. `innerHTML` turns tags into real HTML:
+
+```js
+// innerHTML: the <em> tags become real italics
+title.innerHTML = 'JavaScript <em>changed</em> this heading!';
+```
+
+Use `textContent` unless you need tags. It is safer, because text a user typed can't turn into HTML.
+
+---
+
+## 13. Responding to a Click
+
+An **event** is something that happens on the page: a click, a key press, a form being sent. An **event listener** waits for an event and runs a function when it happens.
+
+Add a button to your HTML (below the "Your walkthrough HTML" comment):
+
+```html
+<p id="message">Nothing has happened yet.</p>
+<button id="click-btn" type="button">Click me</button>
+```
+
+Add this to your script:
+
+```js
+// ----- Click button -----
+const clickBtn = document.getElementById('click-btn');
+const message = document.getElementById('message');
+
+// When the button is clicked, run this function
+clickBtn.addEventListener('click', function () {
+  message.textContent = 'You clicked the button!';
+});
+```
+
+`addEventListener` takes two things:
+
+1. The event name in quotes: `'click'`
+2. A function to run when it happens
+
+Every interactive feature in this lesson uses the same pattern:
+
+1. **Find** the element (`getElementById`)
+2. **Listen** for an event (`addEventListener`)
+3. **Change** something (`textContent`, a class, a style)
+
+You can also change a style directly with `.style`. CSS names with dashes become camelCase: `background-color` becomes `backgroundColor`.
+
+```js
+message.style.backgroundColor = 'yellow';
+message.style.fontSize = '1.5rem';
+```
+
+> **Try This 13:** Add a counter. Make `let clicks = 0;` above the listener. Inside it, add 1 to `clicks` and show `'Clicks: ' + clicks` in `#message`.
+
+---
+
+## 14. Turning a Class On and Off
+
+Changing styles one at a time with `.style` gets messy. A cleaner way: write the look in CSS as a class, and have JavaScript add or remove the class.
+
+`classList` has three tools:
+
+```js
+element.classList.add('highlight');      // turns the class on
+element.classList.remove('highlight');   // turns the class off
+element.classList.toggle('highlight');   // on if it's off, off if it's on
+```
+
+Try it. Add this CSS (below the "Your walkthrough CSS" comment):
+
+```css
+.hidden {
+  display: none;
+}
+```
+
+Add this HTML:
+
+```html
+<p id="secret">This is a secret message.</p>
+<button id="hide-btn" type="button">Hide / Show</button>
+```
+
+Add this JavaScript:
+
+```js
+// ----- Hide / show button -----
+const hideBtn = document.getElementById('hide-btn');
+const secret = document.getElementById('secret');
+
+// Each click turns the hidden class on or off
+hideBtn.addEventListener('click', function () {
+  secret.classList.toggle('hidden');
+});
+```
+
+Click it a few times. Hide, show, hide.
+
+To check whether a class is on right now, use `classList.contains`. It gives back `true` or `false`, so it works in an `if`:
+
+```js
+if (secret.classList.contains('hidden')) {
+  say('The secret is hidden.');
+}
+```
+
+---
+
+## 15. Dark Mode
+
+Dark mode is `classList.toggle` on the `<body>`, plus a CSS trick called **custom properties**.
+
+### Step 1: Put the colors in variables (CSS)
+
+A **custom property** is a CSS variable. Its name starts with two dashes. You make them on `:root` (the whole page) and use them with `var()`.
+
+Add this to your CSS:
+
+```css
+/* Light colors (the default) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --accent-color: #0055aa;
+}
+
+/* Dark colors: same names, new values */
+body.dark-mode {
+  --bg-color: #1a1a1a;
+  --text-color: #eeeeee;
+  --accent-color: #66aaff;
+}
+
+/* Rules use the variables, not real colors */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;   /* fade instead of snap */
+}
+
+h1 {
+  color: var(--accent-color);
+}
+```
+
+When `<body>` has the class `dark-mode`, the variables get the dark values. Every rule that uses them changes at once.
+
+### Step 2: Add the button (HTML)
+
+Put this under your `<h1>`:
+
+```html
+<button id="theme-toggle" type="button">Dark mode</button>
+```
+
+It is a `<button>`, not a link. It does something on this page. It doesn't go anywhere.
+
+### Step 3: The JavaScript
+
+```js
+// ----- Dark mode button -----
+const themeBtn = document.getElementById('theme-toggle');
+
+themeBtn.addEventListener('click', function () {
+  // Turn dark mode on or off
+  document.body.classList.toggle('dark-mode');
+
+  // Change the button words to match
+  if (document.body.classList.contains('dark-mode')) {
+    themeBtn.textContent = 'Light mode';
+  } else {
+    themeBtn.textContent = 'Dark mode';
+  }
+});
+```
+
+`document.body` is a shortcut for the `<body>` element. You don't need `getElementById` for it.
+
+Find, listen, toggle. That's the whole feature.
+
+---
+
+## 16. Checking a Form Before It Sends
+
+When someone fills out a form, JavaScript can check it before it is sent. This is called **client-side form validation**. It catches mistakes right away and tells the user what to fix.
+
+### Step 1: The form (HTML)
+
+Add this form to your page:
+
+```html
+<h2>Contact</h2>
+<!-- novalidate: turn off the browser's pop-up bubbles so our messages show -->
+<form id="contact-form" novalidate>
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name">
+  <span class="error" id="name-error"></span>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email">
+  <span class="error" id="email-error"></span>
+
+  <label for="message-box">Message (at least 10 characters)</label>
+  <textarea id="message-box" name="message" rows="4"></textarea>
+  <span class="error" id="message-error"></span>
+
+  <button type="submit">Send</button>
+</form>
+<p class="success" id="form-success" hidden>Thanks! Your message passed every check.</p>
+```
+
+And this CSS:
+
+```css
+label { display: block; margin-top: 0.75rem; font-weight: bold; }
+.error { display: block; color: #b3261e; }
+.success { color: #1b7f3a; font-weight: bold; }
+```
+
+Notice the empty `<span class="error">` under each field. That is where your error messages will go. The `hidden` attribute hides the success line until you turn it off.
+
+### Step 2: Stop the form from sending
+
+A form normally sends as soon as you click Submit, and the page reloads. We need to stop that so we can check first. The event is `'submit'`, and it goes on the **form**, not the button.
+
+```js
+// ----- Contact form checks -----
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', function (event) {
+  // Stop the form from sending so we can check it first
+  event.preventDefault();
+
+  say('The form tried to send.');
+});
+```
+
+`event` is information about what just happened. `event.preventDefault()` means "don't do the normal thing" (for a form, the normal thing is sending and reloading).
+
+### Step 3: Read what the user typed
+
+For inputs and textareas, `.value` is what the user typed. It is always a string.
+
+```js
+const nameValue = document.getElementById('name').value.trim();
+```
+
+`.trim()` cuts off extra spaces at the start and end, so a name of only spaces counts as empty.
+
+### Step 4: Check each field
+
+Replace the `say('The form tried to send.');` line with the checks:
+
+```js
+form.addEventListener('submit', function (event) {
+  // Stop the form from sending so we can check it first
+  event.preventDefault();
+
+  // Start by assuming everything is fine
+  let allGood = true;
+
+  // Check 1: the name can't be empty
+  const nameValue = document.getElementById('name').value.trim();
+  const nameError = document.getElementById('name-error');
+  if (nameValue === '') {
+    nameError.textContent = 'Please enter your name.';
+    allGood = false;
+  } else {
+    nameError.textContent = '';
+  }
+
+  // Check 2: the email needs an @
+  const emailValue = document.getElementById('email').value.trim();
+  const emailError = document.getElementById('email-error');
+  if (!emailValue.includes('@')) {
+    emailError.textContent = 'Please enter an email address with an @.';
+    allGood = false;
+  } else {
+    emailError.textContent = '';
+  }
+
+  // Check 3: the message needs at least 10 characters
+  const messageValue = document.getElementById('message-box').value.trim();
+  const messageError = document.getElementById('message-error');
+  if (messageValue.length < 10) {
+    messageError.textContent = 'Your message must be at least 10 characters.';
+    allGood = false;
+  } else {
+    messageError.textContent = '';
+  }
+
+  // Show the thank-you line only when every check passed
+  document.getElementById('form-success').hidden = !allGood;
+});
+```
+
+New pieces:
+
+| Code | What it does |
+|---|---|
+| `.includes('@')` | `true` if the string has an `@` in it |
+| `!` | flips it: `!emailValue.includes('@')` means "does NOT have an @" |
+| `.length` | how many characters are in the string |
+| `.hidden = !allGood` | hides the success line if anything failed, shows it if everything passed |
+
+Each check has an `else` that clears the message. That way, when the user fixes a field, its error goes away.
+
+### Step 5: Test it
+
+1. Click Send with everything empty. Three messages show.
+2. Type a name. Click Send. The name message goes away.
+3. Type `hello` as the email. The email message stays.
+4. Fill everything in correctly. The errors clear and the thank-you line shows.
+
+The messages are written on the page, next to the field. Don't use `alert()` pop-ups. They block the page and don't say where the problem is.
+
+---
+
+## 17. What Happens After a Form Is Sent
+
+Your checks run in the browser. On a real website, when the form passes, the browser sends the data to a **web server**. Here is what happens next:
+
+1. **The server checks it again.** A user can turn off JavaScript or get around it. So the server never trusts the data just because the browser checked it. Browser checks are for quick, friendly feedback. Server checks are for safety.
+2. **The server stores it.** It usually saves the data in a **database**, which is an organized place to keep records, like a table of every message that was sent.
+3. **The server may pass it on.** It might send the data to a **web service**, another program that does one job, like sending an email to the site owner or adding the person to a mailing list.
+4. **The server answers.** It sends back a page or message like "Thanks, we got your message."
+
+In this class, our forms stop after the browser checks. Nothing is actually sent. The server side comes in later courses.
+
+---
+
+## 18. Moving the Script to Its Own File
+
+On a real site, the JavaScript goes in its own file, like your CSS does.
+
+1. Make a new file next to your HTML named `html09_Walkthrough_lastname.js`.
+2. Cut everything **between** `<script>` and `</script>` and paste it into the new file. Don't bring the `<script>` tags. A `.js` file has only JavaScript.
+3. Change the script tag at the end of the body to:
+
+```html
+<script src="html09_Walkthrough_lastname.js"></script>
+```
+
+4. Save both files and refresh. Everything should work the same.
+
+If it stopped working, check that the file name in `src` matches exactly, including capital letters.
+
+Commit and push with GitHub Desktop.
+
+---
+
+## 19. Try This Answers
+
+**Try This 4**
+
+```js
+say('Alex');
+say('Pizza');
+```
+
+**Try This 6**
+
+```js
+let favoriteColor = 'green';
+const birthYear = 2010;
+say(favoriteColor);
+say(birthYear);
+```
+
+**Try This 8**
+
+```js
+let city = 'Medina';
+say('I live in ' + city + '.');
+```
+
+**Try This 9**
+
+```js
+// Returns the area of a rectangle
+function calculateArea(width, height) {
+  return width * height;
+}
+say(calculateArea(4, 6));   // 24
+```
+
+**Try This 13**
+
+```js
+// ----- Click counter -----
+let clicks = 0;
+
+clickBtn.addEventListener('click', function () {
+  clicks = clicks + 1;
+  message.textContent = 'Clicks: ' + clicks;
+});
+```
+
+(Put this in place of the Step 13 listener, or both will run on each click.)

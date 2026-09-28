@@ -122,7 +122,7 @@ Hex and RGB let you make custom colors. Named colors are simple for beginners.
 p { font-family: Arial, sans-serif; }
 ```
 
-**font-size** — Size in px (pixels)
+**font-size** — Size in px, rem, or em (more in 05c)
 ```css
 h1 { font-size: 32px; }
 p { font-size: 16px; }
@@ -194,22 +194,56 @@ Use external stylesheets and classes for maintainable code.
 
 ---
 
+<!-- _header: "05c — CSS Units" -->
+
+# CSS Units: px, rem, em
+
+**Default browser font size = 16px**
+
+| Unit | Based on | Example |
+|------|----------|---------|
+| **px** | Nothing (fixed) | `border: 1px solid;` |
+| **rem** | The `<html>` font size | `1.5rem` = 24px |
+| **em** | The parent's font size | `1.5em` in a 20px parent = 30px |
+
+**px to rem:** divide by 16. &nbsp; 24px ÷ 16 = `1.5rem`
+
+rem and em grow when a user makes their browser text bigger. px does not.
+
+---
+
+<!-- _header: "05c — CSS Units" -->
+
+# em Stacks, rem Doesn't
+
+Three boxes inside each other, each set to `1.5`:
+
+| Level | `1.5em` | `1.5rem` |
+|-------|---------|----------|
+| 1 | 24px | 24px |
+| 2 | 36px | 24px |
+| 3 | 54px | 24px |
+
+**Rule of thumb:** rem for font sizes and spacing, em for button padding, px for borders.
+
+---
+
 <!-- _header: "Practice & Project" -->
 
 # What You'll Build
 
-Restyle your **"About Me" page** from html01 using CSS:
+Style the **website you built in Lessons 03 and 04** with one stylesheet:
 
-1. Start with HTML structure from html01
-2. Create a separate `styles.css` file
-3. Link the stylesheet in your HTML
-4. Add CSS rules for:
-   - Colors (text, backgrounds)
-   - Fonts (family, size, weight)
-   - Text formatting (alignment, spacing)
-   - Use at least 2 classes and 1 ID selector
+1. Make one `styles.css` file in your site folder
+2. Link it in the `<head>` of all 4 pages (index, about, contact, gallery)
+3. Add CSS rules for:
+   - Colors (text, backgrounds) in hex or rgb
+   - Fonts (family, size in rem, weight)
+   - Text formatting (alignment, line-height, links)
+   - Nav links, the table on About, the captions on Gallery
+   - Use at least 2 classes and 1 id selector
 
-**Goal:** Same HTML, totally different look through CSS!
+**Goal:** One CSS file, 4 pages that look like one website!
 
 ---
 
@@ -222,7 +256,8 @@ Restyle your **"About Me" page** from html01 using CSS:
 - **CSS rule:** selector + declarations (property: value;)
 - **Colors:** named, hex (#), or RGB
 - **Fonts:** family, size, weight, and Google Fonts
+- **Units:** px is fixed, rem uses the root (16px), em uses the parent
 - **Text:** align, line-height, decoration, letter-spacing
 - **Cascade & Specificity:** last rule and selector strength matter
 
-Next: Build your styled About Me page!
+Next: Style every page of your website with one stylesheet!

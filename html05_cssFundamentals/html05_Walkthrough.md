@@ -420,4 +420,4 @@ This is **best practice**! Separating HTML and CSS makes your code:
 5. **Google Fonts:** Link in `<head>`, use in CSS `font-family`
 6. **Best Practice:** Use external stylesheets
 
-You now know the fundamentals of CSS! Next, you'll apply this to restyle your "About Me" page.
+You now know the fundamentals of CSS! Next, in the DIY task, you'll write one `styles.css` that styles every page of your website from Lessons 03 and 04.

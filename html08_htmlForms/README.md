@@ -1,234 +1,57 @@
-# HTML 08: Forms — Complete Lesson Materials
+# HTML 08: Forms
 
-## Overview
-Comprehensive CTE Web Design lesson materials for teaching HTML Forms at Medina County Career Center. This lesson covers form structure, input types, form controls, styling, and accessibility.
+Students learn to build and style HTML forms, then add a working contact form to the Contact page of the website they have been building all year (`DiyWebsite_Lastname/contact.html`). The form gets `id="contact-form"` so Lesson 09 can add JavaScript validation to it.
 
-## Files Created (17 total)
+## Files
 
-### Core Lesson Materials
+### Student files
 
-1. **html08_Slides.md** (266 lines)
-   - MARP presentation with 10 slides
-   - Covers 08a, 08b, and 08c sub-lessons
-   - Topics: form basics, input types, radio/checkboxes, dropdowns, textarea, fieldsets, submission, styling
+| File | What it is |
+|---|---|
+| `html08_Walkthrough.md` | Step-by-step guide. Students build a practice sign-up form (`form-practice.html` + `form-practice.css`) using every graded form skill. |
+| `html08_Task.html` | The one practice task: a coding camp registration form. Starter file with TODO comments for the HTML (Part 1), the CSS (Part 2), and a test list (Part 3). |
+| `html08_DIYTask.md` | The graded item. Add a styled contact form to `contact.html` on the student's own site, styled in their existing `styles.css`. |
+| `html08_Slides.md` | Marp slide deck for direct instruction. |
+| `html08_StudyGuide.md` | Vocabulary, reference tables, commented examples, and review questions. |
 
-2. **html08_StudyGuide.md** (188 lines)
-   - 26 vocabulary terms with definitions
-   - Key concepts and cheat sheets
-   - Input types reference table
-   - Radio vs Checkbox comparison
-   - CSS styling basics
-   - ODE competencies aligned
-   - Review questions and key takeaways
+### Teacher files (`teacher/`)
 
-3. **html08_Walkthrough.md** (445 lines)
-   - Step-by-step guided walkthrough
-   - Building a complete contact form from scratch
-   - 8 detailed steps with code examples
-   - 6 "Try This" interactive activities
-   - CSS styling with media queries
-   - Checklist and key takeaways
+| File | What it is |
+|---|---|
+| `teacher/html08_Task_Solutions.html` | Finished practice task, all TODOs done (internal CSS). |
+| `teacher/html08_Gimkit.csv` | Gimkit question set (Question, Correct, 3 Incorrect). |
+| `teacher/html08_GoogleQuiz.csv` | Google Forms quiz import (Question, Options A-D, Correct Answer, Points). |
 
-### Walkthrough Solutions
+### Archive (`archive/`)
 
-4. **html08_Walkthrough_Solutions.html** (154 lines)
-   - Complete HTML contact form
-   - Multiple fieldsets with legend elements
-   - Text, email, phone, URL inputs
-   - Radio buttons and checkboxes
-   - Textarea for messages
-   - Submit and Reset buttons
-   - Full inline code comments
+Older versions of this lesson: the three separate a/b/c tasks and their solutions, the old walkthrough and its solution, the old stand-alone form DIY and its solution, the old fast-finisher task, and copies of the old slides, study guide, and quiz files. Kept for reference only. Not used by students.
 
-5. **html08_Walkthrough_Solutions.css** (187 lines)
-   - Professional form styling
-   - Focus states with visual feedback
-   - Responsive design with media queries
-   - Fieldset, legend, input, button styling
-   - Mobile-friendly layout
+## Suggested Days (about 3 class days)
 
-### Sub-Lesson 08a: Form Basics
+| Day | What happens |
+|---|---|
+| 1 | Slides. Walkthrough steps 1-10 (form tag, action/method, labels, input types, radio, checkbox, select, textarea, fieldset, buttons). |
+| 2 | Walkthrough steps 11-13 (tab order, styling, testing). Practice task `html08_Task.html`. |
+| 3 | DIY: contact form on `contact.html`, styled in `styles.css`. Test, validate, push with GitHub Desktop. Gimkit or quiz if time allows. |
 
-6. **html08a_Task.html** (95 lines)
-   - Student task: Build a registration form
-   - TODO comments with specific requirements
-   - Covers: form tag, text inputs, email, password, number, date inputs
-   - Required attributes and labels
-   - 30-45 minute task
+## What Is Graded
 
-7. **html08a_Task_Solutions.html** (118 lines)
-   - Complete registration form solution
-   - All input types properly implemented
-   - Full name, email, password, age, birth date
-   - Submit button
-   - Inline CSS styling
+The DIY only. Grading bands are in words (Complete, Mostly complete, Started, Missing). The form must include: `id="contact-form"`, `action` and `method`, labels tied to inputs with `for`/`id`, text, email, and tel or number inputs, a radio group, a checkbox group, a select, a textarea, `required`, `placeholder`, fieldsets with legends, submit and reset buttons, and styling in `styles.css`. The existing mailto link stays on the page.
 
-### Sub-Lesson 08b: Form Controls
+## ODE Competencies
 
-8. **html08b_Task.html** (97 lines)
-   - Student task: Build a customer feedback survey
-   - TODO comments with detailed requirements
-   - Covers: radio buttons, checkboxes, select dropdowns, textarea, fieldsets
-   - Multiple form sections
-   - 30-45 minute task
+| Code | Competency | Where it is covered |
+|---|---|---|
+| 6.4.1 | Design forms from specifications | DIY Part 1 (plan the form for the site's topic); task follows a written spec |
+| 6.4.2 | HTML code to add a form to a web page | Walkthrough steps 2-10; task Part 1; DIY Part 2 |
+| 6.4.3 | Text fields, radio buttons, checkboxes, dropdowns | Walkthrough steps 3-8; task TODO 2-5; DIY 2b-2d |
+| 6.4.4 | Concept of form action | Walkthrough step 2. `action` is where the answers go; our sites have no server, so `action="#"`. GET vs POST at concept level: GET puts answers in the address bar, POST hides them and is what real contact and login forms use. Students submit with GET to see the `name=value` pairs. |
+| 6.4.5 | Submit and reset buttons | Walkthrough step 10; task TODO 6; DIY 2e |
+| 6.4.6 | Style forms with CSS (fieldset, tabindex) | Walkthrough steps 9, 11, 12; task Part 2 and TODO 7 (remove a bad `tabindex`); DIY Part 3 and 2f |
 
-9. **html08b_Task_Solutions.html** (190 lines)
-   - Complete survey form solution
-   - 4 fieldsets: rating, product interests, contact method, feedback
-   - Radio button group for service rating
-   - Checkbox group for product interests
-   - Select dropdown for contact method
-   - Textarea for additional comments
-   - Full styling and comments
+## Notes for Mr. McMaster
 
-### Sub-Lesson 08c: Form Styling
-
-10. **html08c_Task.html** (146 lines)
-    - Student task: Style a form with CSS
-    - TODO comments for CSS styling requirements
-    - Plain event registration form (HTML provided)
-    - Students add CSS for: body, form, fieldsets, labels, inputs, buttons
-    - Focus states and responsive design
-    - 30-45 minute task
-
-11. **html08c_Task_Solutions.html** (68 lines)
-    - Event registration form (styled)
-    - References external CSS file
-    - Includes all form control types
-    - Well-commented HTML
-
-12. **html08c_Task_Solutions.css** (106 lines)
-    - Complete form styling solution
-    - Page layout and typography
-    - Form container with shadow
-    - Fieldset and legend styling
-    - Input focus states
-    - Button styling with hover effects
-    - Responsive mobile design
-
-### Independent Project
-
-13. **html08_DIYTask.md** (267 lines)
-    - Independent project: Build a multi-section survey
-    - Complete requirements breakdown
-    - Part 1: HTML Structure
-    - Part 2: CSS Styling
-    - Part 3: Accessibility & UX
-    - Multiple survey topic suggestions
-    - Grading rubric
-    - Bonus challenges
-
-14. **html08_DIYTask_Solutions.html** (305 lines)
-    - Example: Technology Preferences Survey
-    - 8 complete sections with fieldsets
-    - Demographics (name, email, age, occupation)
-    - Tech interests (checkboxes)
-    - Device preferences (radio buttons)
-    - Operating systems (select dropdown)
-    - Experience level (radio buttons)
-    - Budget and timeline
-    - Feedback and comments (textareas)
-    - Newsletter signup (checkboxes)
-    - Professional comments throughout
-
-15. **html08_DIYTask_Solutions.css** (323 lines)
-    - Modern, professional form styling
-    - Gradient background
-    - Fieldset hover effects
-    - Focus states with color and shadow
-    - Custom select dropdown styling
-    - Gradient buttons with transitions
-    - Responsive design for 768px and 480px
-    - Accessibility improvements
-    - Footer styling
-
-### Assessment Materials
-
-16. **html08_Gimkit.csv** (28 lines)
-    - 26 multiple-choice questions for Gimkit
-    - Format: Question, Correct Answer, 3 Incorrect Answers
-    - Covers all form concepts
-    - Game-based learning reinforcement
-
-17. **html08_GoogleQuiz.csv** (31 lines)
-    - 30 quiz questions for Google Forms/Quiz
-    - Format: Question, Option A/B/C/D, Correct Answer, Points
-    - Comprehensive assessment coverage
-
-## File Statistics
-
-- **Total Lines of Code/Content:** 3,014
-- **HTML Files:** 6 files, 541 lines
-- **CSS Files:** 3 files, 616 lines
-- **Markdown Guides:** 4 files, 1,166 lines
-- **Assessment CSVs:** 2 files, 59 lines
-
-## ODE Competencies Addressed
-
-- **6.4.1** - Design forms from specifications
-- **6.4.2** - Add forms to web pages
-- **6.4.3** - Text fields, radios, checkboxes, dropdowns
-- **6.4.4** - Form action concept (GET/POST)
-- **6.4.5** - Submit/reset buttons
-- **6.4.6** - Style forms with CSS
-- **6.5.9** - Incorporate forms into web pages
-
-## Lesson Flow
-
-### Day 1: Form Basics (08a) - 60 minutes
-1. Slides 1-4 (30 min instruction)
-2. Walkthrough (30 min guided activity)
-3. 08a Task (homework or extension)
-
-### Day 2: Form Controls (08b) - 60 minutes
-1. Slides 5-7 (25 min instruction)
-2. 08b Task (35 min activity)
-
-### Day 3: Form Styling (08c) - 60 minutes
-1. Slides 8-10 (20 min instruction)
-2. 08c Task (40 min activity)
-
-### Day 4: Independent Project - 90+ minutes
-1. DIY Project briefing (10 min)
-2. Student work time (80+ min)
-3. Optional Gimkit game (10 min)
-
-## Features
-
-- **Comprehensive Coverage:** All form elements and attributes
-- **Progressive Complexity:** Beginner → Intermediate → Advanced
-- **Real-World Examples:** Contact forms, surveys, registration forms
-- **Accessibility-Focused:** Proper labels, semantic HTML, ARIA practices
-- **Responsive Design:** Mobile-first approach throughout
-- **Professional Code:** Proper indentation, comments, valid HTML5
-- **Assessment Options:** Gimkit and Google Quiz with 25-30+ questions
-- **Student Engagement:** Interactive walkthrough, hands-on tasks, creative project
-
-## Teaching Tips
-
-1. **Start Simple:** Begin with basic text inputs and labels before introducing complex elements
-2. **Use Live Examples:** Display forms in browser and interact with them
-3. **Emphasize Accessibility:** Show how labels connect to inputs and improve UX
-4. **Connect to Real World:** Reference forms students use daily (Facebook, Amazon, etc.)
-5. **Group Similar Elements:** Show why radio buttons group differently than checkboxes
-6. **Style as You Go:** Don't leave forms ugly—show CSS styling from the beginning
-7. **Check Browser Support:** Mention that HTML5 input types have good browser support but date pickers vary
-8. **Validate Locally:** Show browser validation (required, email validation) before mentioning server-side validation
-
-## Standards-Aligned
-
-- W3C HTML5 Standards
-- WCAG 2.1 Accessibility Guidelines (Level AA)
-- ODE Web Design Competencies
-- CTE High School Standards
-
-## Usage Rights
-
-These materials are provided for use in the Medina County Career Center CTE Web Design course. Modification for local context is encouraged.
-
----
-
-**Created:** February 2025  
-**Subject:** CTE Web Design - HTML Forms  
-**Grade Level:** High School (9-12)  
-**Time:** 4 class periods (240 minutes instruction + project time)
+- **Why `method="get"`:** with no server, GET lets students see what the form sends in the address bar. It also works on static hosts like Firebase Hosting. A form that POSTs to a plain HTML page on a static host returns an error (405 Method Not Allowed). GET works.
+- **Lesson 09 hook:** the DIY fixes the ids `contact-form`, `name`, `email`, and `message` so the JavaScript lesson can use them.
+- Font sizes in examples use `rem` (taught in html05c).
+- Students check their work with the browser, the W3C validator, and the address bar only.

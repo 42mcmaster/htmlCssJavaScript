@@ -7,13 +7,13 @@
 | Day | Content | Materials |
 |---|---|---|
 | 1 | Mixed review: HTML/CSS/forms via recombined unit question banks + Gimkit rounds | unit teacher folders' Gimkit CSVs |
-| 2 | Troubleshooting drills — methodology scenarios (2.11: top-down, bottom-up, follow-the-path, spot-the-differences) + Strand-1 vocabulary pass (proposal, testing/acceptance, rollout terms from html11; business terms) | html12_TroubleshootingScenarios |
+| 2 | Troubleshooting drills — methodology scenarios (2.11: top-down, bottom-up, follow-the-path, spot-the-differences) + vocabulary pass (project proposal, testing/acceptance, rollout terms from ODE 2.9, 2.12, 2.13; business terms) | html12_TroubleshootingScenarios |
 | 3 | Full-guide review day | html12_MasterStudyGuide |
 | 4 | **Timed practice exam** (40 questions, 45 min) + distractor autopsy of misses | html12_PracticeExam |
 
 ## Lane 2 — Certiport gap lane (opt-in, ungraded, ≈3–4 days)
 
-Built on `certiportStudyGuidesForGitHub/Certiport_HTML_CSS_StudyGuide.md` — the modules map below. Non-opt-in students use these days for extra lane-1 review, html11 polish, or portfolio work.
+Built on `certiportStudyGuidesForGitHub/Certiport_HTML_CSS_StudyGuide.md` — the modules map below. Non-opt-in students use these days for extra lane-1 review or polishing their DIY website.
 
 | Day | Content | Study guide modules |
 |---|---|---|

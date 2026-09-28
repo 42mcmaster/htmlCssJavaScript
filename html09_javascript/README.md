@@ -1,112 +1,76 @@
-# HTML09: JavaScript Basics - Complete Lesson Package
+# Lesson 09: JavaScript
 
-> **v2 note:** this folder is now the merged **html09 — JavaScript** unit. Start with `html09_UnitGuide.md`; this README describes the original basics-half materials.
+Students learn their first JavaScript: the `<script>` tag, variables, data types, functions, if / else, and comments. Then they use the DOM to change a page, respond to clicks, build a dark mode button, and check a form before it sends. The DIY task adds dark mode and form checks to the website in each student's `DiyWebsite_Lastname` folder.
 
-## Overview
-This lesson teaches students their first JavaScript concepts using a "Mad Libs" project as the capstone. All files follow CTE standards and address ODE Competencies 6.3.1, 6.3.2, and 6.3.3.
+**ODE competencies:** 6.3.1, 6.3.2, 6.3.3, 6.4.7
 
-## File Structure
+## Files
 
-### Learning Materials (Instructor Use)
-- **html09_Slides.md** — 10 MARP slides covering variables (09a) and functions (09b)
-- **html09_StudyGuide.md** — 20 vocabulary terms, cheat sheet, ODE competencies, practice questions
-- **html09_Walkthrough.md** — Step-by-step guided walkthrough with fill-in-the-blank sections
+### Student files
 
-### Walkthrough Solutions
-- **html09_Walkthrough_Solutions.html** — Inline JavaScript solution
-- **html09_Walkthrough_Solutions.js** — External JavaScript solution
-
-### Task 09a: Variables Practice
-- **html09a_Task.html** — Blank task template with TODO comments
-- **html09a_Task_Solutions.html** — Complete solution (inline)
-- **html09a_Task_Solutions.js** — Complete solution (external)
-
-### Task 09b: Functions Practice
-- **html09b_Task.html** — Blank task template with TODO comments
-- **html09b_Task_Solutions.html** — Complete solution (inline)
-- **html09b_Task_Solutions.js** — Complete solution (external)
-
-### DIY Project: Mad Libs Generator
-- **html09_DIYTask.md** — Full project specification with requirements, rubric, stretch goals
-- **html09_DIYTask_Solutions.html** — Example solution with CSS styling
-- **html09_DIYTask_Solutions.js** — Example solution with multiple story functions
-
-### Assessment Materials
-- **html09_Gimkit.csv** — 30 questions for Gimkit quiz game
-- **html09_GoogleQuiz.csv** — 30 questions for Google Forms (format: Question, A, B, C, D, Correct, Points)
-
-## Lesson Flow
-
-### Day 1: Script Tags & Variables (09a)
-1. **Warm-up:** Show slides 1-5, discuss what JS does
-2. **Walkthrough:** Lead students through console.log, variables, let vs. const
-3. **Practice:** Students complete html09a_Task.html
-4. **Check:** Review with html09a_Task_Solutions
-
-### Day 2: Functions & Operators (09b)
-1. **Review:** Slides 6-10 covering functions and template literals
-2. **Walkthrough:** Lead students through function syntax and parameters
-3. **Practice:** Students complete html09b_Task.html
-4. **Check:** Review with html09b_Task_Solutions
-
-### Days 3-4: DIY Project
-1. **Project Brief:** Assign html09_DIYTask.md (Mad Libs generator)
-2. **In-Class Work:** Students build variables, functions, and DOM display
-3. **Review:** Show html09_DIYTask_Solutions.html and .js as reference
-4. **Assessment:** Grading rubric included in DIYTask.md
-
-### Day 5: Assessment
-- **Gimkit:** Use html09_Gimkit.csv for fun review
-- **Quiz:** Use html09_GoogleQuiz.csv for formal assessment
-
-## Key Features
-
-✓ **Scaffolded Learning:** Walkthrough → Task → DIY Project progression
-✓ **Dual Format:** Each solution provided as inline (HTML) AND external (.js) file
-✓ **Real-World Project:** Mad Libs engages students and teaches practical skills
-✓ **Complete Comments:** Every code block has explanatory comments
-✓ **camelCase Conventions:** All variables and functions use modern naming
-✓ **Modern JavaScript:** Uses let/const (not var), template literals, proper DOM manipulation
-✓ **ODE Alignment:** Covers competencies 6.3.1, 6.3.2, 6.3.3
-✓ **Assessment Options:** Gimkit for engagement, Google Quiz for accountability
-
-## Student Learning Outcomes
-
-By completing this lesson, students will:
-- Understand JavaScript runs in the browser (client-side)
-- Create variables with let and const
-- Recognize data types (string, number, boolean, undefined, null)
-- Write and call functions with parameters
-- Use template literals for string building
-- Integrate JavaScript with HTML using script tags
-- Use console.log() for debugging
-- Write meaningful comments in code
-- Build an interactive web page with DOM manipulation
-- Apply programming concepts to a creative project
-
-## Teaching Tips
-
-1. **Console is Your Friend** — Always emphasize F12 Developer Tools for testing
-2. **Avoid var** — Show it exists but teach let/const as modern approach
-3. **Template Literals Rock** — Students love the readability; make this a focus
-4. **Functions Enable Reuse** — Show how one function called multiple times saves time
-5. **Mad Libs is Motivating** — Students love creating silly stories; use this momentum
-6. **Pair Programming** — Consider partner coding for Tasks 09a and 09b
-
-## File Sizes
-- Total package: ~92KB (easily fits on USB or LMS)
-- All files are plain text (Markdown, HTML, JavaScript, CSV)
-- No external dependencies or media files
-
-## Standards Alignment
-
-| ODE Competency | Files That Address It |
+| File | What it is |
 |---|---|
-| 6.3.1 Scripting languages in web development | html09_Slides.md, html09_StudyGuide.md, all Walkthrough files |
-| 6.3.2 Insert client-side scripts | html09_Walkthrough.md (Part 7), all Task and DIYTask files |
-| 6.3.3 Comments in scripts | All code files (HTML and JS) contain extensive comments |
+| `html09_Walkthrough.md` | The one walkthrough. Students build one page step by step: output, variables, functions, if / else, the DOM, clicks, classes, dark mode, form checks, and moving the script to an external file. Includes Try This answers. |
+| `html09_Task.html` | The one practice task (20 TODOs in 4 parts): variables, functions, DOM changes, and form validation. |
+| `html09_DIYTask.md` | The graded task. Add an external `script.js` to the student's website with a dark mode button on every page and checks on the contact form. |
+| `html09_Slides.md` | Slide deck (Marp) for the whole lesson. |
+| `html09_StudyGuide.md` | Vocabulary, cheat sheets with commented code, common mistakes, ODE competencies, and practice questions. |
 
-## Ready to Teach!
-This complete package includes slides, guided walkthroughs, practice tasks, solutions, a capstone project, and assessments. Everything is classroom-ready and tested.
+### Teacher files (`teacher/`)
 
-Happy teaching! 🚀
+| File | What it is |
+|---|---|
+| `html09_Walkthrough_Solutions.html` | The finished walkthrough page, every step working. |
+| `html09_Task_Solutions.html` | The finished practice task, all 20 TODOs. |
+| `html09_DIYTask_Example.html` / `.css` / `.js` | A working example of the DIY: dark mode button, form checks with messages on the page, and the server comment at the top of the JS. |
+| `html09_GoogleQuiz.csv` | 53 questions for Google Forms (same column format as the other lessons). |
+| `html09_Gimkit.csv` | The same 53 questions in Gimkit format. |
+
+### Archive (`archive/`)
+
+The old lesson files: the three slide decks, three walkthroughs, two study guides, tasks html09a through html09d, the Mad Libs DIY, the three-feature DIY, the extension task, the unit guide, the manifest, the old README, and all of their solutions (in `archive/teacher/`). Nothing was deleted.
+
+## Suggested Days (about 3 class days)
+
+| Day | In class | Files |
+|---|---|---|
+| 1 | Slides through "if and else." Walkthrough Steps 1 to 10. Start the practice task, Parts 1 and 2. | Slides, Walkthrough, Task |
+| 2 | Slides through "After the Form Is Sent." Walkthrough Steps 11 to 18. Finish the practice task, Parts 3 and 4. | Slides, Walkthrough, Task |
+| 3 | DIY task: `script.js`, dark mode on every page, contact form checks, comments. Push with GitHub Desktop. Gimkit review at the end if there is time. | DIY Task, Gimkit |
+
+The Google Quiz can go at the start of the next lesson or at the end of Day 3.
+
+## The console is turned off on student computers
+
+Dev tools are disabled on student machines, so `console.log()` can't be seen. All student materials use the **output box** instead: a `<div id="output">` and a small `say()` function that writes into it.
+
+```html
+<div id="output"></div>
+<script>
+  // say() adds a message to the #output box on the page
+  function say(msg) {
+    document.getElementById('output').textContent += msg + '\n';
+  }
+  say('Hello, world!');   // used everywhere console.log() would be
+</script>
+```
+
+`console.log()` is still taught by name, so students recognize it. A side benefit: students use `getElementById` and `textContent` on day one, which makes the DOM steps on day two easier.
+
+## Scope Decisions
+
+- **Hover effects are CSS** (`:hover`, html06). JavaScript is for what CSS can't do: clicks, reading input, changing content.
+- **Concatenation with `+` is the tested form.** Template literals are shown once so students recognize them.
+- **One `if / else`** is taught, because dark mode (button label) and form validation both need it. Loops are not in this lesson.
+- **Form validation is the 6.4.7 carrier.** Students check the form in the browser and write a short comment on what a server, database, and web service do with the data after it is sent. No real server.
+- **Cut from this lesson:** the Mad Libs project, the mobile menu button, the FAQ show/hide pattern, the extension task, and anything with fetch or APIs. The old files are in `archive/` if you want them back.
+- **Dark mode does not carry between pages.** Each page starts in light mode. Remembering the choice needs `localStorage`, which is not in scope.
+
+## ODE Competencies
+
+| Competency | Where it is covered |
+|---|---|
+| **6.3.1** Scripting languages in web development | Walkthrough Step 2, Slides, Study Guide |
+| **6.3.2** Insert client-side scripts | Walkthrough Steps 3 and 18 (internal, external, end of body, `defer`); DIY Part 1 (`script.js` on every page) |
+| **6.3.3** Comments in scripts | Walkthrough Step 5; Task and DIY code comments; DIY Part 4 is graded on comments |
+| **6.4.7** Scripting with forms and data | Walkthrough Steps 16 and 17; Task Part 4; DIY Part 3 (form checks) and Part 4 (server / database comment) |

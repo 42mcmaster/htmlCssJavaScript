@@ -1,219 +1,51 @@
-# HTML06: Box Model & Spacing
+# HTML06: Box Model, Spacing, Display, and Position
 
-## Lesson Overview
+One lesson, about 3 class days. Students learn how to control spacing and layout with CSS, then apply it to their own website. This lesson also sets up the permanent `DiyWebsite_Lastname` folder that every later DIY builds on.
 
-This complete lesson covers the CSS Box Model and spacing properties, plus display and positioning concepts. Students learn how to control element spacing, layout, and positioning using CSS properties.
+## ODE Competencies (145010 Web Design)
 
-**ODE Competency:** 6.5.8 — Format Website Layout
+- **6.5.8 Format website layout**: box model (padding, border, margin), width and max-width, `box-sizing: border-box`, centering with `margin: 0 auto`, `display`, and basic `position` (sticky header, relative/absolute badge, fixed button).
+- **6.2.7 Hover effect**: taught here as the CSS `:hover` pseudo-class on nav links and cards.
 
-**Duration:** 20-30 minutes instruction + activities
+## Files
 
-**Topics:**
-- 06a: Box Model (margin, padding, border, width/height, box-sizing)
-- 06b: Display & Positioning (block, inline, inline-block, position values)
+| File | What it is |
+|---|---|
+| `html06_Slides.md` | MARP slide deck for the intro |
+| `html06_Walkthrough.md` | Guided walkthrough. Students build `boxPractice.html` one step at a time. |
+| `html06_Task.html` | Practice task. Starter page with 19 CSS TODOs and a few HTML TODOs. |
+| `html06_DIYTask.md` | The graded item. Part 0 sets up `DiyWebsite_Lastname`; Parts 1 to 5 add spacing, nav buttons with hover, a sticky header, and gallery cards to the student's site. |
+| `html06_StudyGuide.md` | Vocabulary, width math, cheat sheet, debugging checklist |
+| `teacher/html06_Task_Solutions.html` | Working solution for the practice task (CSS in a `<style>` block; TODO numbers match the starter) |
+| `teacher/html06_GoogleQuiz.csv` | Google Forms quiz |
+| `teacher/html06_Gimkit.csv` | Gimkit review game |
+| `archive/` | Old files from before the trim (06a/06b tasks, old DIY, extension, old walkthrough, and their solutions). Not used. |
 
----
+## Suggested Days
 
-## File Organization
+| Day | Plan |
+|---|---|
+| 1 | Slides (short). Walkthrough sections 1 to 6: box model, padding/border/margin, box-sizing, centering, X-ray trick. |
+| 2 | Walkthrough sections 7 to 10: display, `:hover`, position. Then `html06_Task.html`. |
+| 3 | DIY. Part 0 first (set up `DiyWebsite_Lastname`, check with each student that it pushed), then Parts 1 to 6. Gimkit review at the end if time. |
 
-### Instructional Materials
-- **html06_Slides.md** — MARP presentation (10 slides with ASCII diagrams)
-- **html06_StudyGuide.md** — Vocabulary, cheat sheet, debugging checklist
-- **html06_Walkthrough.md** — Hands-on guided walkthrough (4 parts)
+The Google Quiz can be given at the start of the next lesson.
 
-### Solutions & Examples
-- **html06_Walkthrough_Solutions.html** + **.css** — Complete walkthrough demo
-- **html06_DIYTask_Solutions.html** + **.css** — Professional example project
+## Notes for Mr. McMaster
 
-### Student Tasks
+- **No developer tools.** Inspect is disabled on student machines. The X-ray trick (`* { outline: 1px solid red; }`) is how students see boxes. The validators (validator.w3.org and jigsaw.w3.org/css-validator) catch broken code.
+- **Units.** Lesson 05 taught rem and em. This lesson uses `rem` for padding, margin, and font sizes, and `px` for borders.
+- **Sticky, not fixed, for headers.** A fixed header covers the top of the page unless you add a matching margin. Sticky keeps its space, so it is the one used on student sites. Fixed is shown with a "Back to top" link.
+- **Flexbox comes next.** Side-by-side layout here uses `inline-block` on purpose. Lesson 07 replaces it with flexbox.
+- **DiyWebsite folder.** Part 0 copies the html04 pages (with `images` and `media`) and the html05 `styles.css` into one folder. If a student's html05 stylesheet only covered one page, they link it to every page now. From Lesson 07 on, every DIY changes this folder.
 
-#### Task 06a: Box Model
-- **html06a_Task.html** — Incomplete task (students fill in CSS)
-- **html06a_Task_Solutions.html** + **.css** — Teacher solution
+## Common Problems
 
-#### Task 06b: Display & Positioning
-- **html06b_Task.html** — Incomplete task (students complete HTML & CSS)
-- **html06b_Task_Solutions.html** + **.css** — Teacher solution
-
-### Independent Project
-- **html06_DIYTask.md** — Full project specification with rubric
-- **html06_DIYTask_Solutions.html** + **.css** — Example solution
-
-### Assessment
-- **html06_Gimkit.csv** — 30 Gimkit quiz questions
-- **html06_GoogleQuiz.csv** — 30 Google Quiz questions
-
----
-
-## Teaching Flow
-
-### 1. Introduction (10 minutes)
-- Use html06_Slides.md with MARP
-- Show box model diagram
-- Explain padding vs margin conceptually
-
-### 2. Guided Walkthrough (15 minutes)
-- Work through html06_Walkthrough.md
-- Have students open Walkthrough_Solutions.html
-- Demonstrate the CSS outline "X-ray trick" (dev tools are disabled on student machines)
-- Complete "Try This" exercises together
-
-### 3. Task 06a (15 minutes)
-- Students complete html06a_Task.html
-- Emphasize box-sizing: border-box
-- Use the outline X-ray trick to verify spacing
-- Review with html06a_Task_Solutions
-
-### 4. Task 06b (15 minutes)
-- Students complete html06b_Task.html
-- Focus on display and position properties
-- Create fixed header/footer layout
-- Review with html06b_Task_Solutions
-
-### 5. Independent Project (1-2 class periods)
-- Assign html06_DIYTask.md
-- Students build card component + page layout
-- Emphasize professional appearance
-- Grade using provided rubric
-
-### 6. Assessment
-- Use Gimkit CSV for quick review game
-- Use GoogleQuiz CSV for formal assessment
-- Both files have 30 questions covering all content
-
----
-
-## Learning Objectives
-
-Students will be able to:
-- [ ] Understand the four layers of the box model (content, padding, border, margin)
-- [ ] Apply padding and margin properties correctly
-- [ ] Use box-sizing: border-box to prevent width calculation issues
-- [ ] Understand display property values (block, inline, inline-block, none)
-- [ ] Understand position property values (static, relative, absolute, fixed)
-- [ ] Create multi-column layouts using display and position
-- [ ] Create fixed headers and footers
-- [ ] Debug box model issues with the outline X-ray trick and the W3C validator
-- [ ] Build professional card components with proper spacing
-- [ ] Design responsive page layouts
-
----
-
-## Key Concepts
-
-### Box Model
-```
-┌─ Margin (exterior) ──────┐
-│ ┌─ Border ────────────┐  │
-│ │ ┌─ Padding ──────┐  │  │
-│ │ │  Content       │  │  │
-│ │ └────────────────┘  │  │
-│ └────────────────────┘  │
-└──────────────────────────┘
-```
-
-### Display Values
-- **block**: Full width, new line (div, p)
-- **inline**: Flows with text, width/height ignored (span, a)
-- **inline-block**: Inline flow + respects width/height
-- **none**: Completely hidden
-
-### Position Values
-- **static**: Normal flow (default)
-- **relative**: Relative to normal position, still in flow
-- **absolute**: Relative to positioned parent, removed from flow
-- **fixed**: Relative to viewport, stays when scrolling
-
----
-
-## Debugging Without DevTools
-
-Browser dev tools are disabled on student machines. The classroom substitutes:
-
-1. **X-ray trick:** `* { outline: 1px solid red; }` at the top of the stylesheet — every box edge becomes visible, nothing shifts
-2. **W3C validator** (validator.w3.org) for "why is my page broken" questions
-3. **Paper box-model diagrams** for computing total element width
-
-## Common Mistakes
-
-| Mistake | Fix |
-|---------|-----|
-| Width too wide | Add `box-sizing: border-box;` to `*` |
-| Header overlaps content | Add `margin-top` or `padding-top` to main |
-| Position: absolute breaks layout | Parent must have `position: relative/absolute/fixed` |
-| Can't see fixed element | Check `z-index` value |
-| Margin not working | Check if parent has `display: flex` or `grid` |
-
----
-
-## Assessment Questions
-
-**Gimkit:** 30 questions (auto-format for Gimkit)
-**GoogleQuiz:** 30 questions (auto-format for Google Forms)
-
-Topics covered:
-- Box model terminology
-- Property purposes and values
-- CSS calculations and formulas
-- Display and position values
-- X-ray trick usage
-- Common misconceptions
-
----
-
-## Extensions & Challenges
-
-### Beginner
-- Change padding/margin values and observe the boxes move (X-ray trick on)
-- Create cards with different color schemes
-- Add hover effects to buttons
-
-### Intermediate
-- Build responsive layout with media queries
-- Create gradient backgrounds
-- Add CSS transitions and animations
-- Build multi-level navigation
-
-### Advanced
-- Implement CSS Grid for card layouts
-- Build complex dashboard with multiple sections
-- Create sticky headers that scroll with content
-- Implement CSS custom properties (variables)
-
----
-
-## Resources
-
-- **MDN Box Model:** https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model
-- **MDN Display:** https://developer.mozilla.org/en-US/docs/Web/CSS/display
-- **MDN Position:** https://developer.mozilla.org/en-US/docs/Web/CSS/position
-
----
-
-## File Checklist
-
-- [x] html06_Slides.md — Presentation
-- [x] html06_StudyGuide.md — Study materials
-- [x] html06_Walkthrough.md — Guided practice
-- [x] html06_Walkthrough_Solutions.html + .css
-- [x] html06a_Task.html + Solutions
-- [x] html06b_Task.html + Solutions
-- [x] html06_DIYTask.md + Solutions
-- [x] html06_Gimkit.csv — 30 questions
-- [x] html06_GoogleQuiz.csv — 30 questions
-
-**Total: 16 files | 2,771 lines of content**
-
----
-
-## Notes
-
-All files use:
-- Valid HTML5 and CSS3
-- Semantic HTML elements
-- `box-sizing: border-box;` for all projects
-- Comprehensive code comments
-- Professional styling practices
-- Mobile-responsive design where applicable
-
-No external dependencies required. All files are self-contained and ready to use.
+| Problem | Fix |
+|---|---|
+| Box wider than its width | `* { box-sizing: border-box; }` at the top of the CSS |
+| Box won't center | Needs `max-width` and `margin: 0 auto` |
+| Link padding does nothing up and down | `display: inline-block` |
+| Absolute badge flies to the page corner | `position: relative` on the parent |
+| Sticky header scrolls away | Missing `top: 0`, or a later `header` rule overrides it |
+| No styles on one page of the DIY site | Missing `<link rel="stylesheet" href="styles.css">` |

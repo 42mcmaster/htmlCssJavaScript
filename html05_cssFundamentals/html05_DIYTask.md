@@ -1,291 +1,351 @@
-# Independent Project: Restyle Your "About Me" Page (html05)
+# Lesson 05 DIY: One Stylesheet for Your Whole Website
 
-## Overview
+Write one CSS file that styles every page of the website you built in Lesson 03 and Lesson 04. This is the one graded item for Lesson 05. The walkthroughs and the a/b/c tasks are practice.
 
-In this independent project, you'll take your "About Me" page from **html01** and restyle it completely using an **external stylesheet**. This is a real-world application of CSS fundamentals!
+Your site has 4 pages: `index.html`, `about.html`, `contact.html`, and `gallery.html`. You will make **one** file named `styles.css` and link it to **all 4 pages**. When you change a color in that one file, all 4 pages change. That is the reason we use an external stylesheet.
 
----
-
-## Requirements
-
-### 1. HTML Structure (Minimal Changes)
-- Start with your **html01 "About Me" page** (or use the example provided)
-- Keep the HTML clean and unchanged
-- Add **one `<link>` tag** in the `<head>` to connect your external stylesheet
-- Do **not** add inline styles
-
-### 2. External Stylesheet (New File)
-- Create a file called **`styles.css`** in the same folder as your HTML
-- Write **at least 10 CSS rules** covering the following categories:
-  - **At least 2 element selectors** (e.g., `body`, `p`, `h1`)
-  - **At least 2 class selectors** (e.g., `.highlight`, `.intro`)
-  - **At least 1 ID selector** (e.g., `#header`, `#footer`)
-
-### 3. CSS Properties to Include
-
-Use at least one property from **each** of these categories:
-
-#### Colors
-```css
-color: blue;
-background-color: yellow;
-```
-
-#### Fonts
-```css
-font-family: 'Arial', sans-serif;
-font-size: 18px;
-font-weight: bold;
-```
-
-#### Text Properties
-```css
-text-align: center;
-line-height: 1.6;
-text-decoration: underline;
-letter-spacing: 2px;
-```
-
-### 4. Nice-to-Have Additions
-- Use **Google Fonts** for at least one element
-- Use **hex color codes** for at least 3 colors
-- Use **rgb() color format** for at least 1 color
-- Add **padding** or **margin** to create spacing
-- Add **border** to highlight important elements
+**All CSS goes in `styles.css`.** No `style` attributes and no `<style>` blocks in your pages.
 
 ---
 
-## Step-by-Step Instructions
+## Table of Contents
 
-### Step 1: Start with Your HTML
-Copy your "About Me" page from html01. It should have content like:
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me</title>
-  <!-- TODO: Add <link> to styles.css here -->
-</head>
-<body>
-  <h1>About Me</h1>
-  <p>I'm a student at Medina County Career Center...</p>
-  <p>My interests include...</p>
-  <!-- More content -->
-</body>
-</html>
+- [Where Everything Goes](#where-everything-goes)
+- [Part 1: Make styles.css and link it to every page](#part-1-make-stylescss-and-link-it-to-every-page)
+- [Part 2: Colors and fonts for the whole site](#part-2-colors-and-fonts-for-the-whole-site)
+- [Part 3: Headings and text](#part-3-headings-and-text)
+- [Part 4: Header, nav links, and footer](#part-4-header-nav-links-and-footer)
+- [Part 5: Class and id selectors](#part-5-class-and-id-selectors)
+- [Part 6: The table on about.html](#part-6-the-table-on-abouthtml)
+- [Part 7: The captions on gallery.html](#part-7-the-captions-on-galleryhtml)
+- [Part 8: Finish and push](#part-8-finish-and-push)
+- [Checklist](#checklist)
+- [Grading](#grading)
+- [If something goes wrong](#if-something-goes-wrong)
+
+---
+
+## Where Everything Goes
+
+Work in the same folder as your Lesson 03 and Lesson 04 site. When you are done, it should look like this:
+
+```
+your-site-folder/
+├── index.html      <- Home: add the <link> to styles.css
+├── about.html      <- About: add the <link> to styles.css
+├── contact.html    <- Contact: add the <link> to styles.css
+├── gallery.html    <- Gallery: add the <link> to styles.css
+├── styles.css      <- NEW: one stylesheet for every page
+├── images/         <- your photos (no changes)
+└── media/          <- your promo video (no changes)
 ```
 
-### Step 2: Link Your Stylesheet
-In the `<head>`, add the link tag:
+| File | What changes |
+|---|---|
+| `styles.css` | New file. All of your CSS goes here. |
+| All 4 pages | Add `<link rel="stylesheet" href="styles.css">` in the `<head>`. Add a few `class` attributes (Part 5). |
+| `about.html` | Nothing new in the HTML. The table gets styled from `styles.css`. |
+| `gallery.html` | Nothing new in the HTML. The captions get styled from `styles.css`. |
+
+---
+
+## Part 1: Make styles.css and link it to every page
+
+1. In VS Code, make a new file in your site folder. Name it `styles.css` (all lowercase, next to your HTML files, not inside `images` or `media`).
+2. Put a comment at the top so anyone reading it knows what it is:
+
+```css
+/* styles.css
+   Stylesheet for every page of my website
+   Author: Your Name */
+```
+
+3. Open `index.html`. Inside `<head>`, under the `<title>`, add this line:
+
 ```html
 <link rel="stylesheet" href="styles.css">
 ```
 
-### Step 3: Plan Your CSS
-Before writing CSS, plan what you want to style:
-- What should the **body** look like? (background, font)
-- What should **headings** look like? (size, color, alignment)
-- What should **paragraphs** look like? (spacing, color)
-- Do you want to **highlight** certain text with classes?
-- Do you want a **special footer or header** with an ID?
-
-### Step 4: Write Your CSS
-Create a `styles.css` file with at least 10 rules:
+4. Do the same on `about.html`, `contact.html`, and `gallery.html`. That is **4 links**, one on each page.
+5. Test it. Add this rule to `styles.css`, save, and open each page in the browser:
 
 ```css
-/* Example structure */
-
-/* Element selectors */
+/* Test rule - delete this after all 4 pages turn light blue */
 body {
-  /* ... styles ... */
+  background-color: lightblue;
 }
-
-h1 {
-  /* ... styles ... */
-}
-
-p {
-  /* ... styles ... */
-}
-
-/* Class selectors */
-.highlight {
-  /* ... styles ... */
-}
-
-.intro {
-  /* ... styles ... */
-}
-
-/* ID selector */
-#footer {
-  /* ... styles ... */
-}
-
-/* More rules to reach 10+ */
 ```
 
-### Step 5: Test Your Work
-- Open your HTML in a browser
-- Verify that all styles are applied
-- Check that colors, fonts, and text properties look good
-- Make sure the page is readable and professional-looking
+6. All 4 pages should turn light blue. If one does not, that page is missing the `<link>` line or has a typo in it. Once all 4 work, delete the test rule.
 
 ---
 
-## Example Project
+## Part 2: Colors and fonts for the whole site
 
-**Note:** This is just an example to show you what's possible. Your project should reflect your own "About Me" content!
+Pick a color scheme that fits your topic: a background color, a text color, and 1 or 2 accent colors for headings and links. Use **hex** (`#2c3e50`) or **rgb** (`rgb(44, 62, 80)`) values, not color names.
 
-### Example HTML
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div id="header">
-    <h1>About Me</h1>
-    <p class="intro">Welcome to my web page!</p>
-  </div>
+Rules on `body` are passed down to everything on the page, so this is where the site-wide color and font go.
 
-  <h2>Who I Am</h2>
-  <p>I'm a high school student passionate about web design and technology.</p>
-
-  <h2>My Interests</h2>
-  <p>I love building websites, learning new technologies, and creating digital art.</p>
-  <p class="highlight">In the future, I want to become a web developer!</p>
-
-  <h2>My Skills</h2>
-  <ul>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript (learning)</li>
-  </ul>
-
-  <div id="footer">
-    <p>© 2024 My Name. All rights reserved.</p>
-  </div>
-</body>
-</html>
+```css
+/* ===== Whole page ===== */
+body {
+  background-color: #fdf6ec;           /* page background (hex) */
+  color: rgb(51, 51, 51);              /* main text color (rgb) */
+  font-family: Arial, sans-serif;      /* font for the whole site */
+  font-size: 1rem;                     /* 16px, the normal size */
+  line-height: 1.6;                    /* space between lines of text */
+}
 ```
 
-### Example CSS
-```css
-/* Body and page styles */
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-  line-height: 1.6;
-  margin: 0;
-  padding: 20px;
-}
+**Google Fonts (optional).** If you use a Google Font, the Google Fonts `<link>` goes in the `<head>` of **all 4 pages**, above the `styles.css` link. Then use the font name in `font-family`:
 
-/* Headings */
+```css
+body {
+  font-family: 'Poppins', sans-serif;  /* sans-serif is the backup font */
+}
+```
+
+**Font sizes use rem.** Remember from 05c: `1rem` is 16px. To convert, divide pixels by 16. Example: 24px ÷ 16 = `1.5rem`. Borders can stay in px.
+
+---
+
+## Part 3: Headings and text
+
+Style your headings and paragraphs with **element selectors**. These rules work on every page because every page uses the same tags.
+
+```css
+/* ===== Headings ===== */
 h1 {
-  color: #2c3e50;
-  text-align: center;
-  font-size: 48px;
-  font-weight: 700;
+  font-size: 2.5rem;                   /* 40px */
+  text-align: center;                  /* no color here: the h1 sits in the header and uses the header's text color */
 }
 
 h2 {
-  color: #34495e;
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 10px;
+  color: #8b4513;
+  font-size: 1.75rem;                  /* 28px */
+  letter-spacing: 1px;                 /* optional: a little space between letters */
 }
 
-/* Paragraphs */
+/* ===== Paragraphs ===== */
 p {
-  font-size: 16px;
-  margin-bottom: 15px;
-}
-
-/* Class: intro */
-.intro {
-  font-size: 20px;
-  font-style: italic;
-  color: #7f8c8d;
-}
-
-/* Class: highlight */
-.highlight {
-  background-color: #fff3cd;
-  color: #856404;
-  padding: 10px;
-  border-left: 4px solid #ffc107;
-  font-weight: bold;
-}
-
-/* ID: header */
-#header {
-  background-color: #3498db;
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-/* ID: footer */
-#footer {
-  background-color: #2c3e50;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  border-top: 3px solid #3498db;
-}
-
-/* List items */
-li {
-  margin-bottom: 8px;
+  font-size: 1rem;
 }
 ```
 
----
+Use at least one of each of these text properties somewhere in your stylesheet:
 
-## Checklist Before Submitting
-
-- [ ] HTML file is clean (no inline styles)
-- [ ] External `styles.css` file is created and linked
-- [ ] At least 10 CSS rules are written
-- [ ] At least 2 element selectors
-- [ ] At least 2 class selectors
-- [ ] At least 1 ID selector
-- [ ] Uses colors (at least 3 hex colors, 1 rgb color)
-- [ ] Uses fonts (font-family, font-size, font-weight)
-- [ ] Uses text properties (text-align, line-height, text-decoration)
-- [ ] Page looks professional and is readable
-- [ ] HTML and CSS are valid
+| Property | What it does | Example |
+|---|---|---|
+| `text-align` | Left, center, or right | `text-align: center;` |
+| `line-height` | Space between lines | `line-height: 1.6;` |
+| `text-decoration` | Underline on or off | `text-decoration: none;` |
+| `letter-spacing` (optional) | Space between letters | `letter-spacing: 1px;` |
 
 ---
 
-## Bonus Challenges
+## Part 4: Header, nav links, and footer
 
-1. **Add Google Fonts** — Find a professional font at fonts.google.com and integrate it
-2. **Use 3+ Hex Colors** — Create a cohesive color scheme (use a color picker online)
-3. **Add Hover Effects** — Use `a:hover` to add styling when hovering over links
-4. **Responsive Design** — Adjust padding/font-size for mobile devices
-5. **Advanced Selectors** — Use `p:first-child` or `h2:nth-of-type(2)` selectors
-6. **Add Animations** — Use `transition` to create smooth effects (optional)
+Every page has the same header, nav, and footer. Style them once and all 4 pages match.
+
+`nav a` means "links that are inside a `<nav>`." It styles your nav links without changing other links on the page.
+
+```css
+/* ===== Header ===== */
+header {
+  background-color: #8b4513;           /* accent color behind the site name */
+  color: #ffffff;                      /* white text */
+  text-align: center;
+}
+
+/* ===== Nav links (header and footer) ===== */
+nav a {
+  color: #ffe8c2;                      /* light color that shows up on the dark header and footer */
+  font-weight: bold;
+  text-decoration: none;               /* removes the underline */
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #8b4513;           /* same as the header so the page looks finished */
+  color: #ffffff;
+  font-size: 0.875rem;                 /* 14px, a little smaller */
+  text-align: center;
+}
+```
+
+**Tip:** text needs to stand out from what is behind it. If your header and footer are dark, use a light color for the nav links and the site name. If they are light, use a dark color. Check it on every page.
 
 ---
 
-## Submission
+## Part 5: Class and id selectors
 
-Submit:
-1. **`aboutMe.html`** — Your styled About Me page
-2. **`styles.css`** — Your external stylesheet
+You need **at least 2 class selectors** and **at least 1 id selector**.
 
-Both files should be in the same folder and work together without errors.
+**Id selectors.** Your site already has ids from Lesson 04: `id="promo"` on `index.html` and `id="compare"` on `about.html`. You can style one of them:
 
-Good luck! You now have the skills to build professional-looking web pages with CSS!
+```css
+/* ===== id: the promo video section on index.html ===== */
+#promo {
+  background-color: #f3e3cc;           /* light box behind the video */
+  text-align: center;
+}
+```
+
+**Class selectors.** Add a `class` attribute to a few tags in your HTML, then style the class in `styles.css`. A class can be used on more than one page. Some ideas:
+
+| Class | Where to put it | What it could do |
+|---|---|---|
+| `intro` | The first paragraph on each page | Bigger or italic text |
+| `highlight` | A sentence you want to stand out | Background color, bold |
+| `note` | A small note, like hours or a credits line | Smaller, gray text |
+
+HTML (on any page):
+
+```html
+<p class="intro">Welcome to Bean There, the best coffee in Medina.</p>
+```
+
+CSS:
+
+```css
+/* ===== Classes ===== */
+.intro {
+  font-size: 1.25rem;                  /* 20px */
+  font-style: italic;
+}
+
+.highlight {
+  background-color: #fff3cd;           /* soft yellow behind the text */
+  font-weight: bold;
+}
+```
+
+Adding `class="..."` to a tag is fine. It is not inline CSS. Inline CSS is the `style="..."` attribute, and that is still not allowed.
+
+---
+
+## Part 6: The table on about.html
+
+In Lesson 04 your table had no lines. Now add them. `border-collapse: collapse` turns the double lines into single lines.
+
+```css
+/* ===== Comparison table (about.html) ===== */
+table {
+  border-collapse: collapse;           /* single lines instead of double */
+}
+
+th,
+td {
+  border: 1px solid #8b4513;           /* px is fine for borders */
+  padding: 0.5rem;                     /* space inside each cell */
+  text-align: left;
+}
+
+th {
+  background-color: #8b4513;
+  color: #ffffff;
+}
+
+caption {
+  font-weight: bold;
+}
+```
+
+Open `about.html` and check that every cell has a border and the text is not touching the lines.
+
+---
+
+## Part 7: The captions on gallery.html
+
+Style the `<figcaption>` under each photo so the captions look like captions.
+
+```css
+/* ===== Photo captions (gallery.html) ===== */
+figcaption {
+  font-size: 0.875rem;                 /* 14px, smaller than normal text */
+  font-style: italic;
+  text-align: center;
+  color: #666666;                      /* gray */
+}
+```
+
+Lining the photos up side by side comes in Lesson 06. For now, just style the captions.
+
+---
+
+## Part 8: Finish and push
+
+1. Count your rules. You need **at least 10 rules**. A rule is a selector and its `{ }` block.
+2. Check that your CSS has comments that label each section (like `/* ===== Header ===== */`).
+3. Open all 4 pages in the browser. They should look like one website: same colors, same fonts, same header, nav, and footer.
+4. Click every nav link on every page (header and footer).
+5. On `index.html`, play the video. On `gallery.html`, check that every photo shows up.
+6. Run each page through https://validator.w3.org/ and fix the errors.
+7. Open **GitHub Desktop**. Type a summary like `Add styles.css to my website`, click **Commit to main**, then **Push origin**.
+8. On github.com, check that `styles.css` is there next to your HTML files.
+
+---
+
+## Checklist
+
+**Stylesheet**
+- [ ] `styles.css` is in the same folder as the 4 pages
+- [ ] `<link rel="stylesheet" href="styles.css">` in the `<head>` of all 4 pages
+- [ ] No `style` attributes or `<style>` blocks anywhere
+- [ ] At least 10 rules
+- [ ] Comments that label the sections of the CSS
+
+**Selectors**
+- [ ] At least 2 element selectors (like `body`, `h1`, `p`)
+- [ ] At least 2 class selectors (like `.intro`, `.highlight`), and the classes are used in the HTML
+- [ ] At least 1 id selector (like `#promo` or `#compare`)
+
+**Colors, fonts, and text**
+- [ ] Text color and background color using hex or rgb
+- [ ] `font-family` on the body (Google Font optional)
+- [ ] Font sizes in rem
+- [ ] `text-align`, `line-height`, and `text-decoration` used somewhere
+- [ ] Nav links styled
+
+**Pages**
+- [ ] Table on `about.html` has borders and cell padding
+- [ ] Captions on `gallery.html` are styled
+- [ ] All 4 pages look like the same website
+- [ ] Every link works on every page
+- [ ] All 4 pages pass the validator
+- [ ] Pushed to GitHub with `styles.css`
+
+---
+
+## Grading
+
+| Criteria | Looking for |
+|---|---|
+| **Linked to every page** | One `styles.css`, linked in the `<head>` of all 4 pages; no inline CSS or `<style>` blocks |
+| **Selectors** | 10+ rules; at least 2 element, 2 class, and 1 id selector; classes used in the HTML |
+| **Colors and fonts** | Hex or rgb colors for text and background; a font-family; font sizes in rem |
+| **Text and nav** | text-align, line-height, and text-decoration used; nav links styled |
+| **Table and gallery** | Table on `about.html` has borders and padding; figcaptions on `gallery.html` styled |
+| **Consistent and working** | All 4 pages look like one site, CSS has comments, every link works, pages pass the validator, pushed |
+
+**How it is graded:**
+
+- **Complete:** every part is done and all 4 pages look like one clean, readable website. A few small things may be missing.
+- **Mostly done:** `styles.css` is linked and styles most of the site, but several things are missing or one page is not linked.
+- **Started:** `styles.css` exists and has some rules, but most parts are missing or it is not linked to the pages.
+- **Missing:** no `styles.css` pushed.
+
+---
+
+## If something goes wrong
+
+- **A page has no styles at all:** that page is missing the `<link>` line, or it has a typo. It must be `href="styles.css"` exactly, and `styles.css` must be in the same folder as the page.
+- **Nothing works on any page:** check the file name. `Styles.css`, `style.css`, and `styles.css.txt` are all different files. It must be `styles.css`.
+- **One rule does not work but the others do:** look for a missing `;` or `}` in the rule just above it. One missing brace can break everything below it.
+- **Class does nothing:** the CSS needs the dot (`.intro`) and the HTML does not (`class="intro"`). Spelling and capital letters must match.
+- **Id does nothing:** the CSS needs the `#` (`#promo`) and the HTML does not (`id="promo"`).
+- **Font size does nothing:** no space before the unit. `1.5rem` works, `1.5 rem` does not.
+- **Google Font only works on one page:** the Google Fonts `<link>` has to be on all 4 pages.
+- **Table still has double lines:** add `border-collapse: collapse;` to the `table` rule.
+- **Nav links are hard to read on the header:** change the nav link color so it stands out from the header background.
+- **Still stuck:** ask a classmate, then ask Mr. McMaster.

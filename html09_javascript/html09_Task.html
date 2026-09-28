@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>html09 Task - JavaScript Practice</title>
+  <!-- The CSS is done for you. Your work is all in the <script> at the bottom. -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 1rem;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 1.5rem;
+    }
+    main {
+      max-width: 40rem;
+      margin: 0 auto;
+    }
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.3rem; color: #2c3e50; }
+    section {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    #output {
+      white-space: pre-line;   /* makes each say() message start on a new line */
+      font-family: monospace;
+      font-size: 1rem;
+      background-color: #1e1e1e;
+      color: #9fef00;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      min-height: 3rem;
+    }
+    .box {
+      background-color: #3498db;
+      color: white;
+      padding: 1rem;
+      border-radius: 0.25rem;
+      text-align: center;
+      font-weight: bold;
+    }
+    button {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem 0.25rem 0 0;
+      cursor: pointer;
+    }
+    .hidden { display: none; }        /* used in Part 3C */
+    label { display: block; font-weight: bold; margin-top: 0.75rem; }
+    input, textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    .error { color: #b3261e; font-weight: bold; }
+    .success { color: #1b7f3a; font-weight: bold; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>html09 Task: JavaScript Practice</h1>
+  <p>Work through Parts 1 to 4. Every TODO is in the <code>&lt;script&gt;</code> at the bottom of this file.
+     Save, then refresh the page in the browser after each part to check your work.</p>
+
+  <!-- ============ Parts 1 and 2 print here ============ -->
+  <section>
+    <h2>Output (Parts 1 and 2)</h2>
+    <p>Anything you send to <code>say()</code> shows up in this box.</p>
+    <div id="output"></div>
+  </section>
+
+  <!-- ============ Part 3: DOM practice ============ -->
+  <section>
+    <h2>Part 3A: Change Text</h2>
+    <p id="original-text">This is the original text.</p>
+    <button id="change-text-btn">Change the text</button>
+  </section>
+
+  <section>
+    <h2>Part 3B: Change Styles</h2>
+    <div id="color-box" class="box">Click the button to restyle me.</div>
+    <button id="style-btn">Restyle the box</button>
+  </section>
+
+  <section>
+    <h2>Part 3C: Hide and Show</h2>
+    <p id="secret-message">This is a secret message that can be hidden.</p>
+    <button id="toggle-btn">Hide / Show</button>
+  </section>
+
+  <section>
+    <h2>Part 3D: Change HTML Content</h2>
+    <div id="html-content"><p>This is plain text.</p></div>
+    <button id="change-html-btn">Add bold and italic</button>
+  </section>
+
+  <!-- ============ Part 4: form validation ============ -->
+  <section>
+    <h2>Part 4: Check a Form Before It Sends</h2>
+    <!-- novalidate turns off the browser's own pop-up checks so YOUR JavaScript checks run -->
+    <form id="contact-form" novalidate>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email">
+
+      <label for="message">Message (at least 10 characters)</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <!-- Your JavaScript writes the error or success message into this paragraph -->
+    <p id="form-message"></p>
+  </section>
+</main>
+
+<!-- Scripts go at the END of the body so the HTML above already exists when they run -->
+<script>
+  // ============================================================
+  // HELPER (done for you): say() prints a message into the #output box.
+  // Use say() everywhere you would use console.log().
+  // ============================================================
+  function say(msg) {
+    document.getElementById('output').textContent += msg + '\n';
+  }
+
+  say('The script is running.');   // if you don't see this line, check for a typo
+
+  // ============================================================
+  // PART 1: VARIABLES AND DATA TYPES
+  // ============================================================
+
+  // TODO 1: Make a string variable called firstName with let. Use any name.
+
+
+  // TODO 2: Make a number variable called age with let.
+
+
+  // TODO 3: Make a boolean variable called isStudent with let (true or false).
+
+
+  // TODO 4: Make a const called schoolName. Use const because it won't change.
+
+
+  // TODO 5: Print each variable with a label, using + to join the strings.
+  // Example: say('Name: ' + firstName);
+  // Print all four.
+
+
+  // TODO 6: Change the value of age (age = age + 1;) and print it again.
+  // This works because age was made with let.
+
+
+  // TODO 7: Build one sentence with + and print it.
+  // Example output: "My name is Alex and I am 16 years old."
+
+
+  // TODO 8: Print the same sentence again with a template literal (backticks and ${ }).
+  // Example: say(`My name is ${firstName} and I am ${age} years old.`);
+
+
+  // TODO 9: Try it: remove the // from the next line, save, and refresh.
+  // schoolName = 'Different School';
+  // Everything below it stops printing. Changing a const is an error, and an
+  // error stops the script. Put the // back before you go on.
+
+
+  // ============================================================
+  // PART 2: FUNCTIONS
+  // Each function RETURNS a value. Print the result with say().
+  // ============================================================
+
+  // TODO 10: Write a function greetUser(name) that returns 'Hello, ' + name + '!'
+  // Call it twice with two different names and print both results.
+
+
+  // TODO 11: Finish addNumbers so it returns the sum of its two parameters.
+  function addNumbers() {
+
+  }
+  // Then print addNumbers(5, 3) and addNumbers(10, 20).
+
+
+  // TODO 12: Write a function calculateArea(width, height) that returns width * height.
+  // Print the area of a 4 by 6 rectangle.
+
+
+  // TODO 13: Write a function announceEvent(eventName, date, location) that returns
+  // a sentence like: "Open House is on 3/15 at the Career Center!"
+  // Call it twice with different events.
+
+
+  // TODO 14: Write a function checkScore(score) that uses if / else:
+  //   if score is 70 or more, return 'Pass'
+  //   otherwise, return 'Try again'
+  // Print checkScore(85) and checkScore(50).
+
+
+  // ============================================================
+  // PART 3: THE DOM (select, change, listen)
+  // Each one: select the button, add a 'click' listener, change something.
+  // ============================================================
+
+  // TODO 15 (3A): When #change-text-btn is clicked, change the textContent
+  // of #original-text to "The text has been changed!"
+
+
+  // TODO 16 (3B): When #style-btn is clicked, change #color-box:
+  //   style.backgroundColor = '#e74c3c'
+  //   style.fontSize = '1.5rem'
+  //   style.border = '3px solid black'
+  // Note: CSS background-color becomes backgroundColor in JavaScript.
+
+
+  // TODO 17 (3C): When #toggle-btn is clicked, use
+  //   classList.toggle('hidden')
+  // on #secret-message. Click it a few times: hide, show, hide.
+
+
+  // TODO 18 (3D): When #change-html-btn is clicked, set the innerHTML of #html-content to
+  //   '<p>This has <strong>bold text</strong> and <em>italic text</em>.</p>'
+  // textContent shows tags as plain text. innerHTML turns them into real HTML.
+
+
+  // ============================================================
+  // PART 4: FORM VALIDATION
+  // ============================================================
+
+  // TODO 19: Select the form (#contact-form) and the message paragraph (#form-message).
+
+
+  // TODO 20: Add a 'submit' listener to the form. Inside the function:
+  //   a. Call event.preventDefault() so the page does not reload.
+  //   b. Get the value of #name, #email, and #message (use .value).
+  //   c. If any of the three is empty (''), show
+  //      "All fields are required." in #form-message, add the class 'error', and stop (return).
+  //   d. If the email does not include '@', show
+  //      "Please enter a valid email address." with the class 'error', and stop.
+  //   e. If the message is shorter than 10 characters (.length < 10), show
+  //      "Your message must be at least 10 characters." with the class 'error', and stop.
+  //   f. If everything passes: show "Thanks! Your message is ready to send.",
+  //      remove 'error', add 'success', and clear all three fields (set .value to '').
+  // Tip: at the start of the function, remove both 'error' and 'success' so old colors go away.
+
+</script>
+</body>
+</html>

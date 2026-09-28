@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  html10 Task: Fix the Bakery Page
+  =================================
+  This page for "Sweet Crumb Bakery" LOOKS okay, but it has problems with
+  SEO, accessibility, spelling, and valid HTML. Your job: fix every TODO.
+
+  HOW TO DO IT
+  1. Copy this file and the images/ folder into your html10 folder in your
+     htmlCssJavaScript repo. Keep the file name html10_Task.html.
+  2. Open it in the browser so you can see what it looks like before you start.
+  3. Work through TODO 1 to TODO 22 below. Fix the problem in the code right
+     under each TODO. Leave the TODO comments in place so Mr. McMaster can find
+     your fixes.
+  4. Do the TESTING STEPS at the bottom (validator, keyboard, two browsers).
+  5. Answer the VOCABULARY QUESTIONS in the comment at the very bottom.
+  6. Commit and push with GitHub Desktop.
+
+  Use html10_Walkthrough.md for help. Every problem here is explained there.
+  You do NOT need to change how the page looks, except where a TODO says so.
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TODO 1 (SEO): The title is empty. Write a title with the page topic and
+         the business name, about 60 characters or less.
+         Example shape: "Fresh Bread and Custom Cakes - Sweet Crumb Bakery" -->
+    <title></title>
+
+    <!-- TODO 2 (SEO): Add a meta description here. One or two sentences,
+         about 150-160 characters, that say what the bakery sells and where
+         (Medina, Ohio). -->
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            background-color: #ffffff;
+            /* TODO 3 (Contrast): #b0b0b0 on white is about 2 to 1. It fails.
+               Change the text color so it passes 4.5 to 1.
+               Check your color at https://webaim.org/resources/contrastchecker/ */
+            color: #b0b0b0;
+        }
+
+        .top {
+            background-color: #6b3e26;
+            color: #ffffff;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .top h1 {
+            font-size: 2rem;
+        }
+
+        .menu-bar {
+            background-color: #f3e3d3;
+            padding: 0.75rem;
+            text-align: center;
+        }
+
+        .menu-bar a,
+        .menu-bar span {
+            color: #6b3e26;
+            font-size: 1.1rem;
+            margin: 0 1rem;
+            cursor: pointer;
+        }
+
+        /* TODO 4 (Keyboard): This rule HIDES the focus outline, so keyboard
+           users cannot see where they are. Change it to show a clear outline,
+           for example:  outline: 3px solid #1a5fb4;  outline-offset: 2px; */
+        a:focus,
+        button:focus,
+        input:focus,
+        textarea:focus {
+            outline: none;
+        }
+
+        .page {
+            max-width: 56rem;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+        .item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .sale {
+            /* TODO 5 (Contrast): Yellow text on white is almost invisible.
+               Change the color (or add a dark background) so it passes. */
+            color: #ffe066;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .order-form label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        .order-form input,
+        .order-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #6b3e26;
+        }
+
+        .fake-button,
+        .order-form button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.6rem 1.2rem;
+            background-color: #6b3e26;
+            color: #ffffff;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .bottom {
+            background-color: #6b3e26;
+            color: #ffffff;
+            padding: 1.5rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .bottom a {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+        }
+
+        @media (max-width: 40rem) {
+            .item {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TODO 6 (Semantic HTML): This div is the page header. Change it to a
+         <header> element (change the closing tag too). -->
+    <div class="top">
+        <!-- TODO 7 (SEO / Headings): "Welcome" tells a search engine nothing.
+             Change the h1 to the business name: Sweet Crumb Bakery -->
+        <h1>Welcome</h1>
+        <p>Fresh bread and custom cakes, baked every morning in Medina, Ohio.</p>
+    </div>
+
+    <!-- TODO 8 (Semantic HTML): This div is navigation. Change it to <nav>. -->
+    <div class="menu-bar">
+        <a href="#menu">Menu</a>
+        <!-- TODO 9 (Real links): These spans act like links but are not links.
+             They cannot be reached with Tab. Change each span to
+             <a href="#order">Order</a> and <a href="#visit">Visit</a>. -->
+        <span onclick="location.hash='order'">Order</span>
+        <span onclick="location.hash='visit'">Visit</span>
+    </div>
+
+    <!-- TODO 10 (Semantic HTML): This div holds the main content. Change it
+         to <main>. -->
+    <div class="page">
+
+        <!-- TODO 11 (Proofreading): There are 5 spelling or grammar mistakes
+             in the paragraph below. Find and fix all 5. -->
+        <p>Sweet Crumb Bakery has been baking in Medina since 1998. We make
+        our bread from scrach every day, and we use real butter in all our
+        pastrys. Stop by for a fresh loaf, a warm cinamon roll, or order a
+        custom cake for you're next party. There the best in town!</p>
+
+        <p class="sale">Fresh bread is half price after 5 p.m.!</p>
+
+        <!-- TODO 12 (Headings): This section title is an h4, which skips h2
+             and h3. Change it to an h2. -->
+        <h4 id="menu">Our Menu</h4>
+
+        <div class="item">
+            <!-- TODO 13 (Alt text): No alt. Add a short alt that says what is
+                 in the picture (open the image to see it). Also add
+                 width="400" height="300". -->
+            <img src="images/fresh-bread.png">
+            <div>
+                <!-- TODO 14 (Headings): These are parts of the Menu section,
+                     so they should be h3 (not h1). Fix all three items. -->
+                <h1>Breads</h1>
+                <p>Sourdough, rye, and honey wheat. Baked before sunrise.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <!-- TODO 15 (Alt text): The alt "image" is useless. Replace it with
+                 a real description. -->
+            <img src="images/pastries.png" alt="image" width="400" height="300">
+            <div>
+                <h1>Pastries</h1>
+                <p>Croissants, cinnamon rolls, and fruit danishes.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <!-- TODO 16 (Valid HTML): This img has TWO problems the validator
+                 will catch: it has no alt, and its id "photo" is the same id
+                 used on the paragraph below. Every id must be unique. Add alt text
+                 and remove or change the duplicate id. -->
+            <img src="images/custom-cake.png" id="photo" width="400" height="300">
+            <div>
+                <h1>Custom Cakes</h1>
+                <!-- TODO 17 (Link text): "click here" does not say where the
+                     link goes. Change the link text to something like
+                     "order a custom cake". -->
+                <p>Birthdays, weddings, and graduations. To order,
+                <a href="#order">click here</a>.</p>
+            </div>
+        </div>
+
+        <!-- TODO 18 (Valid HTML): The line below has a stray closing </span>
+             tag with no opening <span>. The validator will flag it. Delete it. -->
+        <p id="photo">All cakes need 3 days notice.</span></p>
+
+        <!-- TODO 19 (Headings): Make this an h2. -->
+        <h3 id="order">Order Ahead</h3>
+
+        <form class="order-form" action="#" method="post">
+            <!-- TODO 20 (Labels): None of these labels are connected to their
+                 inputs. Give each input an id, and give each label a matching
+                 for. A placeholder is NOT a label. -->
+            <label>Your name</label>
+            <input type="text" name="customer-name" placeholder="Name">
+
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Email">
+
+            <label>What would you like?</label>
+            <textarea name="order" rows="4"></textarea>
+
+            <!-- TODO 21 (Real buttons): A div is not a button. It cannot be
+                 reached with Tab or pressed with Enter. Replace it with
+                 <button type="submit">Send Order</button> -->
+            <div class="fake-button" onclick="alert('Order sent!')">Send Order</div>
+        </form>
+
+        <h2 id="visit">Visit Us</h2>
+        <p>123 Main Street, Medina, OH 44256. Open Tuesday to Saturday, 6 a.m. to 6 p.m.</p>
+    </div>
+
+    <!-- TODO 22 (Semantic HTML + aria-label): Change this div to <footer>.
+         The three icon links have no words, so a screen reader cannot say
+         where they go. Add an aria-label to each, like
+         aria-label="Sweet Crumb Bakery on Facebook". -->
+    <div class="bottom">
+        <p>
+            <a href="https://facebook.com">f</a>
+            <a href="https://instagram.com">📷</a>
+            <a href="mailto:hello@sweetcrumb.example">✉</a>
+        </p>
+        <p>&copy; 2026 Sweet Crumb Bakery</p>
+    </div>
+
+<!--
+  =====================================================================
+  TESTING STEPS (do these after the TODOs)
+  =====================================================================
+  A. HTML validator: go to https://validator.w3.org/ , use "Validate by File
+     Upload", and check this file. Fix errors until none are left.
+     How many errors did you have the first time? ____  Now? ____
+
+  B. CSS validator: copy everything between <style> and </style>, go to
+     https://jigsaw.w3.org/css-validator/ , use "By direct input", and check it.
+     Any errors? ____
+
+  C. Keyboard test: click in the address bar, then press Tab over and over.
+     Can you reach every link, every input, and the Send Order button?
+     Can you SEE the outline each time? ____
+     (Safari on a Mac: press Option + Tab to reach links.)
+
+  D. Two browsers + narrow window: open this page in two different browsers.
+     Narrow each window until it is phone-width. Do the menu items stack?
+     Is anything cut off? Browsers used: ______________ and ______________
+     Anything different between them? ____________________________
+
+  =====================================================================
+  VOCABULARY QUESTIONS (type your answers after each question)
+  =====================================================================
+  1. What does DNS do when you type sweetcrumb.com into a browser?
+     Answer:
+
+  2. What is the difference between HTTP and HTTPS? Which one would you want
+     for the Order form, and why?
+     Answer:
+
+  3. What does TCP do with data? What does IP give every device?
+     Answer:
+
+  4. What is FTP used for?
+     Answer:
+
+  5. Is this bakery page a static site or a dynamic site? Explain.
+     Name one feature that would need a dynamic site (a database).
+     Answer:
+
+  6. Bandwidth or latency? (a) A 50 MB video takes forever to download.
+     (b) Every click waits a moment before anything starts to arrive.
+     Answer: (a) ________  (b) ________
+
+  7. What was a browser plug-in (like Flash)? What replaced it?
+     Answer:
+
+  8. The bakery owner wants to update the menu herself without learning HTML.
+     What kind of software would help? Name one example.
+     Answer:
+
+  9. The bakery wants customers to see the menu on phones and computers.
+     Name two ways to present it (responsive site, web app, mobile app,
+     desktop app) and one reason to choose each.
+     Answer:
+
+  10. What is the W3C, and why do we validate our code?
+     Answer:
+
+  11. Rename these files the right way for the web:
+      "Bakery Logo FINAL.PNG" ->            "About Us Page.html" ->
+      Answer:
+-->
+</body>
+</html>

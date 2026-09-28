@@ -176,11 +176,11 @@ Instructions: Select the BEST answer for each question. Read carefully—some qu
 - c) In a temporary cache only
 - d) On the web server only
 
-**26. After pushing code to GitHub and enabling GitHub Pages, what is the URL format for a project site?**
-- a) `github.com/username/project-name`
-- b) `username.github.io/project-name`
-- c) `github-pages.com/username/project-name`
-- d) `project-name.github.io`
+**26. You publish your site with Firebase Hosting and run `firebase deploy --only hosting`. What does the live site's address look like?**
+- a) `github.com/username/project-id`
+- b) `https://project-id.web.app`
+- c) `https://firebase.com/username/project-id`
+- d) `C:/Users/username/project-id/index.html`
 
 ---
 
@@ -369,8 +369,8 @@ Instructions: Select the BEST answer for each question. Read carefully—some qu
 **25. b) Locally on your computer's repository**
 - `git commit` saves changes to your LOCAL repo (.git folder). `git push` then uploads to GitHub. Commits aren't on the server until pushed.
 
-**26. b) `username.github.io/project-name`**
-- GitHub Pages format: `username.github.io` for user site (from repo named username.github.io), or `username.github.io/repo-name` for project sites.
+**26. b) `https://project-id.web.app`**
+- Firebase Hosting gives every project a free address made from the project ID, ending in `.web.app`. A `github.com` address shows your code, not your live site. A `C:/` path is a file on your own computer.
 
 ## TESTING & DEPLOYMENT
 

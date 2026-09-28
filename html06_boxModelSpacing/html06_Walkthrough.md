@@ -1,486 +1,350 @@
-# HTML06 Walkthrough: Box Model & Spacing
+# Lesson 06 Walkthrough: Box Model, Spacing, Display, and Position
 
-## Overview
-In this guided walkthrough, you'll build a **styled card component** from scratch, exploring padding, margin, and borders. Then you'll experiment with the **display** and **position** properties to create a simple page layout. You'll use the outline X-ray trick to see the box model at each step (browser dev tools are turned off on school computers).
+You build one practice page, one step at a time. Then you use the same skills in the practice task (`html06_Task.html`) and on your own website (`html06_DIYTask.md`).
+
+## Table of Contents
+
+1. [Set up the practice page](#1-set-up-the-practice-page)
+2. [The box model](#2-the-box-model)
+3. [Padding, border, and margin](#3-padding-border-and-margin)
+4. [Width and box-sizing](#4-width-and-box-sizing)
+5. [Centering a box with margin auto](#5-centering-a-box-with-margin-auto)
+6. [The X-ray trick: see every box](#6-the-x-ray-trick-see-every-box)
+7. [The display property](#7-the-display-property)
+8. [Hover effects with :hover](#8-hover-effects-with-hover)
+9. [The position property](#9-the-position-property)
+10. [Common mistakes](#10-common-mistakes)
 
 ---
 
-## Part 1: Understanding Box Model (Card Component)
+## 1. Set up the practice page
 
-### Step 1: Create a Basic Card
-
-Create a file called `card.html` and build this structure:
+Make a file named `boxPractice.html` and paste this in. The CSS goes in a `<style>` block so you can see everything in one file. (Your real website uses `styles.css`.)
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Card Component</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model Practice</title>
   <style>
-    /* First, apply box-sizing: border-box to all elements */
-    * {
-      box-sizing: border-box;
-    }
-
-    /* Style the card container */
-    .card {
-      width: 300px;
-      background-color: #f5f5f5;
-    }
-
-    .card-title {
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .card-body {
-      font-size: 14px;
-      color: #555;
-    }
-  </style>
-</head>
-<body>
-  <div class="card">
-    <h2 class="card-title">My First Card</h2>
-    <p class="card-body">This is a simple card component to learn the box model.</p>
-  </div>
-</body>
-</html>
-```
-
-**Try This:** Open in browser. Notice the card looks flat with no spacing.
-
----
-
-### Step 2: Add Padding (Interior Space)
-
-Padding goes *inside* the border, between content and border. It makes the card "breathe."
-
-```css
-.card {
-  width: 300px;
-  background-color: #f5f5f5;
-  padding: 20px;  /* 20px space inside all sides */
-}
-
-.card-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: 0;  /* Remove default margin */
-  padding-bottom: 10px;
-}
-
-.card-body {
-  font-size: 14px;
-  color: #555;
-  margin: 0;  /* Remove default margin */
-}
-```
-
-**Try This:**
-- Change `padding: 20px;` to `padding: 40px;`. Notice more space inside.
-- Try `padding: 10px 20px;` (top/bottom 10px, left/right 20px).
-
-**Question:** Does padding make the card wider?
-Answer: It depends on `box-sizing`. With `border-box`, NO. With `content-box`, YES.
-
----
-
-### Step 3: Add a Border
-
-A border is a line around the padding layer.
-
-```css
-.card {
-  width: 300px;
-  background-color: #f5f5f5;
-  padding: 20px;
-  border: 2px solid #333;  /* 2px width, solid style, color #333 */
-  border-radius: 8px;  /* Rounded corners */
-}
-```
-
-**Try This:**
-- Change `border: 2px solid #333;` to `border: 4px dashed #999;`
-- Try `border: 1px dotted #ccc;`
-- Experiment with `border-radius: 0px;` vs `border-radius: 16px;`
-
----
-
-### Step 4: Add Margin (Exterior Space)
-
-Margin is space *outside* the border. It separates elements from each other.
-
-```css
-.card {
-  width: 300px;
-  background-color: #f5f5f5;
-  padding: 20px;
-  border: 2px solid #333;
-  border-radius: 8px;
-  margin: 30px;  /* 30px space outside all sides */
-}
-```
-
-Create a second card to see margin in action:
-
-```html
-<div class="card">
-  <h2 class="card-title">Card One</h2>
-  <p class="card-body">First card with margin.</p>
-</div>
-
-<div class="card">
-  <h2 class="card-title">Card Two</h2>
-  <p class="card-body">Second card. Notice the space between cards.</p>
-</div>
-```
-
-**Try This:**
-- Change `margin: 30px;` to `margin: 10px;`. Cards get closer.
-- Try `margin: 0;`. Cards touch.
-- Set only left margin: `margin-left: 50px;`
-
----
-
-### Step 5: See the Box Model with the X-Ray Trick
-
-Browser dev tools (Inspect) are turned off on school computers, so we use CSS itself to see the boxes.
-
-**Add this line at the very top of your CSS:**
-
-```css
-* { outline: 1px solid red; }
-```
-
-Every element now has a thin red line around its edge. An outline does not take up any space, so nothing on the page moves.
-
-Look at the card:
-- The **background color** fills the content and the **padding**
-- The **border** is the line you set on the card
-- The **margin** is the empty space outside the border, between the card and the next thing
-
-**Try This:**
-- Change `padding: 20px;` to `padding: 40px;`. The background area grows, and the text moves farther from the border.
-- Change `margin: 30px;` to `margin: 60px;`. The card stays the same size, but the space around it grows.
-- Change both back, then **delete the outline line** when you're done.
-
----
-
-## Part 2: Display Property
-
-### Step 6: Create Elements with Different Display Values
-
-Create a file called `display-demo.html`:
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Display Property Demo</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       font-family: Arial, sans-serif;
-      margin: 20px;
+      margin: 0;                  /* remove the browser's default space around the page */
+      background-color: #eeeeee;
     }
-
-    /* Block elements (default for divs) */
-    .block-box {
-      display: block;
-      width: 200px;
-      height: 80px;
-      background-color: #e3f2fd;
-      border: 2px solid #1976d2;
-      padding: 10px;
-      margin-bottom: 20px;
-    }
-
-    /* Inline elements (default for span) */
-    .inline-box {
-      display: inline;
-      background-color: #fff3e0;
-      border: 2px solid #f57c00;
-      padding: 5px 10px;
-      margin-right: 10px;
-    }
-
-    /* Inline-block (inline flow + respects width/height) */
-    .inline-block-box {
-      display: inline-block;
-      width: 150px;
-      height: 60px;
-      background-color: #f3e5f5;
-      border: 2px solid #7b1fa2;
-      padding: 10px;
-      margin: 10px 10px 10px 0;
-    }
-
-    /* Hidden element */
-    .hidden-box {
-      display: none;
-      background-color: #ffebee;
-    }
+    /* Add each new rule below this line */
   </style>
 </head>
 <body>
-  <h1>Display Property Examples</h1>
-
-  <!-- Block example -->
-  <h2>Block Elements</h2>
-  <div class="block-box">Block 1 (full width)</div>
-  <div class="block-box">Block 2 (starts new line)</div>
-
-  <!-- Inline example -->
-  <h2>Inline Elements</h2>
-  <span class="inline-box">Inline 1</span>
-  <span class="inline-box">Inline 2</span>
-  <span class="inline-box">Inline 3</span>
-  <p>Notice inline elements flow with text.</p>
-
-  <!-- Inline-block example -->
-  <h2>Inline-Block Elements</h2>
-  <div class="inline-block-box">Inline-Block 1</div>
-  <div class="inline-block-box">Inline-Block 2</div>
-  <div class="inline-block-box">Inline-Block 3</div>
-  <p>Inline-block elements sit side-by-side but respect width/height.</p>
-
-  <!-- Hidden element -->
-  <div class="hidden-box">This is hidden (display: none)</div>
-  <p>The hidden element takes NO space on the page.</p>
-</body>
-</html>
-```
-
-**Try This:**
-- Change `.block-box` to `display: inline;`. Notice width is ignored.
-- Change `.inline-box` to `display: block;`. Notice it takes full width.
-- Change `.inline-block-box` to `display: block;`. Notice they stack vertically.
-
----
-
-## Part 7: Position Property
-
-### Create a Layout with Headers and Footers
-
-Create `layout-demo.html`:
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Layout with Positioning</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    /* Fixed header at top */
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 60px;
-      background-color: #1976d2;
-      color: white;
-      padding: 15px 20px;
-      z-index: 100;  /* Stay on top */
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    /* Main content (push down to avoid header) */
-    main {
-      margin-top: 60px;  /* Match header height */
-      padding: 20px;
-      min-height: calc(100vh - 180px);  /* Fill space */
-    }
-
-    /* Fixed footer at bottom */
-    footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 60px;
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 15px 20px;
-    }
-
-    footer p {
-      margin: 0;
-    }
-
-    /* Adjust main to not overlap footer */
-    body {
-      margin-bottom: 60px;  /* Space for footer */
-    }
-  </style>
-</head>
-<body>
-  <!-- Fixed header -->
   <header>
-    <h1>My Website</h1>
+    <h1>Box Model Practice</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
   </header>
-
-  <!-- Main content -->
   <main>
-    <h2>Welcome</h2>
-    <p>This page demonstrates fixed header and footer positioning.</p>
-    <p>The header stays at the top and the footer at the bottom when you scroll.</p>
-    <p>Try scrolling to see how position: fixed keeps them in place.</p>
-
-    <!-- Add extra content to enable scrolling -->
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+    <div class="card">
+      <h2>Card One</h2>
+      <p>A card is a box with a heading and some text.</p>
+    </div>
+    <div class="card">
+      <h2>Card Two</h2>
+      <p>We will use cards to learn padding, border, and margin.</p>
+    </div>
   </main>
-
-  <!-- Fixed footer -->
-  <footer>
-    <p>&copy; 2024 Medina County Career Center</p>
-  </footer>
 </body>
 </html>
 ```
 
-**Try This:**
-- Change `position: fixed;` to `position: absolute;` on header. Notice it scrolls away.
-- Remove `margin-top: 60px;` from main. Notice header overlaps content.
-- Change `z-index: 100;` to `z-index: 1;` on header. Does it still work?
+Open it in the browser. Everything is squished together. That is what we fix.
 
 ---
 
-## Part 8: Relative & Absolute Positioning
+## 2. The box model
 
-Create `positioning-advanced.html`:
+Every HTML element is a rectangle, called a **box**. Each box has four layers, from the inside out:
+
+```
++--------------------------------------+
+|  MARGIN   (space outside the border) |
+|  +--------------------------------+  |
+|  |  BORDER  (the line)            |  |
+|  |  +--------------------------+  |  |
+|  |  |  PADDING (space inside)  |  |  |
+|  |  |  +--------------------+  |  |  |
+|  |  |  |  CONTENT           |  |  |  |
+|  |  |  +--------------------+  |  |  |
+|  |  +--------------------------+  |  |
+|  +--------------------------------+  |
++--------------------------------------+
+```
+
+| Layer | What it is |
+|---|---|
+| Content | The text or image |
+| Padding | Space between the content and the border. The background color fills it. |
+| Border | A line around the padding |
+| Margin | Space outside the border. Always see-through. Pushes other boxes away. |
+
+**Padding is inside. Margin is outside.**
+
+---
+
+## 3. Padding, border, and margin
+
+Add this CSS:
+
+```css
+/* A card: space inside, a line around it, space outside */
+.card {
+  background-color: white;
+  padding: 1.5rem;              /* space INSIDE the border */
+  border: 2px solid #1565c0;    /* width, style, color */
+  border-radius: 8px;           /* rounded corners */
+  margin: 1rem;                 /* space OUTSIDE the border */
+}
+
+/* Headings come with a top margin. Remove it inside the card. */
+.card h2 {
+  margin-top: 0;
+}
+```
+
+**Try it:**
+- Change the padding to `3rem`. The white area grows.
+- Change the margin to `3rem`. The cards stay the same size, but the space between them grows.
+- Change the border to `4px dashed gray`. Then put it back.
+
+**Units:** use `rem` for padding, margin, and font sizes (Lesson 05). Use `px` for borders so the line stays thin.
+
+### Shorthand: 1, 2, or 4 values
+
+Four values always go clockwise from the top: **top, right, bottom, left**.
+
+```css
+padding: 1rem;                 /* all 4 sides */
+padding: 1rem 2rem;            /* top and bottom 1rem, left and right 2rem */
+padding: 1rem 2rem 3rem 4rem;  /* top, right, bottom, left */
+margin-bottom: 2rem;           /* one side only (also: -top, -right, -left) */
+```
+
+---
+
+## 4. Width and box-sizing
+
+Add `width: 300px;` to `.card`. By default the browser adds padding and border **on top of** the width:
+
+```
+300 (width) + 24 + 24 (padding) + 2 + 2 (border) = 352px on screen
+```
+
+That default is `box-sizing: content-box`. The fix is one rule at the **top** of your CSS:
+
+```css
+/* width now INCLUDES padding and border. 300px means 300px. */
+* {
+  box-sizing: border-box;
+}
+```
+
+`*` is the **universal selector**. It picks every element.
+
+| box-sizing | `width: 300px` with 1.5rem padding and 2px border |
+|---|---|
+| `content-box` (default) | 352px on screen |
+| `border-box` (use this) | 300px on screen |
+
+Margin is never inside the width. It is always extra space outside.
+
+`height` works the same way, but use it rarely. If the text is taller than the height, it spills out of the box.
+
+---
+
+## 5. Centering a box with margin auto
+
+Give a box a width, then set left and right margin to `auto`. The browser splits the leftover space evenly.
+
+```css
+/* Center the main area */
+main {
+  max-width: 50rem;     /* never wider than 50rem; shrinks on a phone */
+  margin: 0 auto;       /* 0 top and bottom, auto left and right = centered */
+  padding: 1rem;
+}
+```
+
+- `margin: auto` needs a `width` or `max-width`. A full-width box has nothing to center.
+- `text-align: center` centers the **text inside** a box, not the box itself.
+
+---
+
+## 6. The X-ray trick: see every box
+
+Developer tools are turned off on school computers, so we use CSS to see the boxes. Add this line at the **very top** of your CSS:
+
+```css
+* { outline: 1px solid red; }   /* X-RAY: shows every box. Remove when done. */
+```
+
+Every element gets a thin red line around its edge. An **outline** takes up no space, so nothing moves. (A border would change the layout.) Empty space between two red lines is margin.
+
+**Try it:** with the X-ray on, change the card's padding and margin and watch which space grows. Then delete the line, or turn it into a comment. Never leave it in finished work.
+
+---
+
+## 7. The display property
+
+`display` controls how a box sits on the page.
+
+| Value | New line? | Width and height work? | Normal examples |
+|---|---|---|---|
+| `block` | Yes, full width | Yes | `div`, `p`, `h1`, `section`, `header` |
+| `inline` | No, sits in the text | No | `a`, `span`, `strong` |
+| `inline-block` | No, sits side by side | Yes | Nav buttons, cards in a row |
+| `none` | Hidden, takes no space | Not shown | Anything you want to hide |
+
+```css
+/* Cards side by side instead of stacked */
+.card {
+  display: inline-block;
+  vertical-align: top;          /* line up the tops */
+  width: 15rem;
+}
+
+/* Links are inline, so top/bottom padding doesn't push anything.
+   inline-block makes them real buttons. */
+nav a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  background-color: #1565c0;
+  color: white;
+  text-decoration: none;        /* remove the underline */
+  border-radius: 4px;
+}
+
+/* Hide anything with class="hidden". It leaves no gap. */
+.hidden {
+  display: none;
+}
+```
+
+**Try it:** change `nav a` to `display: block;`. Each link becomes a full-width bar. Change it back. Narrow the window and watch the cards wrap.
+
+---
+
+## 8. Hover effects with :hover
+
+`:hover` is a **pseudo-class**. The rule only applies while the mouse is on the element. Write the normal rule first, then a `:hover` rule with only the changes.
+
+```css
+/* Only while the mouse is on a nav link */
+nav a:hover {
+  background-color: #0d47a1;    /* darker blue */
+}
+
+/* Only while the mouse is on a card */
+.card:hover {
+  border-color: #ff9800;
+}
+```
+
+Hover effects tell visitors "you can click this." Keep them simple: change a color, background, or border. Optional: add `transition: background-color 0.3s;` to the normal `nav a` rule so the color fades instead of snapping.
+
+---
+
+## 9. The position property
+
+`position` moves a box out of its normal spot. Use it for a few special jobs. (Lesson 07 flexbox handles most layout.)
+
+| Value | What it does | Common use |
+|---|---|---|
+| `static` | Default. Normal flow. | Almost everything |
+| `relative` | Stays in the flow. Becomes the anchor for `absolute` children. | Parent of a badge |
+| `absolute` | Leaves the flow. Placed from the nearest parent that is not static. | Badge in a card corner |
+| `fixed` | Leaves the flow. Placed on the browser window. Stays put when you scroll. | "Back to top" button |
+| `sticky` | Scrolls normally until it reaches its `top` value, then sticks. | Header that stays at the top |
+
+`top`, `right`, `bottom`, and `left` only work when position is not static. **z-index** decides which box is on top when boxes overlap. Higher number = on top.
+
+### Sticky header
+
+```css
+header {
+  position: sticky;
+  top: 0;                       /* stick at the top edge of the window */
+  z-index: 10;                  /* stay above content scrolling under it */
+  background-color: #0d2a4a;    /* solid background, or content shows through */
+  color: white;
+  padding: 1rem;
+}
+header h1 {
+  margin: 0;
+}
+```
+
+Copy a card a few more times so the page scrolls. The header stays at the top. A `fixed` header would also stay, but it leaves the flow, so it covers the top of the page. Sticky keeps its space.
+
+### Badge in the corner (relative + absolute)
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Relative & Absolute Positioning</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      padding: 20px;
-      font-family: Arial, sans-serif;
-    }
-
-    /* Parent container with relative positioning */
-    .container {
-      position: relative;  /* Create positioning context */
-      width: 400px;
-      height: 300px;
-      background-color: #f5f5f5;
-      border: 2px solid #333;
-      margin-bottom: 30px;
-    }
-
-    /* Absolute child positioned within parent */
-    .box {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      background-color: #1976d2;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-    }
-
-    .box1 {
-      top: 10px;
-      left: 10px;
-    }
-
-    .box2 {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);  /* Center the box */
-    }
-
-    .box3 {
-      bottom: 10px;
-      right: 10px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Relative & Absolute Positioning</h1>
-
-  <div class="container">
-    <div class="box box1">Top Left</div>
-    <div class="box box2">Center</div>
-    <div class="box box3">Bottom Right</div>
-  </div>
-
-  <p>Parent container has position: relative (creates positioning context)</p>
-  <p>Child boxes have position: absolute (positioned within parent)</p>
-</body>
-</html>
+<div class="card has-badge">
+  <span class="badge">NEW</span>
+  <h2>Card Three</h2>
+  <p>This card has a badge.</p>
+</div>
 ```
 
-**Try This:**
-- Remove `position: relative;` from `.container`. Where do boxes move?
-- Change `.box1` offsets: `top: 50px;` and `left: 100px;`
-- Try `bottom: 0; right: 0;` on `.box3`. Does it stick to bottom-right corner?
+```css
+.has-badge {
+  position: relative;           /* the anchor for the badge */
+}
+.badge {
+  position: absolute;           /* placed from the parent's corner */
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: #ff9800;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+```
+
+**Try it:** remove `position: relative;` from `.has-badge`. The badge jumps to the corner of the whole page. Put it back.
+
+### Fixed "Back to top" link
+
+```html
+<!-- right before </body> -->
+<a href="#" class="to-top">Back to top</a>
+```
+
+```css
+.to-top {
+  position: fixed;              /* stays in the window corner while scrolling */
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #1565c0;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+```
 
 ---
 
-## Summary: Key Takeaways
+## 10. Common mistakes
 
-1. **Box Model** = Content + Padding + Border + Margin
-   - Padding = inside space
-   - Margin = outside space
-
-2. **box-sizing: border-box;** prevents width surprises
-
-3. **Display** controls how elements flow:
-   - `block` = full width, new line
-   - `inline` = flows with text, width/height ignored
-   - `inline-block` = inline + respects width/height
-   - `none` = completely hidden
-
-4. **Position** controls element placement:
-   - `static` = normal flow (default)
-   - `relative` = relative to normal position
-   - `absolute` = relative to positioned parent
-   - `fixed` = relative to viewport
-
-5. **The X-ray trick** (`* { outline: 1px solid red; }`) shows every box's edges so you can debug spacing and layout
-
----
-
-## Challenge: Modify the Card
-
-Try these modifications to deepen your understanding:
-
-1. Add a second card and change margin/padding between them
-2. Make cards display inline-block so they sit side-by-side
-3. Add a positioned badge (position: absolute) to card corner
-4. Turn on the X-ray trick to check your changes
-5. Create a card with different padding on each side: `padding: 10px 20px 30px 40px;`
-
-Turn on the X-ray trick after each change to check your work, then take it out.
+| Problem | Fix |
+|---|---|
+| Box is wider than the width you set | Add `* { box-sizing: border-box; }` at the top of the CSS |
+| Box won't center | Give it `max-width` and `margin: 0 auto;` |
+| Padding or width on a link does nothing | Links are inline. Add `display: inline-block;` |
+| Absolute badge flies to the page corner | Add `position: relative;` to the parent |
+| Sticky header doesn't stick | Add `top: 0;` |
+| Content shows through the header | Give the header a `background-color` |
+| Can't tell where the space comes from | Turn on the X-ray trick |

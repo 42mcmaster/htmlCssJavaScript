@@ -1,180 +1,356 @@
-# HTML09 DIY Task: Mad Libs Story Generator
+# Lesson 09 DIY Task: Add JavaScript to Your Website
 
-## Project Overview
+Add JavaScript to the website you have been building in your `DiyWebsite_Lastname` folder. This is the graded item for Lesson 09. The `html09_Task.html` practice file gets you ready for it.
 
-You will create a **Mad Libs** style page generator using JavaScript variables and functions. Mad Libs is a fun word game where you ask for random words, plug them into a story template, and create hilarious results!
+1. A **dark mode button** in the header of every page
+2. **Form checks** on your contact form, so it can't send bad information
+3. **Comments** in your JavaScript that explain what each part does
 
-Your page will:
-- Store words in JavaScript variables
-- Use a function to combine those words into a funny story
-- Display the result on the HTML page (not just console.log)
-
-## Learning Goals
-
-By completing this project, you will:
-- Use variables to store data of different types
-- Write and call functions with parameters
-- Use template literals to build multi-line strings
-- Practice HTML and JavaScript integration
-- Create an interactive, dynamic web page
+All of your JavaScript goes in **one new file**, `script.js`. Every page links to it. No JavaScript inside your HTML pages, and no `alert()` pop-ups.
 
 ---
 
-## Requirements
+## Where Everything Goes
 
-### 1. HTML Structure
-- Create a valid HTML5 page with proper `<!DOCTYPE>`, `<head>`, and `<body>`
-- Add a title that describes your Mad Libs game
-- Include instructions for the user explaining what your Mad Libs generator does
-- Create a `<div>` or `<p>` element with an ID (like `id="storyOutput"`) where the story will display
-- Link to an external JavaScript file (not inline)
+Work in your `DiyWebsite_Lastname` folder at the top of your `htmlCssJavaScript` repo. When you're done, it should look like this:
 
-### 2. JavaScript Variables
-Create at least **8 variables** that store different types of words:
-- At least **2 adjectives** (descriptive words like "purple," "sparkly")
-- At least **2 nouns** (people, places, things like "elephant," "pizza")
-- At least **2 verbs** (action words like "dance," "sing")
-- At least **2 other words** (adverbs, colors, foods, numbers, etc.)
-
-Example:
-```javascript
-let adjective1 = 'silly';
-let adjective2 = 'mysterious';
-let noun1 = 'penguin';
-let noun2 = 'spaceship';
-let verb1 = 'juggle';
-let verb2 = 'explore';
-let adverb = 'frantically';
-let number = 42;
+```
+DiyWebsite_Lastname/
+├── index.html      <- add the dark mode button + link script.js
+├── about.html      <- add the dark mode button + link script.js
+├── contact.html    <- add the dark mode button + link script.js + error message spots
+├── gallery.html    <- add the dark mode button + link script.js
+├── template.html   <- add the dark mode button + link script.js
+├── images/
+├── media/
+├── styles.css      <- colors move into variables; add dark mode colors
+└── script.js       <- NEW file: all of your JavaScript
 ```
 
-### 3. JavaScript Function
-Write a function that:
-- Has a name that describes what it does (like `generateMadLibsStory` or `createFunnyStory`)
-- Takes **parameters** for at least 4 of your variables
-- Uses a **template literal** to build a story string that combines all the parameters
-- **Returns** the complete story as a string
+| File | What changes |
+|---|---|
+| `styles.css` | Your colors move into variables on `:root`. A new `body.dark-mode` rule gives the dark colors. Add `.error` and `.success` styles. |
+| `script.js` | New file. The dark mode code and the form check code, with comments. |
+| Every `.html` page | A dark mode `<button>` in the header. A `<script src="script.js"></script>` line right before `</body>`. |
+| `contact.html` | Also: `novalidate` on the form, an error `<span>` under each field you check, and a success line. |
 
-Example structure:
-```javascript
-function generateMadLibsStory(adj1, noun1, verb1, adj2) {
-  return `Once upon a time, a ${adj1} ${noun1} decided to ${verb1} in a very ${adj2} way!`;
+---
+
+## Part 1: Link script.js on Every Page
+
+1. In VS Code, make a new file in your `DiyWebsite_Lastname` folder named `script.js`.
+2. Put this at the top of it for now:
+
+```js
+// script.js - JavaScript for my website
+// This file is linked on every page.
+```
+
+3. On **every** page (including `template.html`), add this line right before `</body>`:
+
+```html
+  <script src="script.js"></script>
+</body>
+```
+
+The script goes at the end of the body so the page's HTML is already loaded when the script runs. If the script is at the top, it looks for your button before the button exists.
+
+---
+
+## Part 2: Dark Mode Button
+
+### 2a. Move your colors into variables (styles.css)
+
+Right now your colors are typed straight into your CSS rules, like `background-color: #faf7f2;`. Move them into **custom properties** (CSS variables) at the top of `styles.css`. Use your own colors, not these:
+
+```css
+/* Light colors (the default) */
+:root {
+  --bg-color: #faf7f2;
+  --text-color: #2a2118;
+  --accent-color: #7a4a1f;
+  --surface-color: #ffffff;   /* header, footer, cards */
 }
 ```
 
-### 4. Display the Story on the Page
-- Call your function with your variables as arguments
-- Capture the result in a variable
-- Use `document.getElementById()` or similar DOM method to insert the story into your HTML element
-- The story must **display on the page**, not just in the console
+Then go through your rules and swap each color for its variable:
 
-Example:
-```javascript
-let myStory = generateMadLibsStory(adjective1, noun1, verb1, adjective2);
-document.getElementById('storyOutput').textContent = myStory;
+```css
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;   /* fades instead of snapping */
+}
+
+header, footer {
+  background-color: var(--surface-color);
+}
+
+a {
+  color: var(--accent-color);
+}
 ```
 
-### 5. Comments
-- Add a comment explaining what each variable stores
-- Add a comment above your function explaining what it does
-- Add a comment explaining how the story is displayed
+Refresh your pages. Nothing should look different yet. That means you did it right.
 
-### 6. Code Quality
-- Use **camelCase** for all variable and function names
-- Use meaningful variable names (not `x`, `y`, or `a`, `b`)
-- Indent your code properly for readability
-- Make sure all HTML and JavaScript is valid
+### 2b. Add the dark colors (styles.css)
 
----
+Under the `:root` rule, add the dark version. Same variable names, new values:
 
-## Stretch Goals (Optional Enhancements)
-
-Choose one or more to make your Mad Libs even better:
-
-1. **Add a Button** — Create a button that generates a new story with different words each time it's clicked
-   ```html
-   <button onclick="generateNewStory()">Generate New Story</button>
-   ```
-
-2. **Multiple Stories** — Write multiple functions that each generate different stories, then randomly pick one to display
-
-3. **User Input** — Ask the user for words using `prompt()` instead of storing them in variables
-   ```javascript
-   let userAdjective = prompt('Give me an adjective:');
-   ```
-
-4. **Style It** — Add CSS to make your story display beautifully (color, fonts, borders, etc.)
-
-5. **HTML to Text** — Instead of using `textContent`, use `innerHTML` and add HTML formatting (paragraphs, bold text, line breaks, etc.)
-
-6. **Story Variations** — Create a longer, more complex story with more than 8 variables
-
----
-
-## Example Solution Overview
-
-Your final page should:
-- Have a title like "Mad Libs Story Generator"
-- Show instructions: "This page creates silly stories using random words and JavaScript!"
-- Have a clear area where the story appears
-- Display a complete, funny sentence (at least 2-3 sentences long)
-- Have well-commented JavaScript code
-
-Example output might look like:
-```
-Once upon a time, a purple penguin decided to juggle while wearing mysterious pajamas!
-The penguin sang 42 songs and danced with a sparkly robot.
-Everyone laughed and clapped for the silly astronaut!
+```css
+/* Dark mode: same names, darker colors */
+body.dark-mode {
+  --bg-color: #211a12;
+  --text-color: #f0e9df;
+  --accent-color: #d9a662;
+  --surface-color: #2e251a;
+}
 ```
 
----
+When the `dark-mode` class is on `<body>`, every rule that uses a variable picks up the dark color. Make sure text is still easy to read in both modes.
 
-## Testing Checklist
+### 2c. Add the button (every page)
 
-Before you submit, verify:
-- [ ] HTML file is valid and displays in a browser
-- [ ] JavaScript file is linked correctly and loads
-- [ ] Variables are declared with `let` or `const`
-- [ ] Function takes parameters and uses a template literal
-- [ ] Story displays on the page (not just console)
-- [ ] No console errors (check F12 Developer Tools)
-- [ ] Code is commented and uses camelCase
-- [ ] Story makes sense and is funny/creative
+Put this button inside the `<header>` on every page, after your nav:
 
----
+```html
+<button id="theme-toggle" type="button">Dark mode</button>
+```
 
-## Deliverables
+It is a `<button>`, not a link, because it does something on the page. It doesn't go to another page.
 
-Submit two files:
-1. **html09_DIYTask_[YourName].html** — Your HTML page
-2. **html09_DIYTask_[YourName].js** — Your external JavaScript file
+### 2d. Write the JavaScript (script.js)
 
-Or combine as:
-- **html09_DIYTask_[YourName].html** — Single file with inline script (if preferred)
+```js
+// ----- Dark mode button -----
 
----
+// Find the button in the header
+const themeBtn = document.getElementById('theme-toggle');
 
-## Rubric
+// When it is clicked, turn the dark-mode class on or off
+themeBtn.addEventListener('click', function () {
+  document.body.classList.toggle('dark-mode');
 
-| Criterion | Points | Notes |
-|-----------|--------|-------|
-| HTML Structure (valid, proper tags, ID for output) | 20 | Must be valid HTML5 |
-| Variables (8+ variables, multiple types) | 20 | Use let/const, meaningful names |
-| Function (parameters, template literal, return) | 20 | Must take 4+ parameters |
-| Display on Page (DOM manipulation) | 20 | Story must appear in HTML |
-| Comments & Code Quality | 10 | camelCase, indentation, clarity |
-| Creativity & Humor | 10 | Story is funny and engaging |
-| **Total** | **100** | |
+  // Change the button words to match the mode
+  if (document.body.classList.contains('dark-mode')) {
+    themeBtn.textContent = 'Light mode';
+  } else {
+    themeBtn.textContent = 'Dark mode';
+  }
+});
+```
+
+Type it yourself. Don't paste it. Then test the button on every page.
+
+**Note:** when you click to a different page, it goes back to light mode. That's expected. Each page starts fresh.
 
 ---
 
-## Getting Started
+## Part 3: Check the Contact Form (contact.html + script.js)
 
-1. Create an HTML file with a title, instructions, and an output area
-2. Create a JavaScript file with variables for at least 8 words
-3. Write a function that takes those words as parameters
-4. Call the function and display the result on the page
-5. Test in your browser
-6. Enhance with stretch goals if desired
+Your contact form from Lesson 08 already has `required` on some fields. Now JavaScript will check the form and write friendly messages on the page.
 
-Happy coding! Have fun creating silly stories!
+### 3a. Get the form ready (contact.html)
+
+1. Make sure the form has `id="contact-form"`.
+2. Add `novalidate` to the form tag. This turns off the browser's pop-up bubbles so your messages show instead. Keep your `required` attributes.
+3. Make sure these three fields have these ids. If yours are different, change the `id` **and** the matching label's `for`:
+   - the name box: `id="name"`
+   - the email box: `id="email"`
+   - the message box (textarea): `id="message"`
+4. Under each of those three fields, add an empty `<span>` for its error message.
+5. At the bottom of the form, add a success line that starts out hidden.
+
+It should look something like this. Your other fields (radio buttons, checkboxes, select, fieldset) stay where they are:
+
+```html
+<form id="contact-form" novalidate>
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required>
+  <span class="error" id="name-error"></span>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
+  <span class="error" id="email-error"></span>
+
+  <!-- your other fields stay here -->
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" rows="4" required></textarea>
+  <span class="error" id="message-error"></span>
+
+  <button type="submit">Send</button>
+  <button type="reset">Clear</button>
+
+  <p class="success" id="form-success" hidden>Thanks! Your message passed every check.</p>
+</form>
+```
+
+### 3b. Style the messages (styles.css)
+
+```css
+.error {
+  display: block;
+  color: #b3261e;
+}
+
+.success {
+  color: #1b7f3a;
+  font-weight: bold;
+}
+```
+
+Check that both colors are readable in dark mode too. If not, add a `body.dark-mode .error { ... }` rule with a lighter color.
+
+### 3c. Write the checks (script.js)
+
+Your form needs **at least these three checks**:
+
+| Field | Rule | Example message |
+|---|---|---|
+| Name | Can't be empty | Please enter your name. |
+| Email | Must include `@` | Please enter an email address with an @. |
+| Message | At least 10 characters | Your message must be at least 10 characters. |
+
+Here is the start. It shows the name check. You write the email and message checks the same way.
+
+```js
+// ----- Contact form checks -----
+
+// Find the form. Only contact.html has one, so on other pages this is null.
+const form = document.getElementById('contact-form');
+
+// Only set up the checks if this page has the form
+if (form) {
+  form.addEventListener('submit', function (event) {
+    // Stop the form from sending until we check it
+    event.preventDefault();
+
+    // Start by assuming everything is fine
+    let allGood = true;
+
+    // Check 1: the name can't be empty
+    const nameBox = document.getElementById('name');
+    const nameError = document.getElementById('name-error');
+    if (nameBox.value.trim() === '') {
+      nameError.textContent = 'Please enter your name.';
+      allGood = false;
+    } else {
+      nameError.textContent = '';
+    }
+
+    // Check 2: the email needs an @
+    // (your code here - use emailBox.value.includes('@'))
+
+    // Check 3: the message needs at least 10 characters
+    // (your code here - use messageBox.value.trim().length)
+
+    // Show the thank-you line only when every check passed
+    document.getElementById('form-success').hidden = !allGood;
+  });
+}
+```
+
+Why `if (form)`? `script.js` runs on every page. On `about.html` there is no form, so `form` is empty (`null`). Without the `if`, the script would crash on those pages.
+
+### 3d. Test it
+
+Try each of these on `contact.html`:
+
+1. Click Send with everything empty. All three messages show up.
+2. Type an email with no `@`. The email message shows.
+3. Type a message shorter than 10 characters. The message check shows.
+4. Fill everything in correctly. The errors go away and the thank-you line shows.
+5. Click the dark mode button. The messages are still easy to read.
+
+---
+
+## Part 4: Comments (script.js)
+
+Your JavaScript must be commented (ODE 6.3.3).
+
+1. Put a comment above each part (dark mode, form checks) saying what it does.
+2. Put a one-line comment above each `if` check saying what it checks.
+3. At the top of `script.js`, write **2 or 3 sentences** in a comment saying what a real website does with the form data after it passes your checks. Use the words **server**, **database**, and **check it again**. For example:
+
+```js
+// What happens to the form data on a real site:
+// When the form passes these checks, the browser sends the data to a web server.
+// The server checks it again, because a user can get around JavaScript.
+// Then the server saves it in a database or sends it on to a web service, like email.
+```
+
+Write it in your own words.
+
+---
+
+## Part 5: Finish and Push
+
+1. Open every page. Click the dark mode button on each one.
+2. Run all 4 contact form tests again.
+3. Run each page through https://validator.w3.org/ and fix the errors.
+4. In GitHub Desktop, commit with a message like `html09: dark mode and form checks`, then Push.
+5. Check on github.com that `script.js` is in your `DiyWebsite_Lastname` folder.
+
+---
+
+## Checklist
+
+**script.js**
+- [ ] `script.js` is in the `DiyWebsite_Lastname` folder
+- [ ] Every page links it with `<script src="script.js"></script>` right before `</body>`
+- [ ] No JavaScript inside the HTML pages, no `alert()`
+
+**Dark mode**
+- [ ] Colors moved into variables on `:root` in `styles.css`
+- [ ] `body.dark-mode` rule with the dark colors
+- [ ] `<button id="theme-toggle">` in the header on every page
+- [ ] Clicking it switches the page between light and dark
+- [ ] The button words change (Dark mode / Light mode)
+- [ ] Text is readable in both modes
+
+**Form checks (contact.html)**
+- [ ] Form has `id="contact-form"` and `novalidate`
+- [ ] Name, email, and message each have an error `<span>`
+- [ ] Empty name shows a message on the page
+- [ ] Email without `@` shows a message on the page
+- [ ] Message under 10 characters shows a message on the page
+- [ ] Thank-you line shows only when everything passes
+
+**Comments**
+- [ ] A comment above each part and each check
+- [ ] The server / database comment at the top, in your own words
+
+**Finish**
+- [ ] All pages still work: nav, images, video, table, form
+- [ ] All pages pass the validator
+- [ ] Pushed to GitHub with GitHub Desktop
+
+---
+
+## Grading
+
+| Criteria | Looking for |
+|---|---|
+| **script.js linked** | One external `script.js`, linked at the end of the body on every page, no JavaScript inside the HTML |
+| **Dark mode** | Colors in variables, a `body.dark-mode` rule, a real button in the header on every page, button words change, readable in both modes |
+| **Form checks** | Name, email, and message checks on `contact.html`, messages written on the page (not `alert()`), thank-you line only when everything passes |
+| **Comments** | Each part and each check has a comment; the server / database comment is there in the student's own words |
+| **Site still works** | Every page loads, every link works, nothing from earlier lessons broke, pages pass the validator |
+| **Pushed** | On GitHub with `script.js` in the `DiyWebsite_Lastname` folder |
+
+Mostly done with a working page and only a few things missing is full credit. Several things missing is one step down. Missing work gets no credit.
+
+---
+
+## If something goes wrong
+
+- **The button does nothing:** check that the `<script>` line is right before `</body>`, and that the file name is spelled `script.js` exactly. Then check that the button's id is `theme-toggle` in both the HTML and the JavaScript.
+- **The button works on one page but not another:** that page is missing the button or the `<script>` line.
+- **The dark mode button stopped working on contact.html only:** there is a typo in the form code. A mistake anywhere in `script.js` can stop the whole file. Check your brackets `{ }` and parentheses `( )`. Every one that opens has to close.
+- **Dark mode only changes some colors:** those rules still have a real color typed in. Swap it for `var(--bg-color)` or the matching variable.
+- **The browser shows its own pop-up bubble instead of your message:** add `novalidate` to the `<form>` tag.
+- **The page reloads and your message flashes away:** `event.preventDefault();` is missing or misspelled, or the listener is on the button instead of the form. Use `form.addEventListener('submit', ...)`.
+- **An error message never shows:** the id in `getElementById('...')` doesn't match the id in the HTML. They must match exactly, including dashes.
+- **Code below the form checks doesn't run on your other pages:** you are missing the `if (form) { ... }` around the form code.
+- **Still stuck:** ask a classmate to read your code out loud with you, then ask Mr. McMaster.
