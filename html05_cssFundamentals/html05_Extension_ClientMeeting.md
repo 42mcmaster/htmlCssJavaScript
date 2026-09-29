@@ -145,11 +145,11 @@ Ask every client about images:
 
 ## Grading
 
-This project is scored out of 5.
+This project is scored out of 10.
 
 | Requirement | Points |
 |---|---|
-| Part 1: Three or more sources with links and notes | 1 |
-| Part 2: At least 15 questions total, with at least two under each of the six headings | 2 |
-| Part 3: Intake form in plain English with space for answers | 1 |
-| Branding questions cover existing branding and starting from scratch | 1 |
+| Part 1: Three or more sources with links and notes | 2 |
+| Part 2: At least 15 questions total, with at least two under each of the six headings | 4 |
+| Part 3: Intake form in plain English with space for answers | 2 |
+| Branding questions cover existing branding and starting from scratch | 2 |
