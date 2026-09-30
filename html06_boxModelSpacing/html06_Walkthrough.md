@@ -9,7 +9,7 @@ You build one practice page, one step at a time. Then you use the same skills in
 3. [Padding, border, and margin](#3-padding-border-and-margin)
 4. [Width and box-sizing](#4-width-and-box-sizing)
 5. [Centering a box with margin auto](#5-centering-a-box-with-margin-auto)
-6. [The X-ray trick: see every box](#6-the-x-ray-trick-see-every-box)
+6. [See every box with Developer Tools](#6-see-every-box-with-developer-tools)
 7. [The display property](#7-the-display-property)
 8. [Hover effects with :hover](#8-hover-effects-with-hover)
 9. [The position property](#9-the-position-property)
@@ -60,7 +60,7 @@ Make a file named `boxPractice.html` and paste this in. The CSS goes in a `<styl
 </html>
 ```
 
-Open it in the browser. Everything is squished together. That is what we fix.
+Open it with Live Preview in VS Code. Everything is squished together. That is what we fix.
 
 ---
 
@@ -160,13 +160,13 @@ That default is `box-sizing: content-box`. The fix is one rule at the **top** of
 
 Margin is never inside the width. It is always extra space outside.
 
-`height` works the same way, but use it rarely. If the text is taller than the height, it spills out of the box.
+`height` works the same way, but you likely won't use it much. If the text is taller than the height of the box, it spills out of the box.
 
 ---
 
 ## 5. Centering a box with margin auto
 
-Give a box a width, then set left and right margin to `auto`. The browser splits the leftover space evenly.
+Give a box a width, then set left and right margin to `auto`. The browser splits the leftover space evenly.  In this example we are centering `main` which is inside of `body`.  The `main` content contains the `cards` so therefore all the content is centered.
 
 ```css
 /* Center the main area */
@@ -182,17 +182,57 @@ main {
 
 ---
 
-## 6. The X-ray trick: see every box
+## 6. See every box with Developer Tools
 
-Developer tools are turned off on school computers, so we use CSS to see the boxes. Add this line at the **very top** of your CSS:
+**Developer Tools** (often called **dev tools**) are built into the browser. They show you every box on the page, what CSS is on it, and exactly how big its padding, border, and margin are. Web developers use them every day.
+
+### Open Developer Tools
+
+1. Open `boxPractice.html` with **Live Preview** in VS Code.
+2. In the preview's toolbar, click the **Developer Tools** button. A panel opens next to the page.
+
+### Tool 1: Select an element
+
+Click the **select element** button. It is the arrow-in-a-box icon at the top-left corner of the Developer Tools panel. Now move the mouse over the page. Each box lights up in color:
+
+| Color | Layer |
+|---|---|
+| Blue | Content |
+| Green | Padding |
+| Yellow | Border |
+| Orange | Margin |
+
+Click **Card One** to select it.
+
+### Tool 2: The Styles pane
+
+With Card One selected, the **Styles** pane lists every CSS rule on it. You should see your `.card` rule.
+
+- Click a value, like `1.5rem` next to `padding`, and type a new one. The page changes right away.
+- Uncheck the checkbox next to a line to turn it off. Check it to turn it back on.
+- A line with a line through it is being replaced by another rule.
+
+**Changes in Developer Tools are not saved.** It is a place to try things. When you like a value, type it into your CSS file.
+
+### Tool 3: The box model diagram
+
+Click the **Computed** tab. At the top is a box model diagram for the selected element, with the real numbers for margin, border, padding, and content size. It is the same diagram as Section 2, filled in with your values.
+
+**Try it:**
+- Select Card One. Read its padding and margin in the diagram.
+- In the Styles pane, change the padding to `3rem`. Watch the green area grow and the diagram numbers change.
+- Change the margin to `3rem`. Watch the orange area grow.
+- Hover over the `<h2>` inside the card. Its orange margin is the default heading margin you removed with `.card h2 { margin-top: 0; }`.
+
+### Backup: the X-ray line
+
+If the preview will not open, you can still see the boxes with one line at the **very top** of your CSS:
 
 ```css
 * { outline: 1px solid red; }   /* X-RAY: shows every box. Remove when done. */
 ```
 
-Every element gets a thin red line around its edge. An **outline** takes up no space, so nothing moves. (A border would change the layout.) Empty space between two red lines is margin.
-
-**Try it:** with the X-ray on, change the card's padding and margin and watch which space grows. Then delete the line, or turn it into a comment. Never leave it in finished work.
+Every element gets a thin red line around its edge. An outline takes up no space, so nothing moves. Remove it before you turn in your work.
 
 ---
 
@@ -347,4 +387,5 @@ Copy a card a few more times so the page scrolls. The header stays at the top. A
 | Absolute badge flies to the page corner | Add `position: relative;` to the parent |
 | Sticky header doesn't stick | Add `top: 0;` |
 | Content shows through the header | Give the header a `background-color` |
-| Can't tell where the space comes from | Turn on the X-ray trick |
+| Can't tell where the space comes from | Open Developer Tools, select the element, and look at the colors and the box model diagram |
+| Changed CSS in Developer Tools but it's gone after a refresh | Developer Tools changes are not saved. Type the value into your CSS file. |
