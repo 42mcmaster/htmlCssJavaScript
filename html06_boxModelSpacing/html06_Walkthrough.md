@@ -121,6 +121,21 @@ Add this CSS:
 
 **Units:** use `rem` for padding, margin, and font sizes (Lesson 05). Use `px` for borders so the line stays thin.
 
+### Boxes inside boxes
+
+The `<h2>` inside the card is its own box, with its own padding, border, and margin. Its margin is outside **the heading's** box, but the heading sits inside the card. So the heading's margin shows up as white space **inside** the card's border.
+
+The white space above "Card One" is two things stacked:
+
+1. The card's padding (inside the blue border)
+2. The heading's top margin (outside the heading, but still inside the card)
+
+Browsers give every heading a top margin by default. That is why `.card h2 { margin-top: 0; }` removes it. Without that rule, the top of the card gets the padding you chose **plus** the heading's default margin.
+
+**Try it:** change `.card h2` to `margin-top: 60px;`. The white space at the top of the card grows, but the card's padding did not change. The heading's margin pushed the heading down. Put it back to `0`.
+
+**Rule to remember:** a margin always belongs to one box. Ask "whose margin is this?" The card's margin is outside the blue border. The heading's margin is outside the heading.
+
 ### Shorthand: 1, 2, or 4 values
 
 Four values always go clockwise from the top: **top, right, bottom, left**.
