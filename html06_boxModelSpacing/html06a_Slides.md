@@ -24,7 +24,7 @@ paginate: true
 
 # Where Are the Boxes?
 
-![w:780](images/spot_boxes_plain.svg)
+![w:780](images/spot_boxes_plain.png)
 
 How many boxes can you find on this page?
 
@@ -32,7 +32,7 @@ How many boxes can you find on this page?
 
 # Every Element Is a Box
 
-![w:780](images/spot_boxes_outlined.svg)
+![w:780](images/spot_boxes_outlined.png)
 
 Headers, buttons, pictures, text, cards: every one is a rectangle.
 
@@ -40,7 +40,7 @@ Headers, buttons, pictures, text, cards: every one is a rectangle.
 
 # The Box Model
 
-![bg right:52% contain](images/box_model.svg)
+![bg right:52% contain](images/box_model.png)
 
 Every box has four layers, from the inside out:
 
@@ -55,7 +55,7 @@ Every box has four layers, from the inside out:
 
 # Think of a Framed Picture
 
-![w:820](images/picture_frame.svg)
+![w:820](images/picture_frame.png)
 
 The mat is inside the frame. The wall space is outside it.
 
@@ -101,7 +101,7 @@ By default, padding and border are **added on top of** the width:
 
 **300** + 24 + 24 + 2 + 2 = **352px**
 
-![w:560](images/box_sizing.svg)
+![w:560](images/box_sizing.png)
 
 **The fix:** `* { box-sizing: border-box; }` at the top of your CSS. Now 300px means 300px.
 

@@ -14,7 +14,7 @@ paginate: true
 
 # Quick Review: The Box Model
 
-![bg right:45% contain](images/box_model.svg)
+![bg right:45% contain](images/box_model.png)
 
 - **Padding** is inside the border
 - **Margin** is outside the border
