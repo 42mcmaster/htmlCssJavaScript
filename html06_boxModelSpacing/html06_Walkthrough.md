@@ -1,6 +1,6 @@
 # Lesson 06 Walkthrough: Box Model, Spacing, Display, and Position
 
-You build one practice page, one step at a time. Then you use the same skills in the practice task (`html06_Task.html`) and on your own website (`html06_DIYTask.md`).
+You build one practice page, one step at a time. Then you use the same skills in the picture frame task (`html06_FrameTask.html`), the practice task (`html06_Task.html`), and on your own website (`html06_DIYTask.md`).
 
 ## Table of Contents
 
@@ -9,7 +9,7 @@ You build one practice page, one step at a time. Then you use the same skills in
 3. [Padding, border, and margin](#3-padding-border-and-margin)
 4. [Width and box-sizing](#4-width-and-box-sizing)
 5. [Centering a box with margin auto](#5-centering-a-box-with-margin-auto)
-6. [See every box with Developer Tools](#6-see-every-box-with-developer-tools)
+6. [See every box](#6-see-every-box)
 7. [The display property](#7-the-display-property)
 8. [Hover effects with :hover](#8-hover-effects-with-hover)
 9. [The position property](#9-the-position-property)
@@ -83,14 +83,14 @@ Every HTML element is a rectangle, called a **box**. Each box has four layers, f
 +--------------------------------------+
 ```
 
-| Layer | What it is |
-|---|---|
-| Content | The text or image |
-| Padding | Space between the content and the border. The background color fills it. |
-| Border | A line around the padding |
-| Margin | Space outside the border. Always see-through. Pushes other boxes away. |
+| Layer | What it is | In a framed picture |
+|---|---|---|
+| Content | The text or image | The picture |
+| Padding | Space between the content and the border. The background color fills it. | The mat (the blank border around the picture) |
+| Border | A line around the padding | The frame |
+| Margin | Space outside the border. Always see-through. Pushes other boxes away. | The wall space between frames |
 
-**Padding is inside. Margin is outside.**
+**Padding is inside. Margin is outside.** In a framed picture, the mat is inside the frame and the wall space is outside it.
 
 ---
 
@@ -136,7 +136,11 @@ margin-bottom: 2rem;           /* one side only (also: -top, -right, -left) */
 
 ## 4. Width and box-sizing
 
-Add `width: 300px;` to `.card`. By default the browser adds padding and border **on top of** the width:
+Add `width: 300px;` to `.card`.
+
+**Predict it:** the card has `width: 300px`, `1.5rem` of padding (24px), and a `2px` border. Before you read on, how wide is the card on the screen? Write your guess down.
+
+By default the browser adds padding and border **on top of** the width:
 
 ```
 300 (width) + 24 + 24 (padding) + 2 + 2 (border) = 352px on screen
@@ -182,16 +186,32 @@ main {
 
 ---
 
-## 6. See every box with Developer Tools
+## 6. See every box
 
-**Developer Tools** (often called **dev tools**) are built into the browser. They show you every box on the page, what CSS is on it, and exactly how big its padding, border, and margin are. Web developers use them every day.
+There are two ways to see the boxes on a page. Use the X-ray line first. Developer Tools show more detail.
 
-### Open Developer Tools
+### Way 1: The X-ray line
+
+Add this line at the **very top** of your CSS:
+
+```css
+* { outline: 1px solid red; }   /* X-RAY: shows every box. Remove when done. */
+```
+
+Every element gets a thin red line around its edge. An outline takes up no space, so nothing moves. Remove it before you turn in your work.
+
+**Try it:** with the X-ray line on, change the card's padding to `3rem`. The red line around the card moves out. Change the margin to `3rem`. The red line stays put, and the space between the red lines grows.
+
+### Way 2: Developer Tools
+
+**Developer Tools** (often called **dev tools**) show you every box on the page, what CSS is on it, and exactly how big its padding, border, and margin are. Web developers use them every day.
+
+#### Open Developer Tools
 
 1. Open `boxPractice.html` with **Live Preview** in VS Code.
 2. In the preview's toolbar, click the **Developer Tools** button. A panel opens next to the page.
 
-### Tool 1: Select an element
+#### Tool 1: Select an element
 
 Click the **select element** button. It is the arrow-in-a-box icon at the top-left corner of the Developer Tools panel. Now move the mouse over the page. Each box lights up in color:
 
@@ -204,7 +224,7 @@ Click the **select element** button. It is the arrow-in-a-box icon at the top-le
 
 Click **Card One** to select it.
 
-### Tool 2: The Styles pane
+#### Tool 2: The Styles pane
 
 With Card One selected, the **Styles** pane lists every CSS rule on it. You should see your `.card` rule.
 
@@ -214,7 +234,7 @@ With Card One selected, the **Styles** pane lists every CSS rule on it. You shou
 
 **Changes in Developer Tools are not saved.** It is a place to try things. When you like a value, type it into your CSS file.
 
-### Tool 3: The box model diagram
+#### Tool 3: The box model diagram
 
 Click the **Computed** tab. At the top is a box model diagram for the selected element, with the real numbers for margin, border, padding, and content size. It is the same diagram as Section 2, filled in with your values.
 
@@ -224,15 +244,7 @@ Click the **Computed** tab. At the top is a box model diagram for the selected e
 - Change the margin to `3rem`. Watch the orange area grow.
 - Hover over the `<h2>` inside the card. Its orange margin is the default heading margin you removed with `.card h2 { margin-top: 0; }`.
 
-### Backup: the X-ray line
-
-If the preview will not open, you can still see the boxes with one line at the **very top** of your CSS:
-
-```css
-* { outline: 1px solid red; }   /* X-RAY: shows every box. Remove when done. */
-```
-
-Every element gets a thin red line around its edge. An outline takes up no space, so nothing moves. Remove it before you turn in your work.
+**Next:** open `html06_FrameTask.html` and use sections 2-6 to frame three pictures.
 
 ---
 
