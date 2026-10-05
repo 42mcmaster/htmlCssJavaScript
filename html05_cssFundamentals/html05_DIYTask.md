@@ -184,7 +184,7 @@ Use at least one property from each group somewhere in your file:
 
 Always give `font-family` a backup, like `font-family: Arial, sans-serif;`. If the first font is missing, the browser uses the second.
 }
-```
+
 
 Use at least one of each of these text properties somewhere in your stylesheet:
 
