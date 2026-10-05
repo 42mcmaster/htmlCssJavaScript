@@ -1,11 +1,12 @@
 # Lesson 05 DIY Task: Style Your Mini-Site with One Stylesheet
 
-This is the one graded item for Lesson 05. In this task you will style your whole mini-site (all 4 pages) with **one** CSS file named `styles.css`. Every page links to the same file, so one change in `styles.css` changes every page at once. That is the main reason web developers use external stylesheets.
+In this task you will style your whole mini-site (all 4 pages) with **one** CSS file named `styles.css`. Every page links to the same file, so one change in `styles.css` changes every page at once. That is the main reason web developers use external stylesheets.
 
-You'll do this in two parts:
+Three things to pay attention to:
 
 1. **Check your site** so the right things are on the right pages.
 2. **Write `styles.css`** and link it to all 4 pages.
+3. **Ensure your website is in it's own folder** in other words, it should be separate from any of the units and you can just call it `diyWebsite`. 
 
 ---
 
@@ -34,7 +35,7 @@ You'll do this in two parts:
 
 ## Where Everything Goes
 
-Work in the same folder as your Lesson 03 and Lesson 04 site. When you are done, it should look like this:
+This is an ongoing project, continuing from your Lesson 03 and Lesson 04 DIY site. When you are done, it should look like this:
 
 ```
 your-site-folder/
@@ -50,7 +51,7 @@ your-site-folder/
 | File | What changes |
 |---|---|
 | `styles.css` | New file. All of your CSS goes here. |
-| All 4 pages | Add `<link rel="stylesheet" href="styles.css">` in the `<head>`. Add a few `class` attributes (Part 5). |
+| All 4 html pages | Add `<link rel="stylesheet" href="styles.css">` in the `<head>`. Add a few `class` attributes (Part 5). |
 | `about.html` | Nothing new in the HTML. The table gets styled from `styles.css`. |
 | `gallery.html` | Nothing new in the HTML. The captions get styled from `styles.css`. |
 
@@ -60,7 +61,7 @@ your-site-folder/
 
 Your CSS will style things that live on specific pages. Before you write any CSS, make sure your site matches this. **If something is on the wrong page, move it now.**
 
-### Your folder should look like this
+### Repeated from above: Your folder should look like this
 
 ```
 your-site-folder/
