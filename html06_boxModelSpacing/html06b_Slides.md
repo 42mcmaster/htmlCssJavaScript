@@ -34,8 +34,12 @@ paginate: true
 
 ```css
 nav a {
-  display: inline-block;   /* padding now works on all sides */
-  padding: 0.5rem 1rem;
+  display: inline-block;     /* Make each link behave like a small box.
+                              Unlike a normal inline element, the box can
+                              properly use padding, width, and height. */
+  padding: 0.5rem 1rem;        /* Create space inside the link's box:
+                              0.5rem above and below
+                              1rem to the left and right */
 }
 ```
 

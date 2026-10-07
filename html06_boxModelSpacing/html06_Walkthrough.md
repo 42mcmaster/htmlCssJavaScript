@@ -277,26 +277,25 @@ Click the **Computed** tab. At the top is a box model diagram for the selected e
 ```css
 /* Cards side by side instead of stacked */
 .card {
-  display: inline-block;
+  display: inline-block;        /* box can sit beside other boxes */
   vertical-align: top;          /* line up the tops */
-  width: 15rem;
+  width: 15rem;                 /* set the card's width */
 }
 
-/* Links are inline, so top/bottom padding doesn't push anything.
-   inline-block makes them real buttons. */
+/* Navigation links */
 nav a {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  margin-right: 0.5rem;
-  background-color: #1565c0;
-  color: white;
+  display: inline-block;        /* makes the link behave like a box */
+  padding: 0.5rem 1rem;         /* add space inside the link */
+  margin-right: 0.5rem;        /* add space between links */
+  background-color: #1565c0;    /* set the button background color */
+  color: white;                 /* set the text color */
   text-decoration: none;        /* remove the underline */
-  border-radius: 4px;
+  border-radius: 4px;           /* round the corners */
 }
 
-/* Hide anything with class="hidden". It leaves no gap. */
+/* Hide anything with class="hidden" */
 .hidden {
-  display: none;
+  display: none;                /* remove it completely from the page */
 }
 ```
 
