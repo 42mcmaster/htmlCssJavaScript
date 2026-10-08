@@ -7,19 +7,18 @@
   <!--
     HTML06 PRACTICE TASK
     Fill in every TODO. Most TODOs are CSS in the style block.
-    A few TODOs are in the HTML below (look for "TODO (HTML)").
+    TODOs 6, 11, and 12 also have one line to add in the HTML.
     Use rem for padding, margin, and font sizes. Use px for borders.
     Open the page in the browser after each TODO to check your work.
   -->
   <style>
-    /* TODO 1: X-ray trick.
-       Add this line here while you work:  * { outline: 1px solid red; }
-       Turn it into a comment (or delete it) before you turn the task in. */
+    /* TODO 1: Add a universal rule (*) with two lines:
+       - box-sizing: border-box
+       - outline: 1px solid red   (X-ray trick: shows every box while you work.
+                                   Delete this line before you turn the task in.) */
 
-    /* TODO 2: Add a universal rule (*) that sets box-sizing: border-box */
 
-
-    /* Already done for you */
+    /* ===== Already done for you ===== */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -27,26 +26,52 @@
       color: #333333;
     }
 
+    header h1 {
+      margin: 0 0 0.5rem 0;
+    }
+
+    .intro h2 {
+      margin-top: 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #dddddd;
+      color: #1565c0;
+    }
+
+    .intro p {
+      margin: 0;
+      padding: 1rem 0;
+      line-height: 1.5;
+    }
+
+    .boxes-container {
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #333333;
+      color: white;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
     /* ===== HEADER ===== */
 
-    /* TODO 3: Make the header a sticky header.
+    /* TODO 2: Make the header a sticky header.
        - position: sticky
        - top: 0
        - z-index: 10
        - background-color: #1565c0
        - color: white
-       - padding: 1rem 2rem   (1rem top/bottom, 2rem left/right) */
+       - padding: 1rem 2rem */
     header {
 
     }
 
-    /* TODO 4: Remove the default margin around the header h1 (margin: 0)
-       and add margin-bottom: 0.5rem so it doesn't touch the nav. */
-    header h1 {
-
-    }
-
-    /* TODO 5: Make the nav links look like buttons.
+    /* TODO 3: Make the nav links look like buttons.
        - display: inline-block   (so padding works on all sides)
        - padding: 0.5rem 1rem
        - margin-right: 0.5rem
@@ -58,13 +83,9 @@
 
     }
 
-    /* TODO 6: Hover effect for the nav links.
-       Change the background-color to #ff9800 while the mouse is on a link. */
-
-
     /* ===== MAIN AREA ===== */
 
-    /* TODO 7: Center the main area on the page.
+    /* TODO 4: Center the main area on the page.
        - max-width: 60rem
        - margin: 0 auto   (auto left and right = centered)
        - padding: 2rem */
@@ -72,32 +93,21 @@
 
     }
 
-    /* ===== INTRO CARD ===== */
-
-    /* TODO 8: Style the intro card.
+    /* TODO 5: Style the intro card.
        - width: 30rem  (with border-box, this INCLUDES padding and border)
        - padding: 1.5rem
        - border: 2px solid #333333
        - margin: 0 auto 2rem auto   (centered, with 2rem of space under it)
        - background-color: white
        - border-radius: 8px
-       - position: relative   (so the badge in TODO 10 is placed inside this card) */
+       - position: relative   (so the badge in TODO 6 is placed inside this card) */
     .intro {
 
     }
 
-    /* TODO 9: Style the intro card's heading and paragraph.
-       h2:  margin-top: 0, padding-bottom: 0.5rem, border-bottom: 1px solid #dddddd, color: #1565c0
-       p:   margin: 0, padding: 1rem 0   (1rem top/bottom, 0 left/right), line-height: 1.5 */
-    .intro h2 {
-
-    }
-
-    .intro p {
-
-    }
-
-    /* TODO 10: Style the NEW badge (see TODO (HTML) A below).
+    /* TODO 6: Add the NEW badge.
+       HTML: add <span class="badge">NEW</span> as the first thing in the intro card.
+       CSS:
        - position: absolute
        - top: 0.5rem
        - right: 0.5rem
@@ -112,13 +122,7 @@
 
     /* ===== THREE SPACING BOXES ===== */
 
-    /* TODO 11: Center the row of boxes with text-align: center.
-       (inline-block boxes line up like words, so text-align centers them.) */
-    .boxes-container {
-
-    }
-
-    /* TODO 12: Give ALL three boxes these shared styles in this one rule:
+    /* TODO 7: Shared styles for all three boxes.
        - display: inline-block   (side by side)
        - vertical-align: top
        - width: 14rem
@@ -128,12 +132,12 @@
 
     }
 
-    /* TODO 13: Give each box different spacing:
+    /* TODO 8: Give each box different spacing:
        .box-1: padding: 0.5rem, margin: 0.25rem, border: 1px solid #1976d2
        .box-2: padding: 1rem,   margin: 0.5rem,  border: 2px solid #f57c00
        .box-3: padding: 2rem,   margin: 1rem,    border: 3px solid #7b1fa2
-       Question to answer in a comment: why are all three boxes the same width
-       even though their padding and border are different? */
+       Question: why are all three boxes the same width even though their
+       padding and border are different? Answer in the comment below. */
     .box-1 {
 
     }
@@ -146,57 +150,43 @@
 
     }
 
-    /* Answer to the TODO 13 question: */
+    /* Answer to the TODO 8 question: */
 
 
-    /* TODO 14: Hover effect for all three boxes.
-       Change the background-color to #fff3e0 while the mouse is on a box. */
+    /* ===== QUICK LINKS ===== */
 
-
-    /* ===== QUICK LINKS (aside) ===== */
-
-    /* TODO 15: Style the aside box.
-       - background-color: white
-       - padding: 1rem 1.5rem
-       - margin-top: 2rem
-       - border-left: 4px solid #1565c0 */
+    /* TODO 9: Style the quick links box and its links.
+       aside:   background-color: white, padding: 1rem 1.5rem,
+                margin-top: 2rem, border-left: 4px solid #1565c0
+       aside a: display: block (each link on its own row), padding: 0.5rem 0,
+                color: #1565c0, text-decoration: none,
+                border-bottom: 1px solid #eeeeee */
     aside {
 
     }
 
-    /* TODO 16: Make each quick link its own full-width row.
-       - display: block
-       - padding: 0.5rem 0
-       - color: #1565c0
-       - text-decoration: none
-       - border-bottom: 1px solid #eeeeee */
     aside a {
 
     }
 
-    /* TODO 17: Hover effect for the quick links.
-       Add padding-left: 0.5rem and font-weight: bold while the mouse is on a link. */
+    /* ===== HOVER EFFECTS ===== */
+
+    /* TODO 10: Add :hover rules (the style changes while the mouse is on it).
+       - nav a:hover        background-color: #ff9800
+       - the three boxes    background-color: #fff3e0
+       - aside a:hover      padding-left: 0.5rem and font-weight: bold */
 
 
-    /* TODO 18: Hide anything with class="hidden" (display: none). */
+    /* ===== HIDE AND FIXED ===== */
+
+    /* TODO 11: Hide the extra paragraph.
+       CSS: a .hidden rule with display: none
+       HTML: add class="hidden" to the paragraph that says it should be hidden. */
 
 
-    /* ===== FOOTER ===== */
-
-    /* Already done for you */
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #333333;
-      color: white;
-    }
-
-    footer p {
-      margin: 0;
-    }
-
-    /* TODO 19: Make the "Back to top" link stay in the bottom-right corner
-       of the window, even while scrolling (see TODO (HTML) C).
+    /* TODO 12: Make a "Back to top" link that stays in the corner while scrolling.
+       HTML: add <a href="#top" class="to-top">Back to top</a> right above </body>
+       CSS:
        - position: fixed
        - bottom: 1rem
        - right: 1rem
@@ -223,11 +213,8 @@
   <main>
     <!-- Intro card -->
     <section class="intro" id="intro">
-      <!-- TODO (HTML) A: Add a badge as the first thing in this card:
-           <span class="badge">NEW</span> -->
       <h2>What Is the Box Model?</h2>
       <p>Every element is a box with four layers: content, padding, border, and margin. Padding is space inside the border. Margin is space outside the border.</p>
-      <!-- TODO (HTML) B: Add class="hidden" to the paragraph below so it disappears. -->
       <p>This paragraph should be hidden when you are done.</p>
     </section>
 
@@ -235,20 +222,17 @@
     <section id="boxes">
       <h2>Box Model Variations</h2>
       <div class="boxes-container">
-        <!-- TODO (HTML): Add class="box-1" to this div -->
-        <div>
+        <div class="box-1">
           <h3>Box 1: Small</h3>
           <p>Padding 0.5rem | Margin 0.25rem | Border 1px</p>
         </div>
 
-        <!-- TODO (HTML): Add class="box-2" to this div -->
-        <div>
+        <div class="box-2">
           <h3>Box 2: Medium</h3>
           <p>Padding 1rem | Margin 0.5rem | Border 2px</p>
         </div>
 
-        <!-- TODO (HTML): Add class="box-3" to this div -->
-        <div>
+        <div class="box-3">
           <h3>Box 3: Large</h3>
           <p>Padding 2rem | Margin 1rem | Border 3px</p>
         </div>
@@ -279,7 +263,5 @@
     <p>&copy; 2026 Medina County Career Center</p>
   </footer>
 
-  <!-- TODO (HTML) C: Add a "Back to top" link right here, above </body>:
-       <a href="#top" class="to-top">Back to top</a> -->
 </body>
 </html>
