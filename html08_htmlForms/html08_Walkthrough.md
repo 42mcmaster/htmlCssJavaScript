@@ -503,7 +503,7 @@ The radio buttons and checkboxes are inside labels that are `display: block`, so
 6. Fill it in and submit. Read the answers in the address bar.
 7. Click Clear Form. Everything empties.
 8. Tab through the whole form. The order goes top to bottom, and you can always see which box you're in.
-9. Drag the Live Preview panel narrow. The buttons should go full width.
+9. Check a phone width with the **device toolbar** in Live Preview's Developer Tools (the phone-and-tablet icon). The buttons should go full width.
 10. Run the page through https://validator.w3.org/ and fix any errors.
 
 ---

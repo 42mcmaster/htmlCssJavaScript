@@ -215,7 +215,7 @@ figure:hover {
 }
 ```
 
-Pick your own colors and sizes. Drag the Live Preview panel narrow and make sure the cards wrap to the next row instead of running off the page.
+Pick your own colors and sizes. Check a phone width with the **device toolbar** in Live Preview's Developer Tools (the phone-and-tablet icon) and make sure the cards wrap to the next row instead of running off the page.
 
 ---
 

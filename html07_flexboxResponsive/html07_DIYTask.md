@@ -196,15 +196,15 @@ Add this at the **very bottom** of `styles.css`. It only runs when the screen is
 }
 ```
 
-**Test it in Live Preview.** Drag the line between your code and the Live Preview panel until the preview is about as narrow as a phone. You should see:
+**Test it in Live Preview.** Open **Developer Tools** (the button in the Live Preview toolbar) and click the **device toolbar** button (the phone-and-tablet icon). Pick a phone from the **Responsive** menu, or type a width like `375`. You should see:
 
 - The header change from one bar to site name on top, links underneath
 - The gallery go to one photo per row
 - No side-to-side scrolling on any page
 
-Drag it wide again and everything should go back to rows.
+Type a wide width like `1200` and everything should go back to rows.
 
-If something doesn't change, open **Developer Tools** (the button in the Live Preview toolbar), select the element, and look in the **Styles** pane. When the preview is narrow, your `@media` rule should be listed. If it is missing or crossed out, check the media query.
+If something doesn't change, open **Developer Tools** (the button in the Live Preview toolbar), select the element, and look in the **Styles** pane. At phone width, your `@media` rule should be listed. If it is missing or crossed out, check the media query.
 
 If you can, open your published site on your own phone too.
 

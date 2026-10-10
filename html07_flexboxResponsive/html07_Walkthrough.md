@@ -406,15 +406,19 @@ The width where the layout changes is called a **breakpoint**. Common breakpoint
 Test phone size in **Live Preview** in VS Code. (Developer Tools in Chrome are turned off on school computers, but the ones in Live Preview work.)
 
 1. Open the page with **Live Preview**.
-2. Drag the line between your code and the preview to make the preview narrow (about as wide as a phone).
-3. Watch the nav and cards stack when you pass 768px.
-4. Drag it wide again and watch them go back to a row.
+2. Click the **Developer Tools** button in the preview's toolbar.
+3. Click the **device toolbar** button. It is the phone-and-tablet icon at the top-left of the Developer Tools panel, next to the select element arrow.
+4. A bar appears above the page. Click the menu that says **Responsive** and pick a phone, or type a width like `375` in the width box.
+5. Watch the nav and cards stack. Any width of 768px or less uses your media query.
+6. Type a wide width like `1200`. The nav and cards go back to a row.
+7. Click the device toolbar button again to turn it off.
 
-**Check the media query with Developer Tools:**
+You can also drag the line between your code and the preview to make the preview narrow.
 
-1. Click the **Developer Tools** button in the preview's toolbar.
-2. Click the **select element** button (the arrow-in-a-box icon), then click the nav bar.
-3. Look in the **Styles** pane. When the preview is narrow, the rule from inside `@media (max-width: 768px)` shows at the top. When it is wide, that rule is gone.
+**Check the media query with the Styles pane:**
+
+1. With the page at phone width, click the **select element** button (the arrow-in-a-box icon), then click the nav bar.
+2. Look in the **Styles** pane. At phone width, the rule from inside `@media (max-width: 768px)` shows at the top. At a wide width, that rule is gone.
 
 If the layout doesn't change, the Styles pane tells you why: the rule is missing, crossed out, or has a typo.
 

@@ -301,7 +301,7 @@ Why `#contact-form` in front of every rule? So these styles only change the form
 6. Fill in everything and click **Send Message**. Look at the address bar: you should see `?name=...&email=...`. Every field you filled in should be there. A field that's missing has no `name`.
 7. Click **Clear Form**. Everything empties.
 8. Tab through the whole form. It goes top to bottom and you can always see which box you are in.
-9. Drag the Live Preview panel narrow. The form still fits and the buttons go full width.
+9. Check a phone width with the **device toolbar** in Live Preview's Developer Tools (the phone-and-tablet icon). The form still fits and the buttons go full width.
 10. Run `contact.html` through https://validator.w3.org/ and fix the errors.
 11. In GitHub Desktop, commit with a message like `Add contact form` and push. Check on github.com that `contact.html` and `styles.css` changed.
 

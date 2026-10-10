@@ -185,7 +185,7 @@ Check your main text color, link color, button colors, and nav colors at https:/
 2. In each one, click every nav link on every page (header and footer).
 3. Check that every image shows, the video plays with sound, dark mode works, and the form shows your error messages when you submit it empty.
 4. Narrow the window to phone width. Your media query should change the layout. Nothing should run off the side.
-5. Open each page with **Live Preview** in VS Code, click the **Developer Tools** button, and check the **Console** tab. Fix any red errors.
+5. Open each page with **Live Preview** in VS Code, click the **Developer Tools** button, and check the **Console** tab. Fix any red errors. Then click the **device toolbar** button (phone-and-tablet icon) and check each page at a phone width.
 6. Go through the usability checklist in `html10_Walkthrough.md` (Part 4).
 7. Write down anything that looked different or broken, and what you did about it.
 
