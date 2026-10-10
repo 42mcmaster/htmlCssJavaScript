@@ -198,12 +198,13 @@ Add a few more comments to sections of your page. For example:
 1. In File Explorer (Windows), navigate to your project folder
 2. Right-click `index.html` → **Open with** → **Your browser** (Chrome, Firefox, Edge, etc.)
 
-### Step 15: View the Page Source (this likely won't work due to developer tools being turned off for students, but we'll try)
-In your browser:
-1. Right-click anywhere on the page
-2. Select **Inspect** or **View Page Source**
-3. You'll see your HTML code
-4. This is handy for checking your work and debugging
+### Step 15: Look at Your Page in Developer Tools
+Developer Tools in Chrome are turned off on school computers, but the ones in VS Code's Live Preview work.
+1. In VS Code, right-click `index.html` and select **Show Preview** (Live Preview)
+2. In the preview's toolbar, click the **Developer Tools** button. A panel opens next to the page.
+3. Click the **Elements** tab. You'll see your HTML code, with each tag you can open and close
+4. Click the **select element** button (the arrow-in-a-box icon), then click something on the page. Its tag lights up in the Elements tab
+5. This is handy for checking your work and debugging
 
 ---
 

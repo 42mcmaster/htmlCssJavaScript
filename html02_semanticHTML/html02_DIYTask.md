@@ -104,7 +104,7 @@ Fill in each section with your recipe content.
 ### 7. Validate & Test
 - Test in a browser
 - Validate at https://validator.w3.org/
-- Open DevTools (F12) and check for errors in the console
+- Open the page with **Live Preview** in VS Code, click the **Developer Tools** button in the preview's toolbar, and look at your HTML in the **Elements** tab
 - If using a screen reader, test how the content is read aloud
 
 ---

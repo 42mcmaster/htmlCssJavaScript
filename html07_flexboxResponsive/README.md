@@ -49,7 +49,7 @@ The teacher solution files use `../images/` paths so the pictures show from insi
 
 ## Notes
 
-- Dev tools are turned off on student computers. Everything tells students to test phone size by dragging the browser window narrow.
+- Browser dev tools are turned off on student computers, but the Developer Tools in VS Code's Live Preview work. Students test phone size by dragging the Live Preview panel narrow and check the media query in Developer Tools (Styles pane).
 - The class uses `max-width` media queries (desktop layout first, fix for phones). Mobile-first and `min-width` are taught as terms for the exam.
 - CSS Grid is recognition only: `display: grid`, `grid-template-columns`, `fr`, `repeat()`, `gap`. No `auto-fit`, `minmax()`, or spanning.
 - Spacing and font sizes use `rem` (taught in html05c).

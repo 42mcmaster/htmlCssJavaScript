@@ -1,6 +1,6 @@
 # Lesson 09 Walkthrough: JavaScript
 
-In this walkthrough you build one small page, step by step. It starts with a blank box that JavaScript writes into. By the end, the page has buttons that change it, a dark mode button, and a form that checks itself before it sends.
+In this walkthrough you build one small page, step by step. It starts with messages printed in the Console. By the end, the page has buttons that change it, a dark mode button, and a form that checks itself before it sends.
 
 Everything here is practiced in `html09_Task.html` and used in the DIY task, where you add JavaScript to your own website.
 
@@ -9,7 +9,7 @@ Everything here is practiced in `html09_Task.html` and used in the DIY task, whe
 1. [Before You Start](#1-before-you-start)
 2. [What JavaScript Does](#2-what-javascript-does)
 3. [The script Tag](#3-the-script-tag)
-4. [Showing Output on the Page](#4-showing-output-on-the-page)
+4. [Showing Output in the Console](#4-showing-output-in-the-console)
 5. [Comments](#5-comments)
 6. [Variables: let and const](#6-variables-let-and-const)
 7. [Data Types: String, Number, Boolean](#7-data-types-string-number-boolean)
@@ -49,24 +49,12 @@ Everything here is practiced in `html09_Task.html` and used in the DIY task, whe
       padding: 1rem;
     }
 
-    #output {
-      white-space: pre-line;   /* each message starts on a new line */
-      font-family: monospace;
-      background-color: #1e1e1e;
-      color: #9fef00;
-      padding: 1rem;
-      min-height: 3rem;
-    }
-
     /* Your walkthrough CSS goes below this line */
 
   </style>
 </head>
 <body>
   <h1 id="page-title">html09 Walkthrough</h1>
-
-  <h2>Output</h2>
-  <div id="output"></div>
 
   <!-- Your walkthrough HTML goes below this line -->
 
@@ -136,34 +124,33 @@ You may also see it in the `<head>` with `defer`. `defer` tells the browser to w
 
 ---
 
-## 4. Showing Output on the Page
+## 4. Showing Output in the Console
 
-When you write code, you need to see what it is doing. Programmers usually use `console.log()`, which prints to the browser's console:
+When you write code, you need to see what it is doing. Programmers use `console.log()`. It prints a message to the **Console**, a panel in the Developer Tools. Visitors to your page never see the Console. It is a tool for you.
+
+Add this to your `<script>` block:
 
 ```js
+// console.log() prints a message to the Console
 console.log('Hello, world!');
+console.log('JavaScript is running.');
 ```
 
-**The console is turned off on our school computers.** So in this class, we print to a box on the page instead. Add this `say()` function to your `<script>` block. You will use it through the whole walkthrough.
+### Open the Console
 
-```js
-// say() adds a message to the #output box on the page.
-// Use say() wherever you would use console.log().
-function say(msg) {
-  document.getElementById('output').textContent += msg + '\n';
-}
+The Console is part of the Developer Tools in VS Code's Live Preview. (Developer Tools in Chrome are turned off on school computers, but the ones in Live Preview work.)
 
-say('Hello, world!');
-say('JavaScript is running.');
-```
+1. Open your page with **Live Preview** in VS Code.
+2. In the preview's toolbar, click the **Developer Tools** button. A panel opens next to the page.
+3. Click the **Console** tab.
 
-Save and refresh the page. Both lines should show up in the black box.
+Both lines should show up in the Console. Keep the Console open for the whole walkthrough.
 
-If nothing shows up, there is a typo somewhere in your script. One mistake stops the whole script. Check the spelling, the quotes, and that every `(` and `{` has a matching `)` and `}`.
+**The Console also shows errors.** If your code has a mistake, the Console shows a red error message with the line number where it happened. One mistake stops the whole script, so if a message you expect is missing, look for red. Then check the spelling, the quotes, and that every `(` and `{` has a matching `)` and `}`.
 
-You don't need to understand every part of `say()` yet. By Step 12 you will.
+If you change your code and the Console doesn't show the new messages, save the file and refresh the preview.
 
-> **Try This 4:** Use `say()` to print your name, then your favorite food.
+> **Try This 4:** Use `console.log()` to print your name, then your favorite food.
 
 ---
 
@@ -203,11 +190,11 @@ A **variable** is a named box that holds a value. You make one with `let` or `co
 // let: the value can change later
 let score = 0;
 score = 10;          // this works
-say('Score: ' + score);
+console.log('Score: ' + score);
 
 // const: the value is set once and never changes
 const schoolName = 'Medina County Career Center';
-say('School: ' + schoolName);
+console.log('School: ' + schoolName);
 ```
 
 What happens if you try to change a `const`?
@@ -216,13 +203,13 @@ What happens if you try to change a `const`?
 // schoolName = 'Another School';   // ERROR: can't change a const
 ```
 
-That line causes an error, and the error stops the script. Everything after it won't run.
+That line causes an error, and the error stops the script. Everything after it won't run. The Console shows the error in red.
 
 **Which one should you use?** Use `const` when the value should never change. Use `let` when it will. You may see `var` in older code online. It is the old way. Use `let` and `const`.
 
 **Naming:** use **camelCase**. Start lowercase, and start each new word with a capital: `firstName`, `favoriteColor`, `isStudent`. No spaces or dashes. Pick names that say what the box holds.
 
-> **Try This 6:** Make a `let` variable called `favoriteColor` and a `const` called `birthYear`. Print both with `say()`.
+> **Try This 6:** Make a `let` variable called `favoriteColor` and a `const` called `birthYear`. Print both with `console.log()`.
 
 ---
 
@@ -241,16 +228,16 @@ let price = 3.75;
 // Boolean: only true or false. No quotes.
 let isStudent = true;
 
-say(firstName);
-say(age);
-say(isStudent);
+console.log(firstName);
+console.log(age);
+console.log(isStudent);
 ```
 
 Quotes matter. `'16'` is a string. `16` is a number. Watch what `+` does with each:
 
 ```js
-say(5 + 3);       // 8   (two numbers: adds them)
-say('5' + '3');   // 53  (two strings: joins them)
+console.log(5 + 3);       // 8   (two numbers: adds them)
+console.log('5' + '3');   // 53  (two strings: joins them)
 ```
 
 You will also run into two more values:
@@ -270,7 +257,7 @@ let age = 16;
 
 // Join strings and variables with +
 let sentence = 'My name is ' + firstName + ' and I am ' + age + ' years old.';
-say(sentence);
+console.log(sentence);
 ```
 
 Watch the spaces. `'My name is' + firstName` prints `My name isAlex`. The space has to be inside the quotes.
@@ -279,7 +266,7 @@ There is also a newer way called a **template literal**. It uses backticks (`` `
 
 ```js
 let sentence2 = `My name is ${firstName} and I am ${age} years old.`;
-say(sentence2);
+console.log(sentence2);
 ```
 
 Both lines print the same thing. You will see template literals in code online. In this class, `+` is the one you need to know.
@@ -299,8 +286,8 @@ function greet(name) {
 }
 
 // Call: run it with different names
-say(greet('Maya'));    // Hello, Maya!
-say(greet('Marco'));   // Hello, Marco!
+console.log(greet('Maya'));    // Hello, Maya!
+console.log(greet('Marco'));   // Hello, Marco!
 ```
 
 The parts:
@@ -320,11 +307,11 @@ function addNumbers(num1, num2) {
   return num1 + num2;
 }
 
-say(addNumbers(5, 3));      // 8
-say(addNumbers(10, 20));    // 30
+console.log(addNumbers(5, 3));      // 8
+console.log(addNumbers(10, 20));    // 30
 ```
 
-You already wrote a function: `say(msg)`. It has one parameter, `msg`. It doesn't `return` anything. It just does a job.
+You have already been calling a function: `console.log()`. You send it a value, and it prints it. It doesn't `return` anything. It just does a job.
 
 > **Try This 9:** Write `calculateArea(width, height)` that returns `width * height`. Print the area of a 4 by 6 rectangle.
 
@@ -344,8 +331,8 @@ function checkScore(score) {
   }
 }
 
-say(checkScore(85));   // Pass
-say(checkScore(50));   // Try again
+console.log(checkScore(85));   // Pass
+console.log(checkScore(50));   // Try again
 ```
 
 Ways to compare two values:
@@ -368,7 +355,7 @@ You can check two things at once:
 ```js
 let name = '';
 if (name === '' || name === 'none') {
-  say('Please enter a name.');
+  console.log('Please enter a name.');
 }
 ```
 
@@ -413,7 +400,7 @@ title.textContent = 'JavaScript changed this heading!';
 
 Save and refresh. The heading on the page is different, but your HTML file didn't change. JavaScript changed the page after it loaded.
 
-Now look at `say()` again. It finds `#output` and adds (`+=`) your message to its `textContent`. That's all it does.
+**See it in the Developer Tools:** click the **Elements** tab. The `<h1>` there shows the new text. The Elements tab shows the page as it is right now, after JavaScript changed it. Your HTML file still has the old text.
 
 **textContent vs innerHTML:** `textContent` puts in plain text. If you give it `<strong>hi</strong>`, the tags show up as text. `innerHTML` turns tags into real HTML:
 
@@ -518,7 +505,7 @@ To check whether a class is on right now, use `classList.contains`. It gives bac
 
 ```js
 if (secret.classList.contains('hidden')) {
-  say('The secret is hidden.');
+  console.log('The secret is hidden.');
 }
 ```
 
@@ -649,7 +636,7 @@ form.addEventListener('submit', function (event) {
   // Stop the form from sending so we can check it first
   event.preventDefault();
 
-  say('The form tried to send.');
+  console.log('The form tried to send.');
 });
 ```
 
@@ -667,7 +654,7 @@ const nameValue = document.getElementById('name').value.trim();
 
 ### Step 4: Check each field
 
-Replace the `say('The form tried to send.');` line with the checks:
+Replace the `console.log('The form tried to send.');` line with the checks:
 
 ```js
 form.addEventListener('submit', function (event) {
@@ -772,8 +759,8 @@ Commit and push with GitHub Desktop.
 **Try This 4**
 
 ```js
-say('Alex');
-say('Pizza');
+console.log('Alex');
+console.log('Pizza');
 ```
 
 **Try This 6**
@@ -781,15 +768,15 @@ say('Pizza');
 ```js
 let favoriteColor = 'green';
 const birthYear = 2010;
-say(favoriteColor);
-say(birthYear);
+console.log(favoriteColor);
+console.log(birthYear);
 ```
 
 **Try This 8**
 
 ```js
 let city = 'Medina';
-say('I live in ' + city + '.');
+console.log('I live in ' + city + '.');
 ```
 
 **Try This 9**
@@ -799,7 +786,7 @@ say('I live in ' + city + '.');
 function calculateArea(width, height) {
   return width * height;
 }
-say(calculateArea(4, 6));   // 24
+console.log(calculateArea(4, 6));   // 24
 ```
 
 **Try This 13**

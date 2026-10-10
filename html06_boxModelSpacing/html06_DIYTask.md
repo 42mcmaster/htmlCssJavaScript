@@ -215,7 +215,7 @@ figure:hover {
 }
 ```
 
-Pick your own colors and sizes. Narrow the browser window and make sure the cards wrap to the next row instead of running off the page.
+Pick your own colors and sizes. Drag the Live Preview panel narrow and make sure the cards wrap to the next row instead of running off the page.
 
 ---
 
@@ -290,5 +290,5 @@ Pick your own colors and sizes. Narrow the browser window and make sure the card
 - **Header scrolls away:** add `top: 0;` to the header rule. Also check that no other `header` rule later in the file sets `position` back.
 - **Content shows through the header:** give the header a `background-color`.
 - **Gallery cards stack instead of sitting side by side:** check `display: inline-block;` on `figure`, and that each card's width fits in the window.
-- **Can't find where extra space comes from:** turn the X-ray line back on and look at the red lines.
+- **Can't find where extra space comes from:** turn the X-ray line back on and look at the red lines. Or open **Developer Tools** in Live Preview, select the element, and look at the colors and the box model diagram (Computed tab).
 - **Folder missing on github.com:** you committed but did not click **Push origin**, or the folder is empty. GitHub does not show empty folders.

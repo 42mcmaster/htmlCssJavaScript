@@ -403,11 +403,20 @@ The width where the layout changes is called a **breakpoint**. Common breakpoint
 
 ## 13. Testing Phone Size
 
-Browser developer tools are turned off on school computers. To see what your page looks like on a phone:
+Test phone size in **Live Preview** in VS Code. (Developer Tools in Chrome are turned off on school computers, but the ones in Live Preview work.)
 
-1. Grab the edge of the browser window and drag it narrow (about as wide as a phone).
-2. Watch the nav and cards stack when you pass 768px.
-3. Drag it wide again and watch them go back to a row.
+1. Open the page with **Live Preview**.
+2. Drag the line between your code and the preview to make the preview narrow (about as wide as a phone).
+3. Watch the nav and cards stack when you pass 768px.
+4. Drag it wide again and watch them go back to a row.
+
+**Check the media query with Developer Tools:**
+
+1. Click the **Developer Tools** button in the preview's toolbar.
+2. Click the **select element** button (the arrow-in-a-box icon), then click the nav bar.
+3. Look in the **Styles** pane. When the preview is narrow, the rule from inside `@media (max-width: 768px)` shows at the top. When it is wide, that rule is gone.
+
+If the layout doesn't change, the Styles pane tells you why: the rule is missing, crossed out, or has a typo.
 
 If you can, also open your published page on your own phone.
 

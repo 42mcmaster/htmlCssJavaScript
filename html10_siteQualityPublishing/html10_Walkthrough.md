@@ -338,7 +338,8 @@ Different browsers can show the same page a little differently. **Cross-browser 
 1. Open your site in **two browsers** (for example Chrome and Safari, or Chrome and Firefox).
 2. In each one, click through every page and every link.
 3. **Narrow the window:** drag the edge of the browser window until it is about as narrow as a phone. Your media query should kick in. Check that nothing runs off the side and the text is still readable.
-4. Write down anything that looks different or broken.
+4. **Check the Console:** open each page with **Live Preview** in VS Code, click the **Developer Tools** button, and click the **Console** tab. There should be no red errors. A red error means something in `script.js` is broken, and it gives you the line number.
+5. Write down anything that looks different or broken.
 
 ### Usability checklist
 

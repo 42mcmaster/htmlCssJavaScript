@@ -196,13 +196,17 @@ Add this at the **very bottom** of `styles.css`. It only runs when the screen is
 }
 ```
 
-**Test it.** Dev tools are turned off on school computers, so drag the edge of the browser window until it is about as narrow as a phone. You should see:
+**Test it in Live Preview.** Drag the line between your code and the Live Preview panel until the preview is about as narrow as a phone. You should see:
 
 - The header change from one bar to site name on top, links underneath
 - The gallery go to one photo per row
 - No side-to-side scrolling on any page
 
-Drag it wide again and everything should go back to rows. If you can, open your published site on your own phone too.
+Drag it wide again and everything should go back to rows.
+
+If something doesn't change, open **Developer Tools** (the button in the Live Preview toolbar), select the element, and look in the **Styles** pane. When the preview is narrow, your `@media` rule should be listed. If it is missing or crossed out, check the media query.
+
+If you can, open your published site on your own phone too.
 
 You can change anything else inside the media query if it helps your site on a phone, like smaller heading sizes or less padding.
 

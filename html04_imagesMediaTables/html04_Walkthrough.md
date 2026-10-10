@@ -247,7 +247,7 @@ Add this row **above** the existing header row (right after the `<caption>`):
 
 1. Save your file as `product-showcase.html`
 2. Open it in a browser—verify:
-   - All images load with proper alt text (use developer tools)
+   - All images load with proper alt text (open the page with **Live Preview** in VS Code, click the **Developer Tools** button, and check each `<img>` in the **Elements** tab)
    - Video embeds and has controls
    - Table displays correctly with aligned columns
 3. Use the W3C HTML Validator: https://validator.w3.org/

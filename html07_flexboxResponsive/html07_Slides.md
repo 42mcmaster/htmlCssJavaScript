@@ -132,7 +132,7 @@ CSS that only runs when the screen matches a condition.
 | `@media (max-width: 768px)` | 768px **and narrower** | Fixing a desktop layout for phones (what we use) |
 | `@media (min-width: 768px)` | 768px **and wider** | **Mobile-first:** phone layout is the default, bigger screens are added |
 
-**Testing:** dev tools are off. Drag the browser window narrow.
+**Testing:** in Live Preview, drag the preview narrow. Use **Developer Tools → Styles** to check that the `@media` rule is applied.
 
 ---
 

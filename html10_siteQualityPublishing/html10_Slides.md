@@ -173,6 +173,7 @@ Fix the **first** error, then check again.
 - Open the site in **two browsers**
 - Click every link on every page
 - **Narrow the window** to phone width. Does the layout adjust?
+- **Live Preview → Developer Tools → Console:** no red errors
 - Usability: can a partner use it without your help?
 
 Optional (if the filter allows): **WAVE** and **PageSpeed Insights**
