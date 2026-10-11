@@ -2,9 +2,8 @@
 
 **Due: Thursday, October 15**
 
-You met with your Business and Marketing client and filled out the intake form. Now turn that meeting into a plan and get the home page started. This milestone is small on purpose. Work on it when your regular class work is done.
+You met with your Business and Marketing client and filled out your intake form. Now turn that meeting into a plan and get the home page started. This first "milestone" in your website evelopment is relatively short.  Work on it when your regular class work is done.
 
-You and your classmate may share the same client, but each of you builds your own website.
 
 ## What You Will Turn In
 
@@ -35,10 +34,12 @@ Client's name, business name, and what the business does (1–2 sentences).
 What should a visitor do on this site? (call, visit, buy, sign up, ...)
 
 ## Pages
-List the 3 to 5 web pages the client's site will have (for example: Home, About, Menu, Contact).
-For each page, write one line about what goes on it. You only build the Home page this week.
+List the number of web pages the client's site will have (for example: Home, About, Menu, Contact).
+For each page, write one line about what goes on it. You only start building the Home page this week (at least that's this weeks requirement - you can do more if you have time).
 
-## Branding
+## Branding 
+You might need to have a follow-up discussion with your client if you didn't get these details:
+
 - Colors (hex codes, like #1E6FD9):
 - Fonts:
 - Logo: does the client have one, or does one need to be made?
@@ -69,27 +70,5 @@ Build `index.html` and `styles.css` in your `ClientSite_Lastname` folder.
 Check your page with Live Preview before you push.
 
 ---
-
-## Optional: Show Your Client
-
-If you can meet with your client this week, show them the home page. Add a section at the bottom of your plan:
-
-```markdown
-## Client Feedback
-One thing the client liked:
-One thing the client wants changed:
-```
-
----
-
-## Grading (out of 5)
-
-| Score | What it looks like |
-|---|---|
-| 5 | Site plan filled in, and the home page has a header, nav, two sections, and footer, styled with the client's colors |
-| 4 | Both parts started, with a few things missing |
-| 3 | One part done, or both parts with big gaps |
-| 2 | Started, but mostly empty |
-| 0 | Not turned in |
 
 Questions? Ask Mr. McMaster.
