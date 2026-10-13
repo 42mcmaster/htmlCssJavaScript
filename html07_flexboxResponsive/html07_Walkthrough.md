@@ -272,7 +272,8 @@ By default, a flex item is only as wide as its content. `flex: 1` tells each ite
   flex: 1;   /* every card grows by the same amount = equal widths */
   background-color: #fff;
   padding: 1.5rem;
-  border-radius: 0.5rem;
+  border: 2px solid #2c3e50;
+  border-radius: 8px; 
 }
 ```
 
