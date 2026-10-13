@@ -99,6 +99,8 @@ Everything here is graded in the practice task (`html07_Task.html`) and in the D
 
 Open the file in the browser. Right now everything stacks down the page. That is normal flow: block elements go top to bottom.
 
+**Where to put your CSS:** In Steps 2 through 11, add each new CSS rule at the end of the `<style>` block, below the comment `/* Your walkthrough CSS goes below this line */` and above `</style>`. If a step changes a rule you already have (like `.cards`), edit that rule instead of making a second copy. Step 12 adds a media query, and after that the placement changes. Step 12 explains how.
+
 [Back to top](#table-of-contents)
 
 ---
@@ -126,7 +128,7 @@ Two words you will see:
 | **Main axis** | The direction the items flow. For a row, left to right. |
 | **Cross axis** | The other direction. For a row, top to bottom. |
 
-**Try This 1:** Add the `.cards` rule above to your `<style>` block and refresh. What happened to the three cards?
+**Try This 1:** Add the `.cards` rule above to your `<style>` block (below the "Your walkthrough CSS" comment) and refresh. What happened to the three cards?
 
 [Back to top](#table-of-contents)
 
@@ -142,6 +144,8 @@ Two words you will see:
 | `column` | Top to bottom (stacked) |
 | `row-reverse` | Right to left |
 | `column-reverse` | Bottom to top |
+
+Add the `flex-direction` line to the `.cards` rule you already have:
 
 ```css
 .cards {
@@ -169,7 +173,7 @@ Try `column`, look at the page, then change it back to `row` (or delete the line
 | `space-around` | Even space around each item |
 | `space-evenly` | Exactly equal space everywhere |
 
-`space-between` is the one you will use most. It is how a nav bar puts the logo on the left and the links on the right.
+`space-between` is the one you will use most. It is how a nav bar puts the logo on the left and the links on the right. You will use it in Step 7.
 
 [Back to top](#table-of-contents)
 
@@ -188,7 +192,7 @@ Try `column`, look at the page, then change it back to `row` (or delete the line
 
 Easy way to remember: **justify-content = along the row. align-items = across the row.**
 
-A common trick is centering something both ways:
+A common trick is centering something both ways. You do not need to add this to your page. It is here so you know the pattern:
 
 ```css
 .center-box {
@@ -207,6 +211,8 @@ A common trick is centering something both ways:
 
 `gap` puts space **between** flex items, but not on the outside edges. It is cleaner than adding margins to every item.
 
+Add the `gap` line to your `.cards` rule:
+
 ```css
 .cards {
   display: flex;
@@ -223,6 +229,8 @@ Use `rem` for spacing, the same as in Lesson 05. `1rem` is the page's base font 
 ## 7. Build a Flexbox Nav Bar
 
 The nav has two flex items: the `.logo` and the `.nav-links` group. The links group is also a flex container, so the links sit in a row with a gap.
+
+Add these four rules at the end of your `<style>` block:
 
 ```css
 /* The whole bar: logo on the left, links on the right */
@@ -262,6 +270,8 @@ The nav has two flex items: the `.logo` and the `.nav-links` group. The links gr
 
 By default, a flex item is only as wide as its content. `flex: 1` tells each item to **grow** and take an equal share of the empty space. Give it to every card and they all come out the same width.
 
+Your `.cards` rule should now match the one below. Then add the new `.card` rule (no "s") under it:
+
 ```css
 .cards {
   display: flex;
@@ -273,7 +283,7 @@ By default, a flex item is only as wide as its content. `flex: 1` tells each ite
   background-color: #fff;
   padding: 1.5rem;
   border: 2px solid #2c3e50;
-  border-radius: 8px; 
+  border-radius: 8px;
 }
 ```
 
@@ -286,6 +296,8 @@ By default, a flex item is only as wide as its content. `flex: 1` tells each ite
 ## 9. flex-wrap: A Gallery That Wraps
 
 By default, flexbox squeezes **every** item onto one line, even if they get tiny. `flex-wrap: wrap` lets items move to a new line when the row is full.
+
+Add these two rules at the end of your `<style>` block:
 
 ```css
 .gallery {
@@ -310,7 +322,9 @@ The `flex: 1` + `min-width` pair is a simple way to build a gallery: photos fill
 
 ## 10. Responsive Images
 
-A **responsive image** shrinks to fit its box instead of spilling off the side of the screen. Put this rule in every site you build:
+A **responsive image** shrinks to fit its box instead of spilling off the side of the screen. Put this rule in every site you build.
+
+Add it at the end of your `<style>` block:
 
 ```css
 img {
@@ -334,7 +348,7 @@ img {
 
 Phones pretend to be about 980px wide unless the page tells them otherwise. The page shows up tiny and zoomed out, and your media queries never kick in.
 
-This tag goes in the `<head>` of **every** page:
+This tag goes in the `<head>` of **every** page. Your starter already has it:
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -357,7 +371,11 @@ This tag goes in the `<head>` of **every** page:
 
 A responsive website is one of the ways to present data to people (competency 2.7.2). The others are a mobile app, a desktop app, and a web application.
 
+Add this at the **very bottom** of your `<style>` block, just above `</style>`:
+
 ```css
+/* ===== Media queries: keep this block at the very bottom ===== */
+
 /* Only runs when the window is 768px wide or narrower (phones) */
 @media (max-width: 768px) {
   .navbar {
@@ -371,7 +389,15 @@ A responsive website is one of the ways to present data to people (competency 2.
 }
 ```
 
-How to read it: "When the screen is **at most** 768px wide, use these rules." The rules inside **override** the normal ones because they come later in the stylesheet. So always put your media queries at the **bottom** of the CSS.
+How to read it: "When the screen is **at most** 768px wide, use these rules." The rules inside **override** the normal ones because they come later in the stylesheet.
+
+**Important:** This only works if the media query comes **after** the normal rules. From now on:
+
+- New normal CSS rules go **above** the `@media` block.
+- New phone rules go **inside** the `@media` block.
+- The `@media` block always stays last, right above `</style>`.
+
+If a normal rule ends up below the media query, it wins, and your phone layout will not change.
 
 The width where the layout changes is called a **breakpoint**. Common breakpoints:
 
@@ -385,6 +411,8 @@ The width where the layout changes is called a **breakpoint**. Common breakpoint
 
 - `@media (max-width: 768px)` means **768px and narrower**. You write the desktop layout first, then fix it for phones. This is what we use in class.
 - `@media (min-width: 768px)` means **768px and wider**. This is used for **mobile-first** design: write the phone layout as the normal CSS, then add media queries for bigger screens. Many professional sites work this way. Know the term for the exam.
+
+This example is just to read. Do not add it to your page:
 
 ```css
 /* Mobile-first example: one column by default... */
@@ -421,7 +449,7 @@ You can also drag the line between your code and the preview to make the preview
 1. With the page at phone width, click the **select element** button (the arrow-in-a-box icon), then click the nav bar.
 2. Look in the **Styles** pane. At phone width, the rule from inside `@media (max-width: 768px)` shows at the top. At a wide width, that rule is gone.
 
-If the layout doesn't change, the Styles pane tells you why: the rule is missing, crossed out, or has a typo.
+If the layout doesn't change, the Styles pane tells you why: the rule is missing, crossed out, or has a typo. A crossed-out media query rule usually means a normal rule is sitting below the `@media` block (see Step 12).
 
 If you can, also open your published page on your own phone.
 
@@ -435,16 +463,9 @@ You only need to **recognize** CSS Grid in this course. Know what it is and what
 
 **CSS Grid** is a layout tool for **rows AND columns at the same time**. That makes it **two-dimensional**. Flexbox does one direction at a time.
 
-```css
-/* A page with a 15rem sidebar and a main area that takes the rest */
-.page-layout {
-  display: grid;                        /* turn on grid */
-  grid-template-columns: 15rem 1fr;     /* two columns: 15rem, then the rest */
-  gap: 1.5rem;                          /* same gap idea as flexbox */
-}
-```
+### Step A: Add the HTML
 
-To try it, add this HTML at the bottom of `<main>`, then add the CSS above:
+Add this inside `<main>`, right after the gallery's closing `</div>` and right before `</main>`:
 
 ```html
 <!-- Two grid items: the sidebar and the main area -->
@@ -454,23 +475,97 @@ To try it, add this HTML at the bottom of `<main>`, then add the CSS above:
 </div>
 ```
 
+The bottom of your `<body>` should now look like this:
+
+```html
+    <!-- Six photos: will wrap onto more than one row -->
+    <div class="gallery">
+      ...six img tags...
+    </div>
+
+    <!-- Two grid items: the sidebar and the main area -->
+    <div class="page-layout">
+      <aside><h2>Sidebar</h2><p>15rem wide.</p></aside>
+      <section><h2>Main Area</h2><p>Takes the rest of the space.</p></section>
+    </div>
+  </main>
+</body>
+</html>
+```
+
+### Step B: Add the grid CSS
+
+Add these rules in your `<style>` block **above** the `@media` block (not below it):
+
+```css
+/* A page with a 15rem sidebar and a main area that takes the rest */
+.page-layout {
+  display: grid;                        /* turn on grid */
+  grid-template-columns: 15rem 1fr;     /* two columns: 15rem, then the rest */
+  gap: 1.5rem;                          /* same gap idea as flexbox */
+  margin-top: 1.5rem;                   /* space between the gallery and the grid */
+}
+
+/* Give both grid items a box so you can see the two columns */
+.page-layout aside,
+.page-layout section {
+  background-color: #fff;
+  border: 2px solid #2c3e50;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* A different color so the sidebar stands out */
+.page-layout aside {
+  background-color: #dfe6ec;
+}
+```
+
+Without the second and third rules, the grid still works, but the two columns are just plain text and it is hard to tell anything changed. The borders and colors make the columns visible.
+
+**What you should see:** a narrow gray-blue box on the left (the sidebar) and a wide white box on the right (the main area), side by side.
+
+Now make the preview narrower. The sidebar stays 15rem wide. The main area shrinks. That is what `1fr` does: it takes whatever space is left over.
+
+### What each line does
+
 - `display: grid` turns it on.
 - `grid-template-columns` lists the width of each column.
 - `fr` means "a fraction of the leftover space." `1fr 1fr 1fr` makes three equal columns. `1fr 2fr` makes the second column twice as wide as the first.
 - `repeat(3, 1fr)` is a short way to write `1fr 1fr 1fr`.
 - `gap` works the same as in flexbox.
 
-Grid works with media queries too. On a phone, switch to one column:
+### Step C: One column on phones
+
+Grid works with media queries too. On a phone, a 15rem sidebar takes up most of the screen, so switch to one column.
+
+Add the `.page-layout` rule **inside** your existing `@media (max-width: 768px)` block, below the `.cards` rule. Do not make a second `@media` block. Your whole media query should now look like this:
 
 ```css
+/* ===== Media queries: keep this block at the very bottom ===== */
+
+/* Only runs when the window is 768px wide or narrower (phones) */
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;   /* logo on top, links underneath */
+    gap: 0.5rem;
+  }
+
+  .cards {
+    flex-direction: column;   /* cards stack */
+  }
+
   .page-layout {
-    grid-template-columns: 1fr;   /* one column */
+    grid-template-columns: 1fr;   /* one column: sidebar on top, main area below */
   }
 }
 ```
 
+Test it at phone width (Step 13). The sidebar box should move on top of the main area box, and both should be full width.
+
 **Try This 7:** What does `grid-template-columns: repeat(3, 1fr)` make?
+
+**Try This 8:** Change `15rem 1fr` to `1fr 2fr` and make the preview wider and narrower. What is different about the sidebar now? Change it back.
 
 [Back to top](#table-of-contents)
 
@@ -497,7 +592,7 @@ Real sites use both: grid for the big page layout, flexbox for the parts inside 
 6. `flex-wrap: wrap` lets items drop to the next line.
 7. Every image: `max-width: 100%; height: auto;`
 8. Every page: the viewport meta tag.
-9. `@media (max-width: 768px) { ... }` changes the layout for phones. `min-width` is used for mobile-first.
+9. `@media (max-width: 768px) { ... }` changes the layout for phones. Keep it at the bottom of the CSS. `min-width` is used for mobile-first.
 10. Grid = two-dimensional: `display: grid`, `grid-template-columns`, `gap`.
 
 [Back to top](#table-of-contents)
@@ -513,5 +608,6 @@ Real sites use both: grid for the big page layout, flexbox for the parts inside 
 5. The phone shows the page zoomed out like a tiny desktop page, and media queries for phones do not run.
 6. `@media (min-width: 1024px) { ... }`
 7. Three columns of equal width.
+8. The sidebar is no longer a fixed width. It is always one third of the space (and the main area is two thirds), so the sidebar grows and shrinks with the window.
 
 [Back to top](#table-of-contents)
