@@ -5,7 +5,7 @@
 - [Vocabulary](#vocabulary)
 - [Box Model Diagram and Width Math](#box-model-diagram-and-width-math)
 - [Cheat Sheet](#cheat-sheet)
-- [Seeing the Box Model Without Developer Tools](#seeing-the-box-model-without-developer-tools)
+- [Seeing the Box Model](#seeing-the-box-model)
 - [ODE Competencies](#ode-competencies)
 - [Common Mistakes and Fixes](#common-mistakes-and-fixes)
 - [Quick Debugging Checklist](#quick-debugging-checklist)
@@ -167,9 +167,17 @@ header {
 
 ---
 
-## Seeing the Box Model Without Developer Tools
+## Seeing the Box Model
 
-Developer tools are turned off on school computers, so we use CSS to see the boxes.
+There are three ways to see the boxes on a page.
+
+**Developer Tools in Live Preview:** Developer Tools in Chrome are turned off on school computers, but the ones in VS Code's Live Preview work.
+
+1. Open the page with **Live Preview** in VS Code.
+2. Click the **Developer Tools** button in the preview's toolbar.
+3. Click the **select element** button (the arrow-in-a-box icon) and point at the page. Each layer lights up: blue = content, green = padding, yellow = border, orange = margin.
+4. The **Styles** pane shows every CSS rule on the selected element. You can change a value there to try it. Changes are not saved, so type the value you like into your CSS file.
+5. The **Computed** tab shows the box model diagram with the real numbers.
 
 **The X-ray trick:** add this at the top of your stylesheet:
 
@@ -207,6 +215,7 @@ Every element's edge shows as a red line. An outline takes up no space, so nothi
 | Sticky header doesn't stick | No `top` value | Add `top: 0;` |
 | Content shows through the header | Header has no background | Add a `background-color` |
 | X-ray lines left in finished work | Red lines on the page | Delete the X-ray line |
+| Changed CSS in Developer Tools, but it's gone after a refresh | Developer Tools changes are not saved | Type the value into your CSS file |
 
 ---
 

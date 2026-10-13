@@ -33,7 +33,7 @@
 7. **External script**: JavaScript in its own `.js` file, linked with `<script src="script.js"></script>`.
 8. **`src` attribute**: Points a `<script>` tag to an external `.js` file.
 9. **`defer`**: A `<script>` attribute that waits until the page is loaded before running the script.
-10. **`console.log()`**: Prints a message to the browser console. (The console is off on our school computers.)
+10. **`console.log()`**: Prints a message to the Console. In class, open it in Live Preview: **Developer Tools** button, then the **Console** tab.
 11. **Comment**: A note in the code that the browser skips. `//` for one line, `/* */` for several.
 12. **Variable**: A named box that holds a value.
 13. **`let`**: Makes a variable whose value can change.
@@ -120,31 +120,22 @@ A `.js` file has only JavaScript in it. No `<script>` tags inside it.
 
 ## Showing Output
 
-The usual tool is `console.log()`, which prints to the browser's console:
+`console.log()` prints a message to the **Console**, a panel in the Developer Tools:
 
 ```js
-console.log('Hello');          // prints Hello in the console
+console.log('Hello');          // prints Hello in the Console
 console.log('Score: ' + 10);   // prints Score: 10
 ```
 
-**The console is turned off on our school computers**, so in class we print to a box on the page with `say()`:
+**How to open the Console in class:** browser Developer Tools are turned off on school computers, but the ones in VS Code's Live Preview work.
 
-```html
-<!-- The box that messages go into -->
-<div id="output" style="white-space: pre-line;"></div>
+1. Open the page with **Live Preview** in VS Code.
+2. Click the **Developer Tools** button in the preview's toolbar.
+3. Click the **Console** tab.
 
-<script>
-  // say() adds a message to the #output box, one per line
-  function say(msg) {
-    document.getElementById('output').textContent += msg + '\n';
-  }
+The Console also shows **errors** in red, with the line number. If a message you expect is missing, look for a red error first.
 
-  say('Hello');          // shows Hello on the page
-  say('Score: ' + 10);   // shows Score: 10 on the page
-</script>
-```
-
-How it works: it finds `#output`, then adds (`+=`) the message and a new line (`\n`) to its text.
+Visitors to a website never see the Console. It is a tool for the programmer.
 
 [Back to top](#table-of-contents)
 
@@ -248,16 +239,16 @@ function announceEvent(eventName, date, place) {
 }
 
 // Call them (the values in parentheses are arguments)
-say(greet('Maya'));                                    // Hello, Maya!
-say(addNumbers(5, 3));                                 // 8
-say(announceEvent('Open House', '3/15', 'Career Center'));
+console.log(greet('Maya'));                                    // Hello, Maya!
+console.log(addNumbers(5, 3));                                 // 8
+console.log(announceEvent('Open House', '3/15', 'Career Center'));
 // Open House is on 3/15 at the Career Center!
 
 // Save a returned value in a variable
 let total = addNumbers(10, 20);                        // total is 30
 ```
 
-A function doesn't have to return anything. `say(msg)` just does a job.
+A function doesn't have to return anything. `console.log()` just does a job: it prints.
 
 A function with no parameters still needs the parentheses: `function sayHi() { ... }` and `sayHi();`
 
@@ -496,7 +487,7 @@ if (form) {
 
 | Mistake | Fix |
 |---|---|
-| Nothing works at all | One typo stops the whole script. Check quotes, `( )`, and `{ }`. |
+| Nothing works at all | One typo stops the whole script. Open the Console and read the red error: it gives the line number. Check quotes, `( )`, and `{ }`. |
 | `getElementById('#name')` | No `#` in `getElementById`. It is `getElementById('name')`. (`querySelector` does use `#`.) |
 | Id in JavaScript doesn't match the HTML | They must match exactly, including dashes and capital letters. |
 | Script in the `<head>` can't find the button | Move the script right before `</body>`, or add `defer`. |

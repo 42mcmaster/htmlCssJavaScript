@@ -211,7 +211,7 @@ textarea:focus {
 | Stray end tag | Extra closing tag, or missing opening tag |
 | The `for` attribute of the `label` element must refer to... | `for` does not match any `id` |
 
-**Two browsers and a narrow window:** open the site in two browsers, click every link, check images, video, dark mode, and the form, then narrow the window to phone width.
+**Two browsers and a narrow window:** open the site in two browsers, click every link, check images, video, dark mode, and the form, then narrow the window to phone width. Then open each page in VS Code Live Preview, click **Developer Tools**, and check the **Console** tab for red errors.
 
 **Usability checklist:**
 - [ ] Clear what the site is about in 5 seconds

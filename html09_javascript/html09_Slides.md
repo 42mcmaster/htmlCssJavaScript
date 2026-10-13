@@ -56,22 +56,15 @@ paginate: true
 
 # Seeing Your Output
 
-Programmers use `console.log('Hello');` but **the console is off on our computers.**
-
-We print to a box on the page instead:
-
-```html
-<div id="output"></div>
-<script>
-  // say() adds a message to the #output box
-  function say(msg) {
-    document.getElementById('output').textContent += msg + '\n';
-  }
-  say('Hello, world!');
-</script>
+```js
+// console.log() prints a message to the Console
+console.log('Hello, world!');
 ```
 
-Nothing shows up? There is a typo. One mistake stops the whole script.
+**To see it:** Live Preview in VS Code → **Developer Tools** button → **Console** tab
+
+- Visitors never see the Console. It is a tool for you.
+- Errors show up in **red**, with the line number. One mistake stops the whole script.
 
 ---
 
@@ -121,8 +114,8 @@ let isStudent = true;     // boolean: true or false
 Quotes change everything:
 
 ```js
-say(5 + 3);       // 8
-say('5' + '3');   // 53
+console.log(5 + 3);       // 8
+console.log('5' + '3');   // 53
 ```
 
 Also: `undefined` (no value yet) and `null` (nothing on purpose)
@@ -136,10 +129,10 @@ let name = 'Alex';
 let age = 16;
 
 // + joins strings (this is the one to know)
-say('My name is ' + name + ' and I am ' + age + '.');
+console.log('My name is ' + name + ' and I am ' + age + '.');
 
 // Template literal: backticks and ${ } (you'll see it online)
-say(`My name is ${name} and I am ${age}.`);
+console.log(`My name is ${name} and I am ${age}.`);
 ```
 
 Spaces go **inside** the quotes: `'My name is ' + name`
@@ -155,8 +148,8 @@ function greet(name) {            // name is a parameter
 }
 
 // Call it as many times as you want
-say(greet('Maya'));               // 'Maya' is an argument
-say(greet('Marco'));
+console.log(greet('Maya'));               // 'Maya' is an argument
+console.log(greet('Marco'));
 ```
 
 More than one parameter: `function addNumbers(num1, num2) { return num1 + num2; }`

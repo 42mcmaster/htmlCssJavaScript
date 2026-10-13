@@ -60,5 +60,5 @@ Strong classes can do this in 3 days by assigning the task vocabulary questions 
   - Hosting on the free Spark plan needs no credit card. Students should not change plans.
 - **ARIA is `aria-label` only.** The rest of the ARIA catalog is beyond both exams.
 - **CMS is describe level.** What a CMS is, static vs CMS-driven, WordPress as the example. Students do not install or configure one.
-- **No dev tools.** Dev tools are disabled on student machines, so testing uses the W3C validators, two browsers, a narrowed window, and the keyboard. WAVE (wave.webaim.org) and PageSpeed Insights (pagespeed.web.dev) are optional, only if the school filter allows them.
+- **Dev tools come from Live Preview.** Browser dev tools are turned off on student machines, but the Developer Tools in VS Code's Live Preview work. Testing uses the W3C validators, the Live Preview Console (no red errors), two browsers, a narrowed window, and the keyboard. WAVE (wave.webaim.org) and PageSpeed Insights (pagespeed.web.dev) are optional, only if the school filter allows them.
 - **Troubleshooting methods are introduced here** (top-down, bottom-up, follow the path, spot the differences) and reviewed in exam prep.

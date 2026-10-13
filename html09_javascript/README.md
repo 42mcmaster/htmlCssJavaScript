@@ -40,22 +40,11 @@ The old lesson files: the three slide decks, three walkthroughs, two study guide
 
 The Google Quiz can go at the start of the next lesson or at the end of Day 3.
 
-## The console is turned off on student computers
+## Output goes to the Console in Live Preview
 
-Dev tools are disabled on student machines, so `console.log()` can't be seen. All student materials use the **output box** instead: a `<div id="output">` and a small `say()` function that writes into it.
+Browser dev tools are turned off on student computers, but the Developer Tools inside VS Code's Live Preview work, including the Console (Mr. McMaster checked, Oct 2026). All student materials use `console.log()` and tell students to open it with: Live Preview → **Developer Tools** button → **Console** tab. Students also read red error messages (with line numbers) there.
 
-```html
-<div id="output"></div>
-<script>
-  // say() adds a message to the #output box on the page
-  function say(msg) {
-    document.getElementById('output').textContent += msg + '\n';
-  }
-  say('Hello, world!');   // used everywhere console.log() would be
-</script>
-```
-
-`console.log()` is still taught by name, so students recognize it. A side benefit: students use `getElementById` and `textContent` on day one, which makes the DOM steps on day two easier.
+The earlier version used an on-page output box and a `say()` helper because the console was thought to be unavailable. That version is in git history if it is ever needed again.
 
 ## Scope Decisions
 

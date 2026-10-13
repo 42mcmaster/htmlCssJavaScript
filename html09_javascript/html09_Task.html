@@ -26,16 +26,6 @@
       padding: 1rem;
       margin-bottom: 1.5rem;
     }
-    #output {
-      white-space: pre-line;   /* makes each say() message start on a new line */
-      font-family: monospace;
-      font-size: 1rem;
-      background-color: #1e1e1e;
-      color: #9fef00;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      min-height: 3rem;
-    }
     .box {
       background-color: #3498db;
       color: white;
@@ -66,13 +56,14 @@
 <main>
   <h1>html09 Task: JavaScript Practice</h1>
   <p>Work through Parts 1 to 4. Every TODO is in the <code>&lt;script&gt;</code> at the bottom of this file.
-     Save, then refresh the page in the browser after each part to check your work.</p>
+     Open this page with Live Preview in VS Code. Save, then refresh the preview after each part to check your work.</p>
 
-  <!-- ============ Parts 1 and 2 print here ============ -->
+  <!-- ============ Parts 1 and 2 print in the Console ============ -->
   <section>
     <h2>Output (Parts 1 and 2)</h2>
-    <p>Anything you send to <code>say()</code> shows up in this box.</p>
-    <div id="output"></div>
+    <p>Parts 1 and 2 print with <code>console.log()</code>. To see the messages, click the
+       <strong>Developer Tools</strong> button in the Live Preview toolbar, then click the <strong>Console</strong> tab.
+       Errors show up there in red, with the line number.</p>
   </section>
 
   <!-- ============ Part 3: DOM practice ============ -->
@@ -124,14 +115,11 @@
 <!-- Scripts go at the END of the body so the HTML above already exists when they run -->
 <script>
   // ============================================================
-  // HELPER (done for you): say() prints a message into the #output box.
-  // Use say() everywhere you would use console.log().
+  // console.log() prints a message in the Console
+  // (Live Preview > Developer Tools > Console tab).
   // ============================================================
-  function say(msg) {
-    document.getElementById('output').textContent += msg + '\n';
-  }
 
-  say('The script is running.');   // if you don't see this line, check for a typo
+  console.log('The script is running.');   // if you don't see this line in the Console, look for a red error
 
   // ============================================================
   // PART 1: VARIABLES AND DATA TYPES
@@ -150,7 +138,7 @@
 
 
   // TODO 5: Print each variable with a label, using + to join the strings.
-  // Example: say('Name: ' + firstName);
+  // Example: console.log('Name: ' + firstName);
   // Print all four.
 
 
@@ -163,18 +151,19 @@
 
 
   // TODO 8: Print the same sentence again with a template literal (backticks and ${ }).
-  // Example: say(`My name is ${firstName} and I am ${age} years old.`);
+  // Example: console.log(`My name is ${firstName} and I am ${age} years old.`);
 
 
   // TODO 9: Try it: remove the // from the next line, save, and refresh.
   // schoolName = 'Different School';
-  // Everything below it stops printing. Changing a const is an error, and an
-  // error stops the script. Put the // back before you go on.
+  // Everything below it stops printing, and the Console shows a red error.
+  // Changing a const is an error, and an error stops the script.
+  // Put the // back before you go on.
 
 
   // ============================================================
   // PART 2: FUNCTIONS
-  // Each function RETURNS a value. Print the result with say().
+  // Each function RETURNS a value. Print the result with console.log().
   // ============================================================
 
   // TODO 10: Write a function greetUser(name) that returns 'Hello, ' + name + '!'

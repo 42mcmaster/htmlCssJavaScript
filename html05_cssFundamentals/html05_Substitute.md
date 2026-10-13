@@ -17,7 +17,7 @@ Mr. McMaster is out today. You'll learn the basics of CSS from a video, take a q
 **Two notes about the video:**
 
 - He uses a VS Code add-on called Live Server so the page updates by itself. You don't need it. Open your HTML file in Chrome and refresh after you save.
-- In the box model part, he right-clicks and uses **Inspect**. That is turned off on our computers. Just watch that part.
+- In the box model part, he right-clicks and uses **Inspect**. Inspect is turned off in Chrome on our computers, but you can do the same thing in VS Code: open your page with **Live Preview** and click the **Developer Tools** button in the preview's toolbar.
 
 ---
 
