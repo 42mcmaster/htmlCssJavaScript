@@ -277,7 +277,7 @@ By default, a flex item is only as wide as its content. `flex: 1` tells each ite
 }
 ```
 
-`flex: 1` is short for `flex-grow: 1` (plus two other settings you do not need yet). If one card had `flex: 2`, it would grow twice as much as the others.
+`flex: 1` is short for `flex-grow: 1`. If one card had `flex: 2`, it would grow twice as much as the others.
 
 [Back to top](#table-of-contents)
 
