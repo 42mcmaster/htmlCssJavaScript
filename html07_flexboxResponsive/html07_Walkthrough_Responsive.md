@@ -48,7 +48,6 @@ Do Part 1 (`html07_Walkthrough_Flexbox.md`) first.
       padding: 1rem;
     }
 
-    /* ----- Flexbox from Part 1 ----- */
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -103,7 +102,6 @@ Do Part 1 (`html07_Walkthrough_Flexbox.md`) first.
 
 
     /* ===== MARKER B: media query goes here (Steps 4 and 7) ===== */
-    /* Keep the media query at the very bottom, right above </style> */
 
   </style>
 </head>
