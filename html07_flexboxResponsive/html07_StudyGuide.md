@@ -178,7 +178,7 @@ img {
 
 - Put media queries at the **bottom** of the stylesheet so they override the rules above them.
 - **Mobile-first:** phone layout is the normal CSS; `min-width` queries add layout for bigger screens.
-- **Testing:** in VS Code Live Preview, open **Developer Tools** (button in the preview toolbar) and click the **device toolbar** button (phone-and-tablet icon). Pick a phone or type a width like `375`. Select an element and check the **Styles** pane: the `@media` rule shows only at phone width.
+- **Testing:** the phone-size button in Live Preview does not work, so open the page in a Chrome **Guest** window (copy the address from Live Preview's address bar, click your profile picture in Chrome > **Guest**, and paste it in), right-click > **Inspect**, then click the **device toolbar** button (phone-and-tablet icon). Pick a phone or type a width like `375`. Select an element and check the **Styles** pane: the `@media` rule shows only at phone width.
 
 [Back to top](#table-of-contents)
 

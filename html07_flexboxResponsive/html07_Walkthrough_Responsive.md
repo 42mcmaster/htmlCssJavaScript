@@ -12,7 +12,7 @@ Do Part 1 (`html07_Walkthrough_Flexbox.md`) first.
 2. [The Viewport Tag](#2-the-viewport-tag)
 3. [Responsive Images](#3-responsive-images)
 4. [Add a Media Query](#4-add-a-media-query)
-5. [Test Phone Size in Live Preview](#5-test-phone-size-in-live-preview)
+5. [Test Phone Size in a Chrome Guest Window](#5-test-phone-size-in-a-chrome-guest-window)
 6. [CSS Grid: A Two-Column Layout](#6-css-grid-a-two-column-layout)
 7. [Grid on a Phone](#7-grid-on-a-phone)
 8. [Terms to Know for the Exam](#8-terms-to-know-for-the-exam)
@@ -235,26 +235,37 @@ The width where the layout changes (768px here) is called a **breakpoint**.
 
 ---
 
-## 5. Test Phone Size in Live Preview
+## 5. Test Phone Size in a Chrome Guest Window
 
-Developer Tools in Chrome are turned off on school computers, but the ones in **Live Preview** work.
+The phone-size button in Live Preview's Developer Tools does not change the page size. Developer Tools are turned off in regular Chrome on school computers, but they work in a Chrome **Guest** window. You will open your Live Preview page there.
 
-1. With your page open in Live Preview, click the **Developer Tools** button in the preview's toolbar.
-2. Click the **device toolbar** button. It is the phone-and-tablet icon at the top-left of the Developer Tools panel.
-3. A bar appears above the page. In the width box, type `375` (a phone width).
+**Open the page in a Guest window**
+
+1. Keep your page open in Live Preview in VS Code.
+2. In the Live Preview address bar, copy the page address. It looks like `http://127.0.0.1:3000/index.html`.
+3. Open Chrome. Click your profile picture at the top-right, then click **Guest**. A new Guest window opens.
+4. Paste the address into the Guest window and press Enter. Your page appears.
+
+**Turn on phone size**
+
+5. Right-click the page and click **Inspect**. Developer Tools open.
+6. Click the **device toolbar** button. It is the phone-and-tablet icon at the top-left of the Developer Tools panel.
+7. A bar appears above the page. In the width box, type `375` (a phone width).
 
 **What you should see at 375:**
 - The logo is on top and the links are underneath it.
 - The three cards are stacked.
 
-4. Change the width to `1200`.
+8. Change the width to `1200`.
 
 **What you should see at 1200:** the nav and cards go back to a row.
 
-5. Try `768` and then `769`. At 768 the phone layout is on. At 769 it is off. That is the breakpoint.
-6. Click the device toolbar button again to turn it off.
+9. Try `768` and then `769`. At 768 the phone layout is on. At 769 it is off. That is the breakpoint.
+10. Click the device toolbar button again to turn it off.
 
-Quick way without Developer Tools: drag the line between your code and the preview to make the preview narrow.
+When you change your code and save, the Guest window should update. If it does not, click Chrome's refresh button.
+
+Quick way without Developer Tools: drag the line between your code and the preview in VS Code to make the preview narrow.
 
 **If the layout does not change:**
 - Check that the media query is at the very bottom of the `<style>` block.
@@ -454,7 +465,7 @@ The bottom of your `<style>` block, from Marker A down, should look like this:
 1. Every page needs the viewport tag in the `<head>`.
 2. Every image: `max-width: 100%; height: auto;`
 3. `@media (max-width: 768px) { ... }` changes the layout on phones. Keep it at the bottom of the CSS.
-4. Test phone sizes with the device toolbar in Live Preview's Developer Tools.
+4. Test phone sizes with the device toolbar in a Chrome Guest window (copy the Live Preview address, right-click > Inspect).
 5. Grid is two-dimensional: `display: grid`, `grid-template-columns`, `gap`.
 6. `fr` = a fraction of the leftover space.
 
