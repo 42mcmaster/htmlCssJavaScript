@@ -279,6 +279,8 @@ Quick way without Developer Tools: drag the line between your code and the previ
 
 ## 6. CSS Grid: A Two-Column Layout
 
+First, let's watch this on YouTube: [Watch the video](https://www.youtube.com/watch?v=eHaZlFcGl6k)
+
 You only need to **recognize** CSS Grid in this course.
 
 - **Flexbox** works in **one direction at a time** (a row or a column). It is **one-dimensional**.
@@ -306,9 +308,11 @@ You will make a layout with a narrow sidebar on the left and a wide main area on
 ```css
 .page-layout {
   display: grid;                      /* turn on grid */
-  grid-template-columns: 15rem 1fr;   /* two columns: 15rem, then the rest */
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  grid-template-columns: 15rem 1fr;   /* first column is 15rem; 1fr fills the remaining space */
+                                       /* 1fr 1fr = two equal columns */
+                                       /* 1fr 2fr = two columns; second gets twice the space */
+  gap: 1.5rem;                         /* space between columns and rows */
+  margin-top: 1.5rem;                  /* add space above the grid */
 }
 
 /* Give both boxes a border so you can see the two columns */
