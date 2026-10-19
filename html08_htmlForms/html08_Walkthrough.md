@@ -366,29 +366,17 @@ Many people fill in forms with the keyboard. The **Tab** key moves to the next c
 
 The browser tabs through controls **in the order they appear in your HTML.** If your HTML is in a sensible order, the tab order is already correct. You don't need to add anything.
 
-The `tabindex` attribute changes this. The Ohio web design standards list it (competency 6.4.6), so know what it does:
+**Try it:** Click in the Full Name box. Press Tab over and over. Every control should get a highlight, top to bottom, ending with the buttons.
 
-| Value | What it does | Should you use it? |
-|---|---|---|
-| `tabindex="0"` | Lets Tab land on something that normally can't be focused, like a `<div>` | Only if that item is clickable |
-| `tabindex="-1"` | Tab skips it | Rarely |
-| `tabindex="1"`, `"2"`, ... | Tab goes to these first, before everything else | **Almost never.** It usually makes the order confusing. |
+### tabindex: know it, but don't use it
 
-```html
-<!-- BAD: Tab jumps to the button first, before any boxes are filled in -->
-<button type="submit" tabindex="1">Sign Up</button>
+The Ohio web design standards list the `tabindex` attribute (competency 6.4.6), so know what it is. It changes the tab order. You will almost never need it, because putting your HTML in the right order does the job.
 
-<!-- GOOD: no tabindex. Tab reaches the button last, because it is last in the HTML. -->
-<button type="submit">Sign Up</button>
-```
-
-**Try it:**
-1. Click a blank spot on the page, like the "Club Sign-Up" heading. Do not click in a box. Press Tab over and over. Every control should get a highlight, top to bottom, ending with the buttons.
-2. Add `tabindex="1"` to the Sign Up button and save.
-3. Click the heading again, then press Tab **once**. The highlight jumps straight to Sign Up, before any of the boxes. That is the problem with positive `tabindex`.
-4. Take `tabindex="1"` back out and save.
-
-If you click inside a box first, you will not see the jump. Tab starts from that box and moves down, and Sign Up gets skipped at the end instead.
+| Value | What it does |
+|---|---|
+| `tabindex="0"` | Lets Tab land on something it normally skips, like a `<div>` |
+| `tabindex="-1"` | Tab skips it |
+| `tabindex="1"`, `"2"`, ... | Tab goes to these first. **Don't use these.** They make the order confusing. |
 
 ---
 
