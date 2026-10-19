@@ -263,36 +263,63 @@ A `<textarea>` is a box for several lines of text, like a message.
 
 A long form is easier to read in sections. `<fieldset>` draws a box around related controls. `<legend>` is the title of that box.
 
-Wrap your controls into groups like this:
+Your form works, but everything is in one long list. In this step you will **rebuild the form in four sections**. Copying pieces out of your own file and moving them around gets messy, so you will start the form over and copy the code from **this walkthrough** instead.
+
+### Step A: Delete your old form
+
+In `form-practice.html`, select everything from `<form id="signup-form"` down to `</form>`, including those two lines. Delete it. Leave the `<h1>` and everything else in the page alone.
+
+### Step B: Paste in the empty template
+
+Paste this where the old form was:
 
 ```html
 <form id="signup-form" action="#" method="get">
 
   <fieldset>
     <legend>About You</legend>
-    <!-- name, email, password, phone, age, date, website, nickname go here -->
+    <!-- Paste the Full Name code from step 3 here.
+         Then paste ALL the code from step 4 under it
+         (email, password, phone, age, date, website, nickname). -->
   </fieldset>
 
   <fieldset>
     <legend>Meeting Time</legend>
-    <!-- the radio buttons go here (you can delete the <p> above them;
-         the legend now says what the group is) -->
+    <!-- Paste the three radio buttons from step 5 here.
+         Skip the <p>Meeting time:</p> line. The legend does that job now. -->
   </fieldset>
 
   <fieldset>
     <legend>Interests</legend>
-    <!-- the checkboxes go here -->
+    <!-- Paste the three checkboxes from step 6 here.
+         Skip the <p>What do you want to learn?</p> line. The legend does that job now. -->
   </fieldset>
 
   <fieldset>
     <legend>A Little More</legend>
-    <!-- the grade dropdown and the textarea go here -->
+    <!-- Paste the Grade dropdown from step 7 here.
+         Then paste the textarea from step 8 under it. -->
   </fieldset>
 
-  <!-- buttons go here (step 10) -->
+  <!-- The buttons go here in step 10 -->
 
 </form>
 ```
+
+### Step C: Fill in each fieldset
+
+Scroll back up in this walkthrough and copy each code block into the matching fieldset:
+
+| Fieldset (legend) | Copy the code from |
+|---|---|
+| About You | Step 3 (Full Name), then step 4 (all the other input types) |
+| Meeting Time | Step 5 (radio buttons), without the `<p>` line |
+| Interests | Step 6 (checkboxes), without the `<p>` line |
+| A Little More | Step 7 (Grade dropdown), then step 8 (textarea) |
+
+You can delete the `<!-- Paste ... -->` comments once the code is in.
+
+**Try it:** Save and look at the page. You should see four boxes, each with a title on its top border. Every control from steps 3-8 should be in one of them. If one is missing, check the table above.
 
 A fieldset + legend is the best way to label a group of radio buttons or checkboxes. Screen readers read the legend before each choice.
 
