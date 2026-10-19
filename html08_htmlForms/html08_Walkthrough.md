@@ -382,7 +382,13 @@ The `tabindex` attribute changes this. The Ohio web design standards list it (co
 <button type="submit">Sign Up</button>
 ```
 
-**Try it:** Click in the Full Name box. Press Tab over and over. Every control should get a highlight, top to bottom. Then add `tabindex="1"` to the Sign Up button and try again. See the jump? Take it back out.
+**Try it:**
+1. Click a blank spot on the page, like the "Club Sign-Up" heading. Do not click in a box. Press Tab over and over. Every control should get a highlight, top to bottom, ending with the buttons.
+2. Add `tabindex="1"` to the Sign Up button and save.
+3. Click the heading again, then press Tab **once**. The highlight jumps straight to Sign Up, before any of the boxes. That is the problem with positive `tabindex`.
+4. Take `tabindex="1"` back out and save.
+
+If you click inside a box first, you will not see the jump. Tab starts from that box and moves down, and Sign Up gets skipped at the end instead.
 
 ---
 
