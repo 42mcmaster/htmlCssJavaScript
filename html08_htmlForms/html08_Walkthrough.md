@@ -364,19 +364,38 @@ You may also see the older style: `<input type="submit" value="Sign Up">`. It wo
 
 Many people fill in forms with the keyboard. The **Tab** key moves to the next control. **Shift+Tab** moves back. Space checks a checkbox. The arrow keys move between radio buttons.
 
-The browser tabs through controls **in the order they appear in your HTML.** If your HTML is in a sensible order, the tab order is already correct. You don't need to add anything.
+### What Tab stops on
+
+Tab is not just for forms. It stops on anything on the page you can **click or type in**:
+
+- Links (`<a href="...">`)
+- Buttons
+- Form controls: inputs, radio buttons, checkboxes, dropdowns, and textareas
+
+Tab **skips** everything else: `<div>`, `<p>`, `<h1>`, images, and so on. You can't click or type in those, so there is no reason to stop on them.
+
+The browser goes through these stops **in the order they appear in your HTML.** If your HTML is in a sensible order, the tab order is already correct. You don't need to add anything.
 
 **Try it:** Click in the Full Name box. Press Tab over and over. Every control should get a highlight, top to bottom, ending with the buttons.
 
-### tabindex: know it, but don't use it
+### tabindex: know it, but you will rarely use it
 
-The Ohio web design standards list the `tabindex` attribute (competency 6.4.6), so know what it is. It changes the tab order. You will almost never need it, because putting your HTML in the right order does the job.
+The `tabindex` attribute changes what Tab stops on. The Ohio web design standards list it (competency 6.4.6), so know what each value does:
 
-| Value | What it does |
-|---|---|
-| `tabindex="0"` | Lets Tab land on something it normally skips, like a `<div>` |
-| `tabindex="-1"` | Tab skips it |
-| `tabindex="1"`, `"2"`, ... | Tab goes to these first. **Don't use these.** They make the order confusing. |
+| Value | What it does | When you would use it |
+|---|---|---|
+| `tabindex="0"` | Adds something to the Tab stops that Tab normally skips | When a `<div>` or other plain element has been made clickable with JavaScript (see below) |
+| `tabindex="-1"` | Takes something off the Tab stops, even a link or button | Rarely. Most of the time you want people to reach everything. |
+| `tabindex="1"`, `"2"`, ... | Moves that item to the front of the tab order, before everything else | **Don't use these.** The order stops matching the page, and keyboard users get lost. |
+
+**Why `tabindex="0"` exists.** Sometimes a web page uses JavaScript to make a plain `<div>` clickable, like a card that opens more details when you click it. A mouse user can click it. But Tab skips `<div>`s, so a keyboard user could never reach it. Adding `tabindex="0"` puts it in the Tab stops in its normal place:
+
+```html
+<!-- Without tabindex="0", Tab skips this card. Keyboard users can't reach it. -->
+<div class="card" tabindex="0">Click for club details</div>
+```
+
+**Best practice:** if something is clickable, use a real `<button>` or `<a>` when you can. They are already Tab stops, so you don't need `tabindex` at all.
 
 ---
 
