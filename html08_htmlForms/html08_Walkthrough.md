@@ -79,13 +79,7 @@ On a real website, `action` is the address of a program on a **server** that rec
 | `get` | Puts the answers in the address bar, after a `?` | Searches, filters, anything that is fine to see or bookmark |
 | `post` | Sends the answers hidden inside the request, not in the address bar | Passwords, personal info, anything that saves or changes data |
 
-Real sign-up and contact forms use `post`, with a server to receive the data. We use `get` for now so you can **see** what your form sends. After you submit, look at the address bar. You will see something like:
-
-```
-form-practice.html?fullName=Ana+Lopez&email=ana%40example.com#
-```
-
-Each piece is a `name=value` pair. That is why every control needs a `name`.
+Real sign-up and contact forms use `post`, with a server to receive the data. We use `get` for now so you can **see** what your form sends. You will try this in step 10, after you add the boxes and a submit button.
 
 ---
 
@@ -328,7 +322,13 @@ You may also see the older style: `<input type="submit" value="Sign Up">`. It wo
 
 **Try it:**
 1. Click Sign Up with everything empty. The browser stops you at the first required box.
-2. Fill in the required boxes and click Sign Up. Look at the address bar. Find each `name=value` pair.
+2. Fill in the required boxes and click Sign Up. Look at the address bar. Because the form uses `method="get"`, the answers are added to the end of the address, after a `?`. You will see something like:
+
+   ```
+   form-practice.html?fullName=Ana+Lopez&email=ana%40example.com#
+   ```
+
+   Each piece is a **name=value pair**: the `name` you gave the control, an `=` sign, and what the visitor typed or picked. An `&` separates the pairs. A control with no `name` is left out, which is why every control needs a `name`. (A `+` stands for a space, and `%40` stands for the `@` sign.) Find the pair for each box you filled in.
 3. Change `method="get"` to `method="post"` and submit again. The answers are no longer in the address bar. Change it back to `get`.
 
 ---
