@@ -66,20 +66,24 @@ Make `form-practice.html` and start with this:
 </html>
 ```
 
-### action: where the answers go
+### `action`: where the answers go
 
-On a real website, `action` is the address of a program on a **server** that receives the answers. It might save them in a database or email them to the owner. For example: `action="https://example.com/signup"`.
+On a real website, `action` is the address where the browser sends the answers. Usually, this is a program on a **server** that receives the information. It might save the answers in a database, send a message to the website owner, or process a sign-up.
 
-**We do not have a server yet.** Our sites are plain HTML files. So we use `action="#"`, which means "send it back to this same page." Nothing is saved. That is fine for learning. In Lesson 09, JavaScript will check the form before it is sent.
+For example: `action="https://example.com/signup"`.
 
-### method: how the answers travel
+**We do not have a server yet.** Our sites are plain HTML files. So we use `action="#"` for this practice form. The `#` generally points to the current page. Nothing is sent to a server or saved in a database. That is fine for learning. In Lesson 09, JavaScript will let us check the form before submission.
+
+### `method`: how the answers travel
 
 | Method | What it does | Use it for |
 |---|---|---|
-| `get` | Puts the answers in the address bar, after a `?` | Searches, filters, anything that is fine to see or bookmark |
-| `post` | Sends the answers hidden inside the request, not in the address bar | Passwords, personal info, anything that saves or changes data |
+| `get` | Adds the answers to the URL, after a `?` | Searches, filters, and information that is fine to see or bookmark |
+| `post` | Sends the answers in the body of the request instead of the URL | Submitting information that needs to be processed or saved |
 
-Real sign-up and contact forms use `post`, with a server to receive the data. We use `get` for now so you can **see** what your form sends. You will try this in step 10, after you add the boxes and a submit button.
+Real sign-up and contact forms commonly use `post`, with a server to receive the data. However, `post` does not automatically make information secure; real websites use HTTPS to protect information in transit.
+
+We use `get` for now so you can **see** what your form sends. You will try this in Step 10, after you add the boxes and a submit button.
 
 ---
 
