@@ -4,6 +4,12 @@ In this walkthrough you build one practice form, step by step. You will use ever
 
 **Files you make:** `form-practice.html` and `form-practice.css`, saved together in one folder.
 
+> **Video for this lesson:** Bro Code, "HTML forms" (about 8 minutes): https://www.youtube.com/watch?v=2O8pkybH6po
+>
+> We watch this video in class first. It covers the `<form>` tag, `action` and `method` (GET vs POST), labels with `for` and `id`, `name`, `placeholder`, `required`, and these input types: text, password, email, tel, date, number, radio, and checkbox. It also covers `<select>` dropdowns and submit and reset buttons.
+>
+> This walkthrough uses all of that, plus a few things the video does not cover: the `url` input type, `minlength`, `<textarea>`, `<fieldset>` and `<legend>`, the `<button>` tag, tab order, and styling the form with CSS. Where the video does something a little differently from this walkthrough, there is a note that says so.
+
 ## Table of Contents
 
 1. [What a Form Is](#1-what-a-form-is)
@@ -70,7 +76,7 @@ Make `form-practice.html` and start with this:
 
 On a real website, `action` is the address where the browser sends the answers. Usually, this is a program on a **server** that receives the information. It might save the answers in a database, send a message to the website owner, or process a sign-up.
 
-For example: `action="https://example.com/signup"`.
+For example: `action="https://example.com/signup"`. In the video, Bro Code points `action` at a PHP page. PHP is one of the languages that runs on a server and handles form answers.
 
 **We do not have a server yet.** Our sites are plain HTML files. So we use `action="#"` for this practice form. The `#` generally points to the current page. Nothing is sent to a server or saved in a database. That is fine for learning. In Lesson 09, JavaScript will let us check the form before submission.
 
@@ -81,7 +87,7 @@ For example: `action="https://example.com/signup"`.
 | `get` | Adds the answers to the URL, after a `?` | Searches, filters, and information that is fine to see or bookmark |
 | `post` | Sends the answers in the body of the request instead of the URL | Submitting information that needs to be processed or saved |
 
-Real sign-up and contact forms commonly use `post`, with a server to receive the data. However, `post` does not automatically make information secure; real websites use HTTPS to protect information in transit.
+Real sign-up and contact forms commonly use `post`, with a server to receive the data. As the video says, **never send a password with `get`**, because the password shows up in the address bar for anyone to see. `get` is a good fit for search boxes. Note that `post` does not make information secure by itself; real websites also use HTTPS to protect information in transit.
 
 We use `get` for now so you can **see** what your form sends. You will try this in Step 10, after you add the boxes and a submit button.
 
@@ -116,6 +122,8 @@ What each attribute does:
 | `required` | The browser will not submit the form while this box is empty. |
 
 **Try it:** Save and open the page. Click the words "Full Name:". The cursor should jump into the box. If it does not, your `for` and `id` do not match.
+
+**Note on the video:** Bro Code puts each label and input pair inside its own `<div>` so each pair sits on its own line. We do not need the `<div>`s. In step 12, the CSS rule `label { display: block; }` puts each label on its own line instead. Both ways work.
 
 ---
 
@@ -154,6 +162,11 @@ Changing `type` changes what the box accepts and what the browser shows. Add the
 <input type="text" id="nickname" name="nickname" maxlength="20">
 ```
 
+Two more attributes from the video:
+
+- `maxlength` works on password boxes too. Bro Code uses `maxlength="12"` so a password can be no more than 12 characters. You can use `minlength` and `maxlength` together.
+- `value` on a number box sets the starting number. Bro Code makes a quantity box with `min="0" max="99" value="1"`, so it starts at 1 and the arrows can't go below 0 or above 99.
+
 **Try it:**
 1. Type `ana` (no @ sign) in Email and click away. Nothing happens yet. When you add the submit button in step 10, the browser will stop you and show a message.
 2. Type letters into Age. The number box will not keep them.
@@ -186,6 +199,22 @@ Changing `type` changes what the box accepts and what the browser shows. Add the
 ```
 
 Here the `<input>` is **inside** the `<label>`. That also ties them together, so you don't need `for` and `id`. Clicking the words picks the button. Both ways (for/id, or wrapping) are correct.
+
+**Note on the video:** Bro Code uses the `for` and `id` way for radio buttons. Each radio button gets its own unique `id`, and its label's `for` matches it. That version looks like this:
+
+```html
+<!-- The for/id way (what the video shows). Same name, different id and value for each. -->
+<input type="radio" id="before" name="meetingTime" value="before" required>
+<label for="before">Before school</label>
+
+<input type="radio" id="lunch" name="meetingTime" value="lunch">
+<label for="lunch">Lunch</label>
+
+<input type="radio" id="after" name="meetingTime" value="after">
+<label for="after">After school</label>
+```
+
+Use whichever way you like. This walkthrough and the practice task use the wrapping way because it is shorter. The same choice applies to checkboxes in step 6.
 
 Putting `required` on one radio button in a group makes the whole group required.
 
@@ -349,7 +378,7 @@ Put these after the last `</fieldset>`, still inside the `<form>`:
 | `type="reset"` | Empties the form. Nothing is sent. |
 | `type="button"` | Does nothing by itself. JavaScript gives it a job (Lesson 09). |
 
-You may also see the older style: `<input type="submit" value="Sign Up">`. It works the same way. We use `<button>` because it is easier to style.
+The video uses the other way to make these buttons: `<input type="submit">` and `<input type="reset">`. You can add `value="Sign Up"` to change the words on the button. It works the same way. We use `<button>` because it is easier to style.
 
 **Try it:**
 1. Click Sign Up with everything empty. The browser stops you at the first required box.
@@ -360,6 +389,8 @@ You may also see the older style: `<input type="submit" value="Sign Up">`. It wo
    ```
 
    Each piece is a **name=value pair**: the `name` you gave the control, an `=` sign, and what the visitor typed or picked. An `&` separates the pairs. A control with no `name` is left out, which is why every control needs a `name`. (A `+` stands for a space, and `%40` stands for the `@` sign.) Find the pair for each box you filled in.
+
+   Find the `password=` pair. Your password is right there in the address bar. This is why the video says never to use `get` for passwords.
 3. Change `method="get"` to `method="post"` and submit again. The answers are no longer in the address bar. Change it back to `get`.
 
 ---

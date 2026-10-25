@@ -11,7 +11,7 @@ Students learn to build and style HTML forms, then add a working contact form to
 | `html08_Walkthrough.md` | Step-by-step guide. Students build a practice sign-up form (`form-practice.html` + `form-practice.css`) using every graded form skill. |
 | `html08_Task.html` | The one practice task: a coding camp registration form. Starter file with TODO comments for the HTML (Part 1), the CSS (Part 2), and a test list (Part 3). |
 | `html08_DIYTask.md` | The graded item. Add a styled contact form to `contact.html` on the student's own site, styled in their existing `styles.css`. |
-| `html08_Slides.md` | Marp slide deck for direct instruction. |
+| `html08_Slides.md` | Marp slide deck for direct instruction (optional; the Bro Code video replaces it on Day 1). |
 | `html08_StudyGuide.md` | Vocabulary, reference tables, commented examples, and review questions. |
 
 ### Teacher files (`teacher/`)
@@ -26,11 +26,17 @@ Students learn to build and style HTML forms, then add a working contact form to
 
 Older versions of this lesson: the three separate a/b/c tasks and their solutions, the old walkthrough and its solution, the old stand-alone form DIY and its solution, the old fast-finisher task, and copies of the old slides, study guide, and quiz files. Kept for reference only. Not used by students.
 
+## Video
+
+Bro Code, "HTML forms" (about 8 minutes): https://www.youtube.com/watch?v=2O8pkybH6po
+
+Shown at the start of Day 1 in place of the slides. It covers the form tag, action and method, labels with for/id, name, placeholder, required, the text, password, email, tel, date, number, radio, and checkbox input types, select, and submit and reset buttons. The walkthrough adds what the video does not cover: the url type, minlength, textarea, fieldset and legend, the `<button>` tag, tab order, and CSS styling. The walkthrough has short notes where the video does something differently (div wrappers, for/id on radio buttons, `<input type="submit">`).
+
 ## Suggested Days (about 3 class days)
 
 | Day | What happens |
 |---|---|
-| 1 | Slides. Walkthrough steps 1-10 (form tag, action/method, labels, input types, radio, checkbox, select, textarea, fieldset, buttons). |
+| 1 | Bro Code forms video (8 min). Walkthrough steps 1-10 (form tag, action/method, labels, input types, radio, checkbox, select, textarea, fieldset, buttons). |
 | 2 | Walkthrough steps 11-13 (tab order, styling, testing). Practice task `html08_Task.html`. |
 | 3 | DIY: contact form on `contact.html`, styled in `styles.css`. Test, validate, push with GitHub Desktop. Gimkit or quiz if time allows. |
 
