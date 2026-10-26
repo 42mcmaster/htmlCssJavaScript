@@ -529,7 +529,7 @@ The radio buttons and checkboxes are inside labels that are `display: block`, so
 
 ---
 
-## 13. Test Your Form
+## 12. Test Your Form
 
 1. Click each label. The cursor or check should go to the right control.
 2. Click Sign Up with the form empty. The browser should stop you.
@@ -544,7 +544,7 @@ The radio buttons and checkboxes are inside labels that are `display: block`, so
 
 ---
 
-## 14. Checklist
+## 13. Checklist
 
 - [ ] `<form>` with `id`, `action`, and `method`
 - [ ] Every text-style input has a `<label>` with a `for` that matches its `id`
@@ -563,7 +563,7 @@ The radio buttons and checkboxes are inside labels that are `display: block`, so
 
 ---
 
-## 15. Summary
+## 14. Summary
 
 - `<form>` wraps the whole form. `action` is where the answers go. `method` is how (`get` = in the address bar, `post` = hidden).
 - We have no server yet, so we use `action="#"`.
