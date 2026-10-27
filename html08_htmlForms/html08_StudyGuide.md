@@ -1,5 +1,7 @@
 # HTML 08: Forms Study Guide
 
+> **Video for this lesson:** Bro Code, "HTML forms" (about 8 minutes): https://www.youtube.com/watch?v=2O8pkybH6po
+
 ## Table of Contents
 
 1. [Vocabulary](#vocabulary)
@@ -71,7 +73,7 @@
 
 ## action and method (GET vs POST)
 
-- On a real site, `action` is the web address of a program on a **server**, like `action="https://example.com/contact"`.
+- On a real site, `action` is the web address of a program on a **server**, like `action="https://example.com/contact"`. In the video, the action is a PHP page. PHP is a language that runs on a server and handles form answers.
 - Our sites have **no server** yet, so we use `action="#"`. That sends the answers back to the same page. Nothing is saved.
 
 | | GET | POST |
@@ -80,6 +82,8 @@
 | Can you see them? | Yes | No |
 | Can you bookmark it? | Yes | No |
 | Use for | Searches, filters | Passwords, personal info, anything that saves data |
+
+**Never send a password with GET.** The password would show up in the address bar where anyone can see it.
 
 A GET submit looks like this in the address bar:
 
@@ -101,7 +105,16 @@ contact.html?name=Ana+Lopez&email=ana%40example.com#
   <input type="checkbox" name="news" value="yes">
   Send me the newsletter
 </label>
+
+<!-- Way 1 also works for radio buttons and checkboxes (this is how the video does it).
+     Each radio button needs its own unique id. -->
+<input type="radio" id="small" name="size" value="small">
+<label for="small">Small</label>
+<input type="radio" id="large" name="size" value="large">
+<label for="large">Large</label>
 ```
+
+Both ways are correct. In the video, each label and input pair is also put inside its own `<div>` so it sits on its own line. We do the same thing with CSS instead (`label { display: block; }`).
 
 Why labels matter:
 - Clicking the label puts the cursor in the box (or checks the box).
@@ -116,9 +129,9 @@ Why labels matter:
 |---|---|---|
 | `text` | Short text | `maxlength`, `minlength` |
 | `email` | Email address; browser checks for @ and a domain | |
-| `password` | Hides the letters | `minlength` |
+| `password` | Hides the letters | `minlength`, `maxlength` |
 | `tel` | Phone number; opens number keypad on phones | |
-| `number` | Numbers only | `min`, `max` |
+| `number` | Numbers only; shows up/down arrows | `min`, `max`, `value` (starting number) |
 | `date` | Date picker | |
 | `url` | Web address starting with http:// or https:// | |
 | `radio` | Pick one from a group | `name`, `value` |
@@ -240,6 +253,7 @@ button:hover {
 | `for` | `<label>` | Matches a control's id | `for="email"` |
 | `name` | Controls | Name sent with the answer | `name="email"` |
 | `value` | Radio, checkbox, option | What gets sent | `value="small"` |
+| `value` | `number` input | The starting number in the box | `value="1"` |
 | `placeholder` | Text boxes, textarea | Gray hint text | `placeholder="you@example.com"` |
 | `required` | Controls | Must be filled in | `required` |
 | `minlength` / `maxlength` | Text boxes, textarea | Fewest / most characters | `minlength="8"` |
@@ -276,6 +290,8 @@ button:hover {
 12. Why should you avoid `tabindex="1"`?
 13. Why do form inputs need `box-sizing: border-box` when `width` is 100%?
 14. Why must you add your own `:focus` style if you use `outline: none`?
+15. Why should a form with a password never use `method="get"`?
+16. What does `value="1"` do on a number input?
 
 ---
 

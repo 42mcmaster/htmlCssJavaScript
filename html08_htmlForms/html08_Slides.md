@@ -46,6 +46,8 @@ About 3 class days.
 | `get` | In the address bar, after a `?` | Searches, filters |
 | `post` | Hidden in the request | Passwords, personal info, saving data |
 
+**Never use `get` for passwords.** They would show in the address bar.
+
 After a `get` submit you will see:
 
 ```
@@ -86,7 +88,9 @@ Click the label and the cursor jumps into the box.
 | `date` | Date picker |
 | `url` | Web address |
 
-Limits: `minlength="8"`, `maxlength="20"`
+Limits: `minlength="8"`, `maxlength="20"` (both work on password boxes)
+
+Starting number: `<input type="number" min="0" max="99" value="1">`
 
 ---
 
@@ -107,6 +111,7 @@ Limits: `minlength="8"`, `maxlength="20"`
 ```
 
 Input inside the label = tied together, no `for`/`id` needed.
+The video uses `for`/`id` on each radio button instead. Both ways work.
 
 ---
 
