@@ -102,7 +102,7 @@ A few notes:
 - **SQL** is not a scripting language for web pages. It is the language for asking a database for data. A server-side script often uses SQL to talk to the database.
 - **Old languages you might see in questions:** VBScript and Flash (ActionScript) were used in older websites. Browsers don't support them anymore.
 
-**Static and dynamic sites.** A **static** site sends the same files to every visitor. Pages change only when someone edits the files. A **dynamic** site builds pages on the server, often from a database, so different visitors can see different content (your shopping cart, your messages). Dynamic sites need server-side scripting. The site you built in this class is static.
+**Static and dynamic sites**. A static site sends the same files to every visitor. Pages change only when someone edits the files. A dynamic site can change its content or behavior based on user interaction, user information, or data from a database. For example, a shopping cart or personal messages can be different for each visitor. Dynamic sites may use client-side JavaScript, server-side scripting, or both. The site you built in this class is static, although adding JavaScript can make it interactive.
 
 > **Try This 3:** Is each one client-side or server-side?
 > a. Checking that an email box has an `@` before the form sends
