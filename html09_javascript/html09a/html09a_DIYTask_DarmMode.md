@@ -96,8 +96,6 @@ Then look at your pages and find anything that stays light or becomes hard to re
 
 Use your own colors, not the examples. Tip: test the look first by typing `class="dark-mode"` on the `<body>` of one page, then remove it when you're done.
 
-**Or use CSS variables (recommended).** Instead of the extra `.dark-mode` rules above, you can set up color variables in `:root` the way the walkthrough shows, use `var()` for the colors in your existing CSS, and have `.dark-mode` give the variables new values. Make at least three color variables. Either way counts for full credit.
-
 ---
 
 ## Part 4: Write the JavaScript
@@ -145,7 +143,7 @@ Hints: `document.body.classList.contains('dark-mode')` gives `true` or `false`. 
 
 **CSS**
 - [ ] A `.dark-mode` rule with a background color and text color that fit your site
-- [ ] At least two more `.dark-mode` rules for other parts of the page (header, nav, footer, links, and so on), **or** at least three CSS color variables in `:root` that `.dark-mode` changes
+- [ ] At least two more `.dark-mode` rules for other parts of the page (header, nav, footer, links, and so on)
 - [ ] A comment above the dark mode section
 
 **script.js**
@@ -168,7 +166,7 @@ Hints: `document.body.classList.contains('dark-mode')` gives `true` or `false`. 
 | Criteria | Looking for |
 |---|---|
 | **Button and script link** | A button with `id="themeButton"` and a `script.js` link at the end of the body on every page, with HTML comments |
-| **Dark mode CSS** | A `.dark-mode` rule plus at least two more `.dark-mode` rules, or at least three CSS color variables that `.dark-mode` changes; colors fit the site and keep text readable |
+| **Dark mode CSS** | A `.dark-mode` rule plus at least two more `.dark-mode` rules, with colors that fit the site and keep text readable |
 | **JavaScript** | Finds the button, uses a function that toggles the class on the body, connects it with `addEventListener`; works with no red errors |
 | **Comments** | Comment block at the top of `script.js`, a comment above each part, both comment styles (`//` and `/* */`) used |
 | **Pushed** | On GitHub with `script.js` in the `DiyWebsite_Lastname` folder; the rest of the site still works |
@@ -184,7 +182,7 @@ Mostly done with only a few things missing is full credit. Several things missin
 - **Red error that a name "is not defined":** a variable or function name is spelled differently in two places. Names must match exactly, including capital letters.
 - **The page turns dark when it loads and the button does nothing:** take the parentheses off the function name inside `addEventListener`.
 - **The button works but nothing changes color:** CSS uses `.dark-mode` with a dot. JavaScript uses `'dark-mode'` without a dot. Check that the spelling matches.
-- **Part of the page stays light:** that part has its own color in your CSS. Add a `.dark-mode` rule for it, like `.dark-mode footer`, or change that color to use one of your CSS variables.
+- **Part of the page stays light:** that part has its own color in your CSS. Add a `.dark-mode` rule for it, like `.dark-mode footer`.
 - **Dark mode turns off when you change pages:** that's expected. Each page starts in light mode.
 - **Old results still show after you change the code:** save every file and refresh the preview.
 - **Still stuck:** ask a classmate to read your code out loud with you, then ask Mr. McMaster.

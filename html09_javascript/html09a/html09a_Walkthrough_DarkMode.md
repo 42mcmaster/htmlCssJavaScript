@@ -9,15 +9,15 @@ In this walkthrough you will build a small practice page with a button that swit
 3. [The Plan: CSS Does the Look, JavaScript Flips the Switch](#3-the-plan-css-does-the-look-javascript-flips-the-switch)
 4. [Step 1: The HTML Page and Button](#4-step-1-the-html-page-and-button)
 5. [Step 2: The Dark Mode Class in CSS](#5-step-2-the-dark-mode-class-in-css)
-6. [Using CSS Variables for Colors](#6-using-css-variables-for-colors)
-7. [Step 3: Finding Elements with JavaScript](#7-step-3-finding-elements-with-javascript)
-8. [Step 4: Adding and Removing a Class with classList](#8-step-4-adding-and-removing-a-class-with-classlist)
-9. [Step 5: Putting Code in a Function](#9-step-5-putting-code-in-a-function)
-10. [Step 6: Running the Function When the Button Is Clicked](#10-step-6-running-the-function-when-the-button-is-clicked)
-11. [The Finished Practice Code](#11-the-finished-practice-code)
-12. [Try the W3Schools Example](#12-try-the-w3schools-example)
-13. [Vocabulary](#13-vocabulary)
-14. [If Something Goes Wrong](#14-if-something-goes-wrong)
+6. [Step 3: Finding Elements with JavaScript](#6-step-3-finding-elements-with-javascript)
+7. [Step 4: Adding and Removing a Class with classList](#7-step-4-adding-and-removing-a-class-with-classlist)
+8. [Step 5: Putting Code in a Function](#8-step-5-putting-code-in-a-function)
+9. [Step 6: Running the Function When the Button Is Clicked](#9-step-6-running-the-function-when-the-button-is-clicked)
+10. [The Finished Practice Code](#10-the-finished-practice-code)
+11. [Try the W3Schools Example](#11-try-the-w3schools-example)
+12. [Vocabulary](#12-vocabulary)
+13. [If Something Goes Wrong](#13-if-something-goes-wrong)
+
 ---
 
 ## 1. What We Are Building
@@ -133,109 +133,10 @@ The `.dark-mode` rule above only changes the body. If a page has a header, nav, 
 
 `.dark-mode a` means "any link inside something that has the dark-mode class." Since the body holds everything on the page, this covers every link.
 
-This works, but it can get long when a site has a lot of colors. The next section shows a cleaner way.
 
 ---
 
-## 6. Using CSS Variables for Colors
-
-Most websites use the same few colors over and over: one background color, one text color, one link color, and so on. Typing the same hex code like `#1e1e2e` in ten places is slow, and if you want to change it, you have to find and change all ten.
-
-A **CSS variable** stores a value under a name. You set it once, then use the name everywhere. To change the color, you change it in one place.
-
-### Making CSS variables
-
-Put CSS variables at the very top of `styles.css`, inside a rule called `:root`:
-
-```css
-/* Color variables for the whole site */
-:root {
-  --background-color: white;
-  --text-color: black;
-  --link-color: blue;
-}
-```
-
-What to know:
-
-- **`:root`** means the whole page. Variables made here can be used by every element.
-- **Every CSS variable name starts with two dashes**: `--text-color`.
-- Name variables by **what they are used for**, not by the color. `--text-color` is a good name. `--black` is not, because in dark mode the text won't be black anymore.
-
-### Using CSS variables
-
-Use a variable with **`var()`** and the variable's name inside the parentheses:
-
-```css
-/* Light mode: the normal look of the page, using the color variables */
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: Arial, sans-serif;
-  padding: 25px;
-}
-
-/* Links use the link color variable */
-a {
-  color: var(--link-color);
-}
-```
-
-### Dark mode with CSS variables
-
-Here is where variables really help. Instead of writing new rules for every part of the page, the `.dark-mode` class just gives the variables **new values**:
-
-```css
-/* Dark mode: give the color variables new values */
-.dark-mode {
-  --background-color: #222222;
-  --text-color: #eeeeee;
-  --link-color: lightblue;
-}
-```
-
-When JavaScript adds `dark-mode` to the body, every element inside the body that uses these variables switches to the new colors at the same time. No `.dark-mode a` or `.dark-mode header` rules are needed, as long as those parts use the variables.
-
-The JavaScript does not change at all. It still just toggles the `dark-mode` class.
-
-### Try it
-
-Replace everything in your practice `styles.css` with this:
-
-```css
-/* Color variables for the whole site (light mode) */
-:root {
-  --background-color: white;
-  --text-color: black;
-  --link-color: blue;
-}
-
-/* Dark mode: give the color variables new values */
-.dark-mode {
-  --background-color: #222222;
-  --text-color: #eeeeee;
-  --link-color: lightblue;
-}
-
-/* The body uses the color variables */
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: Arial, sans-serif;
-  padding: 25px;
-}
-
-/* Links use the link color variable */
-a {
-  color: var(--link-color);
-}
-```
-
-Test it the same way as before: type `class="dark-mode"` on the `<body>`, check Live Preview, then take it back out. Then try changing one of the dark mode colors and watch every place that uses it change.
-
----
-
-## 7. Step 3: Finding Elements with JavaScript
+## 6. Step 3: Finding Elements with JavaScript
 
 Before JavaScript can change something on the page, it has to find it. The browser gives JavaScript an object called **`document`** that stands for the whole web page.
 
@@ -277,7 +178,7 @@ console.log(document.body);
 
 ---
 
-## 8. Step 4: Adding and Removing a Class with classList
+## 7. Step 4: Adding and Removing a Class with classList
 
 Every element has a **`classList`**. It is the list of classes on that element, and it has tools for changing that list.
 
@@ -301,7 +202,7 @@ Notice the class name is written **without a dot**: `'dark-mode'`, not `'.dark-m
 
 ---
 
-## 9. Step 5: Putting Code in a Function
+## 8. Step 5: Putting Code in a Function
 
 A **function** is a named group of code that runs when you tell it to. Writing code inside a function doesn't run it. It saves it so it can run later, as many times as needed.
 
@@ -327,7 +228,7 @@ If you save and refresh now, nothing happens. That's correct. The function exist
 
 ---
 
-## 10. Step 6: Running the Function When the Button Is Clicked
+## 9. Step 6: Running the Function When the Button Is Clicked
 
 Something that happens on a page, like a click, is called an **event**. To make code run when an event happens, use **`addEventListener`**. It tells an element: "listen for this event, and when it happens, run this function."
 
@@ -351,7 +252,7 @@ Save, refresh, and click the button. The page should switch between light and da
 
 ---
 
-## 11. The Finished Practice Code
+## 10. The Finished Practice Code
 
 Your finished `script.js`:
 
@@ -379,7 +280,7 @@ Commit and push your `darkModePractice` folder with GitHub Desktop.
 
 ---
 
-## 12. Try the W3Schools Example
+## 11. Try the W3Schools Example
 
 Open the W3Schools page **How TO - Toggle Dark Mode**:
 
@@ -399,7 +300,7 @@ Both versions work. In this class, use the walkthrough version.
 
 ---
 
-## 13. Vocabulary
+## 12. Vocabulary
 
 | Word | Meaning |
 |---|---|
@@ -413,19 +314,15 @@ Both versions work. In this class, use the walkthrough version.
 | **event** | Something that happens on the page, like a click |
 | **addEventListener** | Tells an element to run a function when an event happens |
 | **null** | JavaScript's way of saying "nothing was found" |
-| **CSS variable** | A named value in CSS, like `--text-color`, set once and used in many places |
-| **:root** | The CSS selector for the whole page; CSS variables for the whole site go here |
-| **var()** | How CSS uses a variable, like `color: var(--text-color);` |
 
 ---
 
-## 14. If Something Goes Wrong
+## 13. If Something Goes Wrong
 
 - **Nothing happens when you click, and the Console is empty:** the script isn't linked. Check that `src="script.js"` is spelled right and that `script.js` is in the same folder as the HTML page.
 - **Red error: "Cannot read properties of null":** JavaScript couldn't find the button. Check that the `id` in the HTML matches the id in `getElementById` exactly, including capital letters. Also check that the `<script>` tag is at the end of the body, below the button.
 - **Red error: "toggleDarkMode is not defined":** the function name is spelled differently in two places. Names must match exactly.
 - **The page turns dark as soon as it loads, and the button does nothing:** you wrote `toggleDarkMode()` with parentheses inside `addEventListener`. Take the parentheses out.
 - **The button works but the page doesn't change color:** check the class name. CSS uses `.dark-mode` with a dot. JavaScript uses `'dark-mode'` without a dot. The spelling must match.
-- **Some parts of the page stay light:** those parts have their own colors typed in CSS. Change them to use your color variables, like `background-color: var(--background-color);`, or add a `.dark-mode` rule for them, like `.dark-mode header`.
-- **A CSS variable doesn't work:** check that the name starts with two dashes (`--text-color`), that it is spelled the same where it is made and where it is used, and that you used `var(--text-color)`, not just `--text-color`.
+- **Some parts of the page stay light:** those parts have their own colors in CSS. Add a `.dark-mode` rule for them, like `.dark-mode header`.
 - **Old results still show after you change the code:** save every file and refresh the preview.
