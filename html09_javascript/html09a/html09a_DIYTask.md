@@ -1,14 +1,15 @@
-# Lesson 09a DIY Task: Add a Script to Your Contact Page
+# Lesson 09a DIY Task: Add Dark Mode to Your Website
 
-Add your first JavaScript file to the website in your `DiyWebsite_Lastname` folder. This is the graded item for Lesson 09a. The walkthrough gets you ready for it.
+Add a dark mode button to the website in your `DiyWebsite_Lastname` folder. This is the graded item for Lesson 09a. Do the walkthrough and the W3Schools example first.
 
 You will:
 
-1. Make an **external script file**, `script.js`, and link it on your contact page
-2. Make a few **variables** and print them in the **Console**
-3. Write **comments** that explain your code and what a real website does with your contact form's data
+1. Make an **external script file**, `script.js`, and link it on **every page**
+2. Add a **Dark Mode button** to every page
+3. Add a **`.dark-mode` class** to `styles.css` with dark colors that fit your site
+4. Write JavaScript that **toggles** dark mode when the button is clicked
 
-The script goes on `contact.html` only, because the comments in it are about that page's form. No JavaScript inside your HTML pages, and no `alert()` pop-ups.
+No JavaScript inside your HTML pages (no `onclick`), and no `alert()` pop-ups.
 
 ---
 
@@ -18,148 +19,146 @@ Work in your `DiyWebsite_Lastname` folder at the top of your `htmlCssJavaScript`
 
 ```
 DiyWebsite_Lastname/
-├── index.html
-├── about.html
-├── contact.html    <- link script.js here
-├── gallery.html
-├── template.html
+├── index.html      <- button + script link
+├── about.html      <- button + script link
+├── contact.html    <- button + script link
+├── gallery.html    <- button + script link
+├── template.html   <- button + script link
 ├── images/
 ├── media/
-├── styles.css
+├── styles.css      <- add dark mode rules
 └── script.js       <- NEW file: your JavaScript
 ```
 
 | File | What changes |
 |---|---|
-| `script.js` | New file. A comment block, a few variables, `console.log()` lines, and a comment about form data. |
-| `contact.html` | One new line right before `</body>` that links `script.js`, with an HTML comment above it. |
+| Every `.html` page | A Dark Mode button, and one line right before `</body>` that links `script.js` |
+| `styles.css` | New `.dark-mode` rules at the bottom |
+| `script.js` | New file with a comment block and the dark mode code |
 
-No other files change.
+The button has to be on **every page that links `script.js`**. If a page links the script but has no button, the Console shows a red error.
 
 ---
 
-## Part 1: Make script.js and Link It
+## Part 1: Add the Button to Every Page
 
-1. In VS Code, make a new file in your `DiyWebsite_Lastname` folder named `script.js`. All lowercase, no spaces.
-2. Open `contact.html`. Add these two lines right before `</body>`:
+1. Open `template.html` first. Add the button in your header or nav, wherever it fits your design:
 
 ```html
-  <!-- Link the external JavaScript file for this page -->
+<!-- Button that switches dark mode on and off -->
+<button type="button" id="themeButton">Dark Mode</button>
+```
+
+2. Add the same two lines to `index.html`, `about.html`, `contact.html`, and `gallery.html`, in the same spot on each page.
+
+The `id` must be exactly `themeButton` on every page.
+
+---
+
+## Part 2: Link script.js on Every Page
+
+1. In VS Code, make a new file in your `DiyWebsite_Lastname` folder named `script.js`. All lowercase, no spaces.
+2. On every page, add these two lines right before `</body>`:
+
+```html
+  <!-- Link the external JavaScript file -->
   <script src="script.js"></script>
 </body>
 ```
 
-3. In `script.js`, add one line to test the link:
+---
 
-```js
-console.log('script.js is linked and running.');
+## Part 3: Dark Mode Styles
+
+At the bottom of `styles.css`, add a comment and a `.dark-mode` rule. Pick dark colors that go with your site. You don't have to use black and white.
+
+```css
+/* Dark mode: used when the body has the dark-mode class */
+.dark-mode {
+  background-color: #1e1e2e;
+  color: #e0e0e0;
+}
 ```
 
-4. Open `contact.html` with **Live Preview**. Click the **Developer Tools** button in the preview's toolbar, then the **Console** tab. You should see the message.
+Then look at your pages and find anything that stays light or becomes hard to read in dark mode, like your header, nav, footer, or links. Add a rule for **at least two** of them:
 
-If the message doesn't show up, check that the file is named `script.js` exactly and is in the same folder as `contact.html`. Save both files and refresh the preview.
+```css
+/* Links in dark mode */
+.dark-mode a {
+  color: #8ab4f8;
+}
+
+/* Header in dark mode */
+.dark-mode header {
+  background-color: #2a2a3c;
+}
+```
+
+Use your own colors, not the examples. Tip: test the look first by typing `class="dark-mode"` on the `<body>` of one page, then remove it when you're done.
+
+**Or use CSS variables (recommended).** Instead of the extra `.dark-mode` rules above, you can set up color variables in `:root` the way the walkthrough shows, use `var()` for the colors in your existing CSS, and have `.dark-mode` give the variables new values. Make at least three color variables. Either way counts for full credit.
 
 ---
 
-## Part 2: Comment Block at the Top
+## Part 4: Write the JavaScript
 
-At the very top of `script.js`, above your test line, add a multi-line comment with:
+In `script.js`:
 
-- The file name
-- Your name
-- One sentence saying what this file is for
+1. At the very top, add a multi-line comment with the file name, your name, and one sentence saying what this file does.
+2. Find the button with `document.getElementById` and store it in a `const`.
+3. Write a function that toggles the `dark-mode` class on `document.body`. Give it a name that says what it does.
+4. Use `addEventListener` so the function runs when the button is clicked.
+5. Put a one-line `//` comment above each part saying what it does.
 
-```js
-/*
-  script.js
-  Name: Your Name
-  JavaScript for the contact page of my website.
-*/
-```
+Your code should follow the same three steps as the walkthrough: **find** the button, **write** the function, **connect** them with an event. Write it yourself instead of pasting the walkthrough code, and check the walkthrough if you get stuck.
 
 ---
 
-## Part 3: Variables and the Console
+## Part 5: Test, Finish, and Push
 
-Below your test line, add a one-line comment, then make **at least four variables** about your website. Use at least one of each:
+1. Open each page in Live Preview. Click the button. The page should switch to dark mode and back again every time.
+2. Open Developer Tools and check the Console on each page. There should be no red errors.
+3. Check that all text is easy to read in dark mode.
+4. Run `index.html` and `contact.html` through https://validator.w3.org/ and fix any errors.
+5. In GitHub Desktop, commit with a message like `html09a: dark mode button`, then Push.
+6. Check on github.com that `script.js` is in your `DiyWebsite_Lastname` folder.
 
-| Kind | Example |
-|---|---|
-| A `const` holding a **string** | `const siteName = 'Medina Bike Shop';` |
-| A `let` holding a **number** | `let pageCount = 5;` |
-| A `let` holding a **boolean** | `let isPublished = false;` |
-| One more of your choice | `const ownerName = 'Jordan';` |
-
-Use your own site's name and details, not the examples.
-
-Then:
-
-1. Print each variable with `console.log()`.
-2. Print **one sentence** that joins at least two variables with `+`. For example:
-
-```js
-console.log('Welcome to ' + siteName + '. This site has ' + pageCount + ' pages.');
-```
-
-3. Put a short comment above each group of lines saying what it does.
-4. Check the Console. Every line should print with no red errors.
+Note: dark mode turns off when you go to a different page. That's expected for this task.
 
 ---
 
-## Part 4: What Happens to the Form Data
+## Optional Challenge
 
-Your contact form doesn't actually send anything. On a real website it would. At the bottom of `script.js`, write a comment of **3 or 4 sentences** in your own words that explains what happens to your contact form's data after the visitor clicks Submit.
+Make the button's text change. When the page is in dark mode, the button should say **Light Mode**. When it's in light mode, it should say **Dark Mode**.
 
-Use all of these words: **server**, **check it again**, **database**, **web service**.
-
-Here is an example about a different form. Don't copy it. Write about your own contact form.
-
-```js
-/*
-  What happens to the sign-up form data on a real site:
-  When the visitor clicks Submit, the browser sends the data to a web server.
-  The server checks it again, because a user can get around JavaScript.
-  Then the server saves the new account in a database
-  and uses a web service to send a welcome email.
-*/
-```
-
----
-
-## Part 5: Finish and Push
-
-1. Open `contact.html` in Live Preview one more time and check the Console. Everything prints, no red.
-2. Click through your other pages. They should all still work the same as before.
-3. Run `contact.html` through https://validator.w3.org/ and fix any errors.
-4. In GitHub Desktop, commit with a message like `html09a: script.js on contact page`, then Push.
-5. Check on github.com that `script.js` is in your `DiyWebsite_Lastname` folder.
+Hints: `document.body.classList.contains('dark-mode')` gives `true` or `false`. `themeButton.textContent = 'Light Mode';` changes the button's text. You'll need an `if` statement.
 
 ---
 
 ## Checklist
 
-**Linking**
-- [ ] `script.js` is in the `DiyWebsite_Lastname` folder
-- [ ] `contact.html` links it with `<script src="script.js"></script>` right before `</body>`
-- [ ] An HTML comment `<!-- -->` above the script tag
-- [ ] No JavaScript inside the HTML pages, no `alert()`
+**HTML**
+- [ ] A Dark Mode button with `id="themeButton"` on every page
+- [ ] An HTML comment `<!-- -->` above each button
+- [ ] `<script src="script.js"></script>` right before `</body>` on every page, with an HTML comment above it
+- [ ] No JavaScript inside the HTML pages (no `onclick`), no `alert()`
+
+**CSS**
+- [ ] A `.dark-mode` rule with a background color and text color that fit your site
+- [ ] At least two more `.dark-mode` rules for other parts of the page (header, nav, footer, links, and so on), **or** at least three CSS color variables in `:root` that `.dark-mode` changes
+- [ ] A comment above the dark mode section
 
 **script.js**
-- [ ] Multi-line comment block at the top with the file name, your name, and what the file is for
-- [ ] At least 4 variables: a `const` string, a `let` number, a `let` boolean, and one more
-- [ ] Variables are about your own website, named in camelCase
-- [ ] Each variable printed with `console.log()`
-- [ ] One sentence that joins at least two variables with `+`
-- [ ] A one-line comment above each group of lines
-- [ ] Console shows every line with no red errors
-
-**Form data comment**
-- [ ] 3 or 4 sentences in your own words about your contact form
-- [ ] Uses the words server, check it again, database, and web service
+- [ ] Multi-line comment block at the top with the file name, your name, and what the file does
+- [ ] The button found with `getElementById` and stored in a `const`
+- [ ] A function with a clear camelCase name that toggles `dark-mode` on the body
+- [ ] `addEventListener` runs the function when the button is clicked
+- [ ] A one-line comment above each part
 
 **Finish**
-- [ ] All pages still work
-- [ ] `contact.html` passes the validator
+- [ ] The button works on every page, with no red errors in the Console
+- [ ] All text is readable in dark mode
+- [ ] `index.html` and `contact.html` pass the validator
 - [ ] Pushed to GitHub with GitHub Desktop
 
 ---
@@ -168,10 +167,10 @@ Here is an example about a different form. Don't copy it. Write about your own c
 
 | Criteria | Looking for |
 |---|---|
-| **script.js linked** | One external `script.js`, linked at the end of the body on `contact.html`, with an HTML comment above the tag |
-| **Variables and output** | At least 4 variables using `let` and `const` and all three data types; each printed; one joined sentence; runs with no errors |
-| **Comments** | Comment block at the top, a comment above each group of lines, both comment styles (`//` and `/* */`) used |
-| **Form data comment** | 3 or 4 sentences about the student's own contact form, using server, check it again, database, and web service |
+| **Button and script link** | A button with `id="themeButton"` and a `script.js` link at the end of the body on every page, with HTML comments |
+| **Dark mode CSS** | A `.dark-mode` rule plus at least two more `.dark-mode` rules, or at least three CSS color variables that `.dark-mode` changes; colors fit the site and keep text readable |
+| **JavaScript** | Finds the button, uses a function that toggles the class on the body, connects it with `addEventListener`; works with no red errors |
+| **Comments** | Comment block at the top of `script.js`, a comment above each part, both comment styles (`//` and `/* */`) used |
 | **Pushed** | On GitHub with `script.js` in the `DiyWebsite_Lastname` folder; the rest of the site still works |
 
 Mostly done with only a few things missing is full credit. Several things missing is one step down. Missing work gets no credit.
@@ -180,11 +179,12 @@ Mostly done with only a few things missing is full credit. Several things missin
 
 ## If something goes wrong
 
-- **Nothing shows in the Console:** the script isn't linked. Check that the file name in `src` is spelled `script.js` exactly, that `script.js` is in the same folder as `contact.html`, and that you are previewing `contact.html`, not another page.
-- **Some lines print, then they stop:** there is a mistake on the line after the last one that printed. Look for red in the Console. It gives the line number.
-- **Red error about a `const`:** you tried to give a `const` a new value. Use `let` for that variable instead.
-- **Red error that a name "is not defined":** the variable name is spelled differently in two places. Names must match exactly, including capital letters (`siteName` and `sitename` are different).
-- **Your sentence prints with words stuck together:** add a space inside the quotes. `'Welcome to' + siteName` prints `Welcome toMedina Bike Shop`.
-- **Your comment shows up as an error:** a `/*` comment must end with `*/`. A `//` comment only lasts one line, so each line of a long note needs its own `//`.
-- **Old messages still show after you change the code:** save the file and refresh the preview.
+- **Nothing happens when you click, and the Console is empty:** the script isn't linked on that page. Check the `src` spelling and that `script.js` is in the same folder as the page.
+- **Red error: "Cannot read properties of null":** JavaScript couldn't find the button on that page. Check that the page has the button, that its id is exactly `themeButton`, and that the `<script>` tag is below the button, right before `</body>`.
+- **Red error that a name "is not defined":** a variable or function name is spelled differently in two places. Names must match exactly, including capital letters.
+- **The page turns dark when it loads and the button does nothing:** take the parentheses off the function name inside `addEventListener`.
+- **The button works but nothing changes color:** CSS uses `.dark-mode` with a dot. JavaScript uses `'dark-mode'` without a dot. Check that the spelling matches.
+- **Part of the page stays light:** that part has its own color in your CSS. Add a `.dark-mode` rule for it, like `.dark-mode footer`, or change that color to use one of your CSS variables.
+- **Dark mode turns off when you change pages:** that's expected. Each page starts in light mode.
+- **Old results still show after you change the code:** save every file and refresh the preview.
 - **Still stuck:** ask a classmate to read your code out loud with you, then ask Mr. McMaster.
