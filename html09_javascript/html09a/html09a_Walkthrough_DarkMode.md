@@ -167,15 +167,6 @@ Open the page in Live Preview, open Developer Tools, and check the Console. You 
 
 If the Console shows **`null`**, JavaScript could not find the button. The id in the HTML and the id in the JavaScript don't match. They must be spelled exactly the same, including capital letters.
 
-### Finding the body
-
-The body is used so often that `document` has a shortcut for it: **`document.body`**. No id is needed.
-
-```js
-// The body of the page. No id needed.
-console.log(document.body);
-```
-
 ---
 
 ## 7. Step 4: Adding and Removing a Class with classList
