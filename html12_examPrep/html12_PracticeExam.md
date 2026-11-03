@@ -427,7 +427,7 @@ Instructions: Select the BEST answer for each question. Read carefully—some qu
 - **36-40 (90-100%):** Excellent! You're ready for the exam.
 - **32-35 (80-89%):** Good understanding. Review weak areas.
 - **28-31 (70-79%):** Passing. Focus on areas scoring < 70%.
-- **Below 28 (< 70%):** Study more. Review Master Study Guide and redo practice exam.
+- **Below 28 (< 70%):** Study more. Review `html12_FullExam_StudyGuide.md` and redo practice exam.
 
 ## Tips for Actual Exam
 

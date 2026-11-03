@@ -54,7 +54,7 @@ Watch these in order. Video numbers match the slides.
 
 Backup FTP video (no ad at the end): [FTP, SFTP, TFTP Explained](https://youtu.be/tOj8MSEIbfA) (PowerCert, 7:54).
 
-Gimkit practice sets in this folder: `Gimkit_Colors_RGB_Hex.csv`, `Gimkit_SEO.csv`, `Gimkit_Protocols.csv`.
+The tasks for this review are in this folder: `html12a_Colors_lastname.md`, `html12b_SEO_lastname.md`, `html12c_Protocols_lastname.md`. The slides for each topic are in the `slides` folder.
 
 ---
 
@@ -87,6 +87,7 @@ rgb(red, green, blue)
 - Each number goes from **0** (none of that color) to **255** (full amount).
 - That is **256 levels** for each color. (A computer stores each one in one byte, which holds 0 through 255.)
 - 256 × 256 × 256 = about **16.7 million** possible colors.
+- Hex codes can make **exactly the same colors**. Each hex pair goes from `00` to `FF`, which is also 256 choices (16 × 16). Hex just writes the number with fewer digits.
 
 | RGB value | Color |
 |---|---|
@@ -223,6 +224,7 @@ Search engines also look for **spam**: pages that try to trick the ranking. Thos
 | How it gets there | The search engine thinks it is a good match | It is an ad, marked "Sponsored" or "Ad" |
 | Also called | Natural results | Pay-per-click (PPC) |
 | SEO helps? | Yes | No, this is advertising |
+| When the money stops | Still shows up | The ad disappears |
 
 The page of results you see after a search is the **SERP**: Search Engine Results Page.
 
@@ -404,7 +406,7 @@ https://www.example.com/products/shoes.html
 | Part | Example | What it is |
 |---|---|---|
 | Protocol | `https://` | The rules used to send the page |
-| Subdomain | `www` | A part of the site |
+| Subdomain | `www` | A part of the site. It is not always `www`: in `library.example.edu`, the subdomain is `library` |
 | Domain name | `example` | The site's name |
 | Top-level domain (TLD) | `.com` | The ending: `.com`, `.org`, `.edu`, `.gov` |
 | Path | `/products/` | The folder on the server |

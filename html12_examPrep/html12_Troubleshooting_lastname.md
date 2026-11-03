@@ -1,3 +1,5 @@
+**Before you start:** rename this file to `html12_Troubleshooting_lastname.md`, using your own last name. Commit and push when you're done.
+
 # html12 Lane 1: Troubleshooting, QA & Project Management Scenarios
 
 **Time Estimate: 45 minutes**
