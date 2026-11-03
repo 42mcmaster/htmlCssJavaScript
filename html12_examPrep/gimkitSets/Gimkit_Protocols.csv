@@ -1,0 +1,29 @@
+Gimkit Spreadsheet Import Template,,,,
+Question,Correct Answer,Incorrect Answer 1,Incorrect Answer 2 (Optional),Incorrect Answer 3 (Optional)
+What is a protocol?,A set of rules computers follow to communicate,A type of computer virus,A web page template,A CSS property
+What does HTTP stand for?,HyperText Transfer Protocol,High Tech Transfer Program,HyperText Tool Package,Home Transfer Text Protocol
+What is the main job of HTTP?,Sending web pages from a server to a browser,Uploading files to a server,Turning names into IP addresses,Encrypting email
+What does the S in HTTPS stand for?,Secure,Server,Simple,Speed
+What does HTTPS add to HTTP?,Encryption with SSL/TLS,Faster images,Bigger fonts,Free hosting
+What does a browser show for a site using HTTPS?,A padlock icon,A red X,A spinning wheel,Nothing at all
+Which port does HTTPS normally use?,443,80,21,25
+Which port does plain HTTP normally use?,80,443,21,53
+What does FTP stand for?,File Transfer Protocol,Fast Text Program,File Type Package,Free Transfer Process
+What is FTP mainly used for in web design?,Uploading website files to a web server,Showing a page in the browser,Making a page secure,Finding a site's IP address
+Which is the secure version of FTP?,SFTP,HTTP,DNS,TFTP
+What does DNS do?,Turns a domain name into an IP address,Encrypts web pages,Uploads files,Checks spelling in HTML
+DNS is often compared to a...,Phone book,Calculator,Paint brush,Trash can
+What does DNS stand for?,Domain Name System,Data Network Server,Digital Name Service,Domain Number Setting
+An IP address is...,A number that identifies a device on a network,A website's color scheme,A type of HTML tag,A password
+Which is a valid IPv4 address?,192.168.1.25,192.168.1.256,192.168.1,192.168.one.25
+Each number in an IPv4 address is between...,0 and 255,0 and 100,1 and 1000,0 and 9
+Data sent across the internet is broken into small pieces called...,Packets,Cookies,Pixels,Frames
+Which protocol numbers packets and makes sure they all arrive?,TCP,FTP,DNS,HTML
+Which protocol puts the address on each packet?,IP,FTP,CSS,SEO
+The internet's main pair of protocols is...,TCP/IP,HTML/CSS,FTP/SFTP,GET/POST
+What does a 404 status code mean?,Page not found,"OK, here is the page",Server error,Page moved to HTTPS
+What does a 200 status code mean?,"OK, the request worked",Page not found,Server error,Access denied
+"In https://www.example.com/shop/index.html, what is the protocol?",https://,www,example.com,/shop/index.html
+"In https://www.example.com/shop/index.html, what is the top-level domain (TLD)?",.com,www,https,index.html
+"In https://www.example.com/shop/index.html, what is the path to the file?",/shop/index.html,www.example,https://,.com
+What does URL stand for?,Uniform Resource Locator,Universal Remote Link,User Request Line,Uniform Routing List
