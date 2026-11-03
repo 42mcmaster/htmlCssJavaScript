@@ -184,6 +184,8 @@ body {
 }
 ```
 
+**What is rgba?** `rgba` is RGB with a 4th number added. The **a** stands for **alpha**, which means how see-through (transparent) the color is. Alpha goes from **0** (completely clear, you can't see it) to **1** (completely solid). For example, `rgba(0, 0, 0, 0.5)` is black that is half see-through, so whatever is behind it shows through. It is often used for shadows and for dark boxes placed over pictures so the text on top is easy to read.
+
 **Contrast matters.** Use dark text on a light background, or light text on a dark background, so everyone can read it. This is part of making a site accessible.
 
 ---
@@ -216,17 +218,34 @@ Search engines also look for **spam**: pages that try to trick the ranking. Thos
 
 ### 2.3 Organic vs. paid results
 
-**SEO** stands for **Search Engine Optimization**: making pages easy for search engines to find and understand, so they show up **higher in the unpaid results**.
+**SEO** stands for **Search Engine Optimization**: making pages easy for search engines to find and understand, so they show up **higher in the search results**.
 
-| | Organic results | Paid results |
+When you search for something, the page of results is called the **SERP** (Search Engine Results Page). It has two kinds of results mixed together:
+
+- **Paid results** are ads. A business paid the search engine to put its link there. They are usually at the very top and are marked **"Sponsored"** or **"Ad"**.
+- **Organic results** are everything else. Nobody paid for them. The search engine chose them because it thinks they are the best match for what you typed.
+
+**Example:** you search for "pizza Medina Ohio."
+
+```
+Sponsored   Big Chain Pizza – Order Online Now       <- paid: the business bought this spot
+Sponsored   Pizza Delivery App – $5 Off First Order  <- paid
+            Tony's Pizza – Medina, OH                <- organic: earned by being a good match
+            Best Pizza in Medina (local news list)   <- organic
+```
+
+SEO only helps with the **organic** results. Paying for an ad is advertising, not SEO.
+
+| Question | Organic results | Paid results |
 |---|---|---|
-| Cost | Free | The business pays |
-| How it gets there | The search engine thinks it is a good match | It is an ad, marked "Sponsored" or "Ad" |
-| Also called | Natural results | Pay-per-click (PPC) |
-| SEO helps? | Yes | No, this is advertising |
-| When the money stops | Still shows up | The ad disappears |
+| Does the business pay the search engine? | No, it is free | Yes, the business pays |
+| How does the link get on the page? | The search engine decides it is a good match | The business buys the spot |
+| Is it labeled? | No label | Marked "Sponsored" or "Ad" |
+| Other name | Natural results | Pay-per-click (PPC) ads: the business pays each time someone clicks |
+| Does SEO help it? | Yes | No |
+| What happens if the business stops paying? | Nothing. It keeps showing up | The ad goes away |
 
-The page of results you see after a search is the **SERP**: Search Engine Results Page.
+**Why do SEO if you can just buy ads?** Organic traffic is free and keeps coming without paying for every click, and many people skip past the ads and click the first organic result.
 
 ### 2.4 SEO you control in your HTML
 
@@ -447,6 +466,7 @@ FTP is not in this list. It is used earlier, to put the files on the server befo
 | Packet | A small piece of data sent across a network |
 | Protocol | A set of rules computers follow to communicate |
 | RGB | Red, Green, Blue; each from 0 to 255 |
+| rgba | RGB plus a 4th number, alpha, for how see-through the color is (0 = clear, 1 = solid) |
 | SEO | Search Engine Optimization |
 | SERP | Search Engine Results Page |
 | SSL / TLS | Encryption used by HTTPS (TLS is the newer one) |
